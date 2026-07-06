@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杭州行程规划 - 杭州3日游攻略</title>
+<meta name="description" content="杭州3日游行程规划，合理安排时间，不错过任何精彩景点。">
+<link rel="canonical" href="https://www.all-lv.com/city/hangzhou/itinerary">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* ===== 城市选择器 ===== */
+.city-selector{position:relative;margin-right:12px}
+.city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
+.city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.city-selector-name{font-weight:600}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:180px;background:#fff;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.15);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown.open{display:block;animation:dropdownIn .2s ease}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.city-dropdown-title{padding:12px 16px 8px;font-size:.75rem;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.city-option{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:.9rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#f1f5f9}
+.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+
+.day-tabs{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap;justify-content:center}
+.day-tab{padding:10px 24px;border-radius:var(--radius-full);font-weight:600;font-size:.92rem;cursor:pointer;transition:all var(--dur) var(--ease-out);border:2px solid var(--border);background:#fff;color:var(--text-secondary)}
+.day-tab:hover{border-color:var(--brand);color:var(--brand)}
+.day-tab.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+.day-panel{display:none}.day-panel.active{display:block;animation:fadeIn .4s}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="nav-inner">
+  
+<div class="city-selector" id="citySelector">
+  <button class="city-selector-btn" onclick="toggleCityMenu()">
+    <span>🌍</span>
+    <span class="city-selector-name">杭州</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="city-dropdown" id="cityDropdown">
+    <div class="city-dropdown-title">选择目的地</div>
+    <a href="/city/sanya/" class="city-option">undefined 三亚</a><a href="/city/chengdu/" class="city-option">undefined 成都</a><a href="/city/xian/" class="city-option">undefined 西安</a><a href="/city/hangzhou/" class="city-option active">undefined 杭州</a><a href="/city/dali/" class="city-option">undefined 大理</a><a href="/city/lijiang/" class="city-option">undefined 丽江</a><a href="/city/xiamen/" class="city-option">undefined 厦门</a><a href="/city/qingdao/" class="city-option">undefined 青岛</a><a href="/city/guilin/" class="city-option">undefined 桂林</a><a href="/city/lhasa/" class="city-option">undefined 拉萨</a>
+  </div>
+</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/city/hangzhou/">首页</a></li>
+    <li><a href="/city/hangzhou/attractions">景点</a></li>
+    <li><a href="/city/hangzhou/food">美食</a></li>
+    <li><a href="/city/hangzhou/guide">攻略</a></li>
+    <li><a href="/city/hangzhou/itinerary" class="active">行程</a></li>
+    <li><a href="/city/hangzhou/blog">博客</a></li>
+  </ul>
+  <a href="/city/hangzhou/itinerary" class="nav-cta">免费规划行程 →</a>
+  <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></nav>
+
+<main style="max-width:800px;margin:0 auto;padding:100px 24px 60px">
+  <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px;text-align:center">🗺️ 杭州行程规划</h1>
+  <p style="color:#64748b;margin-bottom:36px;text-align:center;font-size:1.05rem">建议游玩 3-4天，以下是推荐行程</p>
+  <div class="day-tabs">
+    <div class="day-tab active" onclick="showDay(0)">第1天</div><div class="day-tab" onclick="showDay(1)">第2天</div><div class="day-tab" onclick="showDay(2)">第3天</div>
+  </div>
+  
+  <div class="day-panel active" id="day-0">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第1天：抵达 + 市区游览</h2>
+      <ul style="list-style:none;padding:0">
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>抵达杭州</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>入住酒店</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>市区闲逛</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>品尝当地美食</li>
+      </ul>
+    </div>
+  </div>
+  <div class="day-panel" id="day-1">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第2天：核心景点</h2>
+      <ul style="list-style:none;padding:0">
+        
+      </ul>
+    </div>
+  </div>
+  <div class="day-panel" id="day-2">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第3天：深度体验</h2>
+      <ul style="list-style:none;padding:0">
+        
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="footer"><div class="footer-inner"><p>© 2026 杭州旅游官网 · <a href="/city/hangzhou/">返回首页</a></p></div></footer>
+<script>
+function showDay(n){document.querySelectorAll('.day-tab').forEach((t,i)=>{t.classList.toggle('active',i===n)});document.querySelectorAll('.day-panel').forEach((p,i)=>{p.classList.toggle('active',i===n)})}
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+
+function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
+document.addEventListener('click',function(e){if(!e.target.closest('.citySelector')&&!e.target.closest('.city-selector')){document.getElementById('cityDropdown')?.classList.remove('open')}});
+
+</script>
+</body>
+</html>

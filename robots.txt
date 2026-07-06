@@ -1,5 +1,11 @@
-# robots.txt for 全国旅游攻略
+# robots.txt for 秦皇岛旅游官网
+# https://www.divdu.com/
+
 User-agent: *
 Allow: /
-Sitemap: https://www.all-lv.com/sitemap.xml
-Disallow: /admin*
+
+# 网站地图位置
+Sitemap: https://www.divdu.com/sitemap.xml
+
+# 禁止爬取后台/管理页面
+Disallow: /admin.html

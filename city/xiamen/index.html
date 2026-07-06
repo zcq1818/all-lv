@@ -3,171 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>厦门旅游攻略 - 海上花园，文艺小城</title>
-<meta name="description" content="厦门是著名的海滨城市，鼓浪屿、南普陀寺、曾厝垵、环岛路等景点充满文艺气息。">
+<title>厦门旅游官网 — 海上花园，文艺小城 | 2026攻略</title>
+<meta name="description" content="厦门旅游官网 · 2026最新攻略。厦门是著名的海滨城市，鼓浪屿、南普陀寺、曾厝垵、环岛路等景点充满文艺气息。">
 <meta name="keywords" content="厦门旅游,厦门攻略,鼓浪屿,南普陀寺,曾厝垵,环岛路,中山路,厦大">
+<meta name="author" content="厦门旅游官网">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://www.all-lv.com/city/xiamen/">
-<meta property="og:title" content="厦门旅游攻略 - 海上花园，文艺小城">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1a73e8">
+<meta property="og:title" content="厦门旅游官网 — 海上花园，文艺小城">
 <meta property="og:description" content="厦门是著名的海滨城市，鼓浪屿、南普陀寺、曾厝垵、环岛路等景点充满文艺气息。">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://www.all-lv.com/city/xiamen/">
+<meta property="og:site_name" content="厦门旅游官网">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TouristDestination","name":"厦门","description":"厦门是著名的海滨城市，鼓浪屿、南普陀寺、曾厝垵、环岛路等景点充满文艺气息。","url":"https://www.all-lv.com/city/xiamen/","geo":{"@type":"GeoCoordinates","latitude":24.48,"longitude":118.09}}
+{"@context":"https://schema.org","@type":"WebSite","name":"厦门旅游官网","url":"https://www.all-lv.com/city/xiamen/","description":"厦门是著名的海滨城市，鼓浪屿、南普陀寺、曾厝垵、环岛路等景点充满文艺气息。",
+"potentialAction":{"@type":"SearchAction","target":"https://www.all-lv.com/city/xiamen/guide?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-  {"@type":"ListItem","position":1,"name":"首页","item":"https://www.all-lv.com/"},
-  {"@type":"ListItem","position":2,"name":"厦门","item":"https://www.all-lv.com/city/xiamen/"}
-]}
-</script>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/style.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:#1a1a2e;background:#f0f2f5;line-height:1.7}
-a{text-decoration:none;color:inherit}
+/* ===== 城市选择器 ===== */
+.city-selector{position:relative;margin-right:12px}
+.city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
+.city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.city-selector-name{font-weight:600}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:180px;background:#fff;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.15);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown.open{display:block;animation:dropdownIn .2s ease}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.city-dropdown-title{padding:12px 16px 8px;font-size:.75rem;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.city-option{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:.9rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#f1f5f9}
+.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
 
-/* Nav */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0;transition:all .2s}
-.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
-.nav-back{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:#64748b;transition:color .2s}
-.nav-back:hover{color:#1a1a2e}
-.nav-title{font-weight:700;font-size:1rem}
-
-/* Hero */
-.hero{padding:100px 24px 40px;text-align:center;color:#fff;position:relative}
-.hero-emoji{font-size:5rem;margin-bottom:16px;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.2))}
-.hero h1{font-size:clamp(2rem,5vw,2.8rem);font-weight:900;margin-bottom:8px}
-.hero p{font-size:1.1rem;opacity:.85;max-width:500px;margin:0 auto 24px}
-.hero-badges{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.badge{padding:6px 16px;background:rgba(255,255,255,0.2);border-radius:24px;font-size:.85rem;backdrop-filter:blur(4px)}
-
-/* Tabs */
-.tabs{position:sticky;top:56px;z-index:50;background:#fff;border-bottom:1px solid #e2e8f0;display:flex;justify-content:center;gap:0}
-.tab{padding:14px 28px;font-size:.95rem;font-weight:600;color:#64748b;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;user-select:none}
-.tab:hover{color:#1a1a2e}
-.tab.active{color:#1a1a2e;border-bottom-color:#4ecdc4}
-.tab-content{display:none}
-.tab-content.active{display:block}
-
-/* Content */
-.content{max-width:900px;margin:0 auto;padding:32px 24px 60px}
-.card{background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s}
-.card:hover{box-shadow:0 8px 24px rgba(0,0,0,0.06);border-color:#ddd}
-.card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.card p{color:#475569;font-size:.95rem;line-height:1.8}
-.card .meta{display:flex;gap:16px;margin-top:12px;font-size:.8rem;color:#94a3b8;flex-wrap:wrap}
-.card .meta span{display:flex;align-items:center;gap:4px}
-
-.section-title{font-size:1.4rem;font-weight:800;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid #e2e8f0}
-
-.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:32px}
-.info-box{background:#fff;border-radius:14px;padding:24px;border:1px solid #e2e8f0}
-.info-box h3{font-size:1rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.info-box p,.info-box ul{color:#475569;font-size:.92rem;line-height:1.8}
-.info-box ul{padding-left:18px}
-.info-box li{margin-bottom:6px}
-
-.footer{text-align:center;padding:40px 24px;color:#94a3b8;font-size:.85rem;border-top:1px solid #e2e8f0}
-
-@media(max-width:640px){
-  .tab{padding:12px 16px;font-size:.85rem}
-  .hero{padding:80px 20px 32px}
-  .content{padding:24px 16px 48px}
-  .card{padding:20px}
-}
+.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#0d47a1 0%,#1a73e888 100%)}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 100%)}
+.hero-grid{max-width:var(--max-width);margin:0 auto;width:100%;position:relative;z-index:2;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.city-intro{padding:100px 24px;background:#fff}
+.city-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.attractions-preview{padding:100px 24px;background:var(--gray-50)}
+.attractions-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media(max-width:768px){.hero-grid,.city-grid{grid-template-columns:1fr}.attractions-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
-<nav class="nav">
+<!-- 导航栏 -->
+<nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="/" class="nav-back">← 全部城市</a>
-    <span class="nav-title">undefined 厦门</span>
-    <div style="width:60px"></div>
+    
+<div class="city-selector" id="citySelector">
+  <button class="city-selector-btn" onclick="toggleCityMenu()">
+    <span>🌍</span>
+    <span class="city-selector-name">厦门</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="city-dropdown" id="cityDropdown">
+    <div class="city-dropdown-title">选择目的地</div>
+    <a href="/city/sanya/" class="city-option">undefined 三亚</a><a href="/city/chengdu/" class="city-option">undefined 成都</a><a href="/city/xian/" class="city-option">undefined 西安</a><a href="/city/hangzhou/" class="city-option">undefined 杭州</a><a href="/city/dali/" class="city-option">undefined 大理</a><a href="/city/lijiang/" class="city-option">undefined 丽江</a><a href="/city/xiamen/" class="city-option active">undefined 厦门</a><a href="/city/qingdao/" class="city-option">undefined 青岛</a><a href="/city/guilin/" class="city-option">undefined 桂林</a><a href="/city/lhasa/" class="city-option">undefined 拉萨</a>
+  </div>
+</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/city/xiamen/" class="active">首页</a></li>
+      <li><a href="/city/xiamen/attractions">景点</a></li>
+      <li><a href="/city/xiamen/food">美食</a></li>
+      <li><a href="/city/xiamen/guide">攻略</a></li>
+      <li><a href="/city/xiamen/itinerary">行程</a></li>
+      <li><a href="/city/xiamen/blog">博客</a></li>
+    </ul>
+    <a href="/city/xiamen/itinerary" class="nav-cta">免费规划行程 <span class="nav-cta-arrow">→</span></a>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<div class="hero" style="background:linear-gradient(135deg,#0f2027dd 0%,#2c536488 100%)">
-  <div class="hero-emoji">undefined</div>
-  <h1>厦门旅游攻略</h1>
-  <p>海上花园，文艺小城</p>
-  <div class="hero-badges">
-    <span class="badge">📍 福建</span>
-    <span class="badge">📅 建议 3-4天</span>
-    <span class="badge">🌤️ 3-5月、10-12月</span>
+<!-- Hero -->
+<section class="hero-full" id="main-content">
+  <div class="hero-overlay"></div>
+  <div class="hero-grid">
+    <div style="color:#fff">
+      <h1 style="font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;text-shadow:0 4px 40px rgba(0,0,0,0.3)">
+        发现厦门<br>最美风光
+      </h1>
+      <p style="font-size:1.15rem;opacity:.95;line-height:1.8;margin-bottom:36px;max-width:500px;text-shadow:0 2px 16px rgba(0,0,0,0.3)">
+        厦门是著名的海滨城市，鼓浪屿、南普陀寺、曾厝垵、环岛路等景点充满文艺气息。
+      </p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="/city/xiamen/itinerary" class="btn btn-white" style="font-size:1rem;padding:14px 28px">🗺️ 智能规划行程</a>
+        <a href="/city/xiamen/attractions" class="btn btn-outline-white" style="font-size:1rem;padding:14px 28px">🏔️ 探索景点</a>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:8rem;filter:drop-shadow(0 8px 32px rgba(0,0,0,0.3))">undefined</div>
   </div>
-</div>
+</section>
 
-<div class="tabs">
-  <div class="tab active" data-tab="attractions">🏔️ 景点</div>
-  <div class="tab" data-tab="food">🍜 美食</div>
-  <div class="tab" data-tab="guide">📋 攻略</div>
-</div>
-
-<div class="tab-content active" id="tab-attractions">
-  <div class="content">
-    <div class="section-title">厦门必玩景点</div>
-    <div id="attractions-list"></div>
+<!-- 城市简介 -->
+<section class="city-intro">
+  <div class="city-grid">
+    <div>
+      <h2 style="font-size:2rem;font-weight:800;margin-bottom:16px">关于厦门</h2>
+      <p style="font-size:1.05rem;line-height:1.9;color:#475569;margin-bottom:24px">厦门是著名的海滨城市，鼓浪屿、南普陀寺、曾厝垵、环岛路等景点充满文艺气息。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📅</div><div style="font-weight:600">最佳时间</div><div style="font-size:.9rem;color:#64748b">3-5月、10-12月</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">⏱️</div><div style="font-weight:600">建议天数</div><div style="font-size:.9rem;color:#64748b">3-4天</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📍</div><div style="font-weight:600">省份</div><div style="font-size:.9rem;color:#64748b">福建</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">🌤️</div><div style="font-weight:600">气候</div><div style="font-size:.9rem;color:#64748b">详见攻略</div></div>
+      </div>
+    </div>
+    <div style="font-size:10rem;text-align:center;opacity:.15">undefined</div>
   </div>
-</div>
+</section>
 
-<div class="tab-content" id="tab-food">
-  <div class="content">
-    <div class="section-title">厦门必吃美食</div>
-    <div id="food-list"></div>
+<!-- 热门景点 -->
+<section class="attractions-preview">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🏔️ 热门景点</h2>
+    <p style="color:#64748b">厦门最值得去的地方</p>
   </div>
-</div>
-
-<div class="tab-content" id="tab-guide">
-  <div class="content">
-    <div class="section-title">厦门旅游攻略</div>
-    <div id="guide-content"></div>
+  <div class="attractions-grid">
+    
   </div>
-</div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/xiamen/attractions" class="btn btn-primary" style="padding:12px 32px">查看全部景点 →</a>
+  </div>
+</section>
 
+<!-- 美食推荐 -->
+<section style="padding:100px 24px;background:#fff">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🍜 必吃美食</h2>
+    <p style="color:#64748b">厦门特色美食推荐</p>
+  </div>
+  <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
+    
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/xiamen/food" class="btn btn-primary" style="padding:12px 32px">查看全部美食 →</a>
+  </div>
+</section>
+
+<!-- 旅游攻略 -->
+<section style="padding:100px 24px;background:var(--gray-50)">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">📋 旅游攻略</h2>
+    <p style="color:#64748b">交通·住宿·最佳时间·注意事项</p>
+  </div>
+  <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+    
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/xiamen/guide" class="btn btn-primary" style="padding:12px 32px">查看完整攻略 →</a>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer class="footer">
-  <p>© 2026 全国旅游攻略 · <a href="/">返回首页</a></p>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>厦门旅游官网</h3><p>致力于为每一位来厦门的游客，提供最实用、最全面的旅游攻略。</p></div>
+      <div class="footer-col"><h4>热门页面</h4><a href="/city/xiamen/">首页</a><a href="/city/xiamen/attractions">景点推荐</a><a href="/city/xiamen/food">美食推荐</a></div>
+      <div class="footer-col"><h4>旅游攻略</h4><a href="/city/xiamen/guide">出行指南</a><a href="/city/xiamen/itinerary">行程规划</a><a href="/city/xiamen/blog">旅游博客</a></div>
+      <div class="footer-col"><h4>其他城市</h4><a href="/city/sanya/">三亚</a><a href="/city/chengdu/">成都</a><a href="/city/xian/">西安</a><a href="/city/hangzhou/">杭州</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 全国旅游攻略</span><div><a href="/sitemap.xml">网站地图</a></div></div>
+  </div>
 </footer>
-
 <script>
-// Tab switching
-document.querySelectorAll('.tab').forEach(t => {
-  t.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-    document.getElementById('tab-' + t.dataset.tab).classList.add('active');
-  });
-});
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
-// Nav scroll
-window.addEventListener('scroll', () => {
-  document.querySelector('.nav').style.boxShadow = window.scrollY > 10 ? '0 2px 12px rgba(0,0,0,0.08)' : 'none';
-});
+function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
+document.addEventListener('click',function(e){if(!e.target.closest('.citySelector')&&!e.target.closest('.city-selector')){document.getElementById('cityDropdown')?.classList.remove('open')}});
 
-// Content data - will be populated by generator or manually
-const attractions = [{"icon":"🏝️","name":"鼓浪屿","desc":"万国建筑博物馆，钢琴之岛。日光岩是最高点，菽庄花园藏海补山。小巷里藏着各种文艺小店。","ticket":"轮渡35元","time":"建议1天"},{"icon":"🏫","name":"厦门大学","desc":"中国最美大学之一，芙蓉湖、芙蓉隧道涂鸦墙是标志。需预约入校。","ticket":"免费(需预约)","time":"建议2小时"},{"icon":"🏘️","name":"曾厝垵","desc":"文艺渔村，各种小吃和手工艺品。离海边近，适合傍晚逛。","ticket":"免费","time":"建议2-3小时"},{"icon":"🛕","name":"南普陀寺","desc":"闽南佛教圣地，紧邻厦大。素斋很有名，后山可以俯瞰厦门。","ticket":"免费","time":"建议2小时"},{"icon":"🌊","name":"环岛路","desc":"沿海公路，骑行或散步都很惬意。一国两制标语牌是网红打卡点。","ticket":"免费","time":"建议2-3小时"},{"icon":"🍜","name":"中山路步行街","desc":"厦门最繁华的商业街，骑楼建筑风格独特。各种闽南小吃集中。","ticket":"免费","time":"建议2-3小时"}];
-const food = [{"icon":"🍜","name":"沙茶面","desc":"厦门第一小吃，沙茶汤底浓郁，配上各种海鲜和内脏，每家店味道都不同。","tip":"乌糖沙茶面、月华沙茶面"},{"icon":"🥟","name":"海蛎煎","desc":"闽南特色，鸡蛋和海蛎煎成饼，蘸甜辣酱吃。中山路和曾厝垵都有。","tip":"莲欢海蛎煎"},{"icon":"🍲","name":"姜母鸭","desc":"厦门人冬天必吃，姜味浓郁，鸭肉入味。配上米酒更地道。","tip":"洪长全姜母鸭"},{"icon":"🫖","name":"功夫茶","desc":"闽南人生活必需品，铁观音是主角。找家茶馆坐下来品茶是厦门慢生活。","tip":"中山路附近茶庄"},{"icon":"🥜","name":"花生汤","desc":"厦门甜品，花生炖得软烂，汤甜而不腻。配油条是经典早餐。","tip":"黄则和花生汤"},{"icon":"🍖","name":"烧肉粽","desc":"闽南粽子，五花肉+香菇+板栗+干贝，料足味美。1980烧肉粽最有名。","tip":"1980烧肉粽"}];
-const guide = [{"icon":"✈️","title":"交通指南","content":"<ul><li><b>飞机：</b>高崎国际机场，地铁/公交到市区约30分钟</li><li><b>高铁：</b>厦门站(岛内)或厦门北站(岛外)</li><li><b>鼓浪屿：</b>东渡码头坐轮渡约20分钟，需提前买票</li><li><b>市内：</b>BRT快速公交+地铁+公交覆盖全面</li></ul>"},{"icon":"🏨","title":"住宿推荐","content":"<ul><li><b>中山路/轮渡附近：</b>去鼓浪屿方便，吃喝方便（200-500元/晚）</li><li><b>曾厝垵：</b>文艺氛围好，离海边近（150-400元/晚）</li><li><b>鼓浪屿岛上：</b>最有氛围，但价格偏高（300-800元/晚）</li></ul>"},{"icon":"🌤️","title":"最佳时间","content":"<p><b>最佳：3-5月、10-12月</b>，气候舒适，适合户外活动。</p><p>夏天热但海风凉爽。冬天温暖，是避寒好去处。</p><p>10月有厦门国际马拉松。</p>"},{"icon":"⚠️","title":"注意事项","content":"<ul><li>鼓浪屿船票要提前在公众号预约，旺季常售罄</li><li>厦门大学限流，要提前3天预约</li><li>曾厝垵小吃价格偏高，可以去中山路吃更正宗</li><li>环岛路骑车注意防晒</li><li>南普陀寺素斋要排队，建议早去</li></ul>"}];
-
-// Render attractions
-document.getElementById('attractions-list').innerHTML = attractions.map(a => 
-  '<div class="card"><h3>' + a.icon + ' ' + a.name + '</h3><p>' + a.desc + '</p><div class="meta">' +
-  (a.ticket ? '<span>🎫 ' + a.ticket + '</span>' : '') +
-  (a.time ? '<span>⏱️ ' + a.time + '</span>' : '') +
-  '</div></div>'
-).join('');
-
-// Render food
-document.getElementById('food-list').innerHTML = food.map(f =>
-  '<div class="card"><h3>' + f.icon + ' ' + f.name + '</h3><p>' + f.desc + '</p>' +
-  (f.tip ? '<div class="meta"><span>💡 ' + f.tip + '</span></div>' : '') + '</div>'
-).join('');
-
-// Render guide
-document.getElementById('guide-content').innerHTML = guide.map(g =>
-  '<div class="info-box"><h3>' + g.icon + ' ' + g.title + '</h3>' + g.content + '</div>'
-).join('');
-// Wrap in grid
-document.getElementById('guide-content').outerHTML = '<div class="info-grid" id="guide-content">' + document.getElementById('guide-content').innerHTML + '</div>';
 </script>
 </body>
 </html>
