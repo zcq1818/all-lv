@@ -10,8 +10,8 @@
 (function () {
   'use strict';
 
-  var STORAGE_FAV = 'qhd_favorites';
-  var STORAGE_REV = 'qhd_reviews';
+  var STORAGE_FAV = 'alllv_favorites';
+  var STORAGE_REV = 'alllv_reviews';
 
   var dom = {};
 
