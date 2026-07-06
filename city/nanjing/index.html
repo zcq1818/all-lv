@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>南京旅游官网 — 六朝古都，金陵风华 | 2026攻略</title>
+<meta name="description" content="南京旅游官网 · 2026最新攻略。南京是六朝古都，中山陵、夫子庙、明孝陵等承载厚重历史。">
+<meta name="keywords" content="南京旅游,南京攻略,中山陵,夫子庙">
+<meta name="author" content="南京旅游官网">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.all-lv.com/city/nanjing/">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1a73e8">
+<meta property="og:title" content="南京旅游官网 — 六朝古都，金陵风华">
+<meta property="og:description" content="南京是六朝古都，中山陵、夫子庙、明孝陵等承载厚重历史。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.all-lv.com/city/nanjing/">
+<meta property="og:site_name" content="南京旅游官网">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"南京旅游官网","url":"https://www.all-lv.com/city/nanjing/","description":"南京是六朝古都，中山陵、夫子庙、明孝陵等承载厚重历史。",
+"potentialAction":{"@type":"SearchAction","target":"https://www.all-lv.com/city/nanjing/guide?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* ===== 城市选择器 ===== */
+.city-selector{position:relative;margin-right:12px}
+.city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
+.city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.city-selector-name{font-weight:600}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:180px;background:#fff;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.15);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown.open{display:block;animation:dropdownIn .2s ease}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.city-dropdown-title{padding:12px 16px 8px;font-size:.75rem;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.city-option{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:.9rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#f1f5f9}
+.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+
+.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#795548 0%,#79554888 100%)}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 100%)}
+.hero-grid{max-width:var(--max-width);margin:0 auto;width:100%;position:relative;z-index:2;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.city-intro{padding:100px 24px;background:#fff}
+.city-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.attractions-preview{padding:100px 24px;background:var(--gray-50)}
+.attractions-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media(max-width:768px){.hero-grid,.city-grid{grid-template-columns:1fr}.attractions-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    
+<div class="city-selector" id="citySelector">
+  <button class="city-selector-btn" onclick="toggleCityMenu()">
+    <span>🍂</span>
+    <span class="city-selector-name">南京</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="city-dropdown" id="cityDropdown">
+    <div class="city-dropdown-title">选择目的地</div>
+    <a href="/city/sanya/" class="city-option">🏖️ 三亚</a><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/xian/" class="city-option">🏛️ 西安</a><a href="/city/hangzhou/" class="city-option">🌸 杭州</a><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/xiamen/" class="city-option">🌊 厦门</a><a href="/city/qingdao/" class="city-option">⛵ 青岛</a><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/lhasa/" class="city-option">🛕 拉萨</a><a href="/city/beijing/" class="city-option">🏛️ 北京</a><a href="/city/shanghai/" class="city-option">🌃 上海</a><a href="/city/chongqing/" class="city-option">🔥 重庆</a><a href="/city/guangzhou/" class="city-option">🌺 广州</a><a href="/city/suzhou/" class="city-option">🏡 苏州</a><a href="/city/nanjing/" class="city-option active">🍂 南京</a><a href="/city/zhangjiajie/" class="city-option">🏔️ 张家界</a><a href="/city/huangshan/" class="city-option">☁️ 黄山</a><a href="/city/jiuzhaigou/" class="city-option">💎 九寨沟</a><a href="/city/haerbin/" class="city-option">❄️ 哈尔滨</a><a href="/city/dunhuang/" class="city-option">🏜️ 敦煌</a><a href="/city/kunming/" class="city-option">🌺 昆明</a><a href="/city/luoyang/" class="city-option">🌺 洛阳</a><a href="/city/beihai/" class="city-option">🐚 北海</a><a href="/city/xining/" class="city-option">🏔️ 西宁</a><a href="/city/guiyang/" class="city-option">🌿 贵阳</a><a href="/city/hongkong/" class="city-option">🏙️ 香港</a><a href="/city/macau/" class="city-option">🎰 澳门</a>
+  </div>
+</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/city/nanjing/" class="active">首页</a></li>
+      <li><a href="/city/nanjing/attractions">景点</a></li>
+      <li><a href="/city/nanjing/food">美食</a></li>
+      <li><a href="/city/nanjing/guide">攻略</a></li>
+      <li><a href="/city/nanjing/itinerary">行程</a></li>
+      <li><a href="/city/nanjing/blog">博客</a></li>
+    </ul>
+    <a href="/city/nanjing/itinerary" class="nav-cta">免费规划行程 <span class="nav-cta-arrow">→</span></a>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-full" id="main-content">
+  <div class="hero-overlay"></div>
+  <div class="hero-grid">
+    <div style="color:#fff">
+      <h1 style="font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;text-shadow:0 4px 40px rgba(0,0,0,0.3)">
+        发现南京<br>六朝古都
+      </h1>
+      <p style="font-size:1.15rem;opacity:.95;line-height:1.8;margin-bottom:36px;max-width:500px;text-shadow:0 2px 16px rgba(0,0,0,0.3)">
+        中山陵瞻仰 · 夫子庙寻味 · 明城墙漫步<br>2026年最新南京旅游攻略
+      </p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="/city/nanjing/itinerary" class="btn btn-white" style="font-size:1rem;padding:14px 28px">🗺️ 智能规划行程</a>
+        <a href="/city/nanjing/attractions" class="btn btn-outline-white" style="font-size:1rem;padding:14px 28px">🏔️ 探索景点</a>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:8rem;filter:drop-shadow(0 8px 32px rgba(0,0,0,0.3))">🍂</div>
+  </div>
+</section>
+
+<!-- 城市简介 -->
+<section class="city-intro">
+  <div class="city-grid">
+    <div>
+      <h2 style="font-size:2rem;font-weight:800;margin-bottom:16px">关于南京</h2>
+      <p style="font-size:1.05rem;line-height:1.9;color:#475569;margin-bottom:24px">南京是六朝古都，中山陵、夫子庙、明孝陵等承载厚重历史。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📅</div><div style="font-weight:600">最佳时间</div><div style="font-size:.9rem;color:#64748b">3-5月、9-11月</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">⏱️</div><div style="font-weight:600">建议天数</div><div style="font-size:.9rem;color:#64748b">3-4天</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📍</div><div style="font-weight:600">省份</div><div style="font-size:.9rem;color:#64748b">江苏</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">🌤️</div><div style="font-weight:600">气候</div><div style="font-size:.9rem;color:#64748b">亚热带季风气候</div></div>
+      </div>
+    </div>
+    <div style="font-size:10rem;text-align:center;opacity:.15">🍂</div>
+  </div>
+</section>
+
+<!-- 热门景点 -->
+<section class="attractions-preview">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🏔️ 热门景点</h2>
+    <p style="color:#64748b">南京最值得去的地方</p>
+  </div>
+  <div class="attractions-grid">
+    
+    <div style="background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s;cursor:pointer" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;background:linear-gradient(135deg,#79554844 0%,#79554822 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">🏔️</div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">中山陵</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">孙中山先生陵墓，392级台阶气势恢宏。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 免费</span>
+          <span>⏱️ 建议2-3小时</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s;cursor:pointer" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;background:linear-gradient(135deg,#79554844 0%,#79554822 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">🏮</div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">夫子庙</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">秦淮河夜景绝美，小吃一条街。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 免费</span>
+          <span>⏱️ 建议2-3小时</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s;cursor:pointer" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;background:linear-gradient(135deg,#79554844 0%,#79554822 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">🏛️</div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">明孝陵</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">朱元璋陵墓，秋天银杏大道最美。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 70元</span>
+          <span>⏱️ 建议2小时</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s;cursor:pointer" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;background:linear-gradient(135deg,#79554844 0%,#79554822 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">🏛️</div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">总统府</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">中国近代史博物馆。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 35元</span>
+          <span>⏱️ 建议2小时</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s;cursor:pointer" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;background:linear-gradient(135deg,#79554844 0%,#79554822 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">🧱</div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">明城墙</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">世界最长古城墙。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 50元</span>
+          <span>⏱️ 建议2小时</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s;cursor:pointer" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;background:linear-gradient(135deg,#79554844 0%,#79554822 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">🌊</div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">玄武湖</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">春天樱花最美。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 免费</span>
+          <span>⏱️ 建议2小时</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/nanjing/attractions" class="btn btn-primary" style="padding:12px 32px">查看全部景点 →</a>
+  </div>
+</section>
+
+<!-- 美食推荐 -->
+<section style="padding:100px 24px;background:#fff">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🍜 必吃美食</h2>
+    <p style="color:#64748b">南京特色美食推荐</p>
+  </div>
+  <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
+    
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:8px">🦆</div>
+      <h3 style="font-weight:700;margin-bottom:6px">盐水鸭</h3>
+      <p style="font-size:.9rem;color:#64748b;line-height:1.6">皮白肉嫩，桂花飘香时最正宗。...</p>
+    </div>
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:8px">🍜</div>
+      <h3 style="font-weight:700;margin-bottom:6px">鸭血粉丝汤</h3>
+      <p style="font-size:.9rem;color:#64748b;line-height:1.6">鸭血鸭肠粉丝汤鲜味美。...</p>
+    </div>
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:8px">🥟</div>
+      <h3 style="font-weight:700;margin-bottom:6px">小笼汤包</h3>
+      <p style="font-size:.9rem;color:#64748b;line-height:1.6">皮薄汁多。...</p>
+    </div>
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:8px">🍲</div>
+      <h3 style="font-weight:700;margin-bottom:6px">牛肉锅贴</h3>
+      <p style="font-size:.9rem;color:#64748b;line-height:1.6">底部煎得金黄酥脆。...</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/nanjing/food" class="btn btn-primary" style="padding:12px 32px">查看全部美食 →</a>
+  </div>
+</section>
+
+<!-- 旅游攻略 -->
+<section style="padding:100px 24px;background:var(--gray-50)">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">📋 旅游攻略</h2>
+    <p style="color:#64748b">交通·住宿·最佳时间·注意事项</p>
+  </div>
+  <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+    
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:12px">✈️</div>
+      <h3 style="font-weight:700;margin-bottom:8px">交通指南</h3>
+      <div style="font-size:.9rem;color:#475569;line-height:1.7">飞机：禄口机场高铁：南京南站...</div>
+    </div>
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:12px">🏨</div>
+      <h3 style="font-weight:700;margin-bottom:8px">住宿推荐</h3>
+      <div style="font-size:.9rem;color:#475569;line-height:1.7">夫子庙：秦淮河夜景好（200-500元/晚）新街口：市中心（200-600元/晚）...</div>
+    </div>
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:12px">🌤️</div>
+      <h3 style="font-weight:700;margin-bottom:8px">最佳时间</h3>
+      <div style="font-size:.9rem;color:#475569;line-height:1.7">最佳：3-5月、9-11月。...</div>
+    </div>
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:12px">⚠️</div>
+      <h3 style="font-weight:700;margin-bottom:8px">注意事项</h3>
+      <div style="font-size:.9rem;color:#475569;line-height:1.7">中山陵要预约，周一闭馆夫子庙小吃偏贵，去老门东...</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/nanjing/guide" class="btn btn-primary" style="padding:12px 32px">查看完整攻略 →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>南京旅游官网</h3><p>致力于为每一位来南京的游客，提供最实用、最全面的旅游攻略。</p></div>
+      <div class="footer-col"><h4>热门页面</h4><a href="/city/nanjing/">首页</a><a href="/city/nanjing/attractions">景点推荐</a><a href="/city/nanjing/food">美食推荐</a></div>
+      <div class="footer-col"><h4>旅游攻略</h4><a href="/city/nanjing/guide">出行指南</a><a href="/city/nanjing/itinerary">行程规划</a><a href="/city/nanjing/blog">旅游博客</a></div>
+      <div class="footer-col"><h4>其他城市</h4><a href="/city/sanya/">三亚</a><a href="/city/chengdu/">成都</a><a href="/city/xian/">西安</a><a href="/city/hangzhou/">杭州</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 全国旅游攻略</span><div><a href="/sitemap.xml">网站地图</a></div></div>
+  </div>
+</footer>
+<script>
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+
+function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
+document.addEventListener('click',function(e){if(!e.target.closest('.citySelector')&&!e.target.closest('.city-selector')){document.getElementById('cityDropdown')?.classList.remove('open')}});
+
+</script>
+</body>
+</html>

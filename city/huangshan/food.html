@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄山美食攻略 - 黄山旅游</title>
+<meta name="description" content="黄山必吃美食推荐：特色小吃、网红餐厅、本地人私藏好店。">
+<link rel="canonical" href="https://www.all-lv.com/city/huangshan/food">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* ===== 城市选择器 ===== */
+.city-selector{position:relative;margin-right:12px}
+.city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
+.city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.city-selector-name{font-weight:600}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:180px;background:#fff;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.15);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown.open{display:block;animation:dropdownIn .2s ease}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.city-dropdown-title{padding:12px 16px 8px;font-size:.75rem;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.city-option{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:.9rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#f1f5f9}
+.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="nav-inner">
+  
+<div class="city-selector" id="citySelector">
+  <button class="city-selector-btn" onclick="toggleCityMenu()">
+    <span>☁️</span>
+    <span class="city-selector-name">黄山</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="city-dropdown" id="cityDropdown">
+    <div class="city-dropdown-title">选择目的地</div>
+    <a href="/city/sanya/" class="city-option">🏖️ 三亚</a><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/xian/" class="city-option">🏛️ 西安</a><a href="/city/hangzhou/" class="city-option">🌸 杭州</a><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/xiamen/" class="city-option">🌊 厦门</a><a href="/city/qingdao/" class="city-option">⛵ 青岛</a><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/lhasa/" class="city-option">🛕 拉萨</a><a href="/city/beijing/" class="city-option">🏛️ 北京</a><a href="/city/shanghai/" class="city-option">🌃 上海</a><a href="/city/chongqing/" class="city-option">🔥 重庆</a><a href="/city/guangzhou/" class="city-option">🌺 广州</a><a href="/city/suzhou/" class="city-option">🏡 苏州</a><a href="/city/nanjing/" class="city-option">🍂 南京</a><a href="/city/zhangjiajie/" class="city-option">🏔️ 张家界</a><a href="/city/huangshan/" class="city-option active">☁️ 黄山</a><a href="/city/jiuzhaigou/" class="city-option">💎 九寨沟</a><a href="/city/haerbin/" class="city-option">❄️ 哈尔滨</a><a href="/city/dunhuang/" class="city-option">🏜️ 敦煌</a><a href="/city/kunming/" class="city-option">🌺 昆明</a><a href="/city/luoyang/" class="city-option">🌺 洛阳</a><a href="/city/beihai/" class="city-option">🐚 北海</a><a href="/city/xining/" class="city-option">🏔️ 西宁</a><a href="/city/guiyang/" class="city-option">🌿 贵阳</a><a href="/city/hongkong/" class="city-option">🏙️ 香港</a><a href="/city/macau/" class="city-option">🎰 澳门</a>
+  </div>
+</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/city/huangshan/">首页</a></li>
+    <li><a href="/city/huangshan/attractions">景点</a></li>
+    <li><a href="/city/huangshan/food" class="active">美食</a></li>
+    <li><a href="/city/huangshan/guide">攻略</a></li>
+    <li><a href="/city/huangshan/itinerary">行程</a></li>
+    <li><a href="/city/huangshan/blog">博客</a></li>
+  </ul>
+  <a href="/city/huangshan/itinerary" class="nav-cta">免费规划行程 →</a>
+  <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></nav>
+
+<main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
+  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="/city/huangshan/" style="color:#1a73e8">首页</a> / <span>美食攻略</span></nav>
+  <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🍜 黄山美食攻略</h1>
+  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">黄山必吃美食，特色小吃一网打尽</p>
+  
+  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0">
+    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🐟 臭鳜鱼</h3>
+    <p style="color:#475569;line-height:1.8;margin-bottom:8px">徽菜代表，闻着臭吃着香。</p>
+    <p style="font-size:.85rem;color:#94a3b8">💡 老街第一楼</p>
+  </div>
+  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0">
+    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍖 毛豆腐</h3>
+    <p style="color:#475569;line-height:1.8;margin-bottom:8px">豆腐发酵后煎制。</p>
+    <p style="font-size:.85rem;color:#94a3b8">💡 屯溪老街</p>
+  </div>
+  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0">
+    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍲 笋衣烧肉</h3>
+    <p style="color:#475569;line-height:1.8;margin-bottom:8px">干笋衣配五花肉。</p>
+    <p style="font-size:.85rem;color:#94a3b8">💡 当地餐馆</p>
+  </div>
+  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0">
+    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🥟 黄山烧饼</h3>
+    <p style="color:#475569;line-height:1.8;margin-bottom:8px">梅干菜猪肉馅。</p>
+    <p style="font-size:.85rem;color:#94a3b8">💡 救驾烧饼</p>
+  </div>
+  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0">
+    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍵 黄山毛峰</h3>
+    <p style="color:#475569;line-height:1.8;margin-bottom:8px">黄山名茶。</p>
+    <p style="font-size:.85rem;color:#94a3b8">💡 汤口镇茶农</p>
+  </div>
+  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0">
+    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍜 笋干面</h3>
+    <p style="color:#475569;line-height:1.8;margin-bottom:8px">徽州传统面食。</p>
+    <p style="font-size:.85rem;color:#94a3b8">💡 屯溪老街</p>
+  </div>
+</main>
+
+<footer class="footer"><div class="footer-inner"><p>© 2026 黄山旅游官网 · <a href="/city/huangshan/">返回首页</a></p></div></footer>
+<script>
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+
+function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
+document.addEventListener('click',function(e){if(!e.target.closest('.citySelector')&&!e.target.closest('.city-selector')){document.getElementById('cityDropdown')?.classList.remove('open')}});
+
+</script>
+</body>
+</html>
