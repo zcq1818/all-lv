@@ -36,13 +36,13 @@
   
 <div class="city-selector" id="citySelector">
   <button class="city-selector-btn" onclick="toggleCityMenu()">
-    <span>🌍</span>
+    <span>🏖️</span>
     <span class="city-selector-name">三亚</span>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
   </button>
   <div class="city-dropdown" id="cityDropdown">
     <div class="city-dropdown-title">选择目的地</div>
-    <a href="/city/sanya/" class="city-option active">undefined 三亚</a><a href="/city/chengdu/" class="city-option">undefined 成都</a><a href="/city/xian/" class="city-option">undefined 西安</a><a href="/city/hangzhou/" class="city-option">undefined 杭州</a><a href="/city/dali/" class="city-option">undefined 大理</a><a href="/city/lijiang/" class="city-option">undefined 丽江</a><a href="/city/xiamen/" class="city-option">undefined 厦门</a><a href="/city/qingdao/" class="city-option">undefined 青岛</a><a href="/city/guilin/" class="city-option">undefined 桂林</a><a href="/city/lhasa/" class="city-option">undefined 拉萨</a>
+    <a href="/city/sanya/" class="city-option active">🏖️ 三亚</a><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/xian/" class="city-option">🏛️ 西安</a><a href="/city/hangzhou/" class="city-option">🌸 杭州</a><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/xiamen/" class="city-option">🌊 厦门</a><a href="/city/qingdao/" class="city-option">⛵ 青岛</a><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/lhasa/" class="city-option">🛕 拉萨</a>
   </div>
 </div>
   <ul class="nav-links" id="navLinks">
@@ -61,30 +61,38 @@
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px;text-align:center">🗺️ 三亚行程规划</h1>
   <p style="color:#64748b;margin-bottom:36px;text-align:center;font-size:1.05rem">建议游玩 4-5天，以下是推荐行程</p>
   <div class="day-tabs">
-    <div class="day-tab active" onclick="showDay(0)">第1天</div><div class="day-tab" onclick="showDay(1)">第2天</div><div class="day-tab" onclick="showDay(2)">第3天</div>
+    <div class="day-tab active" onclick="showDay(0)">第1天</div><div class="day-tab" onclick="showDay(1)">第2天</div><div class="day-tab" onclick="showDay(2)">第3天</div><div class="day-tab" onclick="showDay(3)">第4天</div>
   </div>
   
   <div class="day-panel active" id="day-0">
     <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
-      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第1天：抵达 + 市区游览</h2>
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第1天：抵达 + 三亚湾</h2>
       <ul style="list-style:none;padding:0">
-        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>抵达三亚</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>入住酒店</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>市区闲逛</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>品尝当地美食</li>
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>抵达凤凰国际机场</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>入住三亚湾酒店</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>三亚湾看日落</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>第一市场吃海鲜</li>
       </ul>
     </div>
   </div>
   <div class="day-panel" id="day-1">
     <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
-      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第2天：核心景点</h2>
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第2天：蜈支洲岛一日游</h2>
       <ul style="list-style:none;padding:0">
-        
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>早起前往蜈支洲岛码头</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>蜈支洲岛浮潜/潜水</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>环岛游览</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>返回酒店休息</li>
       </ul>
     </div>
   </div>
   <div class="day-panel" id="day-2">
     <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
-      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第3天：深度体验</h2>
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第3天：南山 + 天涯海角</h2>
       <ul style="list-style:none;padding:0">
-        
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>上午南山文化旅游区</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>108米海上观音</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>下午天涯海角</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>三亚湾晚餐</li>
+      </ul>
+    </div>
+  </div>
+  <div class="day-panel" id="day-3">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第4天：亚龙湾 + 免税店</h2>
+      <ul style="list-style:none;padding:0">
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>上午亚龙湾沙滩</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>下午海棠湾免税店</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>海鲜大餐</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>返程</li>
       </ul>
     </div>
   </div>

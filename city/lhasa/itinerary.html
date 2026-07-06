@@ -36,13 +36,13 @@
   
 <div class="city-selector" id="citySelector">
   <button class="city-selector-btn" onclick="toggleCityMenu()">
-    <span>🌍</span>
+    <span>🛕</span>
     <span class="city-selector-name">拉萨</span>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
   </button>
   <div class="city-dropdown" id="cityDropdown">
     <div class="city-dropdown-title">选择目的地</div>
-    <a href="/city/sanya/" class="city-option">undefined 三亚</a><a href="/city/chengdu/" class="city-option">undefined 成都</a><a href="/city/xian/" class="city-option">undefined 西安</a><a href="/city/hangzhou/" class="city-option">undefined 杭州</a><a href="/city/dali/" class="city-option">undefined 大理</a><a href="/city/lijiang/" class="city-option">undefined 丽江</a><a href="/city/xiamen/" class="city-option">undefined 厦门</a><a href="/city/qingdao/" class="city-option">undefined 青岛</a><a href="/city/guilin/" class="city-option">undefined 桂林</a><a href="/city/lhasa/" class="city-option active">undefined 拉萨</a>
+    <a href="/city/sanya/" class="city-option">🏖️ 三亚</a><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/xian/" class="city-option">🏛️ 西安</a><a href="/city/hangzhou/" class="city-option">🌸 杭州</a><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/xiamen/" class="city-option">🌊 厦门</a><a href="/city/qingdao/" class="city-option">⛵ 青岛</a><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/lhasa/" class="city-option active">🛕 拉萨</a>
   </div>
 </div>
   <ul class="nav-links" id="navLinks">
@@ -61,30 +61,38 @@
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px;text-align:center">🗺️ 拉萨行程规划</h1>
   <p style="color:#64748b;margin-bottom:36px;text-align:center;font-size:1.05rem">建议游玩 4-5天，以下是推荐行程</p>
   <div class="day-tabs">
-    <div class="day-tab active" onclick="showDay(0)">第1天</div><div class="day-tab" onclick="showDay(1)">第2天</div><div class="day-tab" onclick="showDay(2)">第3天</div>
+    <div class="day-tab active" onclick="showDay(0)">第1天</div><div class="day-tab" onclick="showDay(1)">第2天</div><div class="day-tab" onclick="showDay(2)">第3天</div><div class="day-tab" onclick="showDay(3)">第4天</div>
   </div>
   
   <div class="day-panel active" id="day-0">
     <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
-      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第1天：抵达 + 市区游览</h2>
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第1天：抵达 + 适应</h2>
       <ul style="list-style:none;padding:0">
-        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>抵达拉萨</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>入住酒店</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>市区闲逛</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>品尝当地美食</li>
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>抵达拉萨</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>入住酒店休息适应</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>八廓街散步</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>甜茶馆休息</li>
       </ul>
     </div>
   </div>
   <div class="day-panel" id="day-1">
     <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
-      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第2天：核心景点</h2>
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第2天：布达拉宫 + 大昭寺</h2>
       <ul style="list-style:none;padding:0">
-        
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>上午布达拉宫</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>下午大昭寺</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>八廓街转经</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>藏餐晚餐</li>
       </ul>
     </div>
   </div>
   <div class="day-panel" id="day-2">
     <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
-      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第3天：深度体验</h2>
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第3天：色拉寺 + 哲蚌寺</h2>
       <ul style="list-style:none;padding:0">
-        
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>上午色拉寺看辩经</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>下午哲蚌寺</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>自由活动</li>
+      </ul>
+    </div>
+  </div>
+  <div class="day-panel" id="day-3">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+      <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第4天：纳木错一日</h2>
+      <ul style="list-style:none;padding:0">
+        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>早起前往纳木错</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>湖边游览</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>念青唐古拉山</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>返回拉萨</li>
       </ul>
     </div>
   </div>
