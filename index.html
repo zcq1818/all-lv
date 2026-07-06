@@ -3,85 +3,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全国旅游攻略 - 中国最美目的地一网打尽</title>
-<meta name="description" content="全国旅游攻略：精选中国30+热门旅游城市，景点推荐、美食攻略、行程规划，一站式解决你的旅行需求。">
+<title>全国旅游攻略 - 发现中国最美目的地</title>
+<meta name="description" content="全国旅游攻略，精选中国热门旅游城市，景点推荐、美食攻略、行程规划一站搞定。">
 <meta name="keywords" content="全国旅游,旅游攻略,国内旅游,自由行,景点推荐,美食攻略">
 <link rel="canonical" href="https://www.all-lv.com/">
-<link rel="stylesheet" href="style.css">
+<meta property="og:title" content="全国旅游攻略 - 发现中国最美目的地">
+<meta property="og:description" content="精选中国热门旅游城市，景点/美食/攻略一站搞定">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.all-lv.com/">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "全国旅游攻略",
-  "url": "https://www.all-lv.com",
-  "description": "中国最美目的地旅游攻略",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.all-lv.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
+{"@context":"https://schema.org","@type":"WebSite","name":"全国旅游攻略","url":"https://www.all-lv.com","description":"中国最美目的地旅游攻略"}
 </script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:#1a1a2e;background:#f0f2f5;line-height:1.6}
+a{text-decoration:none;color:inherit}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);color:#fff;padding:100px 24px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,#f0f2f5)}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-0.5px;margin-bottom:12px}
+.hero p{font-size:1.15rem;color:rgba(255,255,255,0.75);max-width:500px;margin:0 auto 32px}
+.hero-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.hero-stats .num{font-size:2rem;font-weight:800;color:#4ecdc4}
+.hero-stats .label{font-size:.85rem;color:rgba(255,255,255,0.6);display:block;margin-top:2px}
+
+/* Search */
+.search-wrap{max-width:560px;margin:-28px auto 0;position:relative;z-index:10;padding:0 24px}
+.search-box{width:100%;padding:16px 20px 16px 48px;border:none;border-radius:16px;font-size:1rem;background:#fff;box-shadow:0 8px 32px rgba(0,0,0,0.12);outline:none;transition:box-shadow .2s}
+.search-box:focus{box-shadow:0 8px 40px rgba(0,0,0,0.18)}
+.search-icon{position:absolute;left:40px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:1.1rem}
+
+/* Grid */
+.section{max-width:1200px;margin:0 auto;padding:48px 24px}
+.section-title{font-size:1.6rem;font-weight:800;margin-bottom:8px;color:#1a1a2e}
+.section-desc{color:#64748b;margin-bottom:32px;font-size:.95rem}
+
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.city-card{background:#fff;border-radius:16px;overflow:hidden;transition:all .25s;cursor:pointer;border:1px solid #e2e8f0;position:relative}
+.city-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.1);border-color:transparent}
+.city-card .card-img{height:180px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);position:relative;overflow:hidden}
+.city-card .card-img img{width:100%;height:100%;object-fit:cover}
+.city-card .card-body{padding:20px}
+.city-card .card-province{display:inline-block;padding:2px 10px;background:#f1f5f9;border-radius:20px;font-size:.75rem;color:#64748b;margin-bottom:8px}
+.city-card .card-name{font-size:1.25rem;font-weight:700;margin-bottom:4px}
+.city-card .card-tagline{font-size:.9rem;color:#64748b;margin-bottom:12px}
+.city-card .card-meta{display:flex;gap:16px;font-size:.8rem;color:#94a3b8}
+.city-card .card-arrow{position:absolute;right:20px;bottom:20px;width:32px;height:32px;background:#f1f5f9;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#64748b;transition:all .2s}
+.city-card:hover .card-arrow{background:#4ecdc4;color:#fff}
+
+/* Tags */
+.hot-tag{position:absolute;top:12px;right:12px;background:rgba(255,59,48,0.9);color:#fff;padding:3px 10px;border-radius:20px;font-size:.7rem;font-weight:600;backdrop-filter:blur(4px)}
+
+/* Footer */
+.footer{text-align:center;padding:40px 24px;color:#94a3b8;font-size:.85rem;border-top:1px solid #e2e8f0;margin-top:24px}
+.footer a{color:#64748b}
+
+/* Responsive */
+@media(max-width:640px){
+  .hero{padding:80px 20px 60px}
+  .hero-stats{gap:24px}
+  .city-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-<nav class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">🌍 全国旅游攻略</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="/" class="active">首页</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
-  </div>
-</nav>
 
-<main style="max-width:1200px;margin:0 auto;padding:80px 24px 48px;">
-  <div style="text-align:center;margin-bottom:48px;">
-    <h1 style="font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:12px;">全国旅游攻略</h1>
-    <p style="font-size:1.2rem;color:#6b7280;max-width:600px;margin:0 auto;">精选中国热门旅游城市，景点/美食/攻略一站搞定</p>
+<div class="hero">
+  <h1>🌍 全国旅游攻略</h1>
+  <p>发现中国最美目的地，景点/美食/攻略一站搞定</p>
+  <div class="hero-stats">
+    <div><span class="num" id="city-count">10</span><span class="label">热门城市</span></div>
+    <div><span class="num" id="spot-count">60+</span><span class="label">精选景点</span></div>
+    <div><span class="num" id="food-count">60+</span><span class="label">必吃美食</span></div>
   </div>
-  
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;" id="city-list">
-    <!-- 城市卡片由 JS 动态生成 -->
-  </div>
-</main>
+</div>
+
+<div class="search-wrap">
+  <span class="search-icon">🔍</span>
+  <input class="search-box" id="searchInput" placeholder="搜索城市、景点、美食..." autocomplete="off">
+</div>
+
+<div class="section">
+  <div class="section-title">热门目的地</div>
+  <div class="section-desc">选择你想去的城市，开启一段旅程</div>
+  <div class="city-grid" id="cityGrid"></div>
+</div>
 
 <footer class="footer">
-  <div class="footer-inner">
-    <p>© 2026 全国旅游攻略 · <a href="/sitemap.xml">网站地图</a></p>
-  </div>
+  <p>© 2026 全国旅游攻略 · <a href="/sitemap.xml">网站地图</a></p>
 </footer>
 
 <script>
-// 城市数据
 const cities = [
-  { id: "sanya", name: "三亚", province: "海南", tagline: "东方夏威夷，四季皆夏天", emoji: "🏖️" },
-  { id: "chengdu", name: "成都", province: "四川", tagline: "一座来了就不想走的城市", emoji: "🐼" },
-  { id: "xian", name: "西安", province: "陕西", tagline: "千年古都，历史活化石", emoji: "🏛️" },
-  { id: "hangzhou", name: "杭州", province: "浙江", tagline: "上有天堂，下有苏杭", emoji: "🌸" },
-  { id: "dali", name: "大理", province: "云南", tagline: "风花雪月，自在大理", emoji: "⛰️" },
-  { id: "lijiang", name: "丽江", province: "云南", tagline: "艳遇之都，雪山下的古城", emoji: "🏔️" },
-  { id: "xiamen", name: "厦门", province: "福建", tagline: "海上花园，文艺小城", emoji: "🌊" },
-  { id: "qingdao", name: "青岛", province: "山东", tagline: "红瓦绿树，碧海蓝天", emoji: "⛵" },
-  { id: "guilin", name: "桂林", province: "广西", tagline: "桂林山水甲天下", emoji: "🏞️" },
-  { id: "lhasa", name: "拉萨", province: "西藏", tagline: "日光之城，心灵净土", emoji: "🛕" },
+  {id:"sanya",name:"三亚",province:"海南",tagline:"东方夏威夷，四季皆夏天",emoji:"🏖️",hot:true,season:"10月-次年3月",days:"4-5天",color:"#ff6b6b"},
+  {id:"chengdu",name:"成都",province:"四川",tagline:"一座来了就不想走的城市",emoji:"🐼",hot:true,season:"3-6月、9-11月",days:"3-4天",color:"#ffa726"},
+  {id:"xian",name:"西安",province:"陕西",tagline:"千年古都，历史活化石",emoji:"🏛️",hot:true,season:"3-5月、9-11月",days:"3-4天",color:"#7e57c2"},
+  {id:"hangzhou",name:"杭州",province:"浙江",tagline:"上有天堂，下有苏杭",emoji:"🌸",season:"3-5月、9-11月",days:"3-4天",color:"#26c6da"},
+  {id:"dali",name:"大理",province:"云南",tagline:"风花雪月，自在大理",emoji:"⛰️",season:"3-5月、9-11月",days:"3-4天",color:"#66bb6a"},
+  {id:"lijiang",name:"丽江",province:"云南",tagline:"雪山下的古城",emoji:"🏔️",season:"4-5月、9-10月",days:"3-5天",color:"#8d6e63"},
+  {id:"xiamen",name:"厦门",province:"福建",tagline:"海上花园，文艺小城",emoji:"🌊",season:"3-5月、10-12月",days:"3-4天",color:"#42a5f5"},
+  {id:"qingdao",name:"青岛",province:"山东",tagline:"红瓦绿树，碧海蓝天",emoji:"⛵",season:"5-10月",days:"3-4天",color:"#29b6f6"},
+  {id:"guilin",name:"桂林",province:"广西",tagline:"桂林山水甲天下",emoji:"🏞️",season:"4-10月",days:"3-5天",color:"#26a69a"},
+  {id:"lhasa",name:"拉萨",province:"西藏",tagline:"日光之城，心灵净土",emoji:"🛕",season:"6-10月",days:"4-5天",color:"#ab47bc"},
 ];
 
-const container = document.getElementById('city-list');
-cities.forEach(city => {
-  container.innerHTML += `
-    <a href="/city/${city.id}/" style="display:block;padding:28px;background:#fff;border-radius:16px;text-decoration:none;color:#1e293b;border:1px solid #e2e8f0;transition:all 0.2s;box-shadow:0 1px 3px rgba(0,0,0,0.04);">
-      <div style="font-size:2.5rem;margin-bottom:12px;">${city.emoji}</div>
-      <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:4px;">${city.name}</h2>
-      <p style="font-size:.8rem;color:#94a3b8;margin-bottom:8px;">${city.province}</p>
-      <p style="font-size:.95rem;color:#6b7280;line-height:1.6;">${city.tagline}</p>
-    </a>`;
-});
+function renderCities(list) {
+  const grid = document.getElementById('cityGrid');
+  grid.innerHTML = list.map(c => `
+    <a href="/city/${c.id}/" class="city-card">
+      <div class="card-img" style="background:linear-gradient(135deg,${c.color}dd 0%,${c.color}88 100%)">
+        ${c.hot ? '<span class="hot-tag">🔥 热门</span>' : ''}
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:4rem;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.2))">${c.emoji}</div>
+      </div>
+      <div class="card-body">
+        <span class="card-province">${c.province}</span>
+        <div class="card-name">${c.name}</div>
+        <div class="card-tagline">${c.tagline}</div>
+        <div class="card-meta">
+          <span>📅 ${c.days}</span>
+          <span>🌤️ ${c.season}</span>
+        </div>
+      </div>
+      <div class="card-arrow">→</div>
+    </a>
+  `).join('');
+}
 
-window.addEventListener('scroll', function() {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-});
-document.getElementById('hamburger').addEventListener('click', function() {
-  document.getElementById('navLinks').classList.toggle('open');
+renderCities(cities);
+
+// Search
+document.getElementById('searchInput').addEventListener('input', function() {
+  const q = this.value.trim().toLowerCase();
+  if (!q) { renderCities(cities); return; }
+  const filtered = cities.filter(c => 
+    c.name.includes(q) || c.province.includes(q) || c.tagline.includes(q)
+  );
+  renderCities(filtered);
 });
 </script>
 </body>
