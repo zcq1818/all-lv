@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>桂林景点推荐 - 桂林旅游攻略</title>
+<meta name="description" content="桂林最值得去的景点推荐：精选桂林必玩景点，附详细攻略、门票、交通信息。桂林以漓江山水闻名，阳朔、龙脊梯田、象鼻山等景点构成了如诗如画的桂林风光。">
+<meta name="keywords" content="桂林景点,桂林旅游,桂林攻略,桂林旅游,桂林攻略,漓江,阳朔,龙脊梯田">
+<meta name="author" content="全国旅游攻略">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.all-lv.com/city/guilin/attractions">
+<meta property="og:title" content="桂林景点推荐 - 桂林旅游攻略">
+<meta property="og:description" content="桂林最值得去的景点推荐">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.all-lv.com/city/guilin/attractions">
+<meta property="og:site_name" content="全国旅游攻略">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristDestination",
+  "name": "桂林",
+  "description": "桂林以漓江山水闻名，阳朔、龙脊梯田、象鼻山等景点构成了如诗如画的桂林风光。",
+  "url": "https://www.all-lv.com/city/guilin",
+  "geo": { "@type": "GeoCoordinates", "latitude": 25.27, "longitude": 110.29 },
+  "touristType": ["文化旅游", "自然观光", "美食体验"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.all-lv.com/" },
+    { "@type": "ListItem", "position": 2, "name": "桂林", "item": "https://www.all-lv.com/city/guilin" },
+    { "@type": "ListItem", "position": 3, "name": "景点推荐", "item": "https://www.all-lv.com/city/guilin/attractions" }
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">全国旅游攻略</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">首页</a></li>
+      <li><a href="/city/guilin" class="active">桂林</a></li>
+      <li><a href="/city/guilin/attractions">景点</a></li>
+      <li><a href="/city/guilin/food">美食</a></li>
+      <li><a href="/city/guilin/guide">攻略</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main class="container" style="max-width:960px;margin:0 auto;padding:80px 24px 48px;">
+  <nav class="breadcrumb" style="font-size:.875rem;color:#6b7280;margin-bottom:24px;">
+    <a href="/">首页</a> / <a href="/city/guilin">桂林</a> / <span>景点推荐</span>
+  </nav>
+  
+  <h1 style="font-size:2rem;font-weight:800;margin-bottom:8px;">桂林景点推荐</h1>
+  <p style="color:#6b7280;margin-bottom:32px;">桂林以漓江山水闻名，阳朔、龙脊梯田、象鼻山等景点构成了如诗如画的桂林风光。</p>
+  
+  <div id="attractions-list" style="display:grid;gap:24px;">
+    <!-- 景点列表由 JS 动态填充，或手动生成 -->
+    <p style="color:#94a3b8;text-align:center;padding:48px;">景点数据加载中...</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 全国旅游攻略 · <a href="/sitemap.xml">网站地图</a></p>
+  </div>
+</footer>
+<script>
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全国旅游攻略 - 中国最美目的地一网打尽</title>
+<meta name="description" content="全国旅游攻略：精选中国30+热门旅游城市，景点推荐、美食攻略、行程规划，一站式解决你的旅行需求。">
+<meta name="keywords" content="全国旅游,旅游攻略,国内旅游,自由行,景点推荐,美食攻略">
+<link rel="canonical" href="https://www.all-lv.com/">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "全国旅游攻略",
+  "url": "https://www.all-lv.com",
+  "description": "中国最美目的地旅游攻略",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.all-lv.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">🌍 全国旅游攻略</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="active">首页</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main style="max-width:1200px;margin:0 auto;padding:80px 24px 48px;">
+  <div style="text-align:center;margin-bottom:48px;">
+    <h1 style="font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:12px;">全国旅游攻略</h1>
+    <p style="font-size:1.2rem;color:#6b7280;max-width:600px;margin:0 auto;">精选中国热门旅游城市，景点/美食/攻略一站搞定</p>
+  </div>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;" id="city-list">
+    <!-- 城市卡片由 JS 动态生成 -->
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>© 2026 全国旅游攻略 · <a href="/sitemap.xml">网站地图</a></p>
+  </div>
+</footer>
+
+<script>
+// 城市数据
+const cities = [
+  { id: "sanya", name: "三亚", province: "海南", tagline: "东方夏威夷，四季皆夏天", emoji: "🏖️" },
+  { id: "chengdu", name: "成都", province: "四川", tagline: "一座来了就不想走的城市", emoji: "🐼" },
+  { id: "xian", name: "西安", province: "陕西", tagline: "千年古都，历史活化石", emoji: "🏛️" },
+  { id: "hangzhou", name: "杭州", province: "浙江", tagline: "上有天堂，下有苏杭", emoji: "🌸" },
+  { id: "dali", name: "大理", province: "云南", tagline: "风花雪月，自在大理", emoji: "⛰️" },
+  { id: "lijiang", name: "丽江", province: "云南", tagline: "艳遇之都，雪山下的古城", emoji: "🏔️" },
+  { id: "xiamen", name: "厦门", province: "福建", tagline: "海上花园，文艺小城", emoji: "🌊" },
+  { id: "qingdao", name: "青岛", province: "山东", tagline: "红瓦绿树，碧海蓝天", emoji: "⛵" },
+  { id: "guilin", name: "桂林", province: "广西", tagline: "桂林山水甲天下", emoji: "🏞️" },
+  { id: "lhasa", name: "拉萨", province: "西藏", tagline: "日光之城，心灵净土", emoji: "🛕" },
+];
+
+const container = document.getElementById('city-list');
+cities.forEach(city => {
+  container.innerHTML += `
+    <a href="/city/${city.id}/" style="display:block;padding:28px;background:#fff;border-radius:16px;text-decoration:none;color:#1e293b;border:1px solid #e2e8f0;transition:all 0.2s;box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+      <div style="font-size:2.5rem;margin-bottom:12px;">${city.emoji}</div>
+      <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:4px;">${city.name}</h2>
+      <p style="font-size:.8rem;color:#94a3b8;margin-bottom:8px;">${city.province}</p>
+      <p style="font-size:.95rem;color:#6b7280;line-height:1.6;">${city.tagline}</p>
+    </a>`;
+});
+
+window.addEventListener('scroll', function() {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+});
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+</script>
+</body>
+</html>

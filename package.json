@@ -1,0 +1,13 @@
+{
+  "name": "all-lv",
+  "version": "1.0.0",
+  "description": "全国旅游攻略 — 中国最美目的地一网打尽",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "generate": "node scripts/generate-city.js",
+    "build": "node scripts/generate-sitemap.js"
+  },
+  "author": "全国旅游攻略",
+  "license": "MIT"
+}

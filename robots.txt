@@ -1,0 +1,5 @@
+# robots.txt for 全国旅游攻略
+User-agent: *
+Allow: /
+Sitemap: https://www.all-lv.com/sitemap.xml
+Disallow: /admin*
