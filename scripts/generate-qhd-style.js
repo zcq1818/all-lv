@@ -9,46 +9,72 @@ const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://www.all-lv.com';
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'cities.json'), 'utf8'));
 
-// 城市选择器 HTML 组件
+// 按省份分组
+function groupByProvince() {
+  const provinces = {};
+  data.cities.forEach(c => {
+    if (!provinces[c.province]) provinces[c.province] = [];
+    provinces[c.province].push(c);
+  });
+  return provinces;
+}
+
+// 城市选择器 — 省份 > 城市层级
 function citySelector(currentCityId) {
-  const options = data.cities.map(c => 
-    `<a href="/city/${c.id}/" class="city-option${c.id === currentCityId ? ' active' : ''}">${c.emoji} ${c.name}</a>`
-  ).join('');
+  const provinces = groupByProvince();
+  const current = data.cities.find(c => c.id === currentCityId);
+  let provinceGroups = '';
+  for (const [prov, cities] of Object.entries(provinces)) {
+    const cityLinks = cities.map(c =>
+      `<a href="/city/${c.id}/" class="city-option${c.id === currentCityId ? ' active' : ''}">${c.emoji} ${c.name}</a>`
+    ).join('');
+    provinceGroups += `<div class="province-group"><div class="province-label">${prov}</div>${cityLinks}</div>`;
+  }
   return `
 <div class="city-selector" id="citySelector">
   <button class="city-selector-btn" onclick="toggleCityMenu()">
-    <span>${data.cities.find(c=>c.id===currentCityId)?.emoji || '🌍'}</span>
-    <span class="city-selector-name">${data.cities.find(c=>c.id===currentCityId)?.name || '选择城市'}</span>
+    <span>${current?.emoji || '🌍'}</span>
+    <span class="city-selector-name">${current?.name || '选择城市'}</span>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
   </button>
   <div class="city-dropdown" id="cityDropdown">
-    <div class="city-dropdown-title">选择目的地</div>
-    ${options}
+    <div class="city-dropdown-header">
+      <span class="city-dropdown-title">选择目的地</span>
+      <span class="city-dropdown-count">${data.cities.length}个城市</span>
+    </div>
+    <div class="city-dropdown-body">${provinceGroups}</div>
   </div>
 </div>`;
 }
 
-// 城市选择器 CSS
+// 城市选择器 CSS — 省份 > 城市层级
 const citySelectorCSS = `
 /* ===== 城市选择器 ===== */
 .city-selector{position:relative;margin-right:12px}
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:180px;background:#fff;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,0.15);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
-.city-dropdown.open{display:block;animation:dropdownIn .2s ease}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-title{padding:12px 16px 8px;font-size:.75rem;color:#94a3b8;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
-.city-option{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:.9rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
+.province-group{margin-bottom:4px}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
 .city-option:hover{background:#f1f5f9}
 .city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
 .navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+@media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 `;
 
 // 城市选择器 JS
 const citySelectorJS = `
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
-document.addEventListener('click',function(e){if(!e.target.closest('.citySelector')&&!e.target.closest('.city-selector')){document.getElementById('cityDropdown')?.classList.remove('open')}});
+document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.target.closest('.city-selector')){var d=document.getElementById('cityDropdown');if(d)d.classList.remove('open')}});
 `;
 
 // ===== 首页模板 =====
@@ -532,7 +558,25 @@ for (const city of data.cities) {
   console.log(`✅ ${city.name}: 6个页面 → city/${city.id}/`);
 }
 
-// 生成根目录 index.html（城市选择首页）
+// 生成根目录 index.html（按省份分组）
+const provinces = groupByProvince();
+let provinceHTML = '';
+for (const [prov, cities] of Object.entries(provinces)) {
+  provinceHTML += `
+  <div class="province-section">
+    <h2 class="province-title">${prov}</h2>
+    <div class="city-cards">
+      ${cities.map(c => `
+      <a href="/city/${c.id}/" class="city-card">
+        <div class="emoji">${c.emoji}</div>
+        <div class="info">
+          <h3>${c.name}</h3>
+          <p>${c.tagline}</p>
+        </div>
+      </a>`).join('')}
+    </div>
+  </div>`;
+}
 const rootIndex = `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -543,32 +587,32 @@ const rootIndex = `<!DOCTYPE html>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>
-.hero-picker{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);color:#fff;padding:40px 24px;text-align:center}
-.city-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;max-width:1000px;width:100%;margin-top:40px}
-.city-card{display:flex;align-items:center;gap:16px;padding:20px 24px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:14px;backdrop-filter:blur(8px);transition:all .25s;cursor:pointer;color:#fff;text-decoration:none}
-.city-card:hover{background:rgba(255,255,255,0.2);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.2)}
-.city-card .emoji{font-size:2.4rem}
-.city-card .info h3{font-size:1.15rem;font-weight:700;margin-bottom:2px}
-.city-card .info p{font-size:.85rem;opacity:.7}
+.hero-picker{background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);color:#fff;padding:80px 24px 40px;text-align:center}
+.province-section{max-width:1100px;margin:0 auto;padding:24px 24px 0}
+.province-title{font-size:1.2rem;font-weight:700;color:#1a1a2e;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.city-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.city-card{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;transition:all .25s;cursor:pointer;color:#1a1a2e;text-decoration:none}
+.city-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.1);border-color:#cbd5e1}
+.city-card .emoji{font-size:2rem}
+.city-card .info h3{font-size:1.05rem;font-weight:700;margin-bottom:2px}
+.city-card .info p{font-size:.82rem;color:#64748b}
+.main-content{padding-bottom:60px}
+.footer-simple{text-align:center;padding:40px 24px;color:#94a3b8;font-size:.85rem;border-top:1px solid #e2e8f0}
 </style>
 </head>
 <body>
 <div class="hero-picker">
   <div style="font-size:4rem;margin-bottom:16px">🌍</div>
   <h1 style="font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:8px">全国旅游攻略</h1>
-  <p style="font-size:1.1rem;opacity:.75;margin-bottom:8px">选择你想去的城市，开启一段旅程</p>
-  <p style="font-size:.9rem;opacity:.5">${data.cities.length} 个城市等你探索</p>
-  <div class="city-cards">
-    ${data.cities.map(c => `
-    <a href="/city/${c.id}/" class="city-card">
-      <div class="emoji">${c.emoji}</div>
-      <div class="info">
-        <h3>${c.name}</h3>
-        <p>${c.tagline}</p>
-      </div>
-    </a>`).join('')}
-  </div>
+  <p style="font-size:1.1rem;opacity:.85;margin-bottom:8px">发现中国最美目的地</p>
+  <p style="font-size:.9rem;opacity:.6">${Object.keys(provinces).length} 个省份 · ${data.cities.length} 个城市</p>
 </div>
+<div class="main-content">
+  ${provinceHTML}
+</div>
+<footer class="footer-simple">
+  <p>© 2026 全国旅游攻略 · <a href="/sitemap.xml">网站地图</a></p>
+</footer>
 </body>
 </html>`;
 fs.writeFileSync(path.join(ROOT, 'index.html'), rootIndex);
