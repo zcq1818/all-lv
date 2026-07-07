@@ -143,10 +143,15 @@
 </div>
 
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 哈尔滨旅游官网 · <a href="/city/haerbin/">返回首页</a></p></div></footer>
-<script>
-window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
-document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+<footer class="footer"><div class="footer-inner"><p>© 2026 哈尔滨旅游官网 · <a href="/city/haerbin/">返回首页</a></p></div>
+</div>
 
-function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
-document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.tar
+<footer class="footer"><div class="footer-inner"><p>&copy; 2026 哈尔滨旅游官网 · <a href="/city/haerbin/">返回首页</a></p></div></footer>
+<script>
+window.addEventListener("scroll",function(){document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>20)});
+document.getElementById("hamburger").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open")});
+function toggleCityMenu(){var d=document.getElementById("cityDropdown");d.classList.toggle("open")}
+document.addEventListener("click",function(e){if(!e.target.closest("#citySelector")&&!e.target.closest(".city-selector")){var d=document.getElementById("cityDropdown");if(d)d.classList.remove("open")}});
+</script>
+</body>
+</html>

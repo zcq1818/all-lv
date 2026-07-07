@@ -13,6 +13,13 @@ for (const city of data.cities) {
   urls.push({ loc: `${SITE}/city/${city.id}/attractions`, priority: '0.8', changefreq: 'weekly' });
   urls.push({ loc: `${SITE}/city/${city.id}/food`, priority: '0.7', changefreq: 'weekly' });
   urls.push({ loc: `${SITE}/city/${city.id}/guide`, priority: '0.8', changefreq: 'weekly' });
+  urls.push({ loc: `${SITE}/city/${city.id}/itinerary`, priority: '0.8', changefreq: 'weekly' });
+  urls.push({ loc: `${SITE}/city/${city.id}/blog`, priority: '0.6', changefreq: 'weekly' });
+  if (city.blogs) {
+    for (const blog of city.blogs) {
+      urls.push({ loc: `${SITE}/city/${city.id}/blog/${blog.slug}`, priority: '0.6', changefreq: 'monthly' });
+    }
+  }
 }
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>

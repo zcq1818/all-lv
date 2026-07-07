@@ -1,21 +1,17 @@
-// Service Worker for 秦皇岛旅游官网 - PWA offline support
+// Service Worker for 全国旅游攻略(all-lv) - PWA offline support
 // 策略：HTML 网络优先，静态资源 stale-while-revalidate
-const CACHE_NAME = 'qhd-lv-v3';
-const RUNTIME_CACHE = 'qhd-lv-runtime-v3';
+const CACHE_NAME = 'alllv-v1';
+const RUNTIME_CACHE = 'alllv-runtime-v1';
 
-// 需要预缓存的关键页面
+// 需要预缓存的关键资源
 const STATIC_ASSETS = [
   '/',
-  '/attractions',
-  '/map',
-  '/itinerary',
-  '/food',
-  '/guide',
-  '/blog',
-  '/about',
   '/style.css',
   '/manifest.json',
-  '/robots.txt'
+  '/robots.txt',
+  '/404.html',
+  '/assets/favicon.svg',
+  '/assets/logo.svg'
 ];
 
 // 安装：预缓存关键资源
