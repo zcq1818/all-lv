@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx serve . -p 3000",
     "generate": "node scripts/generate-city.js",
-    "build": "node scripts/generate-sitemap.js"
+    "build": "node scripts/generate-sitemap.js && node scripts/generate-search-data.js"
   },
   "author": "全国旅游攻略",
   "license": "MIT"
