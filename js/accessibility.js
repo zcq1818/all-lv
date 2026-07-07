@@ -190,6 +190,7 @@
         setupFocusVisibility();
         makeElementsKeyboardAccessible();
         setupLiveRegions();
+        addBackToTop();
         console.log('[Accessibility] 无障碍功能已初始化');
       });
     } else {
@@ -199,8 +200,24 @@
       setupFocusVisibility();
       makeElementsKeyboardAccessible();
       setupLiveRegions();
+      addBackToTop();
       console.log('[Accessibility] 无障碍功能已初始化');
     }
+  }
+
+  function addBackToTop() {
+    var btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', '返回顶部');
+    btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>';
+    btn.style.cssText = 'position:fixed;bottom:24px;right:24px;z-index:999;width:44px;height:44px;border-radius:50%;background:#1a73e8;color:#fff;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);display:none;align-items:center;justify-content:center;transition:all .2s';
+    document.body.appendChild(btn);
+    window.addEventListener('scroll', function() {
+      btn.style.display = window.scrollY > 500 ? 'flex' : 'none';
+    });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   init();
