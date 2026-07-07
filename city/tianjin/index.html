@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天津旅游官网 — 津门故里，中西交融 | 2026攻略</title>
+<meta name="description" content="天津旅游官网 · 2026最新攻略。天津毗邻北京，海河穿城而过，五大道洋楼、意式风情区、古文化街与天津之眼，展现中西合璧的市井与摩登。">
+<meta name="keywords" content="天津旅游,天津攻略,五大道,天津之眼,古文化街,狗不理,海河">
+<meta name="author" content="天津旅游官网">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.all-lv.com/city/tianjin/">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1a73e8">
+<meta property="og:title" content="天津旅游官网 — 津门故里，中西交融">
+<meta property="og:description" content="天津毗邻北京，海河穿城而过，五大道洋楼、意式风情区、古文化街与天津之眼，展现中西合璧的市井与摩登。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.all-lv.com/city/tianjin/">
+<meta property="og:site_name" content="天津旅游官网">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"天津旅游官网","url":"https://www.all-lv.com/city/tianjin/","description":"天津毗邻北京，海河穿城而过，五大道洋楼、意式风情区、古文化街与天津之眼，展现中西合璧的市井与摩登。",
+"potentialAction":{"@type":"SearchAction","target":"https://www.all-lv.com/city/tianjin/guide?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* ===== 城市选择器 ===== */
+.city-selector{position:relative;margin-right:12px}
+.city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
+.city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.city-selector-name{font-weight:600}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown.open{display:flex;flex-direction:column}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
+.province-group{margin-bottom:4px}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#f1f5f9}
+.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+@media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
+
+.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background-image:linear-gradient(135deg,rgba(13,71,161,.5) 0%,rgba(26,115,232,.32) 100%),url(/assets/images/tianjin/0.webp);background-size:cover;background-position:center;}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 100%)}
+.hero-photo{width:100%;max-width:420px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);border:4px solid rgba(255,255,255,.25);margin:0 auto}
+.hero-grid{max-width:var(--max-width);margin:0 auto;width:100%;position:relative;z-index:2;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.city-intro{padding:100px 24px;background:#fff}
+.city-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.attractions-preview{padding:100px 24px;background:var(--gray-50)}
+.attractions-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+@media(max-width:768px){.hero-grid,.city-grid{grid-template-columns:1fr}.attractions-grid{grid-template-columns:1fr}.hero-photo{display:none}}
+</style>
+</head>
+<body>
+<!-- 导航栏 -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    
+<div class="city-selector" id="citySelector">
+  <button class="city-selector-btn" onclick="toggleCityMenu()">
+    <span>🎡</span>
+    <span class="city-selector-name">天津</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="city-dropdown" id="cityDropdown">
+    <div class="city-dropdown-header">
+      <span class="city-dropdown-title">选择目的地</span>
+      <span class="city-dropdown-count">41个城市</span>
+    </div>
+    <div class="city-dropdown-body"><div class="province-group"><div class="province-label">海南</div><a href="/city/sanya/" class="city-option">🏖️ 三亚</a></div><div class="province-group"><div class="province-label">四川</div><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/jiuzhaigou/" class="city-option">💎 九寨沟</a><a href="/city/emeishan/" class="city-option">🏔️ 峨眉山</a></div><div class="province-group"><div class="province-label">陕西</div><a href="/city/xian/" class="city-option">🏛️ 西安</a></div><div class="province-group"><div class="province-label">浙江</div><a href="/city/hangzhou/" class="city-option">🌸 杭州</a></div><div class="province-group"><div class="province-label">云南</div><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/kunming/" class="city-option">🌺 昆明</a></div><div class="province-group"><div class="province-label">福建</div><a href="/city/xiamen/" class="city-option">🌊 厦门</a><a href="/city/wuyishan/" class="city-option">⛰️ 武夷山</a></div><div class="province-group"><div class="province-label">山东</div><a href="/city/qingdao/" class="city-option">⛵ 青岛</a></div><div class="province-group"><div class="province-label">广西</div><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/beihai/" class="city-option">🐚 北海</a></div><div class="province-group"><div class="province-label">西藏</div><a href="/city/lhasa/" class="city-option">🛕 拉萨</a></div><div class="province-group"><div class="province-label">北京</div><a href="/city/beijing/" class="city-option">🏛️ 北京</a></div><div class="province-group"><div class="province-label">上海</div><a href="/city/shanghai/" class="city-option">🌃 上海</a></div><div class="province-group"><div class="province-label">重庆</div><a href="/city/chongqing/" class="city-option">🔥 重庆</a></div><div class="province-group"><div class="province-label">广东</div><a href="/city/guangzhou/" class="city-option">🌺 广州</a><a href="/city/shenzhen/" class="city-option">🌆 深圳</a></div><div class="province-group"><div class="province-label">江苏</div><a href="/city/suzhou/" class="city-option">🏡 苏州</a><a href="/city/nanjing/" class="city-option">🍂 南京</a></div><div class="province-group"><div class="province-label">湖南</div><a href="/city/zhangjiajie/" class="city-option">🏔️ 张家界</a><a href="/city/changsha/" class="city-option">🌶️ 长沙</a></div><div class="province-group"><div class="province-label">安徽</div><a href="/city/huangshan/" class="city-option">☁️ 黄山</a></div><div class="province-group"><div class="province-label">黑龙江</div><a href="/city/haerbin/" class="city-option">❄️ 哈尔滨</a></div><div class="province-group"><div class="province-label">甘肃</div><a href="/city/dunhuang/" class="city-option">🏜️ 敦煌</a></div><div class="province-group"><div class="province-label">河南</div><a href="/city/luoyang/" class="city-option">🌺 洛阳</a></div><div class="province-group"><div class="province-label">青海</div><a href="/city/xining/" class="city-option">🏔️ 西宁</a></div><div class="province-group"><div class="province-label">贵州</div><a href="/city/guiyang/" class="city-option">🌿 贵阳</a></div><div class="province-group"><div class="province-label">香港</div><a href="/city/hongkong/" class="city-option">🏙️ 香港</a></div><div class="province-group"><div class="province-label">澳门</div><a href="/city/macau/" class="city-option">🎰 澳门</a></div><div class="province-group"><div class="province-label">河北</div><a href="/city/qinhuangdao/" class="city-option">🏖️ 秦皇岛</a></div><div class="province-group"><div class="province-label">湖北</div><a href="/city/wuhan/" class="city-option">🌉 武汉</a></div><div class="province-group"><div class="province-label">天津</div><a href="/city/tianjin/" class="city-option active">🎡 天津</a></div><div class="province-group"><div class="province-label">辽宁</div><a href="/city/dalian/" class="city-option">🌊 大连</a></div><div class="province-group"><div class="province-label">山西</div><a href="/city/pingyao/" class="city-option">🏯 平遥</a><a href="/city/datong/" class="city-option">🏛️ 大同</a></div><div class="province-group"><div class="province-label">新疆</div><a href="/city/kashgar/" class="city-option">🕌 喀什</a></div><div class="province-group"><div class="province-label">中国台湾</div><a href="/city/taipei/" class="city-option">🏙️ 台北</a></div><div class="province-group"><div class="province-label">内蒙古</div><a href="/city/hulunbuir/" class="city-option">🐎 呼伦贝尔</a></div></div>
+  </div>
+</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/city/tianjin/" class="active">首页</a></li>
+      <li><a href="/city/tianjin/attractions">景点</a></li>
+      <li><a href="/city/tianjin/food">美食</a></li>
+      <li><a href="/city/tianjin/guide">攻略</a></li>
+      <li><a href="/city/tianjin/itinerary">行程</a></li>
+      <li><a href="/city/tianjin/blog">博客</a></li>
+    </ul>
+    <a href="/city/tianjin/itinerary" class="nav-cta">免费规划行程 <span class="nav-cta-arrow">→</span></a>
+    <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-full" id="main-content">
+  <div class="hero-overlay"></div>
+  <div class="hero-grid">
+    <div style="color:#fff">
+      <h1 style="font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;text-shadow:0 4px 40px rgba(0,0,0,0.3)">
+        发现天津<br>津门故里
+      </h1>
+      <p style="font-size:1.15rem;opacity:.95;line-height:1.8;margin-bottom:36px;max-width:500px;text-shadow:0 2px 16px rgba(0,0,0,0.3)">
+        五大道看洋楼 · 海河夜游 · 天津之眼转一圈<br>2026年最新天津旅游攻略
+      </p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="/city/tianjin/itinerary" class="btn btn-white" style="font-size:1rem;padding:14px 28px">🗺️ 智能规划行程</a>
+        <a href="/city/tianjin/attractions" class="btn btn-outline-white" style="font-size:1rem;padding:14px 28px">🏔️ 探索景点</a>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="/assets/images/tianjin/1.webp" alt="天津风光实景" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- 城市简介 -->
+<section class="city-intro">
+  <div class="city-grid">
+    <div>
+      <h2 style="font-size:2rem;font-weight:800;margin-bottom:16px">关于天津</h2>
+      <p style="font-size:1.05rem;line-height:1.9;color:#475569;margin-bottom:24px">天津毗邻北京，海河穿城而过，五大道洋楼、意式风情区、古文化街与天津之眼，展现中西合璧的市井与摩登。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📅</div><div style="font-weight:600">最佳时间</div><div style="font-size:.9rem;color:#64748b">4-6月/9-10月</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">⏱️</div><div style="font-weight:600">建议天数</div><div style="font-size:.9rem;color:#64748b">2-3天</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📍</div><div style="font-weight:600">省份</div><div style="font-size:.9rem;color:#64748b">天津</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">🌤️</div><div style="font-weight:600">气候</div><div style="font-size:.9rem;color:#64748b">温带季风，四季分明</div></div>
+      </div>
+    </div>
+    <div style="font-size:10rem;text-align:center;opacity:.15">🎡</div>
+  </div>
+</section>
+
+<!-- 热门景点 -->
+<section class="attractions-preview">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🏔️ 热门景点</h2>
+    <p style="color:#64748b">天津最值得去的地方</p>
+  </div>
+  <div class="attractions-grid">
+    
+    <a href="/city/tianjin/attraction/0" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,#c0562144 0%,#c0562122 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem"><img src="/assets/images/tianjin/0.webp" alt="五大道" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">五大道</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">睦南道等五街洋楼群，民国名流旧居，骑行赏建筑。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 免费</span>
+          <span>⏱️ 建议2小时</span>
+        </div>
+      </div>
+    </a>
+    <a href="/city/tianjin/attraction/1" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,#c0562144 0%,#c0562122 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem"><img src="/assets/images/tianjin/1.webp" alt="天津之眼" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">天津之眼</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">永乐桥上的巨型摩天轮，俯瞰海河夜景。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 约70元</span>
+          <span>⏱️ 建议1小时</span>
+        </div>
+      </div>
+    </a>
+    <a href="/city/tianjin/attraction/2" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,#c0562144 0%,#c0562122 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem"><img src="/assets/images/tianjin/2.webp" alt="古文化街" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">古文化街</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">津味老街，杨柳青年画、泥人张、狗不理总号。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 免费</span>
+          <span>⏱️ 建议2小时</span>
+        </div>
+      </div>
+    </a>
+    <a href="/city/tianjin/attraction/3" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,#c0562144 0%,#c0562122 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem"><img src="/assets/images/tianjin/3.webp" alt="意式风情区" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">意式风情区</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">原意租界，地中海建筑与酒吧餐厅聚集。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 免费</span>
+          <span>⏱️ 建议2小时</span>
+        </div>
+      </div>
+    </a>
+    <a href="/city/tianjin/attraction/4" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,#c0562144 0%,#c0562122 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem"><img src="/assets/images/tianjin/4.webp" alt="瓷房子" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">瓷房子</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">瓷片镶嵌的法式洋楼，外墙满铺古瓷，奇绝夺目。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 约50元</span>
+          <span>⏱️ 建议1小时</span>
+        </div>
+      </div>
+    </a>
+    <a href="/city/tianjin/attraction/5" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,#c0562144 0%,#c0562122 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem"><img src="/assets/images/tianjin/5.webp" alt="滨江道" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="padding:20px">
+        <h3 style="font-weight:700;margin-bottom:6px">滨江道</h3>
+        <p style="font-size:.9rem;color:#64748b;line-height:1.6">百年商业街，老百货与商圈繁华。...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+          <span>🎫 免费</span>
+          <span>⏱️ 建议2小时</span>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/tianjin/attractions" class="btn btn-primary" style="padding:12px 32px">查看全部景点 →</a>
+  </div>
+</section>
+
+<!-- 美食推荐 -->
+<section style="padding:100px 24px;background:#fff">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🍜 必吃美食</h2>
+    <p style="color:#64748b">天津特色美食推荐</p>
+  </div>
+  <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
+    
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:8px">🥟</div>
+      <h3 style="font-weight:700;margin-bottom:6px">狗不理包子</h3>
+      <p style="font-size:.9rem;color:#64748b;line-height:1.6">天津包子代表，皮薄馅大十八褶。...</p>
+    </div>
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:8px">🥞</div>
+      <h3 style="font-weight:700;margin-bottom:6px">煎饼果子</h3>
+      <p style="font-size:.9rem;color:#64748b;line-height:1.6">绿豆面薄脆果子，津门国民早餐。...</p>
+    </div>
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:8px">🍡</div>
+      <h3 style="font-weight:700;margin-bottom:6px">耳朵眼炸糕</h3>
+      <p style="font-size:.9rem;color:#64748b;line-height:1.6">糯米炸糕红豆馅，外脆内糯。...</p>
+    </div>
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:8px">🍰</div>
+      <h3 style="font-weight:700;margin-bottom:6px">熟梨糕</h3>
+      <p style="font-size:.9rem;color:#64748b;line-height:1.6">米糕蒸制淋糖酱，老式儿童零食。...</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/tianjin/food" class="btn btn-primary" style="padding:12px 32px">查看全部美食 →</a>
+  </div>
+</section>
+
+<!-- 旅游攻略 -->
+<section style="padding:100px 24px;background:var(--gray-50)">
+  <div style="text-align:center;margin-bottom:48px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">📋 旅游攻略</h2>
+    <p style="color:#64748b">交通·住宿·最佳时间·注意事项</p>
+  </div>
+  <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+    
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:12px">✈️</div>
+      <h3 style="font-weight:700;margin-bottom:8px">交通指南</h3>
+      <div style="font-size:.9rem;color:#475569;line-height:1.7">飞机：天津滨海国际机场，地铁2号线入城高铁：天津站，北京南半小时直达市内：地铁+公交，景点集中...</div>
+    </div>
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:12px">🏨</div>
+      <h3 style="font-weight:700;margin-bottom:8px">住宿推荐</h3>
+      <div style="font-size:.9rem;color:#475569;line-height:1.7">和平区/五大道：洋楼区，核心便利（350-800元）滨江道：商圈中心（300-600元）意风区：异域风情（300-700元）...</div>
+    </div>
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:12px">🌤️</div>
+      <h3 style="font-weight:700;margin-bottom:8px">最佳季节</h3>
+      <div style="font-size:.9rem;color:#475569;line-height:1.7">4-6月/9-10月：气候宜人夏季：稍热但海河宜人冬季：可看雪景...</div>
+    </div>
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+      <div style="font-size:2rem;margin-bottom:12px">🍜</div>
+      <h3 style="font-weight:700;margin-bottom:8px">美食地图</h3>
+      <div style="font-size:.9rem;color:#475569;line-height:1.7">古文化街：狗不理、炸糕南市食品街：老字号集合西北角：早点集中地...</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:36px">
+    <a href="/city/tianjin/guide" class="btn btn-primary" style="padding:12px 32px">查看完整攻略 →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>天津旅游官网</h3><p>致力于为每一位来天津的游客，提供最实用、最全面的旅游攻略。</p></div>
+      <div class="footer-col"><h4>热门页面</h4><a href="/city/tianjin/">首页</a><a href="/city/tianjin/attractions">景点推荐</a><a href="/city/tianjin/food">美食推荐</a></div>
+      <div class="footer-col"><h4>旅游攻略</h4><a href="/city/tianjin/guide">出行指南</a><a href="/city/tianjin/itinerary">行程规划</a><a href="/city/tianjin/blog">旅游博客</a></div>
+      <div class="footer-col"><h4>其他城市</h4><a href="/city/sanya/">三亚</a><a href="/city/chengdu/">成都</a><a href="/city/xian/">西安</a><a href="/city/hangzhou/">杭州</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 全国旅游攻略</span><span style="font-size:.8rem;color:#94a3b8">· 图片来源：Wikimedia Commons（CC BY / CC BY-SA）</span><div><a href="/sitemap.xml">网站地图</a></div></div>
+  </div>
+</footer>
+<script>
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+
+function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
+document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.target.closest('.city-selector')){var d=document.getElementById('cityDropdown');if(d)d.classList.remove('open')}});
+
+</script>
+</body>
+</html>

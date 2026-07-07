@@ -8,30 +8,28 @@
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>
-.hero-picker{background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%);color:#fff;padding:80px 24px 40px;text-align:center}
+.hero-picker{position:relative;background-image:url(/assets/images/hero.webp);background-size:cover;background-position:center;color:#fff;padding:120px 24px 64px;text-align:center;overflow:hidden}
+.hero-picker::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,32,39,.62) 0%,rgba(15,32,39,.38) 45%,rgba(15,32,39,.78) 100%)}
+.hero-picker>*{position:relative;z-index:1}
 .province-section{max-width:1100px;margin:0 auto;padding:24px 24px 0}
 .province-title{font-size:1.2rem;font-weight:700;color:#1a1a2e;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
 .city-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.city-card{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;transition:all .25s;cursor:pointer;color:#1a1a2e;text-decoration:none}
+.city-card{display:block;padding:0;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;transition:all .25s;cursor:pointer;color:#1a1a2e;text-decoration:none}
 .city-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.1);border-color:#cbd5e1}
-.city-card .emoji{font-size:2rem}
+.city-card .thumb{width:100%;height:140px;object-fit:cover;display:block;background:#eef2f7}
+.city-card .emoji-fallback{width:100%;height:140px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#1a73e8 0%,#34a853 100%)}
+.city-card .info{padding:14px 16px}
 .city-card .info h3{font-size:1.05rem;font-weight:700;margin-bottom:2px}
 .city-card .info p{font-size:.82rem;color:#64748b}
 .main-content{padding-bottom:60px}
 .footer-simple{text-align:center;padding:40px 24px;color:#94a3b8;font-size:.85rem;border-top:1px solid #e2e8f0}
 </style>
-<link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/weather.css">
-<link rel="stylesheet" href="/css/share.css">
-<link rel="stylesheet" href="/css/user-features.css">
-<link rel="stylesheet" href="/css/chat-widget.css">
 </head>
 <body>
 <div class="hero-picker">
-  <div style="font-size:4rem;margin-bottom:16px">🌍</div>
-  <h1 style="font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:8px">全国旅游攻略</h1>
+  <h1 style="font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:8px;text-shadow:0 2px 12px rgba(0,0,0,.45)">全国旅游攻略</h1>
   <p style="font-size:1.1rem;opacity:.85;margin-bottom:8px">发现中国最美目的地</p>
-  <p style="font-size:.9rem;opacity:.6">23 个省份 · 28 个城市</p>
+  <p style="font-size:.9rem;opacity:.6">31 个省份 · 41 个城市</p>
 </div>
 <div class="main-content">
   
@@ -40,7 +38,7 @@
     <div class="city-cards">
       
       <a href="/city/sanya/" class="city-card">
-        <div class="emoji">🏖️</div>
+        <img class="thumb" src="/assets/images/sanya/0.webp" alt="三亚风光实景" loading="lazy">
         <div class="info">
           <h3>三亚</h3>
           <p>东方夏威夷，四季皆夏天</p>
@@ -53,17 +51,24 @@
     <div class="city-cards">
       
       <a href="/city/chengdu/" class="city-card">
-        <div class="emoji">🐼</div>
+        <img class="thumb" src="/assets/images/chengdu/0.webp" alt="成都风光实景" loading="lazy">
         <div class="info">
           <h3>成都</h3>
           <p>一座来了就不想走的城市</p>
         </div>
       </a>
       <a href="/city/jiuzhaigou/" class="city-card">
-        <div class="emoji">💎</div>
+        <img class="thumb" src="/assets/images/jiuzhaigou/0.webp" alt="九寨沟风光实景" loading="lazy">
         <div class="info">
           <h3>九寨沟</h3>
           <p>九寨归来不看水</p>
+        </div>
+      </a>
+      <a href="/city/emeishan/" class="city-card">
+        <img class="thumb" src="/assets/images/emeishan/0.webp" alt="峨眉山风光实景" loading="lazy">
+        <div class="info">
+          <h3>峨眉山</h3>
+          <p>普贤道场，金顶佛光</p>
         </div>
       </a>
     </div>
@@ -73,7 +78,7 @@
     <div class="city-cards">
       
       <a href="/city/xian/" class="city-card">
-        <div class="emoji">🏛️</div>
+        <img class="thumb" src="/assets/images/xian/0.webp" alt="西安风光实景" loading="lazy">
         <div class="info">
           <h3>西安</h3>
           <p>千年古都，历史活化石</p>
@@ -86,7 +91,7 @@
     <div class="city-cards">
       
       <a href="/city/hangzhou/" class="city-card">
-        <div class="emoji">🌸</div>
+        <img class="thumb" src="/assets/images/hangzhou/0.webp" alt="杭州风光实景" loading="lazy">
         <div class="info">
           <h3>杭州</h3>
           <p>上有天堂，下有苏杭</p>
@@ -99,21 +104,21 @@
     <div class="city-cards">
       
       <a href="/city/dali/" class="city-card">
-        <div class="emoji">⛰️</div>
+        <img class="thumb" src="/assets/images/dali/0.webp" alt="大理风光实景" loading="lazy">
         <div class="info">
           <h3>大理</h3>
           <p>风花雪月，自在大理</p>
         </div>
       </a>
       <a href="/city/lijiang/" class="city-card">
-        <div class="emoji">🏔️</div>
+        <img class="thumb" src="/assets/images/lijiang/0.webp" alt="丽江风光实景" loading="lazy">
         <div class="info">
           <h3>丽江</h3>
           <p>雪山下的古城</p>
         </div>
       </a>
       <a href="/city/kunming/" class="city-card">
-        <div class="emoji">🌺</div>
+        <img class="thumb" src="/assets/images/kunming/0.webp" alt="昆明风光实景" loading="lazy">
         <div class="info">
           <h3>昆明</h3>
           <p>春城四季如春</p>
@@ -126,10 +131,17 @@
     <div class="city-cards">
       
       <a href="/city/xiamen/" class="city-card">
-        <div class="emoji">🌊</div>
+        <img class="thumb" src="/assets/images/xiamen/0.webp" alt="厦门风光实景" loading="lazy">
         <div class="info">
           <h3>厦门</h3>
           <p>海上花园，文艺小城</p>
+        </div>
+      </a>
+      <a href="/city/wuyishan/" class="city-card">
+        <img class="thumb" src="/assets/images/wuyishan/0.webp" alt="武夷山风光实景" loading="lazy">
+        <div class="info">
+          <h3>武夷山</h3>
+          <p>碧水丹山，茶香岩骨</p>
         </div>
       </a>
     </div>
@@ -139,7 +151,7 @@
     <div class="city-cards">
       
       <a href="/city/qingdao/" class="city-card">
-        <div class="emoji">⛵</div>
+        <img class="thumb" src="/assets/images/qingdao/0.webp" alt="青岛风光实景" loading="lazy">
         <div class="info">
           <h3>青岛</h3>
           <p>红瓦绿树，碧海蓝天</p>
@@ -152,14 +164,14 @@
     <div class="city-cards">
       
       <a href="/city/guilin/" class="city-card">
-        <div class="emoji">🏞️</div>
+        <img class="thumb" src="/assets/images/guilin/0.webp" alt="桂林风光实景" loading="lazy">
         <div class="info">
           <h3>桂林</h3>
           <p>桂林山水甲天下</p>
         </div>
       </a>
       <a href="/city/beihai/" class="city-card">
-        <div class="emoji">🐚</div>
+        <img class="thumb" src="/assets/images/beihai/0.webp" alt="北海风光实景" loading="lazy">
         <div class="info">
           <h3>北海</h3>
           <p>天下第一滩</p>
@@ -172,7 +184,7 @@
     <div class="city-cards">
       
       <a href="/city/lhasa/" class="city-card">
-        <div class="emoji">🛕</div>
+        <img class="thumb" src="/assets/images/lhasa/0.webp" alt="拉萨风光实景" loading="lazy">
         <div class="info">
           <h3>拉萨</h3>
           <p>日光之城，心灵净土</p>
@@ -185,7 +197,7 @@
     <div class="city-cards">
       
       <a href="/city/beijing/" class="city-card">
-        <div class="emoji">🏛️</div>
+        <img class="thumb" src="/assets/images/beijing/0.webp" alt="北京风光实景" loading="lazy">
         <div class="info">
           <h3>北京</h3>
           <p>祖国心脏，千年古都</p>
@@ -198,7 +210,7 @@
     <div class="city-cards">
       
       <a href="/city/shanghai/" class="city-card">
-        <div class="emoji">🌃</div>
+        <img class="thumb" src="/assets/images/shanghai/0.webp" alt="上海风光实景" loading="lazy">
         <div class="info">
           <h3>上海</h3>
           <p>魔都上海，东方巴黎</p>
@@ -211,7 +223,7 @@
     <div class="city-cards">
       
       <a href="/city/chongqing/" class="city-card">
-        <div class="emoji">🔥</div>
+        <img class="thumb" src="/assets/images/chongqing/0.webp" alt="重庆风光实景" loading="lazy">
         <div class="info">
           <h3>重庆</h3>
           <p>8D魔幻城市，火锅之都</p>
@@ -224,10 +236,17 @@
     <div class="city-cards">
       
       <a href="/city/guangzhou/" class="city-card">
-        <div class="emoji">🌺</div>
+        <img class="thumb" src="/assets/images/guangzhou/0.webp" alt="广州风光实景" loading="lazy">
         <div class="info">
           <h3>广州</h3>
           <p>食在广州，花城四季</p>
+        </div>
+      </a>
+      <a href="/city/shenzhen/" class="city-card">
+        <img class="thumb" src="/assets/images/shenzhen/0.webp" alt="深圳风光实景" loading="lazy">
+        <div class="info">
+          <h3>深圳</h3>
+          <p>改革窗口，滨海新城</p>
         </div>
       </a>
     </div>
@@ -237,14 +256,14 @@
     <div class="city-cards">
       
       <a href="/city/suzhou/" class="city-card">
-        <div class="emoji">🏡</div>
+        <img class="thumb" src="/assets/images/suzhou/0.webp" alt="苏州风光实景" loading="lazy">
         <div class="info">
           <h3>苏州</h3>
           <p>上有天堂，下有苏杭</p>
         </div>
       </a>
       <a href="/city/nanjing/" class="city-card">
-        <div class="emoji">🍂</div>
+        <img class="thumb" src="/assets/images/nanjing/0.webp" alt="南京风光实景" loading="lazy">
         <div class="info">
           <h3>南京</h3>
           <p>六朝古都，金陵风华</p>
@@ -257,10 +276,17 @@
     <div class="city-cards">
       
       <a href="/city/zhangjiajie/" class="city-card">
-        <div class="emoji">🏔️</div>
+        <img class="thumb" src="/assets/images/zhangjiajie/0.webp" alt="张家界风光实景" loading="lazy">
         <div class="info">
           <h3>张家界</h3>
           <p>阿凡达取景地，奇峰三千</p>
+        </div>
+      </a>
+      <a href="/city/changsha/" class="city-card">
+        <img class="thumb" src="/assets/images/changsha/0.webp" alt="长沙风光实景" loading="lazy">
+        <div class="info">
+          <h3>长沙</h3>
+          <p>星城烟火，网红之都</p>
         </div>
       </a>
     </div>
@@ -270,7 +296,7 @@
     <div class="city-cards">
       
       <a href="/city/huangshan/" class="city-card">
-        <div class="emoji">☁️</div>
+        <img class="thumb" src="/assets/images/huangshan/0.webp" alt="黄山风光实景" loading="lazy">
         <div class="info">
           <h3>黄山</h3>
           <p>黄山归来不看岳</p>
@@ -283,7 +309,7 @@
     <div class="city-cards">
       
       <a href="/city/haerbin/" class="city-card">
-        <div class="emoji">❄️</div>
+        <img class="thumb" src="/assets/images/haerbin/0.webp" alt="哈尔滨风光实景" loading="lazy">
         <div class="info">
           <h3>哈尔滨</h3>
           <p>冰城夏都，东方莫斯科</p>
@@ -296,7 +322,7 @@
     <div class="city-cards">
       
       <a href="/city/dunhuang/" class="city-card">
-        <div class="emoji">🏜️</div>
+        <img class="thumb" src="/assets/images/dunhuang/0.webp" alt="敦煌风光实景" loading="lazy">
         <div class="info">
           <h3>敦煌</h3>
           <p>大漠敦煌，丝路明珠</p>
@@ -309,7 +335,7 @@
     <div class="city-cards">
       
       <a href="/city/luoyang/" class="city-card">
-        <div class="emoji">🌺</div>
+        <img class="thumb" src="/assets/images/luoyang/0.webp" alt="洛阳风光实景" loading="lazy">
         <div class="info">
           <h3>洛阳</h3>
           <p>千年帝都，牡丹花城</p>
@@ -322,7 +348,7 @@
     <div class="city-cards">
       
       <a href="/city/xining/" class="city-card">
-        <div class="emoji">🏔️</div>
+        <img class="thumb" src="/assets/images/xining/0.webp" alt="西宁风光实景" loading="lazy">
         <div class="info">
           <h3>西宁</h3>
           <p>青藏高原门户</p>
@@ -335,7 +361,7 @@
     <div class="city-cards">
       
       <a href="/city/guiyang/" class="city-card">
-        <div class="emoji">🌿</div>
+        <img class="thumb" src="/assets/images/guiyang/0.webp" alt="贵阳风光实景" loading="lazy">
         <div class="info">
           <h3>贵阳</h3>
           <p>爽爽贵阳，避暑之都</p>
@@ -348,7 +374,7 @@
     <div class="city-cards">
       
       <a href="/city/hongkong/" class="city-card">
-        <div class="emoji">🏙️</div>
+        <img class="thumb" src="/assets/images/hongkong/0.webp" alt="香港风光实景" loading="lazy">
         <div class="info">
           <h3>香港</h3>
           <p>东方之珠，购物天堂</p>
@@ -361,7 +387,7 @@
     <div class="city-cards">
       
       <a href="/city/macau/" class="city-card">
-        <div class="emoji">🎰</div>
+        <img class="thumb" src="/assets/images/macau/0.webp" alt="澳门风光实景" loading="lazy">
         <div class="info">
           <h3>澳门</h3>
           <p>东方拉斯维加斯</p>
@@ -369,15 +395,121 @@
       </a>
     </div>
   </div>
+  <div class="province-section">
+    <h2 class="province-title">河北</h2>
+    <div class="city-cards">
+      
+      <a href="/city/qinhuangdao/" class="city-card">
+        <img class="thumb" src="/assets/images/qinhuangdao/0.webp" alt="秦皇岛风光实景" loading="lazy">
+        <div class="info">
+          <h3>秦皇岛</h3>
+          <p>长城入海，避暑天堂</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="province-section">
+    <h2 class="province-title">湖北</h2>
+    <div class="city-cards">
+      
+      <a href="/city/wuhan/" class="city-card">
+        <img class="thumb" src="/assets/images/wuhan/0.webp" alt="武汉风光实景" loading="lazy">
+        <div class="info">
+          <h3>武汉</h3>
+          <p>江城烟火，黄鹤楼上</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="province-section">
+    <h2 class="province-title">天津</h2>
+    <div class="city-cards">
+      
+      <a href="/city/tianjin/" class="city-card">
+        <img class="thumb" src="/assets/images/tianjin/0.webp" alt="天津风光实景" loading="lazy">
+        <div class="info">
+          <h3>天津</h3>
+          <p>津门故里，中西交融</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="province-section">
+    <h2 class="province-title">辽宁</h2>
+    <div class="city-cards">
+      
+      <a href="/city/dalian/" class="city-card">
+        <img class="thumb" src="/assets/images/dalian/0.webp" alt="大连风光实景" loading="lazy">
+        <div class="info">
+          <h3>大连</h3>
+          <p>浪漫滨城，槐花飘香</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="province-section">
+    <h2 class="province-title">山西</h2>
+    <div class="city-cards">
+      
+      <a href="/city/pingyao/" class="city-card">
+        <img class="thumb" src="/assets/images/pingyao/0.webp" alt="平遥风光实景" loading="lazy">
+        <div class="info">
+          <h3>平遥</h3>
+          <p>明清古城，票号源头</p>
+        </div>
+      </a>
+      <a href="/city/datong/" class="city-card">
+        <img class="thumb" src="/assets/images/datong/0.webp" alt="大同风光实景" loading="lazy">
+        <div class="info">
+          <h3>大同</h3>
+          <p>北魏京华，石窟云冈</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="province-section">
+    <h2 class="province-title">新疆</h2>
+    <div class="city-cards">
+      
+      <a href="/city/kashgar/" class="city-card">
+        <img class="thumb" src="/assets/images/kashgar/0.webp" alt="喀什风光实景" loading="lazy">
+        <div class="info">
+          <h3>喀什</h3>
+          <p>丝路明珠，西域风情</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="province-section">
+    <h2 class="province-title">中国台湾</h2>
+    <div class="city-cards">
+      
+      <a href="/city/taipei/" class="city-card">
+        <img class="thumb" src="/assets/images/taipei/0.webp" alt="台北风光实景" loading="lazy">
+        <div class="info">
+          <h3>台北</h3>
+          <p>宝岛之心，新旧交织</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="province-section">
+    <h2 class="province-title">内蒙古</h2>
+    <div class="city-cards">
+      
+      <a href="/city/hulunbuir/" class="city-card">
+        <img class="thumb" src="/assets/images/hulunbuir/0.webp" alt="呼伦贝尔风光实景" loading="lazy">
+        <div class="info">
+          <h3>呼伦贝尔</h3>
+          <p>草原牧歌，北国风光</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
 <footer class="footer-simple">
   <p>© 2026 全国旅游攻略 · <a href="/sitemap.xml">网站地图</a></p>
+  <p style="font-size:.8rem;opacity:.8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p>
 </footer>
-<script src="/js/accessibility.js" defer></script>
-<script src="/js/search.js" defer></script>
-<script src="/js/weather.js" defer></script>
-<script src="/js/share.js" defer></script>
-<script src="/js/user-features.js" defer></script>
-<script src="/js/chat-widget.js" defer></script>
 </body>
 </html>

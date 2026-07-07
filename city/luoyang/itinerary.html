@@ -37,11 +37,6 @@
 .day-panel{display:none}.day-panel.active{display:block;animation:fadeIn .4s}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 </style>
-<link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/weather.css">
-<link rel="stylesheet" href="/css/share.css">
-<link rel="stylesheet" href="/css/user-features.css">
-<link rel="stylesheet" href="/css/chat-widget.css">
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -55,9 +50,9 @@
   <div class="city-dropdown" id="cityDropdown">
     <div class="city-dropdown-header">
       <span class="city-dropdown-title">选择目的地</span>
-      <span class="city-dropdown-count">28个城市</span>
+      <span class="city-dropdown-count">41个城市</span>
     </div>
-    <div class="city-dropdown-body"><div class="province-group"><div class="province-label">海南</div><a href="/city/sanya/" class="city-option">🏖️ 三亚</a></div><div class="province-group"><div class="province-label">四川</div><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/jiuzhaigou/" class="city-option">💎 九寨沟</a></div><div class="province-group"><div class="province-label">陕西</div><a href="/city/xian/" class="city-option">🏛️ 西安</a></div><div class="province-group"><div class="province-label">浙江</div><a href="/city/hangzhou/" class="city-option">🌸 杭州</a></div><div class="province-group"><div class="province-label">云南</div><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/kunming/" class="city-option">🌺 昆明</a></div><div class="province-group"><div class="province-label">福建</div><a href="/city/xiamen/" class="city-option">🌊 厦门</a></div><div class="province-group"><div class="province-label">山东</div><a href="/city/qingdao/" class="city-option">⛵ 青岛</a></div><div class="province-group"><div class="province-label">广西</div><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/beihai/" class="city-option">🐚 北海</a></div><div class="province-group"><div class="province-label">西藏</div><a href="/city/lhasa/" class="city-option">🛕 拉萨</a></div><div class="province-group"><div class="province-label">北京</div><a href="/city/beijing/" class="city-option">🏛️ 北京</a></div><div class="province-group"><div class="province-label">上海</div><a href="/city/shanghai/" class="city-option">🌃 上海</a></div><div class="province-group"><div class="province-label">重庆</div><a href="/city/chongqing/" class="city-option">🔥 重庆</a></div><div class="province-group"><div class="province-label">广东</div><a href="/city/guangzhou/" class="city-option">🌺 广州</a></div><div class="province-group"><div class="province-label">江苏</div><a href="/city/suzhou/" class="city-option">🏡 苏州</a><a href="/city/nanjing/" class="city-option">🍂 南京</a></div><div class="province-group"><div class="province-label">湖南</div><a href="/city/zhangjiajie/" class="city-option">🏔️ 张家界</a></div><div class="province-group"><div class="province-label">安徽</div><a href="/city/huangshan/" class="city-option">☁️ 黄山</a></div><div class="province-group"><div class="province-label">黑龙江</div><a href="/city/haerbin/" class="city-option">❄️ 哈尔滨</a></div><div class="province-group"><div class="province-label">甘肃</div><a href="/city/dunhuang/" class="city-option">🏜️ 敦煌</a></div><div class="province-group"><div class="province-label">河南</div><a href="/city/luoyang/" class="city-option active">🌺 洛阳</a></div><div class="province-group"><div class="province-label">青海</div><a href="/city/xining/" class="city-option">🏔️ 西宁</a></div><div class="province-group"><div class="province-label">贵州</div><a href="/city/guiyang/" class="city-option">🌿 贵阳</a></div><div class="province-group"><div class="province-label">香港</div><a href="/city/hongkong/" class="city-option">🏙️ 香港</a></div><div class="province-group"><div class="province-label">澳门</div><a href="/city/macau/" class="city-option">🎰 澳门</a></div></div>
+    <div class="city-dropdown-body"><div class="province-group"><div class="province-label">海南</div><a href="/city/sanya/" class="city-option">🏖️ 三亚</a></div><div class="province-group"><div class="province-label">四川</div><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/jiuzhaigou/" class="city-option">💎 九寨沟</a><a href="/city/emeishan/" class="city-option">🏔️ 峨眉山</a></div><div class="province-group"><div class="province-label">陕西</div><a href="/city/xian/" class="city-option">🏛️ 西安</a></div><div class="province-group"><div class="province-label">浙江</div><a href="/city/hangzhou/" class="city-option">🌸 杭州</a></div><div class="province-group"><div class="province-label">云南</div><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/kunming/" class="city-option">🌺 昆明</a></div><div class="province-group"><div class="province-label">福建</div><a href="/city/xiamen/" class="city-option">🌊 厦门</a><a href="/city/wuyishan/" class="city-option">⛰️ 武夷山</a></div><div class="province-group"><div class="province-label">山东</div><a href="/city/qingdao/" class="city-option">⛵ 青岛</a></div><div class="province-group"><div class="province-label">广西</div><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/beihai/" class="city-option">🐚 北海</a></div><div class="province-group"><div class="province-label">西藏</div><a href="/city/lhasa/" class="city-option">🛕 拉萨</a></div><div class="province-group"><div class="province-label">北京</div><a href="/city/beijing/" class="city-option">🏛️ 北京</a></div><div class="province-group"><div class="province-label">上海</div><a href="/city/shanghai/" class="city-option">🌃 上海</a></div><div class="province-group"><div class="province-label">重庆</div><a href="/city/chongqing/" class="city-option">🔥 重庆</a></div><div class="province-group"><div class="province-label">广东</div><a href="/city/guangzhou/" class="city-option">🌺 广州</a><a href="/city/shenzhen/" class="city-option">🌆 深圳</a></div><div class="province-group"><div class="province-label">江苏</div><a href="/city/suzhou/" class="city-option">🏡 苏州</a><a href="/city/nanjing/" class="city-option">🍂 南京</a></div><div class="province-group"><div class="province-label">湖南</div><a href="/city/zhangjiajie/" class="city-option">🏔️ 张家界</a><a href="/city/changsha/" class="city-option">🌶️ 长沙</a></div><div class="province-group"><div class="province-label">安徽</div><a href="/city/huangshan/" class="city-option">☁️ 黄山</a></div><div class="province-group"><div class="province-label">黑龙江</div><a href="/city/haerbin/" class="city-option">❄️ 哈尔滨</a></div><div class="province-group"><div class="province-label">甘肃</div><a href="/city/dunhuang/" class="city-option">🏜️ 敦煌</a></div><div class="province-group"><div class="province-label">河南</div><a href="/city/luoyang/" class="city-option active">🌺 洛阳</a></div><div class="province-group"><div class="province-label">青海</div><a href="/city/xining/" class="city-option">🏔️ 西宁</a></div><div class="province-group"><div class="province-label">贵州</div><a href="/city/guiyang/" class="city-option">🌿 贵阳</a></div><div class="province-group"><div class="province-label">香港</div><a href="/city/hongkong/" class="city-option">🏙️ 香港</a></div><div class="province-group"><div class="province-label">澳门</div><a href="/city/macau/" class="city-option">🎰 澳门</a></div><div class="province-group"><div class="province-label">河北</div><a href="/city/qinhuangdao/" class="city-option">🏖️ 秦皇岛</a></div><div class="province-group"><div class="province-label">湖北</div><a href="/city/wuhan/" class="city-option">🌉 武汉</a></div><div class="province-group"><div class="province-label">天津</div><a href="/city/tianjin/" class="city-option">🎡 天津</a></div><div class="province-group"><div class="province-label">辽宁</div><a href="/city/dalian/" class="city-option">🌊 大连</a></div><div class="province-group"><div class="province-label">山西</div><a href="/city/pingyao/" class="city-option">🏯 平遥</a><a href="/city/datong/" class="city-option">🏛️ 大同</a></div><div class="province-group"><div class="province-label">新疆</div><a href="/city/kashgar/" class="city-option">🕌 喀什</a></div><div class="province-group"><div class="province-label">中国台湾</div><a href="/city/taipei/" class="city-option">🏙️ 台北</a></div><div class="province-group"><div class="province-label">内蒙古</div><a href="/city/hulunbuir/" class="city-option">🐎 呼伦贝尔</a></div></div>
   </div>
 </div>
   <ul class="nav-links" id="navLinks">
@@ -97,34 +92,7 @@
   </div>
 </main>
 
-<div style="max-width:960px;margin:0 auto;padding:0 24px 40px">
-<h2 style="font-size:1.5rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px">🗺️ 洛阳旅行地图</h2>
-<img src="https://picsum.photos/seed/luoyang-itinerary-hero/800/400" alt="洛阳行程路线" style="width:100%;border-radius:12px;margin-bottom:24px;box-shadow:var(--shadow-sm)" loading="lazy">
-<h3 style="font-size:1.2rem;font-weight:600;margin:24px 0 12px">📋 行前准备清单</h3>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-<div style="background:#f8fafc;border-radius:12px;padding:20px;border:1px solid #e2e8f0">
-<h4 style="font-weight:600;margin-bottom:8px">🎒 必备物品</h4>
-<ul style="color:#475569;line-height:1.8;padding-left:16px;margin:0">
-<li>身份证/护照</li>
-<li>手机充电器+充电宝</li>
-<li>舒适运动鞋</li>
-<li>防晒霜/雨伞</li>
-<li>常用药品</li>
-</ul></div>
-<div style="background:#f8fafc;border-radius:12px;padding:20px;border:1px solid #e2e8f0">
-<h4 style="font-weight:600;margin-bottom:8px">📱 推荐APP</h4>
-<ul style="color:#475569;line-height:1.8;padding-left:16px;margin:0">
-<li>高德地图（导航）</li>
-<li>携程/美团（门票）</li>
-<li>大众点评（美食）</li>
-<li>铁路12306（火车）</li>
-<li>滴滴出行（打车）</li>
-</ul></div>
-</div>
-</div>
-
-
-<footer class="footer"><div class="footer-inner"><p>© 2026 洛阳旅游官网 · <a href="/city/luoyang/">返回首页</a></p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 洛阳旅游官网 · <a href="/city/luoyang/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 function showDay(n){document.querySelectorAll('.day-tab').forEach((t,i)=>{t.classList.toggle('active',i===n)});document.querySelectorAll('.day-panel').forEach((p,i)=>{p.classList.toggle('active',i===n)})}
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
@@ -134,11 +102,5 @@ function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classL
 document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.target.closest('.city-selector')){var d=document.getElementById('cityDropdown');if(d)d.classList.remove('open')}});
 
 </script>
-<script src="/js/accessibility.js" defer></script>
-<script src="/js/search.js" defer></script>
-<script src="/js/weather.js" defer></script>
-<script src="/js/share.js" defer></script>
-<script src="/js/user-features.js" defer></script>
-<script src="/js/chat-widget.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>靖港古镇 - 长沙旅游攻略</title>
+<meta name="description" content="靖港古镇：湘江畔水乡古镇，青石板与老作坊保留旧时风貌。 门票免费(部分收费)，游玩时间建议半天。">
+<link rel="canonical" href="https://www.all-lv.com/city/changsha/attraction/8">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/style.css">
+<style>
+/* ===== 城市选择器 ===== */
+.city-selector{position:relative;margin-right:12px}
+.city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
+.city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.city-selector-name{font-weight:600}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown.open{display:flex;flex-direction:column}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
+.province-group{margin-bottom:4px}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#f1f5f9}
+.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+@media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
+</style>
+<style>
+.att-hero{position:relative;height:52vh;min-height:380px;overflow:hidden;display:flex;align-items:flex-end}
+.att-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.att-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.12) 0%,rgba(15,23,42,.5) 58%,rgba(15,23,42,.82) 100%)}
+.att-hero-inner{position:relative;z-index:1;max-width:960px;margin:0 auto;width:100%;padding:0 24px 40px;color:#fff}
+.att-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.att-hero .sub{opacity:.92;margin-top:8px;font-size:1.05rem}
+.att-body{max-width:960px;margin:0 auto;padding:36px 24px 60px}
+.att-meta{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;padding:20px 24px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px}
+.att-meta .m b{display:block;color:#94a3b8;font-size:.76rem;font-weight:600;margin-bottom:4px;letter-spacing:.04em}
+.att-meta .m span{color:#1a1a2e;font-weight:600;font-size:1rem}
+.att-desc{font-size:1.08rem;line-height:1.9;color:#334155}
+.att-credit{margin-top:28px;font-size:.8rem;color:#94a3b8}
+.att-credit a{color:#1a73e8}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:20px}
+.rel-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;transition:all .25s}
+.rel-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.1)}
+.rel-card img{width:100%;height:130px;object-fit:cover;display:block}
+.rel-card .ri{padding:12px 14px;font-weight:700}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+@media(max-width:600px){.att-meta{gap:16px}.att-meta .m{font-size:.9rem}}
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="nav-inner">
+  
+<div class="city-selector" id="citySelector">
+  <button class="city-selector-btn" onclick="toggleCityMenu()">
+    <span>🌶️</span>
+    <span class="city-selector-name">长沙</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="city-dropdown" id="cityDropdown">
+    <div class="city-dropdown-header">
+      <span class="city-dropdown-title">选择目的地</span>
+      <span class="city-dropdown-count">41个城市</span>
+    </div>
+    <div class="city-dropdown-body"><div class="province-group"><div class="province-label">海南</div><a href="/city/sanya/" class="city-option">🏖️ 三亚</a></div><div class="province-group"><div class="province-label">四川</div><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/jiuzhaigou/" class="city-option">💎 九寨沟</a><a href="/city/emeishan/" class="city-option">🏔️ 峨眉山</a></div><div class="province-group"><div class="province-label">陕西</div><a href="/city/xian/" class="city-option">🏛️ 西安</a></div><div class="province-group"><div class="province-label">浙江</div><a href="/city/hangzhou/" class="city-option">🌸 杭州</a></div><div class="province-group"><div class="province-label">云南</div><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/kunming/" class="city-option">🌺 昆明</a></div><div class="province-group"><div class="province-label">福建</div><a href="/city/xiamen/" class="city-option">🌊 厦门</a><a href="/city/wuyishan/" class="city-option">⛰️ 武夷山</a></div><div class="province-group"><div class="province-label">山东</div><a href="/city/qingdao/" class="city-option">⛵ 青岛</a></div><div class="province-group"><div class="province-label">广西</div><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/beihai/" class="city-option">🐚 北海</a></div><div class="province-group"><div class="province-label">西藏</div><a href="/city/lhasa/" class="city-option">🛕 拉萨</a></div><div class="province-group"><div class="province-label">北京</div><a href="/city/beijing/" class="city-option">🏛️ 北京</a></div><div class="province-group"><div class="province-label">上海</div><a href="/city/shanghai/" class="city-option">🌃 上海</a></div><div class="province-group"><div class="province-label">重庆</div><a href="/city/chongqing/" class="city-option">🔥 重庆</a></div><div class="province-group"><div class="province-label">广东</div><a href="/city/guangzhou/" class="city-option">🌺 广州</a><a href="/city/shenzhen/" class="city-option">🌆 深圳</a></div><div class="province-group"><div class="province-label">江苏</div><a href="/city/suzhou/" class="city-option">🏡 苏州</a><a href="/city/nanjing/" class="city-option">🍂 南京</a></div><div class="province-group"><div class="province-label">湖南</div><a href="/city/zhangjiajie/" class="city-option">🏔️ 张家界</a><a href="/city/changsha/" class="city-option active">🌶️ 长沙</a></div><div class="province-group"><div class="province-label">安徽</div><a href="/city/huangshan/" class="city-option">☁️ 黄山</a></div><div class="province-group"><div class="province-label">黑龙江</div><a href="/city/haerbin/" class="city-option">❄️ 哈尔滨</a></div><div class="province-group"><div class="province-label">甘肃</div><a href="/city/dunhuang/" class="city-option">🏜️ 敦煌</a></div><div class="province-group"><div class="province-label">河南</div><a href="/city/luoyang/" class="city-option">🌺 洛阳</a></div><div class="province-group"><div class="province-label">青海</div><a href="/city/xining/" class="city-option">🏔️ 西宁</a></div><div class="province-group"><div class="province-label">贵州</div><a href="/city/guiyang/" class="city-option">🌿 贵阳</a></div><div class="province-group"><div class="province-label">香港</div><a href="/city/hongkong/" class="city-option">🏙️ 香港</a></div><div class="province-group"><div class="province-label">澳门</div><a href="/city/macau/" class="city-option">🎰 澳门</a></div><div class="province-group"><div class="province-label">河北</div><a href="/city/qinhuangdao/" class="city-option">🏖️ 秦皇岛</a></div><div class="province-group"><div class="province-label">湖北</div><a href="/city/wuhan/" class="city-option">🌉 武汉</a></div><div class="province-group"><div class="province-label">天津</div><a href="/city/tianjin/" class="city-option">🎡 天津</a></div><div class="province-group"><div class="province-label">辽宁</div><a href="/city/dalian/" class="city-option">🌊 大连</a></div><div class="province-group"><div class="province-label">山西</div><a href="/city/pingyao/" class="city-option">🏯 平遥</a><a href="/city/datong/" class="city-option">🏛️ 大同</a></div><div class="province-group"><div class="province-label">新疆</div><a href="/city/kashgar/" class="city-option">🕌 喀什</a></div><div class="province-group"><div class="province-label">中国台湾</div><a href="/city/taipei/" class="city-option">🏙️ 台北</a></div><div class="province-group"><div class="province-label">内蒙古</div><a href="/city/hulunbuir/" class="city-option">🐎 呼伦贝尔</a></div></div>
+  </div>
+</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/city/changsha/">首页</a></li>
+    <li><a href="/city/changsha/attractions" class="active">景点</a></li>
+    <li><a href="/city/changsha/food">美食</a></li>
+    <li><a href="/city/changsha/guide">攻略</a></li>
+    <li><a href="/city/changsha/itinerary">行程</a></li>
+    <li><a href="/city/changsha/blog">博客</a></li>
+  </ul>
+  <a href="/city/changsha/itinerary" class="nav-cta">免费规划行程 →</a>
+  <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></nav>
+
+<header class="att-hero">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,#d9472f,#34a853)"></div>
+  <div class="att-hero-inner">
+    <div style="font-size:2.4rem;margin-bottom:6px">🏘️</div>
+    <h1>靖港古镇</h1>
+    <div class="sub">长沙 · 必玩景点</div>
+  </div>
+</header>
+
+<main class="att-body">
+  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:8px"><a href="/city/changsha/" style="color:#1a73e8">首页</a> / <a href="/city/changsha/attractions" style="color:#1a73e8">景点</a> / <span>靖港古镇</span></nav>
+  <div class="att-meta">
+    <div class="m"><b>🎫 门票</b><span>免费(部分收费)</span></div>
+    <div class="m"><b>⏱️ 建议游玩</b><span>建议半天</span></div>
+    <div class="m"><b>📍 所在城市</b><span>长沙</span></div>
+  </div>
+  <p class="att-desc">湘江畔水乡古镇，青石板与老作坊保留旧时风貌。</p>
+  <section style="margin-top:36px">
+    <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px">📖 详细介绍</h2>
+    <div style="color:#334155;line-height:1.95;font-size:1.02rem">
+      <p style="margin-bottom:16px">靖港古镇位于长沙，是当地最具人气的旅游目的地之一。湘江畔水乡古镇，青石板与老作坊保留旧时风貌。
+门票方面，票价为免费(部分收费)，旅游旺季容易排长队，建议提前预约并避开高峰时段。
+建议游玩时间安排在建议半天左右，可结合周边景点串联成一日游线路。</p>
+    </div>
+    
+  </section>
+  <p class="att-credit">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p>
+  
+  <section style="margin-top:48px">
+    <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:6px">长沙其他热门景点</h2>
+    <p style="color:#64748b;margin-bottom:20px">继续探索长沙的精彩去处</p>
+    <div class="rel-grid">
+      
+      <a class="rel-card" href="/city/changsha/attraction/0">
+        <img src="/assets/images/changsha/0.webp" alt="岳麓山" loading="lazy">
+        <div class="ri">⛰️ 岳麓山</div>
+      </a>
+      <a class="rel-card" href="/city/changsha/attraction/1">
+        <img src="/assets/images/changsha/1.webp" alt="岳麓书院" loading="lazy">
+        <div class="ri">🏯 岳麓书院</div>
+      </a>
+      <a class="rel-card" href="/city/changsha/attraction/2">
+        <img src="/assets/images/changsha/2.webp" alt="橘子洲" loading="lazy">
+        <div class="ri">🌳 橘子洲</div>
+      </a>
+      <a class="rel-card" href="/city/changsha/attraction/3">
+        <img src="/assets/images/changsha/3.webp" alt="湖南省博物馆" loading="lazy">
+        <div class="ri">🏛️ 湖南省博物馆</div>
+      </a>
+    </div>
+  </section>
+  <div class="cta-row">
+    <a href="/city/changsha/itinerary" class="btn btn-primary" style="padding:12px 28px">规划长沙行程 →</a>
+    <a href="/city/changsha/food" class="btn" style="padding:12px 28px">看看当地美食</a>
+  </div>
+</main>
+
+<footer class="footer"><div class="footer-inner"><p>© 2026 长沙旅游官网 · <a href="/city/changsha/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<script>
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+
+function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
+document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.target.closest('.city-selector')){var d=document.getElementById('cityDropdown');if(d)d.classList.remove('open')}});
+
+</script>
+</body>
+</html>

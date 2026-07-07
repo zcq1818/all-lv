@@ -37,11 +37,10 @@
   {"@type":"ListItem","position":2,"name":"景点","item":"https://www.all-lv.com/city/beihai/attractions"}
 ]}
 </script>
-<link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/weather.css">
-<link rel="stylesheet" href="/css/share.css">
-<link rel="stylesheet" href="/css/user-features.css">
-<link rel="stylesheet" href="/css/chat-widget.css">
+<style>
+.spot-card:hover img{transform:scale(1.06)}
+.spot-card img{transition:transform .45s ease}
+</style>
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -55,9 +54,9 @@
   <div class="city-dropdown" id="cityDropdown">
     <div class="city-dropdown-header">
       <span class="city-dropdown-title">选择目的地</span>
-      <span class="city-dropdown-count">28个城市</span>
+      <span class="city-dropdown-count">41个城市</span>
     </div>
-    <div class="city-dropdown-body"><div class="province-group"><div class="province-label">海南</div><a href="/city/sanya/" class="city-option">🏖️ 三亚</a></div><div class="province-group"><div class="province-label">四川</div><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/jiuzhaigou/" class="city-option">💎 九寨沟</a></div><div class="province-group"><div class="province-label">陕西</div><a href="/city/xian/" class="city-option">🏛️ 西安</a></div><div class="province-group"><div class="province-label">浙江</div><a href="/city/hangzhou/" class="city-option">🌸 杭州</a></div><div class="province-group"><div class="province-label">云南</div><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/kunming/" class="city-option">🌺 昆明</a></div><div class="province-group"><div class="province-label">福建</div><a href="/city/xiamen/" class="city-option">🌊 厦门</a></div><div class="province-group"><div class="province-label">山东</div><a href="/city/qingdao/" class="city-option">⛵ 青岛</a></div><div class="province-group"><div class="province-label">广西</div><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/beihai/" class="city-option active">🐚 北海</a></div><div class="province-group"><div class="province-label">西藏</div><a href="/city/lhasa/" class="city-option">🛕 拉萨</a></div><div class="province-group"><div class="province-label">北京</div><a href="/city/beijing/" class="city-option">🏛️ 北京</a></div><div class="province-group"><div class="province-label">上海</div><a href="/city/shanghai/" class="city-option">🌃 上海</a></div><div class="province-group"><div class="province-label">重庆</div><a href="/city/chongqing/" class="city-option">🔥 重庆</a></div><div class="province-group"><div class="province-label">广东</div><a href="/city/guangzhou/" class="city-option">🌺 广州</a></div><div class="province-group"><div class="province-label">江苏</div><a href="/city/suzhou/" class="city-option">🏡 苏州</a><a href="/city/nanjing/" class="city-option">🍂 南京</a></div><div class="province-group"><div class="province-label">湖南</div><a href="/city/zhangjiajie/" class="city-option">🏔️ 张家界</a></div><div class="province-group"><div class="province-label">安徽</div><a href="/city/huangshan/" class="city-option">☁️ 黄山</a></div><div class="province-group"><div class="province-label">黑龙江</div><a href="/city/haerbin/" class="city-option">❄️ 哈尔滨</a></div><div class="province-group"><div class="province-label">甘肃</div><a href="/city/dunhuang/" class="city-option">🏜️ 敦煌</a></div><div class="province-group"><div class="province-label">河南</div><a href="/city/luoyang/" class="city-option">🌺 洛阳</a></div><div class="province-group"><div class="province-label">青海</div><a href="/city/xining/" class="city-option">🏔️ 西宁</a></div><div class="province-group"><div class="province-label">贵州</div><a href="/city/guiyang/" class="city-option">🌿 贵阳</a></div><div class="province-group"><div class="province-label">香港</div><a href="/city/hongkong/" class="city-option">🏙️ 香港</a></div><div class="province-group"><div class="province-label">澳门</div><a href="/city/macau/" class="city-option">🎰 澳门</a></div></div>
+    <div class="city-dropdown-body"><div class="province-group"><div class="province-label">海南</div><a href="/city/sanya/" class="city-option">🏖️ 三亚</a></div><div class="province-group"><div class="province-label">四川</div><a href="/city/chengdu/" class="city-option">🐼 成都</a><a href="/city/jiuzhaigou/" class="city-option">💎 九寨沟</a><a href="/city/emeishan/" class="city-option">🏔️ 峨眉山</a></div><div class="province-group"><div class="province-label">陕西</div><a href="/city/xian/" class="city-option">🏛️ 西安</a></div><div class="province-group"><div class="province-label">浙江</div><a href="/city/hangzhou/" class="city-option">🌸 杭州</a></div><div class="province-group"><div class="province-label">云南</div><a href="/city/dali/" class="city-option">⛰️ 大理</a><a href="/city/lijiang/" class="city-option">🏔️ 丽江</a><a href="/city/kunming/" class="city-option">🌺 昆明</a></div><div class="province-group"><div class="province-label">福建</div><a href="/city/xiamen/" class="city-option">🌊 厦门</a><a href="/city/wuyishan/" class="city-option">⛰️ 武夷山</a></div><div class="province-group"><div class="province-label">山东</div><a href="/city/qingdao/" class="city-option">⛵ 青岛</a></div><div class="province-group"><div class="province-label">广西</div><a href="/city/guilin/" class="city-option">🏞️ 桂林</a><a href="/city/beihai/" class="city-option active">🐚 北海</a></div><div class="province-group"><div class="province-label">西藏</div><a href="/city/lhasa/" class="city-option">🛕 拉萨</a></div><div class="province-group"><div class="province-label">北京</div><a href="/city/beijing/" class="city-option">🏛️ 北京</a></div><div class="province-group"><div class="province-label">上海</div><a href="/city/shanghai/" class="city-option">🌃 上海</a></div><div class="province-group"><div class="province-label">重庆</div><a href="/city/chongqing/" class="city-option">🔥 重庆</a></div><div class="province-group"><div class="province-label">广东</div><a href="/city/guangzhou/" class="city-option">🌺 广州</a><a href="/city/shenzhen/" class="city-option">🌆 深圳</a></div><div class="province-group"><div class="province-label">江苏</div><a href="/city/suzhou/" class="city-option">🏡 苏州</a><a href="/city/nanjing/" class="city-option">🍂 南京</a></div><div class="province-group"><div class="province-label">湖南</div><a href="/city/zhangjiajie/" class="city-option">🏔️ 张家界</a><a href="/city/changsha/" class="city-option">🌶️ 长沙</a></div><div class="province-group"><div class="province-label">安徽</div><a href="/city/huangshan/" class="city-option">☁️ 黄山</a></div><div class="province-group"><div class="province-label">黑龙江</div><a href="/city/haerbin/" class="city-option">❄️ 哈尔滨</a></div><div class="province-group"><div class="province-label">甘肃</div><a href="/city/dunhuang/" class="city-option">🏜️ 敦煌</a></div><div class="province-group"><div class="province-label">河南</div><a href="/city/luoyang/" class="city-option">🌺 洛阳</a></div><div class="province-group"><div class="province-label">青海</div><a href="/city/xining/" class="city-option">🏔️ 西宁</a></div><div class="province-group"><div class="province-label">贵州</div><a href="/city/guiyang/" class="city-option">🌿 贵阳</a></div><div class="province-group"><div class="province-label">香港</div><a href="/city/hongkong/" class="city-option">🏙️ 香港</a></div><div class="province-group"><div class="province-label">澳门</div><a href="/city/macau/" class="city-option">🎰 澳门</a></div><div class="province-group"><div class="province-label">河北</div><a href="/city/qinhuangdao/" class="city-option">🏖️ 秦皇岛</a></div><div class="province-group"><div class="province-label">湖北</div><a href="/city/wuhan/" class="city-option">🌉 武汉</a></div><div class="province-group"><div class="province-label">天津</div><a href="/city/tianjin/" class="city-option">🎡 天津</a></div><div class="province-group"><div class="province-label">辽宁</div><a href="/city/dalian/" class="city-option">🌊 大连</a></div><div class="province-group"><div class="province-label">山西</div><a href="/city/pingyao/" class="city-option">🏯 平遥</a><a href="/city/datong/" class="city-option">🏛️ 大同</a></div><div class="province-group"><div class="province-label">新疆</div><a href="/city/kashgar/" class="city-option">🕌 喀什</a></div><div class="province-group"><div class="province-label">中国台湾</div><a href="/city/taipei/" class="city-option">🏙️ 台北</a></div><div class="province-group"><div class="province-label">内蒙古</div><a href="/city/hulunbuir/" class="city-option">🐎 呼伦贝尔</a></div></div>
   </div>
 </div>
   <ul class="nav-links" id="navLinks">
@@ -77,85 +76,135 @@
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🏔️ 北海景点推荐</h1>
   <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">北海最值得去的景点，附门票和游玩建议</p>
   
-  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏖️ 银滩</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:12px">天下第一滩，沙质银白细腻。</p>
-    <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
-      <span>🎫 门票：免费</span>
-      <span>⏱️ 游玩时间：建议半天</span>
+  <a class="spot-card" href="/city/beihai/attraction/0" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/0.webp" alt="银滩" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
-  </div>
-  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏝️ 涠洲岛</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:12px">中国最大火山岛。</p>
-    <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
-      <span>🎫 门票：船票150元</span>
-      <span>⏱️ 游玩时间：建议2天</span>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏖️ 银滩</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">天下第一滩，沙质银白细腻。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：免费</span>
+        <span>⏱️ 游玩时间：建议半天</span>
+      </div>
     </div>
-  </div>
-  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏘️ 北海老街</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:12px">百年骑楼老街。</p>
-    <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
-      <span>🎫 门票：免费</span>
-      <span>⏱️ 游玩时间：建议2小时</span>
+  </a>
+  <a class="spot-card" href="/city/beihai/attraction/1" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/1.webp" alt="涠洲岛" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
-  </div>
-  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🐚 海底世界</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:12px">海洋主题公园。</p>
-    <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
-      <span>🎫 门票：138元</span>
-      <span>⏱️ 游玩时间：建议2小时</span>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏝️ 涠洲岛</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">中国最大火山岛。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：船票150元</span>
+        <span>⏱️ 游玩时间：建议2天</span>
+      </div>
     </div>
-  </div>
-  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌊 侨港风情街</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:12px">越南美食和海鲜。</p>
-    <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
-      <span>🎫 门票：免费</span>
-      <span>⏱️ 游玩时间：建议2小时</span>
+  </a>
+  <a class="spot-card" href="/city/beihai/attraction/2" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/2.webp" alt="北海老街" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
-  </div>
-  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌳 红树林</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:12px">海上森林赶海。</p>
-    <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
-      <span>🎫 门票：约80元</span>
-      <span>⏱️ 游玩时间：建议2小时</span>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏘️ 北海老街</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">百年骑楼老街。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：免费</span>
+        <span>⏱️ 游玩时间：建议2小时</span>
+      </div>
     </div>
-  </div>
-  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🐠 北海海底世界</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:12px">集观赏、科普于一体的海洋馆，海底隧道和海豚表演是亮点。</p>
-    <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
-      <span>🎫 门票：138元</span>
-      <span>⏱️ 游玩时间：建议2小时</span>
+  </a>
+  <a class="spot-card" href="/city/beihai/attraction/3" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/3.webp" alt="海底世界" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
-  </div>
-  
-  </div>
-  <div style="background:#fff;border-radius:16px;padding:28px;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌅 金海湾红树林</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:12px">中国面积最大的红树林之一，退潮时可赶海挖螺，生态环境优美。</p>
-    <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
-      <span>🎫 门票：80元</span>
-      <span>⏱️ 游玩时间：建议2-3小时</span>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🐚 海底世界</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">海洋主题公园。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：138元</span>
+        <span>⏱️ 游玩时间：建议2小时</span>
+      </div>
     </div>
-  </div>
+  </a>
+  <a class="spot-card" href="/city/beihai/attraction/4" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/4.webp" alt="侨港风情街" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌊 侨港风情街</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">越南美食和海鲜。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：免费</span>
+        <span>⏱️ 游玩时间：建议2小时</span>
+      </div>
+    </div>
+  </a>
+  <a class="spot-card" href="/city/beihai/attraction/5" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/5.webp" alt="红树林" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌳 红树林</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">海上森林赶海。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：约80元</span>
+        <span>⏱️ 游玩时间：建议2小时</span>
+      </div>
+    </div>
+  </a>
+  <a class="spot-card" href="/city/beihai/attraction/6" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/6.webp" alt="北海海底世界" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🐠 北海海底世界</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">集观赏、科普于一体的海洋馆，海底隧道和海豚表演是亮点。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：138元</span>
+        <span>⏱️ 游玩时间：建议2小时</span>
+      </div>
+    </div>
+  </a>
+  <a class="spot-card" href="/city/beihai/attraction/7" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/7.webp" alt="侨港风情街" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏖️ 侨港风情街</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">越南归侨聚居地，越南春卷、糖水、海鲜大排档，是北海最有烟火气的美食街。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：免费</span>
+        <span>⏱️ 游玩时间：建议2小时</span>
+      </div>
+    </div>
+  </a>
+  <a class="spot-card" href="/city/beihai/attraction/8" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+    
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+      <img src="/assets/images/beihai/8.webp" alt="金海湾红树林" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="padding:22px 28px 26px">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌅 金海湾红树林</h3>
+      <p style="color:#475569;line-height:1.8;margin-bottom:12px">中国面积最大的红树林之一，退潮时可赶海挖螺，生态环境优美。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+        <span>🎫 门票：80元</span>
+        <span>⏱️ 游玩时间：建议2-3小时</span>
+      </div>
+    </div>
+  </a>
 </main>
 
-<div style="max-width:960px;margin:0 auto;padding:0 24px 40px">
-<h2 style="font-size:1.5rem;font-weight:700;margin-bottom:24px;display:flex;align-items:center;gap:8px">📸 北海精彩瞬间</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px">
-  <img src="https://picsum.photos/seed/beihai-att-1/400/300" alt="北海景点" style="width:100%;height:200px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow-sm)" loading="lazy">
-  <img src="https://picsum.photos/seed/beihai-att-2/400/300" alt="北海风景" style="width:100%;height:200px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow-sm)" loading="lazy">
-  <img src="https://picsum.photos/seed/beihai-att-3/400/300" alt="北海风光" style="width:100%;height:200px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow-sm)" loading="lazy">
-</div>
-</div>
-
-
-<footer class="footer"><div class="footer-inner"><p>© 2026 北海旅游官网 · <a href="/city/beihai/">返回首页</a></p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 北海旅游官网 · <a href="/city/beihai/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
@@ -164,11 +213,5 @@ function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classL
 document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.target.closest('.city-selector')){var d=document.getElementById('cityDropdown');if(d)d.classList.remove('open')}});
 
 </script>
-<script src="/js/accessibility.js" defer></script>
-<script src="/js/search.js" defer></script>
-<script src="/js/weather.js" defer></script>
-<script src="/js/share.js" defer></script>
-<script src="/js/user-features.js" defer></script>
-<script src="/js/chat-widget.js" defer></script>
 </body>
 </html>
