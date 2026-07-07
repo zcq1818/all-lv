@@ -9,6 +9,26 @@ const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://www.all-lv.com';
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'cities.json'), 'utf8'));
 
+// ===== 相对路径后处理 =====
+// 依据文件所在目录深度，将绝对路径(/xxx)转为相对前缀(../../)，
+// 使站点在「域名根目录」「GitHub Pages 子路径」「本地双击打开」三种场景下都能正确加载 CSS/图片/JS。
+function relPrefixFor(filePath) {
+  const rel = path.relative(ROOT, path.dirname(filePath));
+  const segs = rel === '' ? 0 : rel.split(path.sep).length;
+  return '../'.repeat(segs);
+}
+function relativize(html, filePath) {
+  const p = relPrefixFor(filePath);
+  return html
+    .replace(/(href|src)="\//g, `$1="${p}`)
+    .replace(/url\(\//g, `url(${p}`);
+}
+function writeHtml(relPath, html) {
+  const filePath = path.join(ROOT, relPath);
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  fs.writeFileSync(filePath, relativize(html, filePath));
+}
+
 // 按省份分组
 function groupByProvince() {
   const provinces = {};
@@ -100,7 +120,7 @@ function generateIndex(city) {
 <meta property="og:site_name" content="${c.name}旅游官网">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"${c.name}旅游官网","url":"${SITE}/city/${c.id}/","description":"${c.description}",
-"potentialAction":{"@type":"SearchAction","target":"${SITE}/city/${c.id}/guide?q={search_term_string}","query-input":"required name=search_term_string"}}
+"potentialAction":{"@type":"SearchAction","target":"${SITE}/city/${c.id}/guide.html?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
@@ -123,13 +143,13 @@ function generateIndex(city) {
     ${citySelector(c.id)}
     <ul class="nav-links" id="navLinks">
       <li><a href="/city/${c.id}/" class="active">首页</a></li>
-      <li><a href="/city/${c.id}/attractions">景点</a></li>
-      <li><a href="/city/${c.id}/food">美食</a></li>
-      <li><a href="/city/${c.id}/guide">攻略</a></li>
-      <li><a href="/city/${c.id}/itinerary">行程</a></li>
-      <li><a href="/city/${c.id}/blog">博客</a></li>
+      <li><a href="/city/${c.id}/attractions.html">景点</a></li>
+      <li><a href="/city/${c.id}/food.html">美食</a></li>
+      <li><a href="/city/${c.id}/guide.html">攻略</a></li>
+      <li><a href="/city/${c.id}/itinerary.html">行程</a></li>
+      <li><a href="/city/${c.id}/blog.html">博客</a></li>
     </ul>
-    <a href="/city/${c.id}/itinerary" class="nav-cta">免费规划行程 <span class="nav-cta-arrow">→</span></a>
+    <a href="/city/${c.id}/itinerary.html" class="nav-cta">免费规划行程 <span class="nav-cta-arrow">→</span></a>
     <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -146,8 +166,8 @@ function generateIndex(city) {
         ${c.heroSub || c.description}
       </p>
       <div style="display:flex;gap:16px;flex-wrap:wrap">
-        <a href="/city/${c.id}/itinerary" class="btn btn-white" style="font-size:1rem;padding:14px 28px">🗺️ 智能规划行程</a>
-        <a href="/city/${c.id}/attractions" class="btn btn-outline-white" style="font-size:1rem;padding:14px 28px">🏔️ 探索景点</a>
+        <a href="/city/${c.id}/itinerary.html" class="btn btn-white" style="font-size:1rem;padding:14px 28px">🗺️ 智能规划行程</a>
+        <a href="/city/${c.id}/attractions.html" class="btn btn-outline-white" style="font-size:1rem;padding:14px 28px">🏔️ 探索景点</a>
       </div>
     </div>
     ${(c.attractions&&c.attractions[1]&&c.attractions[1].image)?`<div class="hero-photo"><img src="${c.attractions[1].image}" alt="${c.name}风光实景" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy"></div>`:`<div style="text-align:center;font-size:8rem;filter:drop-shadow(0 8px 32px rgba(0,0,0,0.3))">${c.emoji}</div>`}
@@ -179,7 +199,7 @@ function generateIndex(city) {
   </div>
   <div class="attractions-grid">
     ${(c.attractions || []).slice(0, 6).map((a, i) => `
-    <a href="/city/${c.id}/attraction/${i}" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+    <a href="/city/${c.id}/attraction/${i}.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
       <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,${c.color||'#1a73e8'}44 0%,${c.color||'#1a73e8'}22 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">${a.image ? `<img src="${a.image}" alt="${a.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover">` : a.icon}</div>
       <div style="padding:20px">
         <h3 style="font-weight:700;margin-bottom:6px">${a.name}</h3>
@@ -192,7 +212,7 @@ function generateIndex(city) {
     </a>`).join('')}
   </div>
   <div style="text-align:center;margin-top:36px">
-    <a href="/city/${c.id}/attractions" class="btn btn-primary" style="padding:12px 32px">查看全部景点 →</a>
+    <a href="/city/${c.id}/attractions.html" class="btn btn-primary" style="padding:12px 32px">查看全部景点 →</a>
   </div>
 </section>
 
@@ -211,7 +231,7 @@ function generateIndex(city) {
     </div>`).join('')}
   </div>
   <div style="text-align:center;margin-top:36px">
-    <a href="/city/${c.id}/food" class="btn btn-primary" style="padding:12px 32px">查看全部美食 →</a>
+    <a href="/city/${c.id}/food.html" class="btn btn-primary" style="padding:12px 32px">查看全部美食 →</a>
   </div>
 </section>
 
@@ -230,7 +250,7 @@ function generateIndex(city) {
     </div>`).join('')}
   </div>
   <div style="text-align:center;margin-top:36px">
-    <a href="/city/${c.id}/guide" class="btn btn-primary" style="padding:12px 32px">查看完整攻略 →</a>
+    <a href="/city/${c.id}/guide.html" class="btn btn-primary" style="padding:12px 32px">查看完整攻略 →</a>
   </div>
 </section>
 
@@ -239,8 +259,8 @@ function generateIndex(city) {
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand"><h3>${c.name}旅游官网</h3><p>致力于为每一位来${c.name}的游客，提供最实用、最全面的旅游攻略。</p></div>
-      <div class="footer-col"><h4>热门页面</h4><a href="/city/${c.id}/">首页</a><a href="/city/${c.id}/attractions">景点推荐</a><a href="/city/${c.id}/food">美食推荐</a></div>
-      <div class="footer-col"><h4>旅游攻略</h4><a href="/city/${c.id}/guide">出行指南</a><a href="/city/${c.id}/itinerary">行程规划</a><a href="/city/${c.id}/blog">旅游博客</a></div>
+      <div class="footer-col"><h4>热门页面</h4><a href="/city/${c.id}/">首页</a><a href="/city/${c.id}/attractions.html">景点推荐</a><a href="/city/${c.id}/food.html">美食推荐</a></div>
+      <div class="footer-col"><h4>旅游攻略</h4><a href="/city/${c.id}/guide.html">出行指南</a><a href="/city/${c.id}/itinerary.html">行程规划</a><a href="/city/${c.id}/blog.html">旅游博客</a></div>
       <div class="footer-col"><h4>其他城市</h4>${data.cities.filter(x=>x.id!==c.id).slice(0,4).map(x=>`<a href="/city/${x.id}/">${x.name}</a>`).join('')}</div>
     </div>
     <div class="footer-bottom"><span>© 2026 全国旅游攻略</span><span style="font-size:.8rem;color:#94a3b8">· 图片来源：Wikimedia Commons（CC BY / CC BY-SA）</span><div><a href="/sitemap.xml">网站地图</a></div></div>
@@ -266,14 +286,14 @@ function generateAttractions(city) {
 <title>${c.name}景点推荐 - ${c.name}旅游攻略</title>
 <meta name="description" content="${c.name}最值得去的景点推荐：精选${c.name}必玩景点，附详细攻略、门票、交通信息。">
 <meta name="keywords" content="${c.name}景点,${c.name}旅游,${c.name}攻略">
-<link rel="canonical" href="${SITE}/city/${c.id}/attractions">
+<link rel="canonical" href="${SITE}/city/${c.id}/attractions.html">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"首页","item":"${SITE}/city/${c.id}/"},
-  {"@type":"ListItem","position":2,"name":"景点","item":"${SITE}/city/${c.id}/attractions"}
+  {"@type":"ListItem","position":2,"name":"景点","item":"${SITE}/city/${c.id}/attractions.html"}
 ]}
 </script>
 <style>
@@ -286,13 +306,13 @@ function generateAttractions(city) {
   ${citySelector(c.id)}
   <ul class="nav-links" id="navLinks">
     <li><a href="/city/${c.id}/">首页</a></li>
-    <li><a href="/city/${c.id}/attractions" class="active">景点</a></li>
-    <li><a href="/city/${c.id}/food">美食</a></li>
-    <li><a href="/city/${c.id}/guide">攻略</a></li>
-    <li><a href="/city/${c.id}/itinerary">行程</a></li>
-    <li><a href="/city/${c.id}/blog">博客</a></li>
+    <li><a href="/city/${c.id}/attractions.html" class="active">景点</a></li>
+    <li><a href="/city/${c.id}/food.html">美食</a></li>
+    <li><a href="/city/${c.id}/guide.html">攻略</a></li>
+    <li><a href="/city/${c.id}/itinerary.html">行程</a></li>
+    <li><a href="/city/${c.id}/blog.html">博客</a></li>
   </ul>
-  <a href="/city/${c.id}/itinerary" class="nav-cta">免费规划行程 →</a>
+  <a href="/city/${c.id}/itinerary.html" class="nav-cta">免费规划行程 →</a>
   <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
 </div></nav>
 
@@ -301,7 +321,7 @@ function generateAttractions(city) {
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🏔️ ${c.name}景点推荐</h1>
   <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">${c.name}最值得去的景点，附门票和游玩建议</p>
   ${(c.attractions || []).map((a, idx) => `
-  <a class="spot-card" href="/city/${c.id}/attraction/${idx}" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card" href="/city/${c.id}/attraction/${idx}.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     ${a.image ? `
     <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
       <img src="${a.image}" alt="${a.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
@@ -330,7 +350,7 @@ ${citySelectorJS}
 // ===== 景点详情页模板 =====
 function generateAttractionDetail(city, a, idx) {
   const c = city;
-  const url = `${SITE}/city/${c.id}/attraction/${idx}`;
+  const url = `${SITE}/city/${c.id}/attraction/${idx}.html`;
   const others = (c.attractions || [])
     .map((x, i) => ({ x, i }))
     .filter(o => o.i !== idx)
@@ -374,13 +394,13 @@ function generateAttractionDetail(city, a, idx) {
   ${citySelector(c.id)}
   <ul class="nav-links" id="navLinks">
     <li><a href="/city/${c.id}/">首页</a></li>
-    <li><a href="/city/${c.id}/attractions" class="active">景点</a></li>
-    <li><a href="/city/${c.id}/food">美食</a></li>
-    <li><a href="/city/${c.id}/guide">攻略</a></li>
-    <li><a href="/city/${c.id}/itinerary">行程</a></li>
-    <li><a href="/city/${c.id}/blog">博客</a></li>
+    <li><a href="/city/${c.id}/attractions.html" class="active">景点</a></li>
+    <li><a href="/city/${c.id}/food.html">美食</a></li>
+    <li><a href="/city/${c.id}/guide.html">攻略</a></li>
+    <li><a href="/city/${c.id}/itinerary.html">行程</a></li>
+    <li><a href="/city/${c.id}/blog.html">博客</a></li>
   </ul>
-  <a href="/city/${c.id}/itinerary" class="nav-cta">免费规划行程 →</a>
+  <a href="/city/${c.id}/itinerary.html" class="nav-cta">免费规划行程 →</a>
   <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
 </div></nav>
 
@@ -394,7 +414,7 @@ function generateAttractionDetail(city, a, idx) {
 </header>
 
 <main class="att-body">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:8px"><a href="/city/${c.id}/" style="color:#1a73e8">首页</a> / <a href="/city/${c.id}/attractions" style="color:#1a73e8">景点</a> / <span>${a.name}</span></nav>
+  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:8px"><a href="/city/${c.id}/" style="color:#1a73e8">首页</a> / <a href="/city/${c.id}/attractions.html" style="color:#1a73e8">景点</a> / <span>${a.name}</span></nav>
   <div class="att-meta">
     ${a.ticket ? `<div class="m"><b>🎫 门票</b><span>${a.ticket}</span></div>` : ''}
     ${a.time ? `<div class="m"><b>⏱️ 建议游玩</b><span>${a.time}</span></div>` : ''}
@@ -415,15 +435,15 @@ function generateAttractionDetail(city, a, idx) {
     <p style="color:#64748b;margin-bottom:20px">继续探索${c.name}的精彩去处</p>
     <div class="rel-grid">
       ${others.map(o => `
-      <a class="rel-card" href="/city/${c.id}/attraction/${o.i}">
+      <a class="rel-card" href="/city/${c.id}/attraction/${o.i}.html">
         ${o.x.image ? `<img src="${o.x.image}" alt="${o.x.name}" loading="lazy">` : `<div style="height:130px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;background:#eef2f7">${o.x.icon}</div>`}
         <div class="ri">${o.x.icon} ${o.x.name}</div>
       </a>`).join('')}
     </div>
   </section>` : ''}
   <div class="cta-row">
-    <a href="/city/${c.id}/itinerary" class="btn btn-primary" style="padding:12px 28px">规划${c.name}行程 →</a>
-    <a href="/city/${c.id}/food" class="btn" style="padding:12px 28px">看看当地美食</a>
+    <a href="/city/${c.id}/itinerary.html" class="btn btn-primary" style="padding:12px 28px">规划${c.name}行程 →</a>
+    <a href="/city/${c.id}/food.html" class="btn" style="padding:12px 28px">看看当地美食</a>
   </div>
 </main>
 
@@ -447,7 +467,7 @@ function generateFood(city) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${c.name}美食攻略 - ${c.name}旅游</title>
 <meta name="description" content="${c.name}必吃美食推荐：特色小吃、网红餐厅、本地人私藏好店。">
-<link rel="canonical" href="${SITE}/city/${c.id}/food">
+<link rel="canonical" href="${SITE}/city/${c.id}/food.html">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
@@ -457,13 +477,13 @@ function generateFood(city) {
   ${citySelector(c.id)}
   <ul class="nav-links" id="navLinks">
     <li><a href="/city/${c.id}/">首页</a></li>
-    <li><a href="/city/${c.id}/attractions">景点</a></li>
-    <li><a href="/city/${c.id}/food" class="active">美食</a></li>
-    <li><a href="/city/${c.id}/guide">攻略</a></li>
-    <li><a href="/city/${c.id}/itinerary">行程</a></li>
-    <li><a href="/city/${c.id}/blog">博客</a></li>
+    <li><a href="/city/${c.id}/attractions.html">景点</a></li>
+    <li><a href="/city/${c.id}/food.html" class="active">美食</a></li>
+    <li><a href="/city/${c.id}/guide.html">攻略</a></li>
+    <li><a href="/city/${c.id}/itinerary.html">行程</a></li>
+    <li><a href="/city/${c.id}/blog.html">博客</a></li>
   </ul>
-  <a href="/city/${c.id}/itinerary" class="nav-cta">免费规划行程 →</a>
+  <a href="/city/${c.id}/itinerary.html" class="nav-cta">免费规划行程 →</a>
   <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
 </div></nav>
 
@@ -502,7 +522,7 @@ function generateGuide(city) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${c.name}旅游攻略 - 交通/住宿/最佳时间</title>
 <meta name="description" content="${c.name}旅游全攻略：交通指南、住宿推荐、最佳旅游时间、行程规划。">
-<link rel="canonical" href="${SITE}/city/${c.id}/guide">
+<link rel="canonical" href="${SITE}/city/${c.id}/guide.html">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
@@ -512,13 +532,13 @@ function generateGuide(city) {
   ${citySelector(c.id)}
   <ul class="nav-links" id="navLinks">
     <li><a href="/city/${c.id}/">首页</a></li>
-    <li><a href="/city/${c.id}/attractions">景点</a></li>
-    <li><a href="/city/${c.id}/food">美食</a></li>
-    <li><a href="/city/${c.id}/guide" class="active">攻略</a></li>
-    <li><a href="/city/${c.id}/itinerary">行程</a></li>
-    <li><a href="/city/${c.id}/blog">博客</a></li>
+    <li><a href="/city/${c.id}/attractions.html">景点</a></li>
+    <li><a href="/city/${c.id}/food.html">美食</a></li>
+    <li><a href="/city/${c.id}/guide.html" class="active">攻略</a></li>
+    <li><a href="/city/${c.id}/itinerary.html">行程</a></li>
+    <li><a href="/city/${c.id}/blog.html">博客</a></li>
   </ul>
-  <a href="/city/${c.id}/itinerary" class="nav-cta">免费规划行程 →</a>
+  <a href="/city/${c.id}/itinerary.html" class="nav-cta">免费规划行程 →</a>
   <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
 </div></nav>
 
@@ -561,7 +581,7 @@ function generateItinerary(city) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${c.name}行程规划 - ${c.name}${days}日游攻略</title>
 <meta name="description" content="${c.name}${days}日游行程规划，合理安排时间，不错过任何精彩景点。">
-<link rel="canonical" href="${SITE}/city/${c.id}/itinerary">
+<link rel="canonical" href="${SITE}/city/${c.id}/itinerary.html">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}
@@ -578,13 +598,13 @@ function generateItinerary(city) {
   ${citySelector(c.id)}
   <ul class="nav-links" id="navLinks">
     <li><a href="/city/${c.id}/">首页</a></li>
-    <li><a href="/city/${c.id}/attractions">景点</a></li>
-    <li><a href="/city/${c.id}/food">美食</a></li>
-    <li><a href="/city/${c.id}/guide">攻略</a></li>
-    <li><a href="/city/${c.id}/itinerary" class="active">行程</a></li>
-    <li><a href="/city/${c.id}/blog">博客</a></li>
+    <li><a href="/city/${c.id}/attractions.html">景点</a></li>
+    <li><a href="/city/${c.id}/food.html">美食</a></li>
+    <li><a href="/city/${c.id}/guide.html">攻略</a></li>
+    <li><a href="/city/${c.id}/itinerary.html" class="active">行程</a></li>
+    <li><a href="/city/${c.id}/blog.html">博客</a></li>
   </ul>
-  <a href="/city/${c.id}/itinerary" class="nav-cta">免费规划行程 →</a>
+  <a href="/city/${c.id}/itinerary.html" class="nav-cta">免费规划行程 →</a>
   <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
 </div></nav>
 
@@ -626,7 +646,7 @@ function generateBlog(city) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${c.name}旅游博客 - ${c.name}攻略分享</title>
 <meta name="description" content="${c.name}旅游攻略分享，最新${c.name}旅游资讯、游记、攻略。">
-<link rel="canonical" href="${SITE}/city/${c.id}/blog">
+<link rel="canonical" href="${SITE}/city/${c.id}/blog.html">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
@@ -636,13 +656,13 @@ function generateBlog(city) {
   ${citySelector(c.id)}
   <ul class="nav-links" id="navLinks">
     <li><a href="/city/${c.id}/">首页</a></li>
-    <li><a href="/city/${c.id}/attractions">景点</a></li>
-    <li><a href="/city/${c.id}/food">美食</a></li>
-    <li><a href="/city/${c.id}/guide">攻略</a></li>
-    <li><a href="/city/${c.id}/itinerary">行程</a></li>
-    <li><a href="/city/${c.id}/blog" class="active">博客</a></li>
+    <li><a href="/city/${c.id}/attractions.html">景点</a></li>
+    <li><a href="/city/${c.id}/food.html">美食</a></li>
+    <li><a href="/city/${c.id}/guide.html">攻略</a></li>
+    <li><a href="/city/${c.id}/itinerary.html">行程</a></li>
+    <li><a href="/city/${c.id}/blog.html" class="active">博客</a></li>
   </ul>
-  <a href="/city/${c.id}/itinerary" class="nav-cta">免费规划行程 →</a>
+  <a href="/city/${c.id}/itinerary.html" class="nav-cta">免费规划行程 →</a>
   <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
 </div></nav>
 
@@ -651,7 +671,7 @@ function generateBlog(city) {
   <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">${c.name}旅游攻略、游记、实用信息</p>
   ${(c.blogs || []).length > 0 ? c.blogs.map(b => `
   <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #e2e8f0;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    <h3 style="font-weight:700;margin-bottom:6px"><a href="/city/${c.id}/blog/${b.slug}" style="color:inherit">${b.title}</a></h3>
+    <h3 style="font-weight:700;margin-bottom:6px"><a href="/city/${c.id}/blog.html/${b.slug}" style="color:inherit">${b.title}</a></h3>
     <p style="font-size:.9rem;color:#64748b">${b.excerpt || ''}</p>
     <div style="font-size:.8rem;color:#94a3b8;margin-top:8px">📅 ${b.date || '2026'}</div>
   </div>`).join('') : '<div style="text-align:center;padding:60px;color:#94a3b8"><p>博客内容即将上线，敬请期待！</p></div>'}
@@ -672,17 +692,17 @@ for (const city of data.cities) {
   const cityDir = path.join(ROOT, 'city', city.id);
   fs.mkdirSync(cityDir, { recursive: true });
   
-  fs.writeFileSync(path.join(cityDir, 'index.html'), generateIndex(city));
-  fs.writeFileSync(path.join(cityDir, 'attractions.html'), generateAttractions(city));
-  fs.writeFileSync(path.join(cityDir, 'food.html'), generateFood(city));
-  fs.writeFileSync(path.join(cityDir, 'guide.html'), generateGuide(city));
-  fs.writeFileSync(path.join(cityDir, 'itinerary.html'), generateItinerary(city));
-  fs.writeFileSync(path.join(cityDir, 'blog.html'), generateBlog(city));
+  writeHtml(`city/${city.id}/index.html`, generateIndex(city));
+  writeHtml(`city/${city.id}/attractions.html`, generateAttractions(city));
+  writeHtml(`city/${city.id}/food.html`, generateFood(city));
+  writeHtml(`city/${city.id}/guide.html`, generateGuide(city));
+  writeHtml(`city/${city.id}/itinerary.html`, generateItinerary(city));
+  writeHtml(`city/${city.id}/blog.html`, generateBlog(city));
 
   const attDir = path.join(cityDir, 'attraction');
   fs.mkdirSync(attDir, { recursive: true });
   (city.attractions || []).forEach((a, i) => {
-    fs.writeFileSync(path.join(attDir, `${i}.html`), generateAttractionDetail(city, a, i));
+    writeHtml(`city/${city.id}/attraction/${i}.html`, generateAttractionDetail(city, a, i));
   });
 
   console.log(`✅ ${city.name}: 6个页面 + ${ (city.attractions||[]).length }个景点详情 → city/${city.id}/`);
@@ -749,6 +769,6 @@ const rootIndex = `<!DOCTYPE html>
 </footer>
 </body>
 </html>`;
-fs.writeFileSync(path.join(ROOT, 'index.html'), rootIndex);
+writeHtml('index.html', rootIndex);
 console.log(`✅ 首页: index.html`);
 console.log('\n🎉 全部完成！');
