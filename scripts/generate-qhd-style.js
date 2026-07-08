@@ -46,6 +46,18 @@ function breadcrumb(items) {
 }
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'cities.json'), 'utf8'));
 
+// 城市独家插画映射（AI 生成，暖陶土品牌色系）
+const CITY_ILLU = {
+  beijing: '/assets/images/featured/beijing.png',
+  xian: '/assets/images/featured/xian.png',
+  chengdu: '/assets/images/featured/chengdu.png',
+  hangzhou: '/assets/images/featured/hangzhou.png',
+  sanya: '/assets/images/featured/sanya.png',
+  lijiang: '/assets/images/featured/lijiang.png',
+};
+/** 获取城市的独家插画路径，无则返回 null */
+function illu(id) { return CITY_ILLU[id] || null; }
+
 // ===== 相对路径后处理 =====
 // 依据文件所在目录深度，将绝对路径(/xxx)转为相对前缀(../../)，
 // 使站点在「域名根目录」「GitHub Pages 子路径」「本地双击打开」三种场景下都能正确加载 CSS/图片/JS。
@@ -147,7 +159,7 @@ ${seoHead({
   description: c.description,
   keywords: c.keywords,
   url: `${SITE}/city/${c.id}/`,
-  image: (c.attractions && c.attractions[0] && c.attractions[0].image) ? c.attractions[0].image : '',
+  image: illu(c.id) || ((c.attractions && c.attractions[0] && c.attractions[0].image) ? c.attractions[0].image : ''),
   type: 'website',
   jsonLd: [
     {
@@ -177,7 +189,7 @@ ${seoHead({
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}
-.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;${(c.attractions&&c.attractions[0]&&c.attractions[0].image)?`background-image:linear-gradient(135deg,rgba(143,53,23,.55) 0%,rgba(189,75,43,.32) 100%),url(${c.attractions[0].image});background-size:cover;background-position:center;`:`background:linear-gradient(135deg,${c.color||'#8F3517'} 0%,${c.color||'#BD4B2B'}88 100%)`}}
+.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;${illu(c.id)?`background-image:linear-gradient(135deg,rgba(143,53,23,.45) 0%,rgba(189,75,43,.25) 100%),url(${illu(c.id)});background-size:cover;background-position:center;`:((c.attractions&&c.attractions[0]&&c.attractions[0].image)?`background-image:linear-gradient(135deg,rgba(143,53,23,.55) 0%,rgba(189,75,43,.32) 100%),url(${c.attractions[0].image});background-size:cover;background-position:center;`:`background:linear-gradient(135deg,${c.color||'#8F3517'} 0%,${c.color||'#BD4B2B'}88 100%)`)}}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 100%)}
 .hero-photo{width:100%;max-width:420px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);border:4px solid rgba(255,255,255,.25);margin:0 auto}
 .hero-grid{max-width:var(--max-width);margin:0 auto;width:100%;position:relative;z-index:2;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -992,18 +1004,24 @@ const FEATURED = ['北京','西安','成都','杭州','三亚','丽江'];
 const featuredCities = FEATURED.map(n => data.cities.find(c => c.name === n)).filter(Boolean);
 
 function cityCardHTML(c) {
-  const img = (c.attractions && c.attractions[0] && c.attractions[0].image)
-    ? `<img class="thumb" src="${c.attractions[0].image}" alt="${c.name}风光实景" loading="lazy">`
-    : `<div class="emoji-fallback">${c.emoji}</div>`;
+  const ci = illu(c.id);
+  const img = ci
+    ? `<img class="thumb" src="${ci}" alt="${c.name}城市插画" loading="lazy">`
+    : ((c.attractions && c.attractions[0] && c.attractions[0].image)
+        ? `<img class="thumb" src="${c.attractions[0].image}" alt="${c.name}风光实景" loading="lazy">`
+        : `<div class="emoji-fallback">${c.emoji}</div>`);
   return `<a href="city/${c.id}/" class="city-card reveal">${img}<div class="info"><h3>${c.name}</h3><p>${c.tagline}</p></div></a>`;
 }
 
 const regionNav = REGION_ORDER.map(r => `<a href="#region-${r}" class="region-chip">${r}</a>`).join('');
 
 const featuredHTML = featuredCities.map(c => {
-  const img = (c.attractions && c.attractions[0] && c.attractions[0].image)
-    ? `<img class="fthumb" src="${c.attractions[0].image}" alt="${c.name}风光实景" loading="lazy">`
-    : `<div class="fthumb emoji-fallback">${c.emoji}</div>`;
+  const fImg = illu(c.id);
+  const img = fImg
+    ? `<img class="fthumb" src="${fImg}" alt="${c.name}城市插画" loading="lazy">`
+    : ((c.attractions && c.attractions[0] && c.attractions[0].image)
+        ? `<img class="fthumb" src="${c.attractions[0].image}" alt="${c.name}风光实景" loading="lazy">`
+        : `<div class="fthumb emoji-fallback">${c.emoji}</div>`);
   return `<a href="city/${c.id}/" class="featured-card reveal">${img}<div class="finfo"><span class="fprov">${c.province}</span><h3>${c.name}</h3><p>${c.tagline}</p></div></a>`;
 }).join('');
 
@@ -1028,7 +1046,7 @@ ${seoHead({
   description: `全国旅游攻略，精选中国 41 个热门城市，景点、美食、行程、攻略一站搞定。`,
   keywords: ['全国旅游', '中国旅游', '旅游攻略', '热门城市', '景点推荐'],
   url: `${SITE}/`,
-  image: 'assets/images/hero.webp',
+  image: '/assets/images/featured/og-card.png',
   type: 'website',
   jsonLd: [
     {
