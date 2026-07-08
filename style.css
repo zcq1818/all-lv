@@ -1260,3 +1260,21 @@ html.reveal-ready .reveal.visible {
 [data-theme="dark"] .hero-picker::before { background: linear-gradient(180deg, rgba(22,19,15,.7), rgba(22,19,15,.85)); }
 [data-theme="dark"] ::selection { background: var(--brand); color: #fff; }
 [data-theme="dark"] .qhd-search-overlay { background: rgba(0,0,0,.6); }
+
+/* 周边热门目的地（城市级交叉推荐卡片） */
+.rel-section{padding:90px 24px;background:#fff}
+.rel-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.rel-card{display:block;text-decoration:none;color:inherit;border-radius:16px;overflow:hidden;background:var(--gray-50);border:1px solid #ECE3D8;transition:transform .25s ease,box-shadow .25s ease}
+.rel-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(143,53,23,.18)}
+.rel-thumb{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:linear-gradient(135deg,#D9794F,#8F3517)}
+.rel-thumb.emoji-fallback{display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#D9794F,#8F3517)}
+.rel-info{padding:14px 16px}
+.rel-prov{font-size:.78rem;color:var(--brand);font-weight:700;letter-spacing:.03em}
+.rel-info h4{font-size:1.05rem;margin:4px 0 2px;color:#211C18}
+.rel-info p{font-size:.85rem;color:#8A7E6E;line-height:1.5}
+@media(max-width:900px){.rel-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.rel-grid{grid-template-columns:1fr}}
+[data-theme="dark"] .rel-card{background:var(--bg-alt);border-color:var(--border)}
+[data-theme="dark"] .rel-card:hover{box-shadow:0 14px 36px rgba(0,0,0,.5)}
+[data-theme="dark"] .rel-info h4{color:var(--text)}
+[data-theme="dark"] .rel-info p{color:#B8AB99}

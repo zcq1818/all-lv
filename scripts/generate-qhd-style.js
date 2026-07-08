@@ -58,6 +58,34 @@ const CITY_ILLU = {
 /** 获取城市的独家插画路径，无则返回 null */
 function illu(id) { return CITY_ILLU[id] || null; }
 
+// 地理聚类：城市首页「周边热门目的地」交叉推荐（SEO 内链 + 邻城导览）
+const GEO_CLUSTERS = {
+  north:    ['beijing','tianjin','qinhuangdao','datong','pingyao'],
+  northeast:['haerbin','dalian','hulunbuir'],
+  nw:       ['xian','dunhuang','xining','lhasa','kashgar'],
+  westsc:   ['chengdu','chongqing','jiuzhaigou','emeishan'],
+  yunnan:   ['kunming','dali','lijiang','guiyang'],
+  east:     ['shanghai','hangzhou','suzhou','nanjing','huangshan','xiamen','wuyishan','qingdao','taipei'],
+  central:  ['wuhan','changsha','zhangjiajie','luoyang','guilin','beihai'],
+  south:    ['guangzhou','shenzhen','hongkong','macau','sanya'],
+};
+const POPULAR_FILL = ['beijing','xian','chengdu','hangzhou','lijiang','sanya','shanghai','guangzhou'];
+const CITY_BY_ID = {};
+(data.cities || data).forEach(x => { CITY_BY_ID[x.id] = x; });
+/** 返回与某城市地理邻近的推荐城市 id 列表（不含自身），不足 n 时用热门城市补齐 */
+function relatedCityIds(id, n = 4) {
+  let cluster = [];
+  for (const k in GEO_CLUSTERS) { if (GEO_CLUSTERS[k].indexOf(id) !== -1) { cluster = GEO_CLUSTERS[k]; break; } }
+  let rel = cluster.filter(x => x !== id);
+  if (rel.length < n) {
+    for (const p of POPULAR_FILL) {
+      if (rel.length >= n) break;
+      if (p !== id && rel.indexOf(p) === -1) rel.push(p);
+    }
+  }
+  return rel.slice(0, n);
+}
+
 // ===== 相对路径后处理 =====
 // 依据文件所在目录深度，将绝对路径(/xxx)转为相对前缀(../../)，
 // 使站点在「域名根目录」「GitHub Pages 子路径」「本地双击打开」三种场景下都能正确加载 CSS/图片/JS。
@@ -189,8 +217,9 @@ ${seoHead({
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}
-.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;${illu(c.id)?`background-image:linear-gradient(135deg,rgba(143,53,23,.45) 0%,rgba(189,75,43,.25) 100%),url(${illu(c.id)});background-size:cover;background-position:center;`:((c.attractions&&c.attractions[0]&&c.attractions[0].image)?`background-image:linear-gradient(135deg,rgba(143,53,23,.55) 0%,rgba(189,75,43,.32) 100%),url(${c.attractions[0].image});background-size:cover;background-position:center;`:`background:linear-gradient(135deg,${c.color||'#8F3517'} 0%,${c.color||'#BD4B2B'}88 100%)`)}}
+.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;isolation:isolate;${illu(c.id)?`background-image:linear-gradient(135deg,rgba(143,53,23,.45) 0%,rgba(189,75,43,.25) 100%),url(${illu(c.id)});background-size:cover;background-position:center;`:((c.attractions&&c.attractions[0]&&c.attractions[0].image)?`background-image:linear-gradient(135deg,rgba(143,53,23,.55) 0%,rgba(189,75,43,.32) 100%),url(${c.attractions[0].image});background-size:cover;background-position:center;`:`background:linear-gradient(135deg,${c.color||'#8F3517'} 0%,${c.color||'#BD4B2B'}88 100%)`)}}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 100%)}
+.hero-wash{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,#BD4B2B 0%,#8F3517 100%);mix-blend-mode:soft-light;opacity:.5;pointer-events:none}
 .hero-photo{width:100%;max-width:420px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);border:4px solid rgba(255,255,255,.25);margin:0 auto}
 .hero-grid{max-width:var(--max-width);margin:0 auto;width:100%;position:relative;z-index:2;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .city-intro{padding:100px 24px;background:#fff}
@@ -222,6 +251,7 @@ ${seoHead({
 <!-- Hero -->
 <section class="hero-full" id="main-content">
   <div class="hero-overlay"></div>
+  <div class="hero-wash"></div>
   <div class="hero-grid">
     <div style="color:#fff">
       <h1 style="font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;text-shadow:0 4px 40px rgba(0,0,0,0.3)">
@@ -333,6 +363,17 @@ ${seoHead({
     <a href="/city/${c.id}/guide.html" class="btn btn-primary" style="padding:12px 32px">查看完整攻略 →</a>
   </div>
 </section>
+
+<!-- 周边热门目的地（城市级交叉推荐） -->
+${(() => {
+  const relIds = relatedCityIds(c.id);
+  const cards = relIds.map(rid => {
+    const rc = CITY_BY_ID[rid]; if (!rc) return '';
+    const rImg = illu(rid) || (rc.attractions && rc.attractions[0] && rc.attractions[0].image) || '';
+    return `<a href="/city/${rid}/" class="rel-card reveal">${rImg ? `<img class="rel-thumb" src="${rImg}" alt="${rc.name}风光" loading="lazy">` : `<div class="rel-thumb emoji-fallback">${rc.emoji}</div>`}<div class="rel-info"><span class="rel-prov">${rc.province}</span><h4>${rc.name}</h4><p>${rc.tagline}</p></div></a>`;
+  }).join('');
+  return `<section class="rel-section"><div style="text-align:center;margin-bottom:48px"><h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🧭 周边热门目的地</h2><p style="color:#8A7E6E">顺道规划的邻城与同区推荐</p></div><div class="rel-grid">${cards}</div></section>`;
+})()}
 
 <!-- Footer -->
 <footer class="footer">

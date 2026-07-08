@@ -55,8 +55,9 @@
 .navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 
-.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background-image:linear-gradient(135deg,rgba(143,53,23,.55) 0%,rgba(189,75,43,.32) 100%),url(../../assets/images/qinhuangdao/0.webp);background-size:cover;background-position:center;}
+.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;isolation:isolate;background-image:linear-gradient(135deg,rgba(143,53,23,.55) 0%,rgba(189,75,43,.32) 100%),url(../../assets/images/qinhuangdao/0.webp);background-size:cover;background-position:center;}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 100%)}
+.hero-wash{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,#BD4B2B 0%,#8F3517 100%);mix-blend-mode:soft-light;opacity:.5;pointer-events:none}
 .hero-photo{width:100%;max-width:420px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);border:4px solid rgba(255,255,255,.25);margin:0 auto}
 .hero-grid{max-width:var(--max-width);margin:0 auto;width:100%;position:relative;z-index:2;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .city-intro{padding:100px 24px;background:#fff}
@@ -102,6 +103,7 @@
 <!-- Hero -->
 <section class="hero-full" id="main-content">
   <div class="hero-overlay"></div>
+  <div class="hero-wash"></div>
   <div class="hero-grid">
     <div style="color:#fff">
       <h1 style="font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1.15;margin-bottom:20px;text-shadow:0 4px 40px rgba(0,0,0,0.3)">
@@ -306,6 +308,9 @@
     <a href="../../city/qinhuangdao/guide.html" class="btn btn-primary" style="padding:12px 32px">查看完整攻略 →</a>
   </div>
 </section>
+
+<!-- 周边热门目的地（城市级交叉推荐） -->
+<section class="rel-section"><div style="text-align:center;margin-bottom:48px"><h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🧭 周边热门目的地</h2><p style="color:#8A7E6E">顺道规划的邻城与同区推荐</p></div><div class="rel-grid"><a href="../../city/beijing/" class="rel-card reveal"><img class="rel-thumb" src="../../assets/images/featured/beijing.png" alt="北京风光" loading="lazy"><div class="rel-info"><span class="rel-prov">北京</span><h4>北京</h4><p>祖国心脏，千年古都</p></div></a><a href="../../city/tianjin/" class="rel-card reveal"><img class="rel-thumb" src="../../assets/images/tianjin/0.webp" alt="天津风光" loading="lazy"><div class="rel-info"><span class="rel-prov">天津</span><h4>天津</h4><p>津门故里，中西交融</p></div></a><a href="../../city/datong/" class="rel-card reveal"><img class="rel-thumb" src="../../assets/images/datong/0.webp" alt="大同风光" loading="lazy"><div class="rel-info"><span class="rel-prov">山西</span><h4>大同</h4><p>北魏京华，石窟云冈</p></div></a><a href="../../city/pingyao/" class="rel-card reveal"><img class="rel-thumb" src="../../assets/images/pingyao/0.webp" alt="平遥风光" loading="lazy"><div class="rel-info"><span class="rel-prov">山西</span><h4>平遥</h4><p>明清古城，票号源头</p></div></a></div></section>
 
 <!-- Footer -->
 <footer class="footer">
