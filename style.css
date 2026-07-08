@@ -1278,3 +1278,12 @@ html.reveal-ready .reveal.visible {
 [data-theme="dark"] .rel-card:hover{box-shadow:0 14px 36px rgba(0,0,0,.5)}
 [data-theme="dark"] .rel-info h4{color:var(--text)}
 [data-theme="dark"] .rel-info p{color:#B8AB99}
+
+/* 目的地掠影（短视频区块） */
+.video-section{max-width:1000px;margin:0 auto;padding:64px 24px}
+.video-section h2{font-size:2rem;font-weight:800;margin-bottom:8px}
+.video-section>p{color:#8A7E6E}
+.video-wrap{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(143,53,23,.20);border:1px solid rgba(189,75,43,.18);aspect-ratio:16/9;background:#1c1714}
+.video-wrap video{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.video-section{padding:44px 16px}.video-wrap{border-radius:14px}}
+[data-theme="dark"] .video-wrap{box-shadow:0 24px 60px rgba(0,0,0,.5);border-color:rgba(217,121,79,.25)}

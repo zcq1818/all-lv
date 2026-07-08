@@ -58,6 +58,19 @@ const CITY_ILLU = {
 /** 获取城市的独家插画路径，无则返回 null */
 function illu(id) { return CITY_ILLU[id] || null; }
 
+// 目的地短视频（文生视频生成，已落地 assets/videos/<id>.mp4）
+const VIDEO_CITIES = new Set(['beijing','xian','chengdu','hangzhou','sanya','lijiang']);
+
+// 博客头图：优先用城市独家插画（其余城市后续补生成）
+const BLOG_IMG = {
+  beijing: '/assets/images/featured/beijing.png',
+  xian: '/assets/images/featured/xian.png',
+  chengdu: '/assets/images/featured/chengdu.png',
+  hangzhou: '/assets/images/featured/hangzhou.png',
+  sanya: '/assets/images/featured/sanya.png',
+  lijiang: '/assets/images/featured/lijiang.png',
+};
+
 // 地理聚类：城市首页「周边热门目的地」交叉推荐（SEO 内链 + 邻城导览）
 const GEO_CLUSTERS = {
   north:    ['beijing','tianjin','qinhuangdao','datong','pingyao'],
@@ -374,6 +387,19 @@ ${(() => {
   }).join('');
   return `<section class="rel-section"><div style="text-align:center;margin-bottom:48px"><h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🧭 周边热门目的地</h2><p style="color:#8A7E6E">顺道规划的邻城与同区推荐</p></div><div class="rel-grid">${cards}</div></section>`;
 })()}
+
+${VIDEO_CITIES.has(c.id) ? `
+<section class="video-section">
+  <div style="text-align:center;margin-bottom:32px">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🎬 目的地掠影</h2>
+    <p style="color:#8A7E6E">${c.name}的沉浸式视觉之旅</p>
+  </div>
+  <div class="video-wrap">
+    <video autoplay muted loop playsinline preload="metadata" poster="${CITY_ILLU[c.id] || ''}">
+      <source src="/assets/videos/${c.id}.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>` : ''}
 
 <!-- Footer -->
 <footer class="footer">
@@ -908,7 +934,7 @@ ${citySelectorJS}
 // ===== 博客详情页模板（修复旧版绝对路径死链；统一暖陶土风格 + 子路径安全） =====
 function generateBlogDetail(city, blog, idx) {
   const c = city;
-  const heroImg = (c.attractions && c.attractions[0] && c.attractions[0].image) ? c.attractions[0].image : '';
+  const heroImg = BLOG_IMG[c.id] || ((c.attractions && c.attractions[0] && c.attractions[0].image) ? c.attractions[0].image : '');
   const heroBg = heroImg ? 'url(' + heroImg + ') center/cover' : 'linear-gradient(135deg,#BD4B2B,#8F3517)';
   const excerpt = blog.excerpt || '';
   const date = blog.date || '2026';
