@@ -6668,7 +6668,3107 @@
       "highlights": [],
       "ticket": "",
       "time": ""
+    },
+    {
+      "id": "qinhuangdao-北戴河",
+      "name": "北戴河",
+      "desc": "中国著名避暑胜地，海岸线绵长，鸽子窝看日出、老虎石观潮，疗养区林荫如盖。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🏖️",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "中国著名避暑胜地",
+        "海岸线绵长",
+        "鸽子窝看日出、老虎石观潮",
+        "疗养"
+      ],
+      "ticket": "免费(部分景点收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "qinhuangdao-山海关",
+      "name": "山海关",
+      "desc": "明长城东端起点，城楼高悬「天下第一关」匾额，城防体系完整壮观。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "明长城东端起点",
+        "城楼高悬「天下第一关」匾额",
+        "城防体系完整壮观"
+      ],
+      "ticket": "约50元",
+      "time": "建议2-3小时"
+    },
+    {
+      "id": "qinhuangdao-老龙头",
+      "name": "老龙头",
+      "desc": "万里长城唯一探入渤海的段落，入海石城如龙首饮水，气势磅礴。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🌊",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "万里长城唯一探入渤海的段落",
+        "入海石城如龙首饮水",
+        "气势磅礴。"
+      ],
+      "ticket": "约50元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "qinhuangdao-鸽子窝公园",
+      "name": "鸽子窝公园",
+      "desc": "北戴河观日出最佳处，鹰角亭临海崖，亦是候鸟迁徙重要栖息地。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🕊️",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "北戴河观日出最佳处",
+        "鹰角亭临海崖",
+        "亦是候鸟迁徙重要栖息地。"
+      ],
+      "ticket": "约25元",
+      "time": "建议1-2小时"
+    },
+    {
+      "id": "qinhuangdao-老虎石海上公园",
+      "name": "老虎石海上公园",
+      "desc": "北戴河中心海滨浴场，海中巨石状如群虎，沙滩平缓宜戏水。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🪨",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "北戴河中心海滨浴场",
+        "海中巨石状如群虎",
+        "沙滩平缓宜戏水。"
+      ],
+      "ticket": "约8元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "qinhuangdao-联峰山公园",
+      "name": "联峰山公园",
+      "desc": "北戴河背后诸峰，登顶可俯瞰整个海滨全景，松林清凉宜徒步。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "⛰️",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "北戴河背后诸峰",
+        "登顶可俯瞰整个海滨全景",
+        "松林清凉宜徒步。"
+      ],
+      "ticket": "约30元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "qinhuangdao-黄金海岸",
+      "name": "黄金海岸",
+      "desc": "昌黎南戴河一带的细软沙滩，滑沙、温泉、海滨度假一应俱全。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🏝️",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "昌黎南戴河一带的细软沙滩",
+        "滑沙、温泉、海滨度假一应俱全。"
+      ],
+      "ticket": "免费(项目另收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "qinhuangdao-燕塞湖",
+      "name": "燕塞湖",
+      "desc": "山海关旁的人工湖，峡谷间碧水蜿蜒，有「北方小桂林」之誉。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🛶",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "山海关旁的人工湖",
+        "峡谷间碧水蜿蜒",
+        "有「北方小桂林」之誉。"
+      ],
+      "ticket": "约40元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "qinhuangdao-孟姜女庙",
+      "name": "孟姜女庙",
+      "desc": "依「孟姜女哭长城」传说而建，依山筑庙，香火绵延数百载。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "秦皇岛",
+      "highlights": [
+        "依「孟姜女哭长城」传说而建",
+        "依山筑庙",
+        "香火绵延数百载。"
+      ],
+      "ticket": "约25元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "qinhuangdao-food-海鲜大餐",
+      "name": "海鲜大餐",
+      "desc": "秦皇岛海鲜现捞现做，皮皮虾、梭子蟹、扇贝清蒸最鲜甜。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "秦皇岛",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "qinhuangdao-food-浑锅",
+      "name": "浑锅",
+      "desc": "山海关特色铜锅，荤素一锅炖煮，本地年节与待客的硬菜。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "秦皇岛",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "qinhuangdao-food-回记绿豆糕",
+      "name": "回记绿豆糕",
+      "desc": "山海关回记百年老号，绿豆糕细腻不腻，经典伴手礼。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "秦皇岛",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "qinhuangdao-food-长城饽椤饼",
+      "name": "长城饽椤饼",
+      "desc": "以饽椤叶包裹的野菜馅饼，山海关非遗小吃，清香独特。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "秦皇岛",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "qinhuangdao-food-昌黎葡萄酒",
+      "name": "昌黎葡萄酒",
+      "desc": "昌黎是中国干红葡萄酒之乡，酒体醇厚，可访酒庄品鉴。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "秦皇岛",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "qinhuangdao-food-赵家馆饺子",
+      "name": "赵家馆饺子",
+      "desc": "昌黎赵家馆百年老号，皮薄馅大，三鲜水饺最为出名。",
+      "city": "秦皇岛",
+      "cityId": "qinhuangdao",
+      "province": "河北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "秦皇岛",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuhan-黄鹤楼",
+      "name": "黄鹤楼",
+      "desc": "江南三大名楼之一，昔人已乘黄鹤去，登楼俯瞰长江大桥与武汉三镇。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "江南三大名楼之一",
+        "昔人已乘黄鹤去",
+        "登楼俯瞰长江大桥与武汉三镇"
+      ],
+      "ticket": "约70元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "wuhan-东湖",
+      "name": "东湖",
+      "desc": "中国最大城中湖，绿道骑行、磨山赏樱、听涛观景，水光潋滟。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🌊",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "中国最大城中湖",
+        "绿道骑行、磨山赏樱、听涛观景",
+        "水光潋滟。"
+      ],
+      "ticket": "免费(部分景区收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "wuhan-武汉大学",
+      "name": "武汉大学",
+      "desc": "百年名校，樱园三月盛放，老建筑与珞珈山相映成画。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "⛩️",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "百年名校",
+        "樱园三月盛放",
+        "老建筑与珞珈山相映成画。"
+      ],
+      "ticket": "免费(需预约)",
+      "time": "建议2小时"
+    },
+    {
+      "id": "wuhan-户部巷",
+      "name": "户部巷",
+      "desc": "武汉小吃第一巷，热干面、豆皮、糊汤粉一站式尝遍。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🍜",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "武汉小吃第一巷",
+        "热干面、豆皮、糊汤粉一站式尝遍。"
+      ],
+      "ticket": "免费",
+      "time": "建议1-2小时"
+    },
+    {
+      "id": "wuhan-长江大桥",
+      "name": "长江大桥",
+      "desc": "万里长江第一桥，步行或骑行横跨，看两江交汇与两岸灯火。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🌉",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "万里长江第一桥",
+        "步行或骑行横跨",
+        "看两江交汇与两岸灯火。"
+      ],
+      "ticket": "免费",
+      "time": "建议1小时"
+    },
+    {
+      "id": "wuhan-晴川阁",
+      "name": "晴川阁",
+      "desc": "与黄鹤楼隔江相望，禹稷行宫与铁门关临江怀古。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "与黄鹤楼隔江相望",
+        "禹稷行宫与铁门关临江怀古。"
+      ],
+      "ticket": "约30元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "wuhan-归元寺",
+      "name": "归元寺",
+      "desc": "汉阳名刹，五百罗汉神态各异，香火鼎盛。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🛕",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "汉阳名刹",
+        "五百罗汉神态各异",
+        "香火鼎盛。"
+      ],
+      "ticket": "约10元",
+      "time": "建议1-2小时"
+    },
+    {
+      "id": "wuhan-湖北省博物馆",
+      "name": "湖北省博物馆",
+      "desc": "编钟、越王勾践剑等国宝云集，曾侯乙编钟演奏必看。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "编钟、越王勾践剑等国宝云集",
+        "曾侯乙编钟演奏必看。"
+      ],
+      "ticket": "免费(需预约)",
+      "time": "建议2-3小时"
+    },
+    {
+      "id": "wuhan-江汉路步行街",
+      "name": "江汉路步行街",
+      "desc": "百年商业街，老建筑与潮流店铺并存，夜景繁华。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🛍️",
+      "level": "景点",
+      "area": "武汉",
+      "highlights": [
+        "百年商业街",
+        "老建筑与潮流店铺并存",
+        "夜景繁华。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "wuhan-food-热干面",
+      "name": "热干面",
+      "desc": "武汉早餐之王，芝麻酱拌碱面，标配葱花萝卜丁。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武汉",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuhan-food-豆皮",
+      "name": "豆皮",
+      "desc": "糯米豆皮，蛋皮裹糯米肉丁，老通城最为经典。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武汉",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuhan-food-鸭脖",
+      "name": "鸭脖",
+      "desc": "周黑鸭、精武鸭脖，麻辣鲜香，追剧零食首选。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武汉",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuhan-food-糊汤粉",
+      "name": "糊汤粉",
+      "desc": "鲜鱼糊汤配油条，热乎暖胃的汉味早点。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武汉",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuhan-food-面窝",
+      "name": "面窝",
+      "desc": "米浆炸成的中空圈，外脆内软，配热干面绝配。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武汉",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuhan-food-排骨藕汤",
+      "name": "排骨藕汤",
+      "desc": "铫子慢煨莲藕排骨汤，粉糯清甜，湖北家常代表。",
+      "city": "武汉",
+      "cityId": "wuhan",
+      "province": "湖北",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武汉",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "changsha-岳麓山",
+      "name": "岳麓山",
+      "desc": "湘江西岸名山，岳麓书院、爱晚亭、麓山寺皆在此，红叶时节尤美。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "⛰️",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "湘江西岸名山",
+        "岳麓书院、爱晚亭、麓山寺皆在此",
+        "红叶时节尤美。"
+      ],
+      "ticket": "免费(书院收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "changsha-岳麓书院",
+      "name": "岳麓书院",
+      "desc": "千年学府，四大书院之一，古树碑刻书香依旧。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "千年学府",
+        "四大书院之一",
+        "古树碑刻书香依旧。"
+      ],
+      "ticket": "约50元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "changsha-橘子洲",
+      "name": "橘子洲",
+      "desc": "湘江中流的江心洲，青年毛泽东雕像与周末烟花秀闻名。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🌳",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "湘江中流的江心洲",
+        "青年毛泽东雕像与周末烟花秀闻名。"
+      ],
+      "ticket": "免费(小火车收费)",
+      "time": "建议2-3小时"
+    },
+    {
+      "id": "changsha-湖南省博物馆",
+      "name": "湖南省博物馆",
+      "desc": "马王堆汉墓陈列，辛追夫人与素纱襌衣震撼世人。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "马王堆汉墓陈列",
+        "辛追夫人与素纱襌衣震撼世人。"
+      ],
+      "ticket": "免费(需预约)",
+      "time": "建议3小时"
+    },
+    {
+      "id": "changsha-太平老街",
+      "name": "太平老街",
+      "desc": "千年古街，贾谊故居在侧，小吃与文创店铺林立。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🏮",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "千年古街",
+        "贾谊故居在侧",
+        "小吃与文创店铺林立。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "changsha-超级文和友",
+      "name": "超级文和友",
+      "desc": "复古市井空间，老长沙场景还原，拍照打卡地标。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🎡",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "复古市井空间",
+        "老长沙场景还原",
+        "拍照打卡地标。"
+      ],
+      "ticket": "免费(消费另计)",
+      "time": "建议2小时"
+    },
+    {
+      "id": "changsha-天心阁",
+      "name": "天心阁",
+      "desc": "古城东南城垣上的阁楼，登临览长沙老城轮廓。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "古城东南城垣上的阁楼",
+        "登临览长沙老城轮廓。"
+      ],
+      "ticket": "约32元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "changsha-IFS国金中心",
+      "name": "IFS国金中心",
+      "desc": "长沙IFS楼顶KAWS雕塑，潮流地标与城市天际线。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🛍️",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "长沙IFS楼顶KAWS雕塑",
+        "潮流地标与城市天际线。"
+      ],
+      "ticket": "免费",
+      "time": "建议1小时"
+    },
+    {
+      "id": "changsha-靖港古镇",
+      "name": "靖港古镇",
+      "desc": "湘江畔水乡古镇，青石板与老作坊保留旧时风貌。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🏘️",
+      "level": "景点",
+      "area": "长沙",
+      "highlights": [
+        "湘江畔水乡古镇",
+        "青石板与老作坊保留旧时风貌。"
+      ],
+      "ticket": "免费(部分收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "changsha-food-臭豆腐",
+      "name": "臭豆腐",
+      "desc": "黑色经典臭豆腐，外酥里嫩，辣汁入味。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "长沙",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "changsha-food-剁椒鱼头",
+      "name": "剁椒鱼头",
+      "desc": "湘菜代表作，红剁椒铺面，鲜辣开胃。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "长沙",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "changsha-food-糖油粑粑",
+      "name": "糖油粑粑",
+      "desc": "糯米炸糕裹糖油，软糯甜香。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "长沙",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "changsha-food-口味虾",
+      "name": "口味虾",
+      "desc": "麻辣小龙虾，夏夜宵摊灵魂。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "长沙",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "changsha-food-茶颜悦色",
+      "name": "茶颜悦色",
+      "desc": "长沙本土茶饮，幽兰拿铁招牌，国风杯身。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "长沙",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "changsha-food-姊妹团子",
+      "name": "姊妹团子",
+      "desc": "糯米甜咸双拼团子，火宫殿名点。",
+      "city": "长沙",
+      "cityId": "changsha",
+      "province": "湖南",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "长沙",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "tianjin-五大道",
+      "name": "五大道",
+      "desc": "睦南道等五街洋楼群，民国名流旧居，骑行赏建筑。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "睦南道等五街洋楼群",
+        "民国名流旧居",
+        "骑行赏建筑。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "tianjin-天津之眼",
+      "name": "天津之眼",
+      "desc": "永乐桥上的巨型摩天轮，俯瞰海河夜景。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🎡",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "永乐桥上的巨型摩天轮",
+        "俯瞰海河夜景。"
+      ],
+      "ticket": "约70元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "tianjin-古文化街",
+      "name": "古文化街",
+      "desc": "津味老街，杨柳青年画、泥人张、狗不理总号。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🏮",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "津味老街",
+        "杨柳青年画、泥人张、狗不理总号。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "tianjin-意式风情区",
+      "name": "意式风情区",
+      "desc": "原意租界，地中海建筑与酒吧餐厅聚集。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "原意租界",
+        "地中海建筑与酒吧餐厅聚集。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "tianjin-瓷房子",
+      "name": "瓷房子",
+      "desc": "瓷片镶嵌的法式洋楼，外墙满铺古瓷，奇绝夺目。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🏠",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "瓷片镶嵌的法式洋楼",
+        "外墙满铺古瓷",
+        "奇绝夺目。"
+      ],
+      "ticket": "约50元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "tianjin-滨江道",
+      "name": "滨江道",
+      "desc": "百年商业街，老百货与商圈繁华。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🛍️",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "百年商业街",
+        "老百货与商圈繁华。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "tianjin-盘山",
+      "name": "盘山",
+      "desc": "京东第一名山，乾隆早知有盘山何必下江南。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "⛰️",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "京东第一名山",
+        "乾隆早知有盘山何必下江南。"
+      ],
+      "ticket": "约130元",
+      "time": "建议半天"
+    },
+    {
+      "id": "tianjin-海河游船",
+      "name": "海河游船",
+      "desc": "夜游海河，览两岸灯光与桥景。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🚢",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "夜游海河",
+        "览两岸灯光与桥景。"
+      ],
+      "ticket": "约100元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "tianjin-西开教堂",
+      "name": "西开教堂",
+      "desc": "法式罗曼式教堂，双塔与彩窗庄严。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "⛪",
+      "level": "景点",
+      "area": "天津",
+      "highlights": [
+        "法式罗曼式教堂",
+        "双塔与彩窗庄严。"
+      ],
+      "ticket": "免费",
+      "time": "建议1小时"
+    },
+    {
+      "id": "tianjin-food-狗不理包子",
+      "name": "狗不理包子",
+      "desc": "天津包子代表，皮薄馅大十八褶。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "天津",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "tianjin-food-煎饼果子",
+      "name": "煎饼果子",
+      "desc": "绿豆面薄脆果子，津门国民早餐。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "天津",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "tianjin-food-耳朵眼炸糕",
+      "name": "耳朵眼炸糕",
+      "desc": "糯米炸糕红豆馅，外脆内糯。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "天津",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "tianjin-food-熟梨糕",
+      "name": "熟梨糕",
+      "desc": "米糕蒸制淋糖酱，老式儿童零食。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "天津",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "tianjin-food-麻花",
+      "name": "麻花",
+      "desc": "十八街麻花，酥脆多层，经典伴手礼。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "天津",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "tianjin-food-锅巴菜",
+      "name": "锅巴菜",
+      "desc": "绿豆煎饼切条浇卤，咸香早点。",
+      "city": "天津",
+      "cityId": "tianjin",
+      "province": "天津",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "天津",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "shenzhen-世界之窗",
+      "name": "世界之窗",
+      "desc": "微缩全球地标，一日环游世界主题乐园。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🌍",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "微缩全球地标",
+        "一日环游世界主题乐园。"
+      ],
+      "ticket": "约220元",
+      "time": "建议半天"
+    },
+    {
+      "id": "shenzhen-欢乐谷",
+      "name": "欢乐谷",
+      "desc": "大型主题乐园，刺激过山车与演出。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🎢",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "大型主题乐园",
+        "刺激过山车与演出。"
+      ],
+      "ticket": "约230元",
+      "time": "建议半天"
+    },
+    {
+      "id": "shenzhen-莲花山公园",
+      "name": "莲花山公园",
+      "desc": "市中心绿肺，山顶广场瞻小平像，俯瞰市民中心。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "⛰️",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "市中心绿肺",
+        "山顶广场瞻小平像",
+        "俯瞰市民中心。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "shenzhen-深圳湾公园",
+      "name": "深圳湾公园",
+      "desc": "滨海红树林与候鸟，骑行望香港。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🌊",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "滨海红树林与候鸟",
+        "骑行望香港。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "shenzhen-大梅沙海滨",
+      "name": "大梅沙海滨",
+      "desc": "免费海滨浴场，沙滩与栈道。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🏖️",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "免费海滨浴场",
+        "沙滩与栈道。"
+      ],
+      "ticket": "免费(需预约)",
+      "time": "建议半天"
+    },
+    {
+      "id": "shenzhen-华侨城创意文化园",
+      "name": "华侨城创意文化园",
+      "desc": "旧厂房改造文艺区，展览与咖啡。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🎨",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "旧厂房改造文艺区",
+        "展览与咖啡。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "shenzhen-中英街",
+      "name": "中英街",
+      "desc": "深港分界街，一街两制，购物怀旧。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🛍️",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "深港分界街",
+        "一街两制",
+        "购物怀旧。"
+      ],
+      "ticket": "免费(需办证)",
+      "time": "建议2小时"
+    },
+    {
+      "id": "shenzhen-地王大厦观光",
+      "name": "地王大厦观光",
+      "desc": "深港之窗俯瞰福田罗湖天际线。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🏙️",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "深港之窗俯瞰福田罗湖天际线。"
+      ],
+      "ticket": "约80元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "shenzhen-甘坑古镇",
+      "name": "甘坑古镇",
+      "desc": "客家小镇，凉帽坊与炮楼，周末文艺游。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🏘️",
+      "level": "景点",
+      "area": "深圳",
+      "highlights": [
+        "客家小镇",
+        "凉帽坊与炮楼",
+        "周末文艺游。"
+      ],
+      "ticket": "免费(部分收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "shenzhen-food-椰子鸡",
+      "name": "椰子鸡",
+      "desc": "海南风味火锅，椰青清汤涮文昌鸡。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "深圳",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "shenzhen-food-肠粉",
+      "name": "肠粉",
+      "desc": "潮汕拉肠，酱汁鲜滑。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "深圳",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "shenzhen-food-沙井蚝",
+      "name": "沙井蚝",
+      "desc": "宝安沙井生蚝，肥美鲜甜。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "深圳",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "shenzhen-food-光明乳鸽",
+      "name": "光明乳鸽",
+      "desc": "光明招待所烧乳鸽，皮脆肉嫩。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "深圳",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "shenzhen-food-潮汕牛肉火锅",
+      "name": "潮汕牛肉火锅",
+      "desc": "现切黄牛肉涮锅，沙茶蘸料。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "深圳",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "shenzhen-food-盆菜",
+      "name": "盆菜",
+      "desc": "客家团圆菜，层层食材一盆盛。",
+      "city": "深圳",
+      "cityId": "shenzhen",
+      "province": "广东",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "深圳",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "dalian-星海广场",
+      "name": "星海广场",
+      "desc": "亚洲最大城市广场，百年城雕与跨海大桥相望。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "⭐",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "亚洲最大城市广场",
+        "百年城雕与跨海大桥相望。"
+      ],
+      "ticket": "免费",
+      "time": "建议1-2小时"
+    },
+    {
+      "id": "dalian-滨海路",
+      "name": "滨海路",
+      "desc": "依山傍海景观公路，木栈道看礁石与鸥鸟。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🛣️",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "依山傍海景观公路",
+        "木栈道看礁石与鸥鸟。"
+      ],
+      "ticket": "免费",
+      "time": "建议半天"
+    },
+    {
+      "id": "dalian-老虎滩海洋公园",
+      "name": "老虎滩海洋公园",
+      "desc": "极地馆与珊瑚馆，海洋动物表演。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🐬",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "极地馆与珊瑚馆",
+        "海洋动物表演。"
+      ],
+      "ticket": "约220元",
+      "time": "建议半天"
+    },
+    {
+      "id": "dalian-金石滩",
+      "name": "金石滩",
+      "desc": "国家地质公园，奇礁怪石与黄金海岸。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🏖️",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "国家地质公园",
+        "奇礁怪石与黄金海岸。"
+      ],
+      "ticket": "约60元",
+      "time": "建议半天"
+    },
+    {
+      "id": "dalian-棒棰岛",
+      "name": "棒棰岛",
+      "desc": "国宾馆海滨，清澈海水与私密沙滩。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🏝️",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "国宾馆海滨",
+        "清澈海水与私密沙滩。"
+      ],
+      "ticket": "约20元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "dalian-旅顺口",
+      "name": "旅顺口",
+      "desc": "军港与日俄监狱旧址，近代史见证。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "军港与日俄监狱旧址",
+        "近代史见证。"
+      ],
+      "ticket": "免费(部分收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "dalian-有轨电车",
+      "name": "有轨电车",
+      "desc": "201路老电车，咣当作响穿越城区。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🚊",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "201路老电车",
+        "咣当作响穿越城区。"
+      ],
+      "ticket": "约1元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "dalian-发现王国",
+      "name": "发现王国",
+      "desc": "大型主题乐园，城堡与过山车。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🎢",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "大型主题乐园",
+        "城堡与过山车。"
+      ],
+      "ticket": "约260元",
+      "time": "建议半天"
+    },
+    {
+      "id": "dalian-渔人码头",
+      "name": "渔人码头",
+      "desc": "欧式码头街区，渔船与餐厅黄昏最美。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "⚓",
+      "level": "景点",
+      "area": "大连",
+      "highlights": [
+        "欧式码头街区",
+        "渔船与餐厅黄昏最美。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "dalian-food-海鲜",
+      "name": "海鲜",
+      "desc": "焖子配虾怪、海胆蒸蛋，渤海海鲜丰盛。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大连",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "dalian-food-焖子",
+      "name": "焖子",
+      "desc": "红薯粉煎块，麻酱蒜汁，大连小吃。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大连",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "dalian-food-烤冷面",
+      "name": "烤冷面",
+      "desc": "东北街头小吃，酸甜酱料。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大连",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "dalian-food-咸鱼饼子",
+      "name": "咸鱼饼子",
+      "desc": "大连家常，咸鱼配玉米饼。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大连",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "dalian-food-海菜包子",
+      "name": "海菜包子",
+      "desc": "海带馅包子，鲜香独特。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大连",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "dalian-food-樱桃",
+      "name": "樱桃",
+      "desc": "旅顺大樱桃，初夏上市甘甜。",
+      "city": "大连",
+      "cityId": "dalian",
+      "province": "辽宁",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大连",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuyishan-九曲溪竹筏",
+      "name": "九曲溪竹筏",
+      "desc": "乘竹筏漂九曲，看三十六峰倒影。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🛶",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "乘竹筏漂九曲",
+        "看三十六峰倒影。"
+      ],
+      "ticket": "约130元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "wuyishan-天游峰",
+      "name": "天游峰",
+      "desc": "武夷第一胜境，登顶俯瞰九曲全景。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "⛰️",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "武夷第一胜境",
+        "登顶俯瞰九曲全景。"
+      ],
+      "ticket": "含在联票",
+      "time": "建议3小时"
+    },
+    {
+      "id": "wuyishan-大红袍景区",
+      "name": "大红袍景区",
+      "desc": "母树大红袍岩茶发源，茶香满谷。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🍵",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "母树大红袍岩茶发源",
+        "茶香满谷。"
+      ],
+      "ticket": "含在联票",
+      "time": "建议2小时"
+    },
+    {
+      "id": "wuyishan-玉女峰",
+      "name": "玉女峰",
+      "desc": "九曲溪畔亭亭玉立的标志性峰。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🏔️",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "九曲溪畔亭亭玉立的标志性峰。"
+      ],
+      "ticket": "含在联票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "wuyishan-一线天",
+      "name": "一线天",
+      "desc": "裂隙仅容侧身，幽暗一线天光。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🧗",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "裂隙仅容侧身",
+        "幽暗一线天光。"
+      ],
+      "ticket": "含在联票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "wuyishan-水帘洞",
+      "name": "水帘洞",
+      "desc": "岩壁垂瀑如帘，洞内清凉。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "💧",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "岩壁垂瀑如帘",
+        "洞内清凉。"
+      ],
+      "ticket": "含在联票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "wuyishan-武夷宫",
+      "name": "武夷宫",
+      "desc": "千年宫观，止止庵与柳永祠。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "千年宫观",
+        "止止庵与柳永祠。"
+      ],
+      "ticket": "免费",
+      "time": "建议1小时"
+    },
+    {
+      "id": "wuyishan-下梅古村",
+      "name": "下梅古村",
+      "desc": "晋商万里茶路起点，明清古民居。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🏘️",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "晋商万里茶路起点",
+        "明清古民居。"
+      ],
+      "ticket": "约60元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "wuyishan-青龙大瀑布",
+      "name": "青龙大瀑布",
+      "desc": "峡谷飞瀑，负氧离子充沛。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "💦",
+      "level": "景点",
+      "area": "武夷山",
+      "highlights": [
+        "峡谷飞瀑",
+        "负氧离子充沛。"
+      ],
+      "ticket": "约40元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "wuyishan-food-岩茶",
+      "name": "岩茶",
+      "desc": "大红袍、水仙、肉桂，岩骨花香。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武夷山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuyishan-food-岚谷熏鹅",
+      "name": "岚谷熏鹅",
+      "desc": "武夷山熏制鹅肉，烟香微辣。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武夷山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuyishan-food-文公菜",
+      "name": "文公菜",
+      "desc": "朱熹家宴菜，红烧肉丸。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武夷山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuyishan-food-粿仔",
+      "name": "粿仔",
+      "desc": "米浆蒸制小吃，浇卤汁。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武夷山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuyishan-food-茶油稻花鱼",
+      "name": "茶油稻花鱼",
+      "desc": "稻田鱼茶油焖，鲜香。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武夷山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "wuyishan-food-孝母饼",
+      "name": "孝母饼",
+      "desc": "朱子孝道主题糕点，芝麻馅。",
+      "city": "武夷山",
+      "cityId": "wuyishan",
+      "province": "福建",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "武夷山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "emeishan-金顶",
+      "name": "金顶",
+      "desc": "峨眉绝顶，十方普贤金像与云海佛光。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "⛰️",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "峨眉绝顶",
+        "十方普贤金像与云海佛光。"
+      ],
+      "ticket": "含进山门票",
+      "time": "建议半天"
+    },
+    {
+      "id": "emeishan-乐山大佛",
+      "name": "乐山大佛",
+      "desc": "岷江畔71米坐佛，凌云栈道近观。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🗿",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "岷江畔71米坐佛",
+        "凌云栈道近观。"
+      ],
+      "ticket": "约80元",
+      "time": "建议3小时"
+    },
+    {
+      "id": "emeishan-报国寺",
+      "name": "报国寺",
+      "desc": "峨眉山门户大刹，林荫幽静。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🛕",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "峨眉山门户大刹",
+        "林荫幽静。"
+      ],
+      "ticket": "含进山门票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "emeishan-清音阁",
+      "name": "清音阁",
+      "desc": "双桥清音，黑白二水汇流，山水如画。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "💧",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "双桥清音",
+        "黑白二水汇流",
+        "山水如画。"
+      ],
+      "ticket": "含进山门票",
+      "time": "建议2小时"
+    },
+    {
+      "id": "emeishan-万年寺",
+      "name": "万年寺",
+      "desc": "无梁砖殿，普贤骑象铜像。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "无梁砖殿",
+        "普贤骑象铜像。"
+      ],
+      "ticket": "含进山门票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "emeishan-猴区",
+      "name": "猴区",
+      "desc": "生态猴区，峨眉藏酋猴出没，请勿挑逗。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🐒",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "生态猴区",
+        "峨眉藏酋猴出没",
+        "请勿挑逗。"
+      ],
+      "ticket": "含进山门票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "emeishan-伏虎寺",
+      "name": "伏虎寺",
+      "desc": "峨眉八大寺庙之一，离垢园无尘。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🛕",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "峨眉八大寺庙之一",
+        "离垢园无尘。"
+      ],
+      "ticket": "含进山门票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "emeishan-洪椿坪",
+      "name": "洪椿坪",
+      "desc": "深山古刹，晨雨湿润幽静。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "⛩️",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "深山古刹",
+        "晨雨湿润幽静。"
+      ],
+      "ticket": "含进山门票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "emeishan-雷洞坪",
+      "name": "雷洞坪",
+      "desc": "高山区停车场，徒步登金顶起点。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🌲",
+      "level": "景点",
+      "area": "峨眉山",
+      "highlights": [
+        "高山区停车场",
+        "徒步登金顶起点。"
+      ],
+      "ticket": "含进山门票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "emeishan-food-峨眉雪芽",
+      "name": "峨眉雪芽",
+      "desc": "峨眉高山茶，清鲜回甘。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "峨眉山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "emeishan-food-乐山跷脚牛肉",
+      "name": "乐山跷脚牛肉",
+      "desc": "药膳牛肉汤锅，鲜而不膻。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "峨眉山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "emeishan-food-甜皮鸭",
+      "name": "甜皮鸭",
+      "desc": "乐山甜皮卤鸭，皮脆甜香。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "峨眉山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "emeishan-food-豆腐脑",
+      "name": "豆腐脑",
+      "desc": "乐山豆腐脑勾芡加酥肉，咸鲜。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "峨眉山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "emeishan-food-叶儿粑",
+      "name": "叶儿粑",
+      "desc": "糯米叶包粑，咸甜两味。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "峨眉山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "emeishan-food-冷串串",
+      "name": "冷串串",
+      "desc": "乐山小吃，钵钵鸡冷串。",
+      "city": "峨眉山",
+      "cityId": "emeishan",
+      "province": "四川",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "峨眉山",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "pingyao-平遥古城墙",
+      "name": "平遥古城墙",
+      "desc": "明代夯土包砖城垣，登城看龟城格局。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "明代夯土包砖城垣",
+        "登城看龟城格局。"
+      ],
+      "ticket": "约125元联票",
+      "time": "建议2小时"
+    },
+    {
+      "id": "pingyao-日昇昌票号",
+      "name": "日昇昌票号",
+      "desc": "中国第一家票号，汇兑业起源地。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🏦",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "中国第一家票号",
+        "汇兑业起源地。"
+      ],
+      "ticket": "含联票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "pingyao-平遥县衙",
+      "name": "平遥县衙",
+      "desc": "完整古代县署，升堂表演还原。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "完整古代县署",
+        "升堂表演还原。"
+      ],
+      "ticket": "含联票",
+      "time": "建议2小时"
+    },
+    {
+      "id": "pingyao-明清街",
+      "name": "明清街",
+      "desc": "南大街市井，老字号与镖局林立。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🏮",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "南大街市井",
+        "老字号与镖局林立。"
+      ],
+      "ticket": "含联票",
+      "time": "建议2小时"
+    },
+    {
+      "id": "pingyao-协同庆钱庄",
+      "name": "协同庆钱庄",
+      "desc": "地下金库与票号经营展示。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🏦",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "地下金库与票号经营展示。"
+      ],
+      "ticket": "含联票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "pingyao-文庙",
+      "name": "文庙",
+      "desc": "平遥文庙大成殿，古建与科举文化。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "平遥文庙大成殿",
+        "古建与科举文化。"
+      ],
+      "ticket": "含联票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "pingyao-双林寺",
+      "name": "双林寺",
+      "desc": "彩塑艺术馆，两千尊明代彩塑栩栩如生。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🛕",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "彩塑艺术馆",
+        "两千尊明代彩塑栩栩如生。"
+      ],
+      "ticket": "约40元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "pingyao-镇国寺",
+      "name": "镇国寺",
+      "desc": "五代木构万佛殿，罕见早期建筑。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "五代木构万佛殿",
+        "罕见早期建筑。"
+      ],
+      "ticket": "约25元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "pingyao-城隍庙",
+      "name": "城隍庙",
+      "desc": "城隍信仰与戏台古建。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "平遥",
+      "highlights": [
+        "城隍信仰与戏台古建。"
+      ],
+      "ticket": "含联票",
+      "time": "建议1小时"
+    },
+    {
+      "id": "pingyao-food-平遥牛肉",
+      "name": "平遥牛肉",
+      "desc": "冠云牛肉，红润咸香。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "平遥",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "pingyao-food-碗托",
+      "name": "碗托",
+      "desc": "荞面碗托浇醋蒜，爽滑。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "平遥",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "pingyao-food-莜面栲栳栳",
+      "name": "莜面栲栳栳",
+      "desc": "山西莜面卷，蘸羊肉臊子。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "平遥",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "pingyao-food-剔尖",
+      "name": "剔尖",
+      "desc": "拨鱼面，筋道浇卤。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "平遥",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "pingyao-food-推光漆器",
+      "name": "推光漆器",
+      "desc": "平遥非遗漆器，亮如镜。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "平遥",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "pingyao-food-山西老陈醋",
+      "name": "山西老陈醋",
+      "desc": "宁化府陈醋，凉拌蘸水。",
+      "city": "平遥",
+      "cityId": "pingyao",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "平遥",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "datong-云冈石窟",
+      "name": "云冈石窟",
+      "desc": "北魏皇家石窟，53窟造像磅礴，雕刻巅峰。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🗿",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "北魏皇家石窟",
+        "53窟造像磅礴",
+        "雕刻巅峰。"
+      ],
+      "ticket": "约120元",
+      "time": "建议3小时"
+    },
+    {
+      "id": "datong-悬空寺",
+      "name": "悬空寺",
+      "desc": "恒山峭壁上的木构悬庙，千年奇观。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "恒山峭壁上的木构悬庙",
+        "千年奇观。"
+      ],
+      "ticket": "约100元(登临)",
+      "time": "建议2小时"
+    },
+    {
+      "id": "datong-恒山",
+      "name": "恒山",
+      "desc": "五岳之北岳，山势险峻道观散布。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "⛰️",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "五岳之北岳",
+        "山势险峻道观散布。"
+      ],
+      "ticket": "约45元",
+      "time": "建议半天"
+    },
+    {
+      "id": "datong-大同古城墙",
+      "name": "大同古城墙",
+      "desc": "修复的明代砖城，夜登看灯。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "修复的明代砖城",
+        "夜登看灯。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "datong-华严寺",
+      "name": "华严寺",
+      "desc": "辽金巨刹，薄伽教藏殿与合掌露齿菩萨。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🛕",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "辽金巨刹",
+        "薄伽教藏殿与合掌露齿菩萨。"
+      ],
+      "ticket": "约50元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "datong-善化寺",
+      "name": "善化寺",
+      "desc": "辽金完整寺院，大雄宝殿宏伟。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🏯",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "辽金完整寺院",
+        "大雄宝殿宏伟。"
+      ],
+      "ticket": "免费",
+      "time": "建议1小时"
+    },
+    {
+      "id": "datong-九龙壁",
+      "name": "九龙壁",
+      "desc": "明代琉璃照壁，比北海更大。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🐉",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "明代琉璃照壁",
+        "比北海更大。"
+      ],
+      "ticket": "免费",
+      "time": "建议1小时"
+    },
+    {
+      "id": "datong-应县木塔",
+      "name": "应县木塔",
+      "desc": "千年辽代木塔，世界最高木构。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🗼",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "千年辽代木塔",
+        "世界最高木构。"
+      ],
+      "ticket": "约60元",
+      "time": "建议2小时(距市区)"
+    },
+    {
+      "id": "datong-大同博物馆",
+      "name": "大同博物馆",
+      "desc": "北魏文物与司马金龙墓展。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "大同",
+      "highlights": [
+        "北魏文物与司马金龙墓展。"
+      ],
+      "ticket": "免费(需预约)",
+      "time": "建议2小时"
+    },
+    {
+      "id": "datong-food-刀削面",
+      "name": "刀削面",
+      "desc": "大同刀削面，外滑内筋浇卤。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大同",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "datong-food-羊杂割",
+      "name": "羊杂割",
+      "desc": "羊杂汤配粉，暖身。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大同",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "datong-food-浑源凉粉",
+      "name": "浑源凉粉",
+      "desc": "浑源蚕豆凉粉，辣香爽滑。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大同",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "datong-food-黄糕",
+      "name": "黄糕",
+      "desc": "黄米蒸糕蘸菜，雁北主食。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大同",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "datong-food-莜面",
+      "name": "莜面",
+      "desc": "雁北莜面窝窝，羊肉臊子。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大同",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "datong-food-苦菜",
+      "name": "苦菜",
+      "desc": "凉拌苦菜，清爽解腻。",
+      "city": "大同",
+      "cityId": "datong",
+      "province": "山西",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "大同",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "kashgar-喀什古城",
+      "name": "喀什古城",
+      "desc": "迷宫般土巷与手作店铺，活着的西域老城。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🏘️",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "迷宫般土巷与手作店铺",
+        "活着的西域老城。"
+      ],
+      "ticket": "免费",
+      "time": "建议半天"
+    },
+    {
+      "id": "kashgar-艾提尕尔清真寺",
+      "name": "艾提尕尔清真寺",
+      "desc": "新疆最大清真寺，周五聚礼壮观。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🕌",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "新疆最大清真寺",
+        "周五聚礼壮观。"
+      ],
+      "ticket": "约45元",
+      "time": "建议1小时"
+    },
+    {
+      "id": "kashgar-高台民居",
+      "name": "高台民居",
+      "desc": "土崖上的层层民居，泥砖迷宫。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🏠",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "土崖上的层层民居",
+        "泥砖迷宫。"
+      ],
+      "ticket": "免费(修缮中)",
+      "time": "建议1小时"
+    },
+    {
+      "id": "kashgar-香妃园",
+      "name": "香妃园",
+      "desc": "香妃墓与阿帕克霍加陵，伊斯兰建筑华美。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🌸",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "香妃墓与阿帕克霍加陵",
+        "伊斯兰建筑华美。"
+      ],
+      "ticket": "约30元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "kashgar-大巴扎",
+      "name": "大巴扎",
+      "desc": "中西亚集市，干果地毯铜器琳琅。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🛍️",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "中西亚集市",
+        "干果地毯铜器琳琅。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "kashgar-喀什夜市",
+      "name": "喀什夜市",
+      "desc": "烤串烤包子与瓜果，烟火升腾。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🍢",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "烤串烤包子与瓜果",
+        "烟火升腾。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "kashgar-慕士塔格峰",
+      "name": "慕士塔格峰",
+      "desc": "冰山之父，帕米尔高原地标(远观)。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🏔️",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "冰山之父",
+        "帕米尔高原地标(远观)。"
+      ],
+      "ticket": "免费(需边境证)",
+      "time": "建议半天"
+    },
+    {
+      "id": "kashgar-卡拉库里湖",
+      "name": "卡拉库里湖",
+      "desc": "慕峰倒影的高原湖，牧民毡房。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "💧",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "慕峰倒影的高原湖",
+        "牧民毡房。"
+      ],
+      "ticket": "免费",
+      "time": "建议半天"
+    },
+    {
+      "id": "kashgar-塔什库尔干",
+      "name": "塔什库尔干",
+      "desc": "帕米尔塔吉克县城，石头城与金草滩。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🏔️",
+      "level": "景点",
+      "area": "喀什",
+      "highlights": [
+        "帕米尔塔吉克县城",
+        "石头城与金草滩。"
+      ],
+      "ticket": "免费(需边境证)",
+      "time": "建议半天"
+    },
+    {
+      "id": "kashgar-food-烤包子",
+      "name": "烤包子",
+      "desc": "馕坑烤包子，皮脆肉香。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "喀什",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "kashgar-food-红柳烤肉",
+      "name": "红柳烤肉",
+      "desc": "红柳枝串羊肉，炭火焦香。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "喀什",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "kashgar-food-手抓饭",
+      "name": "手抓饭",
+      "desc": "黄萝卜羊肉饭，油亮米香。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "喀什",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "kashgar-food-拉条子",
+      "name": "拉条子",
+      "desc": "新疆拌面，过水筋道。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "喀什",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "kashgar-food-石榴汁",
+      "name": "石榴汁",
+      "desc": "喀什石榴现榨，酸甜。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "喀什",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "kashgar-food-鸽子汤",
+      "name": "鸽子汤",
+      "desc": "喀什鸽子汤面，滋补。",
+      "city": "喀什",
+      "cityId": "kashgar",
+      "province": "新疆",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "喀什",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "taipei-台北101",
+      "name": "台北101",
+      "desc": "曾是世界最高楼，观景台与跨年烟火。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🏙️",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "曾是世界最高楼",
+        "观景台与跨年烟火。"
+      ],
+      "ticket": "约600台币",
+      "time": "建议2小时"
+    },
+    {
+      "id": "taipei-故宫博物院",
+      "name": "故宫博物院",
+      "desc": "翠玉白菜与肉形石等国宝，华夏文明精华。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "翠玉白菜与肉形石等国宝",
+        "华夏文明精华。"
+      ],
+      "ticket": "约350台币",
+      "time": "建议3小时"
+    },
+    {
+      "id": "taipei-士林夜市",
+      "name": "士林夜市",
+      "desc": "台湾夜市代表，小吃琳琅。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🍢",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "台湾夜市代表",
+        "小吃琳琅。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "taipei-西门町",
+      "name": "西门町",
+      "desc": "青少年潮流街，电影街与街头表演。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🛍️",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "青少年潮流街",
+        "电影街与街头表演。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "taipei-阳明山",
+      "name": "阳明山",
+      "desc": "火山温泉与海芋季，北投泡汤。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🌸",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "火山温泉与海芋季",
+        "北投泡汤。"
+      ],
+      "ticket": "免费(部分收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "taipei-九份老街",
+      "name": "九份老街",
+      "desc": "山城茶肆红灯笼，千与千寻原型。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🏮",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "山城茶肆红灯笼",
+        "千与千寻原型。"
+      ],
+      "ticket": "免费",
+      "time": "建议半天"
+    },
+    {
+      "id": "taipei-中正纪念堂",
+      "name": "中正纪念堂",
+      "desc": "宏伟纪念建筑与卫兵交接。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🏛️",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "宏伟纪念建筑与卫兵交接。"
+      ],
+      "ticket": "免费",
+      "time": "建议1小时"
+    },
+    {
+      "id": "taipei-淡水",
+      "name": "淡水",
+      "desc": "渔人码头日落与老街，淡江夕照。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🌊",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "渔人码头日落与老街",
+        "淡江夕照。"
+      ],
+      "ticket": "免费",
+      "time": "建议半天"
+    },
+    {
+      "id": "taipei-猫空",
+      "name": "猫空",
+      "desc": "缆车茶园，夜瞰台北灯火。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🚡",
+      "level": "景点",
+      "area": "台北",
+      "highlights": [
+        "缆车茶园",
+        "夜瞰台北灯火。"
+      ],
+      "ticket": "约120台币",
+      "time": "建议2小时"
+    },
+    {
+      "id": "taipei-food-牛肉面",
+      "name": "牛肉面",
+      "desc": "台北红烧牛肉面，汤浓肉烂。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "台北",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "taipei-food-珍珠奶茶",
+      "name": "珍珠奶茶",
+      "desc": "台湾发明，黑糖珍珠。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "台北",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "taipei-food-卤肉饭",
+      "name": "卤肉饭",
+      "desc": "碎卤肉浇饭，国民小吃。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "台北",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "taipei-food-蚵仔煎",
+      "name": "蚵仔煎",
+      "desc": "蚵仔煎，酱香软糯。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "台北",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "taipei-food-凤梨酥",
+      "name": "凤梨酥",
+      "desc": "台湾伴手礼，土凤梨馅。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "台北",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "taipei-food-大肠包小肠",
+      "name": "大肠包小肠",
+      "desc": "糯米肠包香肠，夜市经典。",
+      "city": "台北",
+      "cityId": "taipei",
+      "province": "中国台湾",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "台北",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "hulunbuir-呼伦贝尔大草原",
+      "name": "呼伦贝尔大草原",
+      "desc": "莫尔格勒河九曲，羊群如云，最美草原。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🌿",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "莫尔格勒河九曲",
+        "羊群如云",
+        "最美草原。"
+      ],
+      "ticket": "免费",
+      "time": "建议半天"
+    },
+    {
+      "id": "hulunbuir-额尔古纳湿地",
+      "name": "额尔古纳湿地",
+      "desc": "亚洲最大湿地，根河河谷壮阔。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "💧",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "亚洲最大湿地",
+        "根河河谷壮阔。"
+      ],
+      "ticket": "约65元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "hulunbuir-满洲里",
+      "name": "满洲里",
+      "desc": "中俄蒙风情边城，套娃广场与国门。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🏰",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "中俄蒙风情边城",
+        "套娃广场与国门。"
+      ],
+      "ticket": "免费(部分收费)",
+      "time": "建议半天"
+    },
+    {
+      "id": "hulunbuir-莫尔道嘎",
+      "name": "莫尔道嘎",
+      "desc": "大兴安岭林区，原始白桦与小火车站。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🌲",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "大兴安岭林区",
+        "原始白桦与小火车站。"
+      ],
+      "ticket": "约100元",
+      "time": "建议半天"
+    },
+    {
+      "id": "hulunbuir-室韦",
+      "name": "室韦",
+      "desc": "中俄界河边的俄罗斯族民族乡。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🏘️",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "中俄界河边的俄罗斯族民族乡。"
+      ],
+      "ticket": "免费",
+      "time": "建议2小时"
+    },
+    {
+      "id": "hulunbuir-白桦林",
+      "name": "白桦林",
+      "desc": "成片白桦林，秋日金黄。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🌳",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "成片白桦林",
+        "秋日金黄。"
+      ],
+      "ticket": "约40元",
+      "time": "建议2小时"
+    },
+    {
+      "id": "hulunbuir-黑山头",
+      "name": "黑山头",
+      "desc": "草原骑马与日落山丘。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🐎",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "草原骑马与日落山丘。"
+      ],
+      "ticket": "免费(骑马收费)",
+      "time": "建议2小时"
+    },
+    {
+      "id": "hulunbuir-金帐汗蒙古部落",
+      "name": "金帐汗蒙古部落",
+      "desc": "游牧文化体验，那达慕与祭敖包。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🏕️",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "游牧文化体验",
+        "那达慕与祭敖包。"
+      ],
+      "ticket": "约90元",
+      "time": "建议半天"
+    },
+    {
+      "id": "hulunbuir-阿尔山",
+      "name": "阿尔山",
+      "desc": "火山天池与森林温泉(邻区)。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🏔️",
+      "level": "景点",
+      "area": "呼伦贝尔",
+      "highlights": [
+        "火山天池与森林温泉(邻区)。"
+      ],
+      "ticket": "约180元",
+      "time": "建议半天"
+    },
+    {
+      "id": "hulunbuir-food-手把肉",
+      "name": "手把肉",
+      "desc": "清水煮羊肉，蘸韭菜花。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "呼伦贝尔",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "hulunbuir-food-烤全羊",
+      "name": "烤全羊",
+      "desc": "草原盛宴，外焦里嫩。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "呼伦贝尔",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "hulunbuir-food-奶茶",
+      "name": "奶茶",
+      "desc": "咸香蒙古奶茶，砖茶熬煮。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "呼伦贝尔",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "hulunbuir-food-酸奶",
+      "name": "酸奶",
+      "desc": "草原酸奶，浓稠无添加。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "呼伦贝尔",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "hulunbuir-food-列巴",
+      "name": "列巴",
+      "desc": "俄罗斯大列巴面包，配蓝莓酱。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "呼伦贝尔",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
+    },
+    {
+      "id": "hulunbuir-food-野菜",
+      "name": "野菜",
+      "desc": "柳蒿芽等山野菜，时令清爽。",
+      "city": "呼伦贝尔",
+      "cityId": "hulunbuir",
+      "province": "内蒙古",
+      "emoji": "🍜",
+      "level": "美食",
+      "area": "呼伦贝尔",
+      "highlights": [],
+      "ticket": "",
+      "time": ""
     }
   ],
-  "total": 420
+  "total": 615
 }
