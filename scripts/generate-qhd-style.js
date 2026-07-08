@@ -6,7 +6,44 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const SITE = 'https://www.all-lv.com';
+const SITE = 'https://all-lv.vercel.app';
+
+// ===== SEO 工具函数（生成式站点统一注入，覆盖全部页面）=====
+function seoHead({ title, description, keywords, url, image, type = 'website', jsonLd = null, noindex = false }) {
+  const kw = Array.isArray(keywords) ? keywords.join(',') : (keywords || '');
+  const imgAbs = image ? (image.startsWith('http') ? image : SITE + image) : '';
+  const robots = noindex ? '\n<meta name="robots" content="noindex,follow">' : '';
+  let ld = '';
+  if (jsonLd) {
+    const arr = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+    ld = arr.map(o => '\n<script type="application/ld+json">\n' + JSON.stringify(o) + '\n</script>').join('');
+  }
+  const twCard = imgAbs ? 'summary_large_image' : 'summary';
+  return `<title>${title}</title>
+<meta name="description" content="${description}">
+<meta name="keywords" content="${kw}">
+<link rel="canonical" href="${url}">${robots}
+<meta property="og:title" content="${title}">
+<meta property="og:description" content="${description}">
+<meta property="og:type" content="${type}">
+<meta property="og:url" content="${url}">
+<meta property="og:site_name" content="全国旅游攻略">
+<meta property="og:locale" content="zh_CN">
+${imgAbs ? `<meta property="og:image" content="${imgAbs}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">` : ''}
+<meta name="twitter:card" content="${twCard}">
+<meta name="twitter:title" content="${title}">
+<meta name="twitter:description" content="${description}">
+${imgAbs ? `<meta name="twitter:image" content="${imgAbs}">` : ''}${ld}`;
+}
+function breadcrumb(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((it, i) => ({
+      "@type": "ListItem", "position": i + 1, "name": it[0], "item": SITE + it[1]
+    }))
+  };
+}
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'cities.json'), 'utf8'));
 
 // ===== 相对路径后处理 =====
@@ -105,23 +142,34 @@ function generateIndex(city) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${c.name}旅游官网 — ${c.tagline} | 2026攻略</title>
-<meta name="description" content="${c.name}旅游官网 · 2026最新攻略。${c.description}">
-<meta name="keywords" content="${c.keywords.join(',')}">
-<meta name="author" content="${c.name}旅游官网">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="${SITE}/city/${c.id}/">
+${seoHead({
+  title: `${c.name}旅游官网 — ${c.tagline} | 2026攻略`,
+  description: c.description,
+  keywords: c.keywords,
+  url: `${SITE}/city/${c.id}/`,
+  image: (c.attractions && c.attractions[0] && c.attractions[0].image) ? c.attractions[0].image : '',
+  type: 'website',
+  jsonLd: [
+    {
+      "@context": "https://schema.org", "@type": "TouristDestination",
+      "name": `${c.name}旅游`,
+      "description": c.description,
+      "url": `${SITE}/city/${c.id}/`,
+      "image": (c.attractions && c.attractions[0]) ? `${SITE}${c.attractions[0].image}` : '',
+      "address": { "@type": "PostalAddress", "addressRegion": c.province, "addressCountry": "CN" },
+      "geo": { "@type": "GeoCoordinates", "latitude": c.lat, "longitude": c.lng },
+      "touristType": ["休闲度假", "亲子出游", "摄影打卡", "美食探店"],
+      "containsPlace": (c.attractions || []).slice(0, 12).map(a => ({
+        "@type": "TouristAttraction", "name": a.name,
+        "url": `${SITE}/city/${c.id}/attraction/${c.attractions.indexOf(a)}.html`,
+        "image": `${SITE}${a.image}`
+      }))
+    },
+    breadcrumb([['首页', '/'], [c.name, `/city/${c.id}/`]])
+  ]
+})}
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#BD4B2B">
-<meta property="og:title" content="${c.name}旅游官网 — ${c.tagline}">
-<meta property="og:description" content="${c.description}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="${SITE}/city/${c.id}/">
-<meta property="og:site_name" content="${c.name}旅游官网">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"${c.name}旅游官网","url":"${SITE}/city/${c.id}/","description":"${c.description}",
-"potentialAction":{"@type":"SearchAction","target":"${SITE}/city/${c.id}/guide.html?q={search_term_string}","query-input":"required name=search_term_string"}}
-</script>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}
@@ -284,19 +332,18 @@ function generateAttractions(city) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${c.name}景点推荐 - ${c.name}旅游攻略</title>
-<meta name="description" content="${c.name}最值得去的景点推荐：精选${c.name}必玩景点，附详细攻略、门票、交通信息。">
-<meta name="keywords" content="${c.name}景点,${c.name}旅游,${c.name}攻略">
-<link rel="canonical" href="${SITE}/city/${c.id}/attractions.html">
+${seoHead({
+  title: `${c.name}景点推荐 - ${c.name}旅游攻略`,
+  description: `${c.name}最值得去的景点推荐：精选${c.name}必玩景点，附详细攻略、门票、交通信息。`,
+  keywords: [`${c.name}景点`, `${c.name}旅游`, `${c.name}攻略`, `${c.name}必玩`],
+  url: `${SITE}/city/${c.id}/attractions.html`,
+  image: (c.attractions && c.attractions[0]) ? c.attractions[0].image : '',
+  type: 'website',
+  jsonLd: breadcrumb([['首页', `/city/${c.id}/`], [`${c.name}景点`, `/city/${c.id}/attractions.html`]])
+})}
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-  {"@type":"ListItem","position":1,"name":"首页","item":"${SITE}/city/${c.id}/"},
-  {"@type":"ListItem","position":2,"name":"景点","item":"${SITE}/city/${c.id}/attractions.html"}
-]}
-</script>
 <style>
 .spot-card:hover img{transform:scale(1.06)}
 .spot-card img{transition:transform .45s ease}
@@ -357,14 +404,33 @@ function generateAttractionDetail(city, a, idx) {
     .map((x, i) => ({ x, i }))
     .filter(o => o.i !== idx)
     .slice(0, 4);
+  const attractionSchema = {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": a.name,
+    "description": a.desc,
+    "image": a.image ? (SITE + a.image) : '',
+    "url": url,
+    "address": { "@type": "PostalAddress", "addressLocality": c.name, "addressRegion": c.province, "addressCountry": "CN" },
+    "isPartOf": { "@type": "TouristDestination", "name": c.name + "旅游", "url": SITE + "/city/" + c.id + "/" },
+    "touristType": ["休闲度假", "摄影打卡", "亲子出游"]
+  };
+  if (a.detailSource) attractionSchema.sameAs = a.detailSource;
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${a.name} - ${c.name}旅游攻略</title>
-<meta name="description" content="${a.name}：${a.desc} 门票${a.ticket || '以景区公示为准'}，游玩时间${a.time || '建议半天'}。">
-<link rel="canonical" href="${url}">
+${seoHead({
+  title: `${a.name} - ${c.name}旅游攻略`,
+  description: `${a.name}：${a.desc} 门票${a.ticket || '以景区公示为准'}，游玩时间${a.time || '建议半天'}。`,
+  keywords: [a.name, `${c.name}景点`, `${c.name}旅游`, a.name + '攻略'],
+  url: url,
+  image: a.image || '',
+  type: 'article',
+  jsonLd: [attractionSchema, breadcrumb([['首页', '/'], [c.name, `/city/${c.id}/`], [`${c.name}景点`, `/city/${c.id}/attractions.html`], [a.name, `/city/${c.id}/attraction/${idx}.html`]])]
+})}
+
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
@@ -468,9 +534,16 @@ function generateFood(city) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${c.name}美食攻略 - ${c.name}旅游</title>
-<meta name="description" content="${c.name}必吃美食推荐：特色小吃、网红餐厅、本地人私藏好店。">
-<link rel="canonical" href="${SITE}/city/${c.id}/food.html">
+${seoHead({
+  title: `${c.name}美食攻略 - ${c.name}旅游`,
+  description: `${c.name}必吃美食推荐：特色小吃、网红餐厅、本地人私藏好店。`,
+  keywords: [`${c.name}美食`, `${c.name}小吃`, `${c.name}旅游`, `${c.name}攻略`],
+  url: `${SITE}/city/${c.id}/food.html`,
+  image: (c.attractions && c.attractions[0]) ? c.attractions[0].image : '',
+  type: 'website',
+  jsonLd: breadcrumb([['首页', `/city/${c.id}/`], [`${c.name}美食`, `/city/${c.id}/food.html`]])
+})}
+
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
@@ -524,9 +597,26 @@ function generateGuide(city) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${c.name}旅游攻略 - 交通/住宿/最佳时间</title>
-<meta name="description" content="${c.name}旅游全攻略：交通指南、住宿推荐、最佳旅游时间、行程规划。">
-<link rel="canonical" href="${SITE}/city/${c.id}/guide.html">
+${seoHead({
+  title: `${c.name}旅游攻略 - 交通/住宿/最佳时间`,
+  description: `${c.name}旅游全攻略：交通指南、住宿推荐、最佳旅游时间、行程规划。`,
+  keywords: [`${c.name}旅游攻略`, `${c.name}交通`, `${c.name}住宿`, `${c.name}最佳时间`],
+  url: `${SITE}/city/${c.id}/guide.html`,
+  image: (c.attractions && c.attractions[0]) ? c.attractions[0].image : '',
+  type: 'website',
+  jsonLd: [
+    breadcrumb([['首页', `/city/${c.id}/`], [`${c.name}攻略`, `/city/${c.id}/guide.html`]]),
+    {
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": `${c.name}最佳旅游时间是什么时候？`, "acceptedAnswer": { "@type": "Answer", "text": c.bestSeason || "四季皆宜，具体视景点而定。" } },
+        { "@type": "Question", "name": `${c.name}建议玩几天？`, "acceptedAnswer": { "@type": "Answer", "text": `建议游玩 ${c.suggestedDays}。${c.climate ? "当地气候：" + c.climate : ""}` } },
+        { "@type": "Question", "name": `${c.name}有哪些必去景点？`, "acceptedAnswer": { "@type": "Answer", "text": (c.attractions || []).slice(0, 5).map(a => a.name).join("、") } }
+      ]
+    }
+  ]
+})}
+
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
@@ -584,9 +674,16 @@ function generateItinerary(city) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${c.name}行程规划 - ${c.name}${days}日游攻略</title>
-<meta name="description" content="${c.name}${days}日游行程规划，合理安排时间，不错过任何精彩景点。">
-<link rel="canonical" href="${SITE}/city/${c.id}/itinerary.html">
+${seoHead({
+  title: `${c.name}行程规划 - ${c.name}${days}日游攻略`,
+  description: `${c.name}${days}日游行程规划，合理安排时间，不错过任何精彩景点。`,
+  keywords: [`${c.name}行程`, `${c.name}旅游攻略`, `${c.name}${days}日游`],
+  url: `${SITE}/city/${c.id}/itinerary.html`,
+  image: (c.attractions && c.attractions[0]) ? c.attractions[0].image : '',
+  type: 'website',
+  jsonLd: breadcrumb([['首页', `/city/${c.id}/`], [`${c.name}行程`, `/city/${c.id}/itinerary.html`]])
+})}
+
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}
@@ -650,9 +747,16 @@ function generateBlog(city) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${c.name}旅游博客 - ${c.name}攻略分享</title>
-<meta name="description" content="${c.name}旅游攻略分享，最新${c.name}旅游资讯、游记、攻略。">
-<link rel="canonical" href="${SITE}/city/${c.id}/blog.html">
+${seoHead({
+  title: `${c.name}旅游博客 - ${c.name}攻略分享`,
+  description: `${c.name}旅游攻略分享，最新${c.name}旅游资讯、游记、攻略。`,
+  keywords: [`${c.name}博客`, `${c.name}游记`, `${c.name}旅游`, `${c.name}攻略`],
+  url: `${SITE}/city/${c.id}/blog.html`,
+  image: (c.attractions && c.attractions[0]) ? c.attractions[0].image : '',
+  type: 'website',
+  jsonLd: breadcrumb([['首页', `/city/${c.id}/`], [`${c.name}博客`, `/city/${c.id}/blog.html`]])
+})}
+
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
@@ -709,9 +813,30 @@ function generateBlogDetail(city, blog, idx) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${blog.title} - ${c.name}旅游博客</title>
-<meta name="description" content="${excerpt}">
-<link rel="canonical" href="${SITE}/city/${c.id}/blog/${blog.slug}.html">
+${seoHead({
+  title: `${blog.title} - ${c.name}旅游博客`,
+  description: excerpt || `${blog.title} — ${c.name}旅游博客分享。`,
+  keywords: [blog.title, `${c.name}旅游`, `${c.name}博客`],
+  url: `${SITE}/city/${c.id}/blog/${blog.slug}.html`,
+  image: heroImg || '',
+  type: 'article',
+  jsonLd: [
+    {
+      "@context": "https://schema.org", "@type": "BlogPosting",
+      "headline": blog.title,
+      "description": excerpt || blog.title,
+      "image": heroImg ? `${SITE}${heroImg}` : '',
+      "datePublished": String(blog.date || "2026-01-01"),
+      "dateModified": String(blog.date || "2026-01-01"),
+      "author": { "@type": "Organization", "name": "全国旅游攻略" },
+      "publisher": { "@type": "Organization", "name": "全国旅游攻略", "logo": { "@type": "ImageObject", "url": `${SITE}/assets/favicon.svg` } },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": `${SITE}/city/${c.id}/blog/${blog.slug}.html` },
+      "articleSection": c.name + "旅游"
+    },
+    breadcrumb([['首页', '/'], [c.name, `/city/${c.id}/`], [`${c.name}博客`, `/city/${c.id}/blog.html`], [blog.title, `/city/${c.id}/blog/${blog.slug}.html`]])
+  ]
+})}
+
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}
@@ -848,8 +973,32 @@ const rootIndex = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全国旅游攻略 — 发现中国最美目的地</title>
-<meta name="description" content="全国旅游攻略，精选中国热门城市，景点/美食/行程一站搞定。">
+${seoHead({
+  title: `全国旅游攻略 — 发现中国最美目的地`,
+  description: `全国旅游攻略，精选中国 41 个热门城市，景点、美食、行程、攻略一站搞定。`,
+  keywords: ['全国旅游', '中国旅游', '旅游攻略', '热门城市', '景点推荐'],
+  url: `${SITE}/`,
+  image: 'assets/images/hero.webp',
+  type: 'website',
+  jsonLd: [
+    {
+      "@context": "https://schema.org", "@type": "WebSite",
+      "name": "全国旅游攻略", "url": `${SITE}/`,
+      "description": "精选中国热门城市的旅游攻略，覆盖景点、美食、行程与实用指南。",
+      "potentialAction": { "@type": "SearchAction", "target": `${SITE}/?s={search_term_string}`, "query-input": "required name=search_term_string" }
+    },
+    breadcrumb([['首页', '/']]),
+    {
+      "@context": "https://schema.org", "@type": "ItemList",
+      "name": "中国热门旅游城市",
+      "itemListElement": data.cities.slice(0, 20).map((ct, i) => ({
+        "@type": "ListItem", "position": i + 1,
+        "name": ct.name, "url": `${SITE}/city/${ct.id}/`
+      }))
+    }
+  ]
+})}
+
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="style.css">
 <style>

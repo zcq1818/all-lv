@@ -1,11 +1,8 @@
-# robots.txt for 秦皇岛旅游官网
-# https://www.divdu.com/
+# robots.txt — 全国旅游攻略 (all-lv)
+# 部署于 Vercel: https://all-lv.vercel.app
 
 User-agent: *
 Allow: /
 
-# 网站地图位置
-Sitemap: https://www.divdu.com/sitemap.xml
-
-# 禁止爬取后台/管理页面
-Disallow: /admin.html
+# 站点地图
+Sitemap: https://all-lv.vercel.app/sitemap.xml
