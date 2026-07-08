@@ -1287,3 +1287,44 @@ html.reveal-ready .reveal.visible {
 .video-wrap video{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:640px){.video-section{padding:44px 16px}.video-wrap{border-radius:14px}}
 [data-theme="dark"] .video-wrap{box-shadow:0 24px 60px rgba(0,0,0,.5);border-color:rgba(217,121,79,.25)}
+
+/* ===== 博客正文 (blog body) ===== */
+.blog-main .blog-h2{font-family:"Noto Serif SC",serif;font-size:1.5rem;font-weight:700;color:#8F3517;margin:38px 0 14px;padding-bottom:8px;border-bottom:2px solid rgba(189,75,43,.18)}
+.blog-main .blog-h3{font-family:"Noto Serif SC",serif;font-size:1.18rem;font-weight:700;color:#211C18;margin:22px 0 8px}
+.blog-main .blog-h2+.blog-h3{margin-top:14px}
+.blog-main p{font-size:1.02rem;line-height:1.95;color:#4A423A;margin:0 0 16px}
+.blog-food,.blog-tips{margin:6px 0 18px;padding:0;list-style:none}
+.blog-food li,.blog-tips li{position:relative;padding:9px 0 9px 26px;line-height:1.8;color:#4A423A;border-bottom:1px dashed rgba(33,28,24,.08)}
+.blog-food li:before,.blog-tips li:before{content:"›";position:absolute;left:6px;top:7px;color:#BD4B2B;font-weight:800;font-size:1.1rem}
+.blog-food strong{color:#211C18}
+.blog-food em{display:block;font-style:normal;font-size:.88rem;color:#8F3517;margin-top:2px}
+.blog-plan{margin:8px 0 20px;border:1px solid rgba(189,75,43,.16);border-radius:14px;overflow:hidden;background:#FBF8F4}
+.plan-day{display:flex;align-items:baseline;gap:12px;padding:13px 18px;background:linear-gradient(135deg,rgba(189,75,43,.08),rgba(217,121,79,.06));border-bottom:1px solid rgba(189,75,43,.12)}
+.plan-day-no{font-weight:800;color:#BD4B2B;font-size:.95rem}
+.plan-day-title{font-family:"Noto Serif SC",serif;font-weight:700;color:#211C18}
+.plan-items{list-style:none;margin:0;padding:8px 18px 14px}
+.plan-items li{position:relative;padding:5px 0 5px 20px;color:#4A423A;line-height:1.7}
+.plan-items li:before{content:"•";position:absolute;left:4px;color:#C8772B;font-weight:800}
+.blog-faq{margin:6px 0 18px}
+.faq-item{background:#FBF8F4;border:1px solid #E9E1D6;border-radius:10px;padding:12px 16px;margin-bottom:10px}
+.faq-item summary{cursor:pointer;font-weight:600;color:#211C18;list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:before{content:"❓ ";margin-right:4px}
+.faq-item p{margin:10px 0 0;font-size:.96rem;color:#6B6155}
+.blog-cta{margin-top:30px;padding:16px 20px;border-left:4px solid #BD4B2B;background:#FBF8F4;border-radius:0 12px 12px 0;font-size:.96rem;color:#6B6155;line-height:1.8}
+.blog-cta a{color:#BD4B2B;font-weight:600}
+
+[data-theme="dark"] .blog-main .blog-h2{color:#E8A77E;border-color:rgba(217,121,79,.3)}
+[data-theme="dark"] .blog-main .blog-h3{color:#F3ECE2}
+[data-theme="dark"] .blog-main p{color:#CFC4B6}
+[data-theme="dark"] .blog-food li,.blog-tips li{color:#CFC4B6;border-color:rgba(255,255,255,.08)}
+[data-theme="dark"] .blog-food strong{color:#F3ECE2}
+[data-theme="dark"] .blog-food em{color:#E8A77E}
+[data-theme="dark"] .blog-plan{background:#1c1714;border-color:rgba(217,121,79,.25)}
+[data-theme="dark"] .plan-day{background:rgba(217,121,79,.1);border-color:rgba(217,121,79,.2)}
+[data-theme="dark"] .plan-day-title{color:#F3ECE2}
+[data-theme="dark"] .plan-items li{color:#CFC4B6}
+[data-theme="dark"] .faq-item{background:#1c1714;border-color:rgba(255,255,255,.1)}
+[data-theme="dark"] .faq-item summary{color:#F3ECE2}
+[data-theme="dark"] .faq-item p{color:#B8AB99}
+[data-theme="dark"] .blog-cta{background:#1c1714;color:#B8AB99}

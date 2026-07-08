@@ -938,9 +938,11 @@ function generateBlogDetail(city, blog, idx) {
   const heroBg = heroImg ? 'url(' + heroImg + ') center/cover' : 'linear-gradient(135deg,#BD4B2B,#8F3517)';
   const excerpt = blog.excerpt || '';
   const date = blog.date || '2026';
-  const bodyHTML = excerpt
-    ? '<p class="blog-lead">' + excerpt + '</p><div class="blog-note">📝 这篇游记的完整正文正在精心整理中。先看看 <a href="../guide.html">' + c.name + '游玩攻略</a> 或 <a href="../itinerary.html">' + c.name + '行程规划</a>，获取实用信息。</div>'
-    : '<div class="blog-note">正文即将上线，敬请期待。</div>';
+  const bodyHTML = blog.body
+    ? blog.body
+    : (excerpt
+      ? '<p class="blog-lead">' + excerpt + '</p><div class="blog-note">📝 这篇游记的完整正文正在精心整理中。先看看 <a href="../guide.html">' + c.name + '游玩攻略</a> 或 <a href="../itinerary.html">' + c.name + '行程规划</a>，获取实用信息。</div>'
+      : '<div class="blog-note">正文即将上线，敬请期待。</div>');
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
