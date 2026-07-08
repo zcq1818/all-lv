@@ -3,92 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>黄山徒步攻略：前山vs后山怎么选 - 黄山旅游攻略</title>
+<title>黄山徒步攻略：前山vs后山怎么选 - 黄山旅游博客</title>
 <meta name="description" content="黄山前山雄伟后山秀丽，一日游怎么走最省力？两日游怎么安排最合理？这份徒步攻略帮你规划。">
-<link rel="canonical" href="https://www.all-lv.com/city/huangshan/blog/huangshan-hiking-guide">
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="https://www.all-lv.com/city/huangshan/blog/huangshan-hiking-guide.html">
+<link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+<link rel="stylesheet" href="../../../style.css">
 <style>
-.blog-article{max-width:720px;margin:0 auto;padding:100px 24px 60px}
-.blog-article h1{font-size:2rem;font-weight:800;margin-bottom:16px;line-height:1.3}
-.blog-article .meta{color:#94a3b8;font-size:.9rem;margin-bottom:32px}
-.blog-article p{color:#334155;line-height:1.9;font-size:1.02rem;margin-bottom:20px}
-.blog-article h2{font-size:1.4rem;font-weight:700;margin-top:40px;margin-bottom:16px}
-.blog-article h3{font-size:1.15rem;font-weight:600;margin-top:28px;margin-bottom:12px}
-.blog-article ul,.blog-article ol{padding-left:24px;margin-bottom:20px}
-.blog-article li{color:#334155;line-height:1.8;margin-bottom:8px}
-.blog-article blockquote{border-left:4px solid #1a73e8;padding:12px 20px;margin:20px 0;background:#f8fafc;border-radius:0 8px 8px 0;color:#475569}
-.blog-article img{max-width:100%;border-radius:12px;margin:24px 0}
-.back-link{display:inline-flex;align-items:center;gap:6px;color:#1a73e8;text-decoration:none;font-size:.9rem;margin-bottom:24px}
-.back-link:hover{text-decoration:underline}
+/* ===== 城市选择器 ===== */
+.city-selector{position:relative;margin-right:12px}
+.city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
+.city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.city-selector-name{font-weight:600}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
+.city-dropdown.open{display:flex;flex-direction:column}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
+.city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
+.province-group{margin-bottom:4px}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
+@media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
+
+.blog-hero{position:relative;background:url(../../../assets/images/huangshan/0.webp) center/cover;color:#fff;padding:120px 24px 56px;text-align:center;overflow:hidden}
+.blog-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,32,39,.55),rgba(15,32,39,.8))}
+.blog-hero>*{position:relative;z-index:1}
+.blog-hero .bprov{font-size:.8rem;letter-spacing:.15em;opacity:.85}
+.blog-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin:10px 0 8px;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.blog-hero .bdate{font-size:.85rem;opacity:.7}
+.blog-main{max-width:760px;margin:0 auto;padding:48px 24px 60px}
+.blog-lead{font-size:1.1rem;line-height:1.9;color:#4A423A;margin-bottom:24px}
+.blog-note{background:#FBF8F4;border:1px solid #E9E1D6;border-left:4px solid #BD4B2B;border-radius:10px;padding:18px 20px;color:#6B6155;font-size:.95rem;line-height:1.8}
+.blog-note a{color:#BD4B2B;font-weight:600}
+.blog-back{display:inline-block;margin-top:28px;color:#BD4B2B;font-weight:600;text-decoration:none}
 </style>
-<link rel="stylesheet" href="/css/search.css">
-<link rel="stylesheet" href="/css/weather.css">
-<link rel="stylesheet" href="/css/share.css">
-<link rel="stylesheet" href="/css/user-features.css">
-<link rel="stylesheet" href="/css/chat-widget.css">
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
-<a href="/" class="nav-logo" style="font-weight:800;font-size:1.1rem">☁️ 黄山</a>
-<ul class="nav-links" id="navLinks">
-<li><a href="/city/huangshan/">首页</a></li>
-<li><a href="/city/huangshan/attractions">景点</a></li>
-<li><a href="/city/huangshan/food">美食</a></li>
-<li><a href="/city/huangshan/guide">攻略</a></li>
-<li><a href="/city/huangshan/itinerary">行程</a></li>
-<li><a href="/city/huangshan/blog" class="active">博客</a></li>
-</ul>
-<button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
-</div></nav>
-<div class="blog-article">
-<a href="/city/huangshan/blog" class="back-link">← 返回博客列表</a>
-<h1>黄山徒步攻略：前山vs后山怎么选</h1>
-<div class="meta">☁️ 黄山旅游攻略 · 2026年</div>
-<p>黄山前山雄伟后山秀丽，一日游怎么走最省力？两日游怎么安排最合理？这份徒步攻略帮你规划。</p>
-<img src="https://picsum.photos/seed/huangshan-huangshan-hiking-guide/800/400" alt="黄山徒步攻略：前山vs后山怎么选" style="width:100%;border-radius:12px;margin:24px 0" loading="lazy">
-<h2>🌍 黄山概述</h2>
-<p>黄山，黄山以奇松怪石云海温泉四绝闻名。日出和晚霞美不胜收。。最佳旅行季节为3-5月、9-11月，建议停留2-3天。黄山前山雄伟后山秀丽，一日游怎么走最省力？两日游怎么安排最合理？这份徒步攻略帮你规划。</p>
-
-<img src="https://picsum.photos/seed/huangshan-huangshan-hiking-guide-1/800/400" alt="🌍 黄山概述" style="width:100%;border-radius:12px;margin:16px 0" loading="lazy">
-
-<h2>🗺️ 推荐路线</h2>
-<p>根据您的旅行时间，我们推荐以下路线方案。如果时间充裕，可以将行程延长至2-3天，更深入地感受黄山的魅力。早起可以避开人潮，傍晚则适合拍照和散步。</p>
-
-<h2>🏨 住宿建议</h2>
-<p>黄山的住宿选择丰富，从经济型酒店到高端度假村应有尽有。建议选择交通便利的区域，方便游览各个景点。提前预订通常能获得更好的价格和房型选择。</p>
-
-<h2>🚌 市内交通</h2>
-<p>黄山的公共交通系统较为完善，公交车和地铁覆盖主要景点。也可以选择网约车或出租车，价格合理。建议下载当地交通APP，实时查询路线和班次。</p>
-
-<h2>📅 最佳季节</h2>
-<p>3-5月、9-11月是游览黄山的最佳时间。亚热带山地气候。建议避开法定节假日高峰期，选择工作日出行体验更佳。</p>
-
-<h2>📋 实用信息速览</h2>
-<ul>
-<li><strong>最佳季节：</strong>3-5月、9-11月</li>
-<li><strong>建议天数：</strong>2-3天</li>
-<li><strong>气候特点：</strong>亚热带山地气候</li>
-</ul>
-<h2>实用信息</h2>
-<ul>
-<li><strong>最佳季节：</strong>3-5月、9-11月</li>
-<li><strong>建议天数：</strong>2-3天</li>
-<li><strong>气候特点：</strong>亚热带山地气候</li>
-</ul>
-<h2>更多推荐</h2>
-<p>查看 <a href="/city/huangshan/attractions">黄山景点推荐</a>、<a href="/city/huangshan/food">黄山美食指南</a> 或 <a href="/city/huangshan/itinerary">行程规划</a>，获取完整的旅行信息。</p>
+  
+<div class="city-selector" id="citySelector">
+  <button class="city-selector-btn" onclick="toggleCityMenu()">
+    <span>☁️</span>
+    <span class="city-selector-name">黄山</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="city-dropdown" id="cityDropdown">
+    <div class="city-dropdown-header">
+      <span class="city-dropdown-title">选择目的地</span>
+      <span class="city-dropdown-count">41个城市</span>
+    </div>
+    <div class="city-dropdown-body"><div class="province-group"><div class="province-label">海南</div><a href="../../../city/sanya/" class="city-option">🏖️ 三亚</a></div><div class="province-group"><div class="province-label">四川</div><a href="../../../city/chengdu/" class="city-option">🐼 成都</a><a href="../../../city/jiuzhaigou/" class="city-option">💎 九寨沟</a><a href="../../../city/emeishan/" class="city-option">🏔️ 峨眉山</a></div><div class="province-group"><div class="province-label">陕西</div><a href="../../../city/xian/" class="city-option">🏛️ 西安</a></div><div class="province-group"><div class="province-label">浙江</div><a href="../../../city/hangzhou/" class="city-option">🌸 杭州</a></div><div class="province-group"><div class="province-label">云南</div><a href="../../../city/dali/" class="city-option">⛰️ 大理</a><a href="../../../city/lijiang/" class="city-option">🏔️ 丽江</a><a href="../../../city/kunming/" class="city-option">🌺 昆明</a></div><div class="province-group"><div class="province-label">福建</div><a href="../../../city/xiamen/" class="city-option">🌊 厦门</a><a href="../../../city/wuyishan/" class="city-option">⛰️ 武夷山</a></div><div class="province-group"><div class="province-label">山东</div><a href="../../../city/qingdao/" class="city-option">⛵ 青岛</a></div><div class="province-group"><div class="province-label">广西</div><a href="../../../city/guilin/" class="city-option">🏞️ 桂林</a><a href="../../../city/beihai/" class="city-option">🐚 北海</a></div><div class="province-group"><div class="province-label">西藏</div><a href="../../../city/lhasa/" class="city-option">🛕 拉萨</a></div><div class="province-group"><div class="province-label">北京</div><a href="../../../city/beijing/" class="city-option">🏛️ 北京</a></div><div class="province-group"><div class="province-label">上海</div><a href="../../../city/shanghai/" class="city-option">🌃 上海</a></div><div class="province-group"><div class="province-label">重庆</div><a href="../../../city/chongqing/" class="city-option">🔥 重庆</a></div><div class="province-group"><div class="province-label">广东</div><a href="../../../city/guangzhou/" class="city-option">🌺 广州</a><a href="../../../city/shenzhen/" class="city-option">🌆 深圳</a></div><div class="province-group"><div class="province-label">江苏</div><a href="../../../city/suzhou/" class="city-option">🏡 苏州</a><a href="../../../city/nanjing/" class="city-option">🍂 南京</a></div><div class="province-group"><div class="province-label">湖南</div><a href="../../../city/zhangjiajie/" class="city-option">🏔️ 张家界</a><a href="../../../city/changsha/" class="city-option">🌶️ 长沙</a></div><div class="province-group"><div class="province-label">安徽</div><a href="../../../city/huangshan/" class="city-option active">☁️ 黄山</a></div><div class="province-group"><div class="province-label">黑龙江</div><a href="../../../city/haerbin/" class="city-option">❄️ 哈尔滨</a></div><div class="province-group"><div class="province-label">甘肃</div><a href="../../../city/dunhuang/" class="city-option">🏜️ 敦煌</a></div><div class="province-group"><div class="province-label">河南</div><a href="../../../city/luoyang/" class="city-option">🌺 洛阳</a></div><div class="province-group"><div class="province-label">青海</div><a href="../../../city/xining/" class="city-option">🏔️ 西宁</a></div><div class="province-group"><div class="province-label">贵州</div><a href="../../../city/guiyang/" class="city-option">🌿 贵阳</a></div><div class="province-group"><div class="province-label">香港</div><a href="../../../city/hongkong/" class="city-option">🏙️ 香港</a></div><div class="province-group"><div class="province-label">澳门</div><a href="../../../city/macau/" class="city-option">🎰 澳门</a></div><div class="province-group"><div class="province-label">河北</div><a href="../../../city/qinhuangdao/" class="city-option">🏖️ 秦皇岛</a></div><div class="province-group"><div class="province-label">湖北</div><a href="../../../city/wuhan/" class="city-option">🌉 武汉</a></div><div class="province-group"><div class="province-label">天津</div><a href="../../../city/tianjin/" class="city-option">🎡 天津</a></div><div class="province-group"><div class="province-label">辽宁</div><a href="../../../city/dalian/" class="city-option">🌊 大连</a></div><div class="province-group"><div class="province-label">山西</div><a href="../../../city/pingyao/" class="city-option">🏯 平遥</a><a href="../../../city/datong/" class="city-option">🏛️ 大同</a></div><div class="province-group"><div class="province-label">新疆</div><a href="../../../city/kashgar/" class="city-option">🕌 喀什</a></div><div class="province-group"><div class="province-label">中国台湾</div><a href="../../../city/taipei/" class="city-option">🏙️ 台北</a></div><div class="province-group"><div class="province-label">内蒙古</div><a href="../../../city/hulunbuir/" class="city-option">🐎 呼伦贝尔</a></div></div>
+  </div>
 </div>
-<footer class="footer"><div class="footer-inner"><p>&copy; 2026 黄山旅游攻略 · <a href="/city/huangshan/">返回首页</a></p></div></footer>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../../../city/huangshan/">首页</a></li>
+    <li><a href="../../../city/huangshan/attractions.html">景点</a></li>
+    <li><a href="../../../city/huangshan/food.html">美食</a></li>
+    <li><a href="../../../city/huangshan/guide.html">攻略</a></li>
+    <li><a href="../../../city/huangshan/itinerary.html">行程</a></li>
+    <li><a href="../../../city/huangshan/blog.html" class="active">博客</a></li>
+  </ul>
+  <a href="../../../city/huangshan/itinerary.html" class="nav-cta">免费规划行程 →</a>
+  <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></nav>
+<header class="blog-hero">
+  <div class="bprov">黄山 · 旅行博客</div>
+  <h1>黄山徒步攻略：前山vs后山怎么选</h1>
+  <div class="bdate">📅 2026</div>
+</header>
+<main class="blog-main reveal">
+  <p class="blog-lead">黄山前山雄伟后山秀丽，一日游怎么走最省力？两日游怎么安排最合理？这份徒步攻略帮你规划。</p><div class="blog-note">📝 这篇游记的完整正文正在精心整理中。先看看 <a href="../guide.html">黄山游玩攻略</a> 或 <a href="../itinerary.html">黄山行程规划</a>，获取实用信息。</div>
+  <a class="blog-back" href="../blog.html">← 返回 黄山博客列表</a>
+</main>
+<footer class="footer"><div class="footer-inner"><p>© 2026 黄山旅游官网 · <a href="../../../city/huangshan/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
-window.addEventListener("scroll",function(){document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>20)});
-document.getElementById("hamburger").addEventListener("click",function(){document.getElementById("navLinks").classList.toggle("open")});
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+
+function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
+document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.target.closest('.city-selector')){var d=document.getElementById('cityDropdown');if(d)d.classList.remove('open')}});
+
 </script>
-<script src="/js/accessibility.js" defer></script>
-<script src="/js/search.js" defer></script>
-<script src="/js/weather.js" defer></script>
-<script src="/js/share.js" defer></script>
-<script src="/js/user-features.js" defer></script>
-<script src="/js/chat-widget.js" defer></script>
 </body>
 </html>

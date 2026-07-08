@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秦皇岛吃什么：从海鲜到山海关小吃 - 秦皇岛旅游博客</title>
+<meta name="description" content="皮皮虾、浑锅、回记绿豆糕……一份秦皇岛不可错过的地道美食清单。">
+<link rel="canonical" href="https://www.all-lv.com/city/qinhuangdao/blog/qinhuangdao-food.html">
+<link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg">
+<link rel="stylesheet" href="../../../style.css">
+<style>
+/* ===== 城市选择器 ===== */
+.city-selector{position:relative;margin-right:12px}
+.city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
+.city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
+.city-selector-name{font-weight:600}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
+.city-dropdown.open{display:flex;flex-direction:column}
+@keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
+.city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
+.province-group{margin-bottom:4px}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
+@media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
+
+.blog-hero{position:relative;background:url(../../../assets/images/qinhuangdao/0.webp) center/cover;color:#fff;padding:120px 24px 56px;text-align:center;overflow:hidden}
+.blog-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,32,39,.55),rgba(15,32,39,.8))}
+.blog-hero>*{position:relative;z-index:1}
+.blog-hero .bprov{font-size:.8rem;letter-spacing:.15em;opacity:.85}
+.blog-hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin:10px 0 8px;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.blog-hero .bdate{font-size:.85rem;opacity:.7}
+.blog-main{max-width:760px;margin:0 auto;padding:48px 24px 60px}
+.blog-lead{font-size:1.1rem;line-height:1.9;color:#4A423A;margin-bottom:24px}
+.blog-note{background:#FBF8F4;border:1px solid #E9E1D6;border-left:4px solid #BD4B2B;border-radius:10px;padding:18px 20px;color:#6B6155;font-size:.95rem;line-height:1.8}
+.blog-note a{color:#BD4B2B;font-weight:600}
+.blog-back{display:inline-block;margin-top:28px;color:#BD4B2B;font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="nav-inner">
+  
+<div class="city-selector" id="citySelector">
+  <button class="city-selector-btn" onclick="toggleCityMenu()">
+    <span>🏖️</span>
+    <span class="city-selector-name">秦皇岛</span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="city-dropdown" id="cityDropdown">
+    <div class="city-dropdown-header">
+      <span class="city-dropdown-title">选择目的地</span>
+      <span class="city-dropdown-count">41个城市</span>
+    </div>
+    <div class="city-dropdown-body"><div class="province-group"><div class="province-label">海南</div><a href="../../../city/sanya/" class="city-option">🏖️ 三亚</a></div><div class="province-group"><div class="province-label">四川</div><a href="../../../city/chengdu/" class="city-option">🐼 成都</a><a href="../../../city/jiuzhaigou/" class="city-option">💎 九寨沟</a><a href="../../../city/emeishan/" class="city-option">🏔️ 峨眉山</a></div><div class="province-group"><div class="province-label">陕西</div><a href="../../../city/xian/" class="city-option">🏛️ 西安</a></div><div class="province-group"><div class="province-label">浙江</div><a href="../../../city/hangzhou/" class="city-option">🌸 杭州</a></div><div class="province-group"><div class="province-label">云南</div><a href="../../../city/dali/" class="city-option">⛰️ 大理</a><a href="../../../city/lijiang/" class="city-option">🏔️ 丽江</a><a href="../../../city/kunming/" class="city-option">🌺 昆明</a></div><div class="province-group"><div class="province-label">福建</div><a href="../../../city/xiamen/" class="city-option">🌊 厦门</a><a href="../../../city/wuyishan/" class="city-option">⛰️ 武夷山</a></div><div class="province-group"><div class="province-label">山东</div><a href="../../../city/qingdao/" class="city-option">⛵ 青岛</a></div><div class="province-group"><div class="province-label">广西</div><a href="../../../city/guilin/" class="city-option">🏞️ 桂林</a><a href="../../../city/beihai/" class="city-option">🐚 北海</a></div><div class="province-group"><div class="province-label">西藏</div><a href="../../../city/lhasa/" class="city-option">🛕 拉萨</a></div><div class="province-group"><div class="province-label">北京</div><a href="../../../city/beijing/" class="city-option">🏛️ 北京</a></div><div class="province-group"><div class="province-label">上海</div><a href="../../../city/shanghai/" class="city-option">🌃 上海</a></div><div class="province-group"><div class="province-label">重庆</div><a href="../../../city/chongqing/" class="city-option">🔥 重庆</a></div><div class="province-group"><div class="province-label">广东</div><a href="../../../city/guangzhou/" class="city-option">🌺 广州</a><a href="../../../city/shenzhen/" class="city-option">🌆 深圳</a></div><div class="province-group"><div class="province-label">江苏</div><a href="../../../city/suzhou/" class="city-option">🏡 苏州</a><a href="../../../city/nanjing/" class="city-option">🍂 南京</a></div><div class="province-group"><div class="province-label">湖南</div><a href="../../../city/zhangjiajie/" class="city-option">🏔️ 张家界</a><a href="../../../city/changsha/" class="city-option">🌶️ 长沙</a></div><div class="province-group"><div class="province-label">安徽</div><a href="../../../city/huangshan/" class="city-option">☁️ 黄山</a></div><div class="province-group"><div class="province-label">黑龙江</div><a href="../../../city/haerbin/" class="city-option">❄️ 哈尔滨</a></div><div class="province-group"><div class="province-label">甘肃</div><a href="../../../city/dunhuang/" class="city-option">🏜️ 敦煌</a></div><div class="province-group"><div class="province-label">河南</div><a href="../../../city/luoyang/" class="city-option">🌺 洛阳</a></div><div class="province-group"><div class="province-label">青海</div><a href="../../../city/xining/" class="city-option">🏔️ 西宁</a></div><div class="province-group"><div class="province-label">贵州</div><a href="../../../city/guiyang/" class="city-option">🌿 贵阳</a></div><div class="province-group"><div class="province-label">香港</div><a href="../../../city/hongkong/" class="city-option">🏙️ 香港</a></div><div class="province-group"><div class="province-label">澳门</div><a href="../../../city/macau/" class="city-option">🎰 澳门</a></div><div class="province-group"><div class="province-label">河北</div><a href="../../../city/qinhuangdao/" class="city-option active">🏖️ 秦皇岛</a></div><div class="province-group"><div class="province-label">湖北</div><a href="../../../city/wuhan/" class="city-option">🌉 武汉</a></div><div class="province-group"><div class="province-label">天津</div><a href="../../../city/tianjin/" class="city-option">🎡 天津</a></div><div class="province-group"><div class="province-label">辽宁</div><a href="../../../city/dalian/" class="city-option">🌊 大连</a></div><div class="province-group"><div class="province-label">山西</div><a href="../../../city/pingyao/" class="city-option">🏯 平遥</a><a href="../../../city/datong/" class="city-option">🏛️ 大同</a></div><div class="province-group"><div class="province-label">新疆</div><a href="../../../city/kashgar/" class="city-option">🕌 喀什</a></div><div class="province-group"><div class="province-label">中国台湾</div><a href="../../../city/taipei/" class="city-option">🏙️ 台北</a></div><div class="province-group"><div class="province-label">内蒙古</div><a href="../../../city/hulunbuir/" class="city-option">🐎 呼伦贝尔</a></div></div>
+  </div>
+</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../../../city/qinhuangdao/">首页</a></li>
+    <li><a href="../../../city/qinhuangdao/attractions.html">景点</a></li>
+    <li><a href="../../../city/qinhuangdao/food.html">美食</a></li>
+    <li><a href="../../../city/qinhuangdao/guide.html">攻略</a></li>
+    <li><a href="../../../city/qinhuangdao/itinerary.html">行程</a></li>
+    <li><a href="../../../city/qinhuangdao/blog.html" class="active">博客</a></li>
+  </ul>
+  <a href="../../../city/qinhuangdao/itinerary.html" class="nav-cta">免费规划行程 →</a>
+  <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+</div></nav>
+<header class="blog-hero">
+  <div class="bprov">秦皇岛 · 旅行博客</div>
+  <h1>秦皇岛吃什么：从海鲜到山海关小吃</h1>
+  <div class="bdate">📅 2026</div>
+</header>
+<main class="blog-main reveal">
+  <p class="blog-lead">皮皮虾、浑锅、回记绿豆糕……一份秦皇岛不可错过的地道美食清单。</p><div class="blog-note">📝 这篇游记的完整正文正在精心整理中。先看看 <a href="../guide.html">秦皇岛游玩攻略</a> 或 <a href="../itinerary.html">秦皇岛行程规划</a>，获取实用信息。</div>
+  <a class="blog-back" href="../blog.html">← 返回 秦皇岛博客列表</a>
+</main>
+<footer class="footer"><div class="footer-inner"><p>© 2026 秦皇岛旅游官网 · <a href="../../../city/qinhuangdao/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<script>
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+
+function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}
+document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.target.closest('.city-selector')){var d=document.getElementById('cityDropdown');if(d)d.classList.remove('open')}});
+
+</script>
+</body>
+</html>
