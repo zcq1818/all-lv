@@ -15,20 +15,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 </style>
 <script type="application/ld+json">
@@ -72,131 +72,131 @@
 </div></nav>
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="../../city/pingyao/" style="color:#1a73e8">首页</a> / <span>景点推荐</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="../../city/pingyao/" style="color:#BD4B2B">首页</a> / <span>景点推荐</span></nav>
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🏔️ 平遥景点推荐</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">平遥最值得去的景点，附门票和游玩建议</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">平遥最值得去的景点，附门票和游玩建议</p>
   
-  <a class="spot-card" href="../../city/pingyao/attraction/0.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/0.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/0.webp" alt="平遥古城墙" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏯 平遥古城墙</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">明代夯土包砖城垣，登城看龟城格局。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">明代夯土包砖城垣，登城看龟城格局。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：约125元联票</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/pingyao/attraction/1.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/1.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/1.webp" alt="日昇昌票号" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏦 日昇昌票号</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">中国第一家票号，汇兑业起源地。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">中国第一家票号，汇兑业起源地。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：含联票</span>
         <span>⏱️ 游玩时间：建议1小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/pingyao/attraction/2.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/2.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/2.webp" alt="平遥县衙" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏛️ 平遥县衙</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">完整古代县署，升堂表演还原。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">完整古代县署，升堂表演还原。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：含联票</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/pingyao/attraction/3.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/3.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/3.webp" alt="明清街" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏮 明清街</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">南大街市井，老字号与镖局林立。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">南大街市井，老字号与镖局林立。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：含联票</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/pingyao/attraction/4.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/4.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/4.webp" alt="协同庆钱庄" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏦 协同庆钱庄</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">地下金库与票号经营展示。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">地下金库与票号经营展示。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：含联票</span>
         <span>⏱️ 游玩时间：建议1小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/pingyao/attraction/5.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/5.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/5.webp" alt="文庙" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏯 文庙</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">平遥文庙大成殿，古建与科举文化。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">平遥文庙大成殿，古建与科举文化。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：含联票</span>
         <span>⏱️ 游玩时间：建议1小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/pingyao/attraction/6.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/6.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/6.webp" alt="双林寺" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🛕 双林寺</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">彩塑艺术馆，两千尊明代彩塑栩栩如生。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">彩塑艺术馆，两千尊明代彩塑栩栩如生。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：约40元</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/pingyao/attraction/7.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/7.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/7.webp" alt="镇国寺" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏯 镇国寺</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">五代木构万佛殿，罕见早期建筑。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">五代木构万佛殿，罕见早期建筑。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：约25元</span>
         <span>⏱️ 游玩时间：建议1小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/pingyao/attraction/8.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/pingyao/attraction/8.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/pingyao/8.webp" alt="城隍庙" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏛️ 城隍庙</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">城隍信仰与戏台古建。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">城隍信仰与戏台古建。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：含联票</span>
         <span>⏱️ 游玩时间：建议1小时</span>
       </div>
@@ -204,9 +204,10 @@
   </a>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 平遥旅游官网 · <a href="../../city/pingyao/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 平遥旅游官网 · <a href="../../city/pingyao/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

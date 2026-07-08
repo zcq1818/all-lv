@@ -15,20 +15,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 </style>
 <script type="application/ld+json">
@@ -72,131 +72,131 @@
 </div></nav>
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="../../city/sanya/" style="color:#1a73e8">首页</a> / <span>景点推荐</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="../../city/sanya/" style="color:#BD4B2B">首页</a> / <span>景点推荐</span></nav>
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🏔️ 三亚景点推荐</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">三亚最值得去的景点，附门票和游玩建议</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">三亚最值得去的景点，附门票和游玩建议</p>
   
-  <a class="spot-card" href="../../city/sanya/attraction/0.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/0.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/0.webp" alt="蜈支洲岛" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏝️ 蜈支洲岛</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">中国的马尔代夫，海水能见度极高，是潜水和水上运动的绝佳去处。岛上情人桥、观日岩等景点值得打卡。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">中国的马尔代夫，海水能见度极高，是潜水和水上运动的绝佳去处。岛上情人桥、观日岩等景点值得打卡。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：门票+船票 约168元</span>
         <span>⏱️ 游玩时间：建议1天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/sanya/attraction/1.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/1.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/1.webp" alt="亚龙湾" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌊 亚龙湾</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">天下第一湾，7公里长的月牙形海滩，沙质细腻洁白，海水清澈见底。周边高端度假酒店林立。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">天下第一湾，7公里长的月牙形海滩，沙质细腻洁白，海水清澈见底。周边高端度假酒店林立。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：免费</span>
         <span>⏱️ 游玩时间：建议半天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/sanya/attraction/2.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/2.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/2.webp" alt="天涯海角" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🗿 天涯海角</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">三亚标志性景点，天涯石、海角石、南天一柱等巨石矗立海边，承载着无数浪漫传说。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">三亚标志性景点，天涯石、海角石、南天一柱等巨石矗立海边，承载着无数浪漫传说。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：68元</span>
         <span>⏱️ 游玩时间：建议2-3小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/sanya/attraction/3.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/3.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/3.webp" alt="南山文化旅游区" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🙏 南山文化旅游区</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">108米海上观音像震撼壮观，南山寺、不二法门、长寿谷等景点充满佛教文化氛围。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">108米海上观音像震撼壮观，南山寺、不二法门、长寿谷等景点充满佛教文化氛围。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：129元</span>
         <span>⏱️ 游玩时间：建议半天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/sanya/attraction/4.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/4.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/4.webp" alt="呀诺达雨林" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌴 呀诺达雨林</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">热带雨林景区，踏瀑戏水、高空滑索、雨林穿越等体验项目丰富，是亲近自然的好去处。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">热带雨林景区，踏瀑戏水、高空滑索、雨林穿越等体验项目丰富，是亲近自然的好去处。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：158元</span>
         <span>⏱️ 游玩时间：建议1天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/sanya/attraction/5.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/5.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/5.webp" alt="鹿回头公园" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌅 鹿回头公园</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">三亚制高点，登顶可俯瞰三亚全景。日落时分最美，是观赏三亚夜景的绝佳位置。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">三亚制高点，登顶可俯瞰三亚全景。日落时分最美，是观赏三亚夜景的绝佳位置。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：42元</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/sanya/attraction/6.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/6.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/6.webp" alt="亚特兰蒂斯水世界" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🐠 亚特兰蒂斯水世界</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">大型水上乐园，海神之跃、漂流河等数十个项目，适合亲子游和年轻人。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">大型水上乐园，海神之跃、漂流河等数十个项目，适合亲子游和年轻人。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：198元</span>
         <span>⏱️ 游玩时间：建议1天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/sanya/attraction/7.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/7.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/7.webp" alt="亚龙湾热带天堂森林公园" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌺 亚龙湾热带天堂森林公园</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">《非诚勿扰2》取景地，过江龙索桥、鸟巢度假村，俯瞰亚龙湾全景。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">《非诚勿扰2》取景地，过江龙索桥、鸟巢度假村，俯瞰亚龙湾全景。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：158元</span>
         <span>⏱️ 游玩时间：建议半天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/sanya/attraction/8.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/sanya/attraction/8.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/sanya/8.webp" alt="西岛" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🎣 西岛</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">原生态渔村海岛，海水清澈，可体验海钓、赶海、浮潜等水上项目。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">原生态渔村海岛，海水清澈，可体验海钓、赶海、浮潜等水上项目。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：门票+船票 约120元</span>
         <span>⏱️ 游玩时间：建议半天</span>
       </div>
@@ -204,9 +204,10 @@
   </a>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 三亚旅游官网 · <a href="../../city/sanya/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 三亚旅游官网 · <a href="../../city/sanya/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

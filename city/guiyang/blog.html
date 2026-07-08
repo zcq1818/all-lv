@@ -14,20 +14,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 </style>
 </head>
@@ -62,28 +62,29 @@
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">📝 贵阳旅游博客</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">贵阳旅游攻略、游记、实用信息</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">贵阳旅游攻略、游记、实用信息</p>
   
-  <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #e2e8f0;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #E9E1D6;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <h3 style="font-weight:700;margin-bottom:6px"><a href="../../city/guiyang/blog.html/guiyang-qingyan-ancient-town" style="color:inherit">青岩古镇攻略：贵阳周边最值得去的古镇</a></h3>
-    <p style="font-size:.9rem;color:#64748b">青岩古镇有600多年历史，明清古建筑、石板路、状元府，还有卤猪脚、玫瑰糖等特色小吃。</p>
-    <div style="font-size:.8rem;color:#94a3b8;margin-top:8px">📅 2026</div>
+    <p style="font-size:.9rem;color:#8A7E6E">青岩古镇有600多年历史，明清古建筑、石板路、状元府，还有卤猪脚、玫瑰糖等特色小吃。</p>
+    <div style="font-size:.8rem;color:#B8AB99;margin-top:8px">📅 2026</div>
   </div>
-  <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #e2e8f0;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #E9E1D6;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <h3 style="font-weight:700;margin-bottom:6px"><a href="../../city/guiyang/blog.html/guiyang-sour-soup-fish" style="color:inherit">贵阳酸汤鱼攻略：贵州人的酸辣密码</a></h3>
-    <p style="font-size:.9rem;color:#64748b">酸汤鱼是贵州的招牌菜，红酸汤、白酸汤、番茄酸汤各有风味。贵阳哪家酸汤鱼最正宗？</p>
-    <div style="font-size:.8rem;color:#94a3b8;margin-top:8px">📅 2026</div>
+    <p style="font-size:.9rem;color:#8A7E6E">酸汤鱼是贵州的招牌菜，红酸汤、白酸汤、番茄酸汤各有风味。贵阳哪家酸汤鱼最正宗？</p>
+    <div style="font-size:.8rem;color:#B8AB99;margin-top:8px">📅 2026</div>
   </div>
-  <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #e2e8f0;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #E9E1D6;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <h3 style="font-weight:700;margin-bottom:6px"><a href="../../city/guiyang/blog.html/guiyang-huangguoshu-guide" style="color:inherit">黄果树瀑布攻略：从贵阳出发的一日游行程</a></h3>
-    <p style="font-size:.9rem;color:#64748b">黄果树瀑布是中国最大的瀑布，从贵阳出发一日游怎么安排？水帘洞、陡坡塘、天星桥怎么逛？</p>
-    <div style="font-size:.8rem;color:#94a3b8;margin-top:8px">📅 2026</div>
+    <p style="font-size:.9rem;color:#8A7E6E">黄果树瀑布是中国最大的瀑布，从贵阳出发一日游怎么安排？水帘洞、陡坡塘、天星桥怎么逛？</p>
+    <div style="font-size:.8rem;color:#B8AB99;margin-top:8px">📅 2026</div>
   </div>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 贵阳旅游官网 · <a href="../../city/guiyang/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 贵阳旅游官网 · <a href="../../city/guiyang/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

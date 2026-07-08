@@ -14,20 +14,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 </style>
 </head>
@@ -61,33 +61,34 @@
 </div></nav>
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="../../city/lhasa/" style="color:#1a73e8">首页</a> / <span>旅游攻略</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="../../city/lhasa/" style="color:#BD4B2B">首页</a> / <span>旅游攻略</span></nav>
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">📋 拉萨旅游攻略</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">拉萨是藏传佛教圣地，布达拉宫、大昭寺、八廓街等景点让人感受到浓厚的宗教氛围和高原文化。</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">拉萨是藏传佛教圣地，布达拉宫、大昭寺、八廓街等景点让人感受到浓厚的宗教氛围和高原文化。</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
     
-    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #E9E1D6">
       <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px">✈️ 交通指南</h3>
-      <div style="color:#475569;line-height:1.8;font-size:.95rem"><ul><li><b>飞机：</b>贡嘎机场，距市区约60公里</li><li><b>火车：</b>拉萨站，青藏铁路终点</li><li><b>市内：</b>出租车起步价10元</li><li><b>纳木错：</b>包车约4-5小时单程</li></ul></div>
+      <div style="color:#6B6155;line-height:1.8;font-size:.95rem"><ul><li><b>飞机：</b>贡嘎机场，距市区约60公里</li><li><b>火车：</b>拉萨站，青藏铁路终点</li><li><b>市内：</b>出租车起步价10元</li><li><b>纳木错：</b>包车约4-5小时单程</li></ul></div>
     </div>
-    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #E9E1D6">
       <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px">🏨 住宿推荐</h3>
-      <div style="color:#475569;line-height:1.8;font-size:.95rem"><ul><li><b>八廓街/大昭寺附近：</b>最方便（150-400元/晚）</li><li><b>布达拉宫附近：</b>交通便利（200-500元/晚）</li><li><b>仙足岛：</b>安静，有青旅（80-200元/晚）</li></ul></div>
+      <div style="color:#6B6155;line-height:1.8;font-size:.95rem"><ul><li><b>八廓街/大昭寺附近：</b>最方便（150-400元/晚）</li><li><b>布达拉宫附近：</b>交通便利（200-500元/晚）</li><li><b>仙足岛：</b>安静，有青旅（80-200元/晚）</li></ul></div>
     </div>
-    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #E9E1D6">
       <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px">🌤️ 最佳时间</h3>
-      <div style="color:#475569;line-height:1.8;font-size:.95rem"><p><b>最佳：6-10月</b>，氧气充足，气候舒适。</p><p>7-8月雨季但白天晴天多。冬天阳光充足但寒冷。</p><p>雪顿节(8月)有晒佛仪式。</p></div>
+      <div style="color:#6B6155;line-height:1.8;font-size:.95rem"><p><b>最佳：6-10月</b>，氧气充足，气候舒适。</p><p>7-8月雨季但白天晴天多。冬天阳光充足但寒冷。</p><p>雪顿节(8月)有晒佛仪式。</p></div>
     </div>
-    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #E9E1D6">
       <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px">⚠️ 注意事项</h3>
-      <div style="color:#475569;line-height:1.8;font-size:.95rem"><ul><li><b>高反：</b>海拔3650米，前2天不要剧烈运动</li><li>布达拉宫每天限流5000人，旺季要提前7天预约</li><li>寺庙参观要顺时针转</li><li>纳木错海拔4718米，高反严重者慎去</li><li>尊重当地宗教习惯</li></ul></div>
+      <div style="color:#6B6155;line-height:1.8;font-size:.95rem"><ul><li><b>高反：</b>海拔3650米，前2天不要剧烈运动</li><li>布达拉宫每天限流5000人，旺季要提前7天预约</li><li>寺庙参观要顺时针转</li><li>纳木错海拔4718米，高反严重者慎去</li><li>尊重当地宗教习惯</li></ul></div>
     </div>
   </div>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 拉萨旅游官网 · <a href="../../city/lhasa/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 拉萨旅游官网 · <a href="../../city/lhasa/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

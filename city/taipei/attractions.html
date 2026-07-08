@@ -15,20 +15,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 </style>
 <script type="application/ld+json">
@@ -72,131 +72,131 @@
 </div></nav>
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="../../city/taipei/" style="color:#1a73e8">首页</a> / <span>景点推荐</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="../../city/taipei/" style="color:#BD4B2B">首页</a> / <span>景点推荐</span></nav>
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🏔️ 台北景点推荐</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">台北最值得去的景点，附门票和游玩建议</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">台北最值得去的景点，附门票和游玩建议</p>
   
-  <a class="spot-card" href="../../city/taipei/attraction/0.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/0.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/0.webp" alt="台北101" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏙️ 台北101</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">曾是世界最高楼，观景台与跨年烟火。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">曾是世界最高楼，观景台与跨年烟火。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：约600台币</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/taipei/attraction/1.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/1.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/1.webp" alt="故宫博物院" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏛️ 故宫博物院</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">翠玉白菜与肉形石等国宝，华夏文明精华。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">翠玉白菜与肉形石等国宝，华夏文明精华。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：约350台币</span>
         <span>⏱️ 游玩时间：建议3小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/taipei/attraction/2.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/2.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/2.webp" alt="士林夜市" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍢 士林夜市</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">台湾夜市代表，小吃琳琅。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">台湾夜市代表，小吃琳琅。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：免费</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/taipei/attraction/3.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/3.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/3.webp" alt="西门町" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🛍️ 西门町</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">青少年潮流街，电影街与街头表演。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">青少年潮流街，电影街与街头表演。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：免费</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/taipei/attraction/4.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/4.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/4.webp" alt="阳明山" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌸 阳明山</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">火山温泉与海芋季，北投泡汤。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">火山温泉与海芋季，北投泡汤。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：免费(部分收费)</span>
         <span>⏱️ 游玩时间：建议半天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/taipei/attraction/5.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/5.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/5.webp" alt="九份老街" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏮 九份老街</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">山城茶肆红灯笼，千与千寻原型。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">山城茶肆红灯笼，千与千寻原型。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：免费</span>
         <span>⏱️ 游玩时间：建议半天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/taipei/attraction/6.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/6.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/6.webp" alt="中正纪念堂" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🏛️ 中正纪念堂</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">宏伟纪念建筑与卫兵交接。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">宏伟纪念建筑与卫兵交接。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：免费</span>
         <span>⏱️ 游玩时间：建议1小时</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/taipei/attraction/7.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/7.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/7.webp" alt="淡水" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🌊 淡水</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">渔人码头日落与老街，淡江夕照。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">渔人码头日落与老街，淡江夕照。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：免费</span>
         <span>⏱️ 游玩时间：建议半天</span>
       </div>
     </div>
   </a>
-  <a class="spot-card" href="../../city/taipei/attraction/8.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="../../city/taipei/attraction/8.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="../../assets/images/taipei/8.webp" alt="猫空" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🚡 猫空</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">缆车茶园，夜瞰台北灯火。</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">缆车茶园，夜瞰台北灯火。</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         <span>🎫 门票：约120台币</span>
         <span>⏱️ 游玩时间：建议2小时</span>
       </div>
@@ -204,9 +204,10 @@
   </a>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 台北旅游官网 · <a href="../../city/taipei/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 台北旅游官网 · <a href="../../city/taipei/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

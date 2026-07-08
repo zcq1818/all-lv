@@ -14,20 +14,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 </style>
 <style>
@@ -38,14 +38,14 @@
 .att-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;text-shadow:0 2px 16px rgba(0,0,0,.5)}
 .att-hero .sub{opacity:.92;margin-top:8px;font-size:1.05rem}
 .att-body{max-width:960px;margin:0 auto;padding:36px 24px 60px}
-.att-meta{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;padding:20px 24px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px}
-.att-meta .m b{display:block;color:#94a3b8;font-size:.76rem;font-weight:600;margin-bottom:4px;letter-spacing:.04em}
-.att-meta .m span{color:#1a1a2e;font-weight:600;font-size:1rem}
-.att-desc{font-size:1.08rem;line-height:1.9;color:#334155}
-.att-credit{margin-top:28px;font-size:.8rem;color:#94a3b8}
-.att-credit a{color:#1a73e8}
+.att-meta{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;padding:20px 24px;background:#FBF8F4;border:1px solid #E9E1D6;border-radius:14px}
+.att-meta .m b{display:block;color:#B8AB99;font-size:.76rem;font-weight:600;margin-bottom:4px;letter-spacing:.04em}
+.att-meta .m span{color:#211C18;font-weight:600;font-size:1rem}
+.att-desc{font-size:1.08rem;line-height:1.9;color:#4A423A}
+.att-credit{margin-top:28px;font-size:.8rem;color:#B8AB99}
+.att-credit a{color:#BD4B2B}
 .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:20px}
-.rel-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;transition:all .25s}
+.rel-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #E9E1D6;border-radius:14px;overflow:hidden;transition:all .25s}
 .rel-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.1)}
 .rel-card img{width:100%;height:130px;object-fit:cover;display:block}
 .rel-card .ri{padding:12px 14px;font-weight:700}
@@ -92,7 +92,7 @@
 </header>
 
 <main class="att-body">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:8px"><a href="../../../city/lijiang/" style="color:#1a73e8">首页</a> / <a href="../../../city/lijiang/attractions.html" style="color:#1a73e8">景点</a> / <span>泸沽湖</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:8px"><a href="../../../city/lijiang/" style="color:#BD4B2B">首页</a> / <a href="../../../city/lijiang/attractions.html" style="color:#BD4B2B">景点</a> / <span>泸沽湖</span></nav>
   <div class="att-meta">
     <div class="m"><b>🎫 门票</b><span>70元</span></div>
     <div class="m"><b>⏱️ 建议游玩</b><span>建议2天</span></div>
@@ -101,16 +101,16 @@
   <p class="att-desc">高原明珠，湖水清澈见底。摩梭族走婚文化独特，猪槽船游湖是必体验。</p>
   <section style="margin-top:36px">
     <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px">📖 详细介绍</h2>
-    <div style="color:#334155;line-height:1.95;font-size:1.02rem">
+    <div style="color:#4A423A;line-height:1.95;font-size:1.02rem">
       <p style="margin-bottom:16px">泸沽湖（普米语：lolt sriip khwep、彝語北部方言：ꇈꈬꎿ，羅馬化：Loxggu Shur），亦称永宁海、左所海、勒得海、落水海子、谢纳米，是一个高原淡水湖，位于中华人民共和国云南省北部、四川省西南部，即四川省凉山彝族自治州盐源县与云南省丽江市宁蒗彝族自治县之间，横跨川、滇两省。湖泊东南面长满水草的大片湿地称为草海，广阔的水域称为亮海，湖面海拔2690米，面积48.45平方公里。泸沽湖是川、滇两省共管的湖泊，湖水透明洁净，属中国Ⅰ类水质，但环境问题也相当严峻。沿岸有普米族和摩梭人居住，摩梭人的走婚婚俗在旅游界有很大的影响。泸沽湖风景秀丽，旅游业发达，是云南和四川两省的省级旅游风景区、中国国家重点风景名胜区。</p>
     </div>
-    <p style="margin-top:18px;font-size:.82rem;color:#94a3b8">文字来源：<a href="https://zh.wikipedia.org/wiki/%E6%B3%B8%E6%B2%BD%E6%B9%96" target="_blank" rel="noopener" style="color:#64748b">维基百科</a>（CC BY-SA）</p>
+    <p style="margin-top:18px;font-size:.82rem;color:#B8AB99">文字来源：<a href="https://zh.wikipedia.org/wiki/%E6%B3%B8%E6%B2%BD%E6%B9%96" target="_blank" rel="noopener" style="color:#8A7E6E">维基百科</a>（CC BY-SA）</p>
   </section>
   <p class="att-credit">图片来源：<a href="https://commons.wikimedia.org/wiki/File:Lugu Lake from Lige Observation Deck (20230930180236).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY / CC BY-SA）</p>
   
   <section style="margin-top:48px">
     <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:6px">丽江其他热门景点</h2>
-    <p style="color:#64748b;margin-bottom:20px">继续探索丽江的精彩去处</p>
+    <p style="color:#8A7E6E;margin-bottom:20px">继续探索丽江的精彩去处</p>
     <div class="rel-grid">
       
       <a class="rel-card" href="../../../city/lijiang/attraction/0.html">
@@ -137,9 +137,10 @@
   </div>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 丽江旅游官网 · <a href="../../../city/lijiang/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 丽江旅游官网 · <a href="../../../city/lijiang/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

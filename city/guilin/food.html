@@ -14,20 +14,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 </style>
 </head>
@@ -61,63 +61,64 @@
 </div></nav>
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="../../city/guilin/" style="color:#1a73e8">首页</a> / <span>美食攻略</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="../../city/guilin/" style="color:#BD4B2B">首页</a> / <span>美食攻略</span></nav>
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🍜 桂林美食攻略</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">桂林必吃美食，特色小吃一网打尽</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">桂林必吃美食，特色小吃一网打尽</p>
   
-  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <div style="height:200px;overflow:hidden"><img src="../../assets/images/guilin/food/0.webp" alt="桂林米粉" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
     <div style="padding:28px">
     <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍜 桂林米粉</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:8px">桂林第一小吃，卤菜粉最经典。干拌吃法，配上酸豆角和辣椒。</p>
-    <p style="font-size:.85rem;color:#94a3b8">💡 崇善米粉、日头火米粉</p>
+    <p style="color:#6B6155;line-height:1.8;margin-bottom:8px">桂林第一小吃，卤菜粉最经典。干拌吃法，配上酸豆角和辣椒。</p>
+    <p style="font-size:.85rem;color:#B8AB99">💡 崇善米粉、日头火米粉</p>
     </div>
   </div>
-  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <div style="height:200px;overflow:hidden"><img src="../../assets/images/guilin/food/1.webp" alt="啤酒鱼" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
     <div style="padding:28px">
     <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🐟 啤酒鱼</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:8px">阳朔特色，漓江鲜鱼用啤酒焖煮，鱼肉鲜嫩入味。</p>
-    <p style="font-size:.85rem;color:#94a3b8">💡 大师傅啤酒鱼</p>
+    <p style="color:#6B6155;line-height:1.8;margin-bottom:8px">阳朔特色，漓江鲜鱼用啤酒焖煮，鱼肉鲜嫩入味。</p>
+    <p style="font-size:.85rem;color:#B8AB99">💡 大师傅啤酒鱼</p>
     </div>
   </div>
-  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <div style="height:200px;overflow:hidden"><img src="../../assets/images/guilin/food/2.webp" alt="荔浦芋头扣肉" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
     <div style="padding:28px">
     <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍲 荔浦芋头扣肉</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:8px">桂林名菜，荔浦芋头和五花肉交替蒸制。</p>
-    <p style="font-size:.85rem;color:#94a3b8">💡 椿记烧鹅</p>
+    <p style="color:#6B6155;line-height:1.8;margin-bottom:8px">桂林名菜，荔浦芋头和五花肉交替蒸制。</p>
+    <p style="font-size:.85rem;color:#B8AB99">💡 椿记烧鹅</p>
     </div>
   </div>
-  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <div style="height:200px;overflow:hidden"><img src="../../assets/images/guilin/food/3.webp" alt="田螺酿" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
     <div style="padding:28px">
     <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🐔 田螺酿</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:8px">桂林十八酿之一，田螺肉剁碎加调料再塞回螺壳。</p>
-    <p style="font-size:.85rem;color:#94a3b8">💡 阳朔西街</p>
+    <p style="color:#6B6155;line-height:1.8;margin-bottom:8px">桂林十八酿之一，田螺肉剁碎加调料再塞回螺壳。</p>
+    <p style="font-size:.85rem;color:#B8AB99">💡 阳朔西街</p>
     </div>
   </div>
-  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <div style="height:200px;overflow:hidden"><img src="../../assets/images/guilin/food/4.webp" alt="油茶" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
     <div style="padding:28px">
     <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍵 油茶</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:8px">桂林人的早餐，茶叶和花生捣碎煮成。</p>
-    <p style="font-size:.85rem;color:#94a3b8">💡 恭城油茶</p>
+    <p style="color:#6B6155;line-height:1.8;margin-bottom:8px">桂林人的早餐，茶叶和花生捣碎煮成。</p>
+    <p style="font-size:.85rem;color:#B8AB99">💡 恭城油茶</p>
     </div>
   </div>
-  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <div style="height:200px;overflow:hidden"><img src="../../assets/images/guilin/food/5.webp" alt="椿记烧鹅" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
     <div style="padding:28px">
     <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">🍖 椿记烧鹅</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:8px">桂林最火的烧鹅店，皮脆肉嫩。</p>
-    <p style="font-size:.85rem;color:#94a3b8">💡 椿记烧鹅多家分店</p>
+    <p style="color:#6B6155;line-height:1.8;margin-bottom:8px">桂林最火的烧鹅店，皮脆肉嫩。</p>
+    <p style="font-size:.85rem;color:#B8AB99">💡 椿记烧鹅多家分店</p>
     </div>
   </div>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 桂林旅游官网 · <a href="../../city/guilin/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 桂林旅游官网 · <a href="../../city/guilin/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

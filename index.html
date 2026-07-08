@@ -12,17 +12,17 @@
 .hero-picker::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,32,39,.62) 0%,rgba(15,32,39,.38) 45%,rgba(15,32,39,.78) 100%)}
 .hero-picker>*{position:relative;z-index:1}
 .province-section{max-width:1100px;margin:0 auto;padding:24px 24px 0}
-.province-title{font-size:1.2rem;font-weight:700;color:#1a1a2e;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.province-title{font-size:1.2rem;font-weight:700;color:#211C18;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #E9E1D6}
 .city-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.city-card{display:block;padding:0;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;transition:all .25s;cursor:pointer;color:#1a1a2e;text-decoration:none}
-.city-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.1);border-color:#cbd5e1}
-.city-card .thumb{width:100%;height:140px;object-fit:cover;display:block;background:#eef2f7}
-.city-card .emoji-fallback{width:100%;height:140px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#1a73e8 0%,#34a853 100%)}
+.city-card{display:block;padding:0;background:#fff;border:1px solid #E9E1D6;border-radius:12px;overflow:hidden;transition:all .25s;cursor:pointer;color:#211C18;text-decoration:none}
+.city-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.1);border-color:#DAD0C2}
+.city-card .thumb{width:100%;height:140px;object-fit:cover;display:block;background:#F3EEE7}
+.city-card .emoji-fallback{width:100%;height:140px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#BD4B2B 0%,#2E7D5B 100%)}
 .city-card .info{padding:14px 16px}
 .city-card .info h3{font-size:1.05rem;font-weight:700;margin-bottom:2px}
-.city-card .info p{font-size:.82rem;color:#64748b}
+.city-card .info p{font-size:.82rem;color:#8A7E6E}
 .main-content{padding-bottom:60px}
-.footer-simple{text-align:center;padding:40px 24px;color:#94a3b8;font-size:.85rem;border-top:1px solid #e2e8f0}
+.footer-simple{text-align:center;padding:40px 24px;color:#B8AB99;font-size:.85rem;border-top:1px solid #E9E1D6}
 </style>
 </head>
 <body>
@@ -37,7 +37,7 @@
     <h2 class="province-title">海南</h2>
     <div class="city-cards">
       
-      <a href="city/sanya/" class="city-card">
+      <a href="city/sanya/" class="city-card reveal">
         <img class="thumb" src="assets/images/sanya/0.webp" alt="三亚风光实景" loading="lazy">
         <div class="info">
           <h3>三亚</h3>
@@ -50,21 +50,21 @@
     <h2 class="province-title">四川</h2>
     <div class="city-cards">
       
-      <a href="city/chengdu/" class="city-card">
+      <a href="city/chengdu/" class="city-card reveal">
         <img class="thumb" src="assets/images/chengdu/0.webp" alt="成都风光实景" loading="lazy">
         <div class="info">
           <h3>成都</h3>
           <p>一座来了就不想走的城市</p>
         </div>
       </a>
-      <a href="city/jiuzhaigou/" class="city-card">
+      <a href="city/jiuzhaigou/" class="city-card reveal">
         <img class="thumb" src="assets/images/jiuzhaigou/0.webp" alt="九寨沟风光实景" loading="lazy">
         <div class="info">
           <h3>九寨沟</h3>
           <p>九寨归来不看水</p>
         </div>
       </a>
-      <a href="city/emeishan/" class="city-card">
+      <a href="city/emeishan/" class="city-card reveal">
         <img class="thumb" src="assets/images/emeishan/0.webp" alt="峨眉山风光实景" loading="lazy">
         <div class="info">
           <h3>峨眉山</h3>
@@ -77,7 +77,7 @@
     <h2 class="province-title">陕西</h2>
     <div class="city-cards">
       
-      <a href="city/xian/" class="city-card">
+      <a href="city/xian/" class="city-card reveal">
         <img class="thumb" src="assets/images/xian/0.webp" alt="西安风光实景" loading="lazy">
         <div class="info">
           <h3>西安</h3>
@@ -90,7 +90,7 @@
     <h2 class="province-title">浙江</h2>
     <div class="city-cards">
       
-      <a href="city/hangzhou/" class="city-card">
+      <a href="city/hangzhou/" class="city-card reveal">
         <img class="thumb" src="assets/images/hangzhou/0.webp" alt="杭州风光实景" loading="lazy">
         <div class="info">
           <h3>杭州</h3>
@@ -103,21 +103,21 @@
     <h2 class="province-title">云南</h2>
     <div class="city-cards">
       
-      <a href="city/dali/" class="city-card">
+      <a href="city/dali/" class="city-card reveal">
         <img class="thumb" src="assets/images/dali/0.webp" alt="大理风光实景" loading="lazy">
         <div class="info">
           <h3>大理</h3>
           <p>风花雪月，自在大理</p>
         </div>
       </a>
-      <a href="city/lijiang/" class="city-card">
+      <a href="city/lijiang/" class="city-card reveal">
         <img class="thumb" src="assets/images/lijiang/0.webp" alt="丽江风光实景" loading="lazy">
         <div class="info">
           <h3>丽江</h3>
           <p>雪山下的古城</p>
         </div>
       </a>
-      <a href="city/kunming/" class="city-card">
+      <a href="city/kunming/" class="city-card reveal">
         <img class="thumb" src="assets/images/kunming/0.webp" alt="昆明风光实景" loading="lazy">
         <div class="info">
           <h3>昆明</h3>
@@ -130,14 +130,14 @@
     <h2 class="province-title">福建</h2>
     <div class="city-cards">
       
-      <a href="city/xiamen/" class="city-card">
+      <a href="city/xiamen/" class="city-card reveal">
         <img class="thumb" src="assets/images/xiamen/0.webp" alt="厦门风光实景" loading="lazy">
         <div class="info">
           <h3>厦门</h3>
           <p>海上花园，文艺小城</p>
         </div>
       </a>
-      <a href="city/wuyishan/" class="city-card">
+      <a href="city/wuyishan/" class="city-card reveal">
         <img class="thumb" src="assets/images/wuyishan/0.webp" alt="武夷山风光实景" loading="lazy">
         <div class="info">
           <h3>武夷山</h3>
@@ -150,7 +150,7 @@
     <h2 class="province-title">山东</h2>
     <div class="city-cards">
       
-      <a href="city/qingdao/" class="city-card">
+      <a href="city/qingdao/" class="city-card reveal">
         <img class="thumb" src="assets/images/qingdao/0.webp" alt="青岛风光实景" loading="lazy">
         <div class="info">
           <h3>青岛</h3>
@@ -163,14 +163,14 @@
     <h2 class="province-title">广西</h2>
     <div class="city-cards">
       
-      <a href="city/guilin/" class="city-card">
+      <a href="city/guilin/" class="city-card reveal">
         <img class="thumb" src="assets/images/guilin/0.webp" alt="桂林风光实景" loading="lazy">
         <div class="info">
           <h3>桂林</h3>
           <p>桂林山水甲天下</p>
         </div>
       </a>
-      <a href="city/beihai/" class="city-card">
+      <a href="city/beihai/" class="city-card reveal">
         <img class="thumb" src="assets/images/beihai/0.webp" alt="北海风光实景" loading="lazy">
         <div class="info">
           <h3>北海</h3>
@@ -183,7 +183,7 @@
     <h2 class="province-title">西藏</h2>
     <div class="city-cards">
       
-      <a href="city/lhasa/" class="city-card">
+      <a href="city/lhasa/" class="city-card reveal">
         <img class="thumb" src="assets/images/lhasa/0.webp" alt="拉萨风光实景" loading="lazy">
         <div class="info">
           <h3>拉萨</h3>
@@ -196,7 +196,7 @@
     <h2 class="province-title">北京</h2>
     <div class="city-cards">
       
-      <a href="city/beijing/" class="city-card">
+      <a href="city/beijing/" class="city-card reveal">
         <img class="thumb" src="assets/images/beijing/0.webp" alt="北京风光实景" loading="lazy">
         <div class="info">
           <h3>北京</h3>
@@ -209,7 +209,7 @@
     <h2 class="province-title">上海</h2>
     <div class="city-cards">
       
-      <a href="city/shanghai/" class="city-card">
+      <a href="city/shanghai/" class="city-card reveal">
         <img class="thumb" src="assets/images/shanghai/0.webp" alt="上海风光实景" loading="lazy">
         <div class="info">
           <h3>上海</h3>
@@ -222,7 +222,7 @@
     <h2 class="province-title">重庆</h2>
     <div class="city-cards">
       
-      <a href="city/chongqing/" class="city-card">
+      <a href="city/chongqing/" class="city-card reveal">
         <img class="thumb" src="assets/images/chongqing/0.webp" alt="重庆风光实景" loading="lazy">
         <div class="info">
           <h3>重庆</h3>
@@ -235,14 +235,14 @@
     <h2 class="province-title">广东</h2>
     <div class="city-cards">
       
-      <a href="city/guangzhou/" class="city-card">
+      <a href="city/guangzhou/" class="city-card reveal">
         <img class="thumb" src="assets/images/guangzhou/0.webp" alt="广州风光实景" loading="lazy">
         <div class="info">
           <h3>广州</h3>
           <p>食在广州，花城四季</p>
         </div>
       </a>
-      <a href="city/shenzhen/" class="city-card">
+      <a href="city/shenzhen/" class="city-card reveal">
         <img class="thumb" src="assets/images/shenzhen/0.webp" alt="深圳风光实景" loading="lazy">
         <div class="info">
           <h3>深圳</h3>
@@ -255,14 +255,14 @@
     <h2 class="province-title">江苏</h2>
     <div class="city-cards">
       
-      <a href="city/suzhou/" class="city-card">
+      <a href="city/suzhou/" class="city-card reveal">
         <img class="thumb" src="assets/images/suzhou/0.webp" alt="苏州风光实景" loading="lazy">
         <div class="info">
           <h3>苏州</h3>
           <p>上有天堂，下有苏杭</p>
         </div>
       </a>
-      <a href="city/nanjing/" class="city-card">
+      <a href="city/nanjing/" class="city-card reveal">
         <img class="thumb" src="assets/images/nanjing/0.webp" alt="南京风光实景" loading="lazy">
         <div class="info">
           <h3>南京</h3>
@@ -275,14 +275,14 @@
     <h2 class="province-title">湖南</h2>
     <div class="city-cards">
       
-      <a href="city/zhangjiajie/" class="city-card">
+      <a href="city/zhangjiajie/" class="city-card reveal">
         <img class="thumb" src="assets/images/zhangjiajie/0.webp" alt="张家界风光实景" loading="lazy">
         <div class="info">
           <h3>张家界</h3>
           <p>阿凡达取景地，奇峰三千</p>
         </div>
       </a>
-      <a href="city/changsha/" class="city-card">
+      <a href="city/changsha/" class="city-card reveal">
         <img class="thumb" src="assets/images/changsha/0.webp" alt="长沙风光实景" loading="lazy">
         <div class="info">
           <h3>长沙</h3>
@@ -295,7 +295,7 @@
     <h2 class="province-title">安徽</h2>
     <div class="city-cards">
       
-      <a href="city/huangshan/" class="city-card">
+      <a href="city/huangshan/" class="city-card reveal">
         <img class="thumb" src="assets/images/huangshan/0.webp" alt="黄山风光实景" loading="lazy">
         <div class="info">
           <h3>黄山</h3>
@@ -308,7 +308,7 @@
     <h2 class="province-title">黑龙江</h2>
     <div class="city-cards">
       
-      <a href="city/haerbin/" class="city-card">
+      <a href="city/haerbin/" class="city-card reveal">
         <img class="thumb" src="assets/images/haerbin/0.webp" alt="哈尔滨风光实景" loading="lazy">
         <div class="info">
           <h3>哈尔滨</h3>
@@ -321,7 +321,7 @@
     <h2 class="province-title">甘肃</h2>
     <div class="city-cards">
       
-      <a href="city/dunhuang/" class="city-card">
+      <a href="city/dunhuang/" class="city-card reveal">
         <img class="thumb" src="assets/images/dunhuang/0.webp" alt="敦煌风光实景" loading="lazy">
         <div class="info">
           <h3>敦煌</h3>
@@ -334,7 +334,7 @@
     <h2 class="province-title">河南</h2>
     <div class="city-cards">
       
-      <a href="city/luoyang/" class="city-card">
+      <a href="city/luoyang/" class="city-card reveal">
         <img class="thumb" src="assets/images/luoyang/0.webp" alt="洛阳风光实景" loading="lazy">
         <div class="info">
           <h3>洛阳</h3>
@@ -347,7 +347,7 @@
     <h2 class="province-title">青海</h2>
     <div class="city-cards">
       
-      <a href="city/xining/" class="city-card">
+      <a href="city/xining/" class="city-card reveal">
         <img class="thumb" src="assets/images/xining/0.webp" alt="西宁风光实景" loading="lazy">
         <div class="info">
           <h3>西宁</h3>
@@ -360,7 +360,7 @@
     <h2 class="province-title">贵州</h2>
     <div class="city-cards">
       
-      <a href="city/guiyang/" class="city-card">
+      <a href="city/guiyang/" class="city-card reveal">
         <img class="thumb" src="assets/images/guiyang/0.webp" alt="贵阳风光实景" loading="lazy">
         <div class="info">
           <h3>贵阳</h3>
@@ -373,7 +373,7 @@
     <h2 class="province-title">香港</h2>
     <div class="city-cards">
       
-      <a href="city/hongkong/" class="city-card">
+      <a href="city/hongkong/" class="city-card reveal">
         <img class="thumb" src="assets/images/hongkong/0.webp" alt="香港风光实景" loading="lazy">
         <div class="info">
           <h3>香港</h3>
@@ -386,7 +386,7 @@
     <h2 class="province-title">澳门</h2>
     <div class="city-cards">
       
-      <a href="city/macau/" class="city-card">
+      <a href="city/macau/" class="city-card reveal">
         <img class="thumb" src="assets/images/macau/0.webp" alt="澳门风光实景" loading="lazy">
         <div class="info">
           <h3>澳门</h3>
@@ -399,7 +399,7 @@
     <h2 class="province-title">河北</h2>
     <div class="city-cards">
       
-      <a href="city/qinhuangdao/" class="city-card">
+      <a href="city/qinhuangdao/" class="city-card reveal">
         <img class="thumb" src="assets/images/qinhuangdao/0.webp" alt="秦皇岛风光实景" loading="lazy">
         <div class="info">
           <h3>秦皇岛</h3>
@@ -412,7 +412,7 @@
     <h2 class="province-title">湖北</h2>
     <div class="city-cards">
       
-      <a href="city/wuhan/" class="city-card">
+      <a href="city/wuhan/" class="city-card reveal">
         <img class="thumb" src="assets/images/wuhan/0.webp" alt="武汉风光实景" loading="lazy">
         <div class="info">
           <h3>武汉</h3>
@@ -425,7 +425,7 @@
     <h2 class="province-title">天津</h2>
     <div class="city-cards">
       
-      <a href="city/tianjin/" class="city-card">
+      <a href="city/tianjin/" class="city-card reveal">
         <img class="thumb" src="assets/images/tianjin/0.webp" alt="天津风光实景" loading="lazy">
         <div class="info">
           <h3>天津</h3>
@@ -438,7 +438,7 @@
     <h2 class="province-title">辽宁</h2>
     <div class="city-cards">
       
-      <a href="city/dalian/" class="city-card">
+      <a href="city/dalian/" class="city-card reveal">
         <img class="thumb" src="assets/images/dalian/0.webp" alt="大连风光实景" loading="lazy">
         <div class="info">
           <h3>大连</h3>
@@ -451,14 +451,14 @@
     <h2 class="province-title">山西</h2>
     <div class="city-cards">
       
-      <a href="city/pingyao/" class="city-card">
+      <a href="city/pingyao/" class="city-card reveal">
         <img class="thumb" src="assets/images/pingyao/0.webp" alt="平遥风光实景" loading="lazy">
         <div class="info">
           <h3>平遥</h3>
           <p>明清古城，票号源头</p>
         </div>
       </a>
-      <a href="city/datong/" class="city-card">
+      <a href="city/datong/" class="city-card reveal">
         <img class="thumb" src="assets/images/datong/0.webp" alt="大同风光实景" loading="lazy">
         <div class="info">
           <h3>大同</h3>
@@ -471,7 +471,7 @@
     <h2 class="province-title">新疆</h2>
     <div class="city-cards">
       
-      <a href="city/kashgar/" class="city-card">
+      <a href="city/kashgar/" class="city-card reveal">
         <img class="thumb" src="assets/images/kashgar/0.webp" alt="喀什风光实景" loading="lazy">
         <div class="info">
           <h3>喀什</h3>
@@ -484,7 +484,7 @@
     <h2 class="province-title">中国台湾</h2>
     <div class="city-cards">
       
-      <a href="city/taipei/" class="city-card">
+      <a href="city/taipei/" class="city-card reveal">
         <img class="thumb" src="assets/images/taipei/0.webp" alt="台北风光实景" loading="lazy">
         <div class="info">
           <h3>台北</h3>
@@ -497,7 +497,7 @@
     <h2 class="province-title">内蒙古</h2>
     <div class="city-cards">
       
-      <a href="city/hulunbuir/" class="city-card">
+      <a href="city/hulunbuir/" class="city-card reveal">
         <img class="thumb" src="assets/images/hulunbuir/0.webp" alt="呼伦贝尔风光实景" loading="lazy">
         <div class="info">
           <h3>呼伦贝尔</h3>
@@ -511,5 +511,9 @@
   <p>© 2026 全国旅游攻略 · <a href="sitemap.xml">网站地图</a></p>
   <p style="font-size:.8rem;opacity:.8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p>
 </footer>
+<script>
+window.addEventListener('scroll',function(){var n=document.getElementById('navbar');if(n)n.classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
+</script>
 </body>
 </html>

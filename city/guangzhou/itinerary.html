@@ -14,20 +14,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 
 .day-tabs{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap;justify-content:center}
@@ -69,41 +69,42 @@
 
 <main style="max-width:800px;margin:0 auto;padding:100px 24px 60px">
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px;text-align:center">🗺️ 广州行程规划</h1>
-  <p style="color:#64748b;margin-bottom:36px;text-align:center;font-size:1.05rem">建议游玩 3-4天，以下是推荐行程</p>
+  <p style="color:#8A7E6E;margin-bottom:36px;text-align:center;font-size:1.05rem">建议游玩 3-4天，以下是推荐行程</p>
   <div class="day-tabs">
     <div class="day-tab active" onclick="showDay(0)">第1天</div><div class="day-tab" onclick="showDay(1)">第2天</div><div class="day-tab" onclick="showDay(2)">第3天</div>
   </div>
   
   <div class="day-panel active" id="day-0">
-    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #E9E1D6">
       <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第1天：老广州</h2>
       <ul style="list-style:none;padding:0">
-        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>早茶</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>陈家祠</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>沙面</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>珠江夜游</li>
+        <li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>早茶</li><li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>陈家祠</li><li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>沙面</li><li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>珠江夜游</li>
       </ul>
     </div>
   </div>
   <div class="day-panel" id="day-1">
-    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #E9E1D6">
       <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第2天：新广州</h2>
       <ul style="list-style:none;padding:0">
-        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>广州塔</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>花城广场</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>北京路</li>
+        <li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>广州塔</li><li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>花城广场</li><li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>北京路</li>
       </ul>
     </div>
   </div>
   <div class="day-panel" id="day-2">
-    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #E9E1D6">
       <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第3天：白云山</h2>
       <ul style="list-style:none;padding:0">
-        <li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>白云山</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>越秀公园</li><li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>天河城</li>
+        <li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>白云山</li><li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>越秀公园</li><li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>天河城</li>
       </ul>
     </div>
   </div>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 广州旅游官网 · <a href="../../city/guangzhou/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 广州旅游官网 · <a href="../../city/guangzhou/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 function showDay(n){document.querySelectorAll('.day-tab').forEach((t,i)=>{t.classList.toggle('active',i===n)});document.querySelectorAll('.day-panel').forEach((p,i)=>{p.classList.toggle('active',i===n)})}
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

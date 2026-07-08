@@ -14,20 +14,20 @@
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 </style>
 <style>
@@ -38,14 +38,14 @@
 .att-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;text-shadow:0 2px 16px rgba(0,0,0,.5)}
 .att-hero .sub{opacity:.92;margin-top:8px;font-size:1.05rem}
 .att-body{max-width:960px;margin:0 auto;padding:36px 24px 60px}
-.att-meta{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;padding:20px 24px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px}
-.att-meta .m b{display:block;color:#94a3b8;font-size:.76rem;font-weight:600;margin-bottom:4px;letter-spacing:.04em}
-.att-meta .m span{color:#1a1a2e;font-weight:600;font-size:1rem}
-.att-desc{font-size:1.08rem;line-height:1.9;color:#334155}
-.att-credit{margin-top:28px;font-size:.8rem;color:#94a3b8}
-.att-credit a{color:#1a73e8}
+.att-meta{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;padding:20px 24px;background:#FBF8F4;border:1px solid #E9E1D6;border-radius:14px}
+.att-meta .m b{display:block;color:#B8AB99;font-size:.76rem;font-weight:600;margin-bottom:4px;letter-spacing:.04em}
+.att-meta .m span{color:#211C18;font-weight:600;font-size:1rem}
+.att-desc{font-size:1.08rem;line-height:1.9;color:#4A423A}
+.att-credit{margin-top:28px;font-size:.8rem;color:#B8AB99}
+.att-credit a{color:#BD4B2B}
 .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:20px}
-.rel-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;transition:all .25s}
+.rel-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #E9E1D6;border-radius:14px;overflow:hidden;transition:all .25s}
 .rel-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.1)}
 .rel-card img{width:100%;height:130px;object-fit:cover;display:block}
 .rel-card .ri{padding:12px 14px;font-weight:700}
@@ -92,7 +92,7 @@
 </header>
 
 <main class="att-body">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:8px"><a href="../../../city/suzhou/" style="color:#1a73e8">首页</a> / <a href="../../../city/suzhou/attractions.html" style="color:#1a73e8">景点</a> / <span>拙政园</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:8px"><a href="../../../city/suzhou/" style="color:#BD4B2B">首页</a> / <a href="../../../city/suzhou/attractions.html" style="color:#BD4B2B">景点</a> / <span>拙政园</span></nav>
   <div class="att-meta">
     <div class="m"><b>🎫 门票</b><span>70元</span></div>
     <div class="m"><b>⏱️ 建议游玩</b><span>建议2-3小时</span></div>
@@ -101,18 +101,18 @@
   <p class="att-desc">中国四大名园之首，水景为主。</p>
   <section style="margin-top:36px">
     <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px">📖 详细介绍</h2>
-    <div style="color:#334155;line-height:1.95;font-size:1.02rem">
+    <div style="color:#4A423A;line-height:1.95;font-size:1.02rem">
       <p style="margin-bottom:16px">拙政园，是中国江南一座园林，位于江苏省苏州市姑蘇區平江街道东北街178号，始建于明朝正德年间，初為御史王獻臣改佛寺以建。它是中国园林的杰出代表，中国四大名园之一，亦是江南私家花园典范。拙政园1961年被国务院列为首批全国重点文物保护单位，1991年被国家计委、旅游局、建设部列为国家级特殊游览参观点，1997年被联合国教科文组织与其它数座园林一同列为世界文化遗产。
 拙政园始建于明正德四年（1509年），为明代弘治进士、御史王献臣弃官回乡后，在唐代陆龟蒙宅地和元代大弘寺旧址处拓建而成。取西晋文学家潘岳《闲居赋》中“筑室种树，逍遥自得……灌园鬻蔬，以供朝夕之膳……此亦拙者之为政也”句意，将此园命名为拙政园。据传王献臣在建园之期，曾请吴门画派的代表人物文徵明为其设计蓝图，形成以水为主、疏朗平淡、近乎自然风景的园林。王献臣死后，其子一夜豪赌，将园输给徐氏，其子孙后亦衰落。明崇祯四年（1631年）园东部归侍郎王心一，名“归田园居”。园中部和西部，主人更换频繁，乾隆初，中部复园归太守蒋棨所有。咸丰十年（1860年）太平军进驻苏州，拙政园为忠王府，相传忠王李秀成以中部见山楼为其治事之所。光绪三年（1877年）西部归富商张履谦，名“补园”。中华人民共和国成立后，得到了保护修复，并于1952年正式对外开放。   
 拙政园占地面积78亩（52000平方米），全园分东、中、西三部分。另有住宅部分现为园林博物馆展厅。东部明快开朗，以平冈远山、松林草坪、竹坞曲水为主。中部为拙政园精华所在，池水面积占1/3，以水为主，池广树茂，景色自然，临水布置了形体不一、高低错落的建筑，主次分明。西部水池呈曲尺形，其特点为台馆分峙，回廊起伏，水波倒影，别有情趣，装饰华丽精美，主体建筑为靠近住宅一侧的卅六鸳鸯馆。</p>
     </div>
-    <p style="margin-top:18px;font-size:.82rem;color:#94a3b8">文字来源：<a href="https://zh.wikipedia.org/wiki/%E6%8B%99%E6%94%BF%E5%9B%AD" target="_blank" rel="noopener" style="color:#64748b">维基百科</a>（CC BY-SA）</p>
+    <p style="margin-top:18px;font-size:.82rem;color:#B8AB99">文字来源：<a href="https://zh.wikipedia.org/wiki/%E6%8B%99%E6%94%BF%E5%9B%AD" target="_blank" rel="noopener" style="color:#8A7E6E">维基百科</a>（CC BY-SA）</p>
   </section>
   <p class="att-credit">图片来源：<a href="https://commons.wikimedia.org/wiki/File:拙政园见山楼2024.11 (2).jpg" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY / CC BY-SA）</p>
   
   <section style="margin-top:48px">
     <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:6px">苏州其他热门景点</h2>
-    <p style="color:#64748b;margin-bottom:20px">继续探索苏州的精彩去处</p>
+    <p style="color:#8A7E6E;margin-bottom:20px">继续探索苏州的精彩去处</p>
     <div class="rel-grid">
       
       <a class="rel-card" href="../../../city/suzhou/attraction/1.html">
@@ -139,9 +139,10 @@
   </div>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 苏州旅游官网 · <a href="../../../city/suzhou/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 苏州旅游官网 · <a href="../../../city/suzhou/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 
 function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classList.toggle('open')}

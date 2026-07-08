@@ -74,20 +74,20 @@ const citySelectorCSS = `
 .city-selector-btn{display:flex;align-items:center;gap:6px;padding:6px 12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:var(--radius);cursor:pointer;font-size:.88rem;color:#fff;transition:all .2s;white-space:nowrap}
 .city-selector-btn:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.4)}
 .city-selector-name{font-weight:600}
-.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #e2e8f0;z-index:999;overflow:hidden}
+.city-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;width:320px;max-height:70vh;background:#fff;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,0.18);border:1px solid #E9E1D6;z-index:999;overflow:hidden}
 .city-dropdown.open{display:flex;flex-direction:column}
 @keyframes dropdownIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.city-dropdown-title{font-size:.8rem;color:#1a1a2e;font-weight:700}
-.city-dropdown-count{font-size:.7rem;color:#94a3b8;background:#f1f5f9;padding:2px 8px;border-radius:10px}
+.city-dropdown-header{padding:14px 16px 10px;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.city-dropdown-title{font-size:.8rem;color:#211C18;font-weight:700}
+.city-dropdown-count{font-size:.7rem;color:#B8AB99;background:#F3EEE7;padding:2px 8px;border-radius:10px}
 .city-dropdown-body{overflow-y:auto;padding:8px 0;flex:1}
 .province-group{margin-bottom:4px}
-.province-label{padding:8px 16px 4px;font-size:.7rem;color:#94a3b8;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
-.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#1a1a2e;transition:background .15s;text-decoration:none}
-.city-option:hover{background:#f1f5f9}
-.city-option.active{background:#eff6ff;color:#1a73e8;font-weight:600}
-.city-option.active::before{content:"✓";font-size:.75rem;color:#1a73e8;margin-right:-4px}
-.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#e2e8f0;color:#1a1a2e}
+.province-label{padding:8px 16px 4px;font-size:.7rem;color:#B8AB99;font-weight:700;letter-spacing:.5px;position:sticky;top:0;background:#fff;z-index:1}
+.city-option{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.88rem;color:#211C18;transition:background .15s;text-decoration:none}
+.city-option:hover{background:#F3EEE7}
+.city-option.active{background:#F7EDE8;color:#BD4B2B;font-weight:600}
+.city-option.active::before{content:"✓";font-size:.75rem;color:#BD4B2B;margin-right:-4px}
+.navbar.scrolled .city-selector-btn{background:rgba(0,0,0,0.06);border-color:#E9E1D6;color:#211C18}
 @media(max-width:640px){.city-dropdown{width:calc(100vw - 32px);left:-8px}}
 `;
 
@@ -112,7 +112,7 @@ function generateIndex(city) {
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="${SITE}/city/${c.id}/">
 <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#1a73e8">
+<meta name="theme-color" content="#BD4B2B">
 <meta property="og:title" content="${c.name}旅游官网 — ${c.tagline}">
 <meta property="og:description" content="${c.description}">
 <meta property="og:type" content="website">
@@ -125,7 +125,7 @@ function generateIndex(city) {
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}
-.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;${(c.attractions&&c.attractions[0]&&c.attractions[0].image)?`background-image:linear-gradient(135deg,rgba(13,71,161,.5) 0%,rgba(26,115,232,.32) 100%),url(${c.attractions[0].image});background-size:cover;background-position:center;`:`background:linear-gradient(135deg,${c.color||'#0d47a1'} 0%,${c.color||'#1a73e8'}88 100%)`}}
+.hero-full{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;${(c.attractions&&c.attractions[0]&&c.attractions[0].image)?`background-image:linear-gradient(135deg,rgba(143,53,23,.55) 0%,rgba(189,75,43,.32) 100%),url(${c.attractions[0].image});background-size:cover;background-position:center;`:`background:linear-gradient(135deg,${c.color||'#8F3517'} 0%,${c.color||'#BD4B2B'}88 100%)`}}
 .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.3) 100%)}
 .hero-photo{width:100%;max-width:420px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);border:4px solid rgba(255,255,255,.25);margin:0 auto}
 .hero-grid{max-width:var(--max-width);margin:0 auto;width:100%;position:relative;z-index:2;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -179,12 +179,12 @@ function generateIndex(city) {
   <div class="city-grid">
     <div>
       <h2 style="font-size:2rem;font-weight:800;margin-bottom:16px">关于${c.name}</h2>
-      <p style="font-size:1.05rem;line-height:1.9;color:#475569;margin-bottom:24px">${c.description}</p>
+      <p style="font-size:1.05rem;line-height:1.9;color:#6B6155;margin-bottom:24px">${c.description}</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📅</div><div style="font-weight:600">最佳时间</div><div style="font-size:.9rem;color:#64748b">${c.bestSeason}</div></div>
-        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">⏱️</div><div style="font-weight:600">建议天数</div><div style="font-size:.9rem;color:#64748b">${c.suggestedDays}</div></div>
-        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📍</div><div style="font-weight:600">省份</div><div style="font-size:.9rem;color:#64748b">${c.province}</div></div>
-        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">🌤️</div><div style="font-weight:600">气候</div><div style="font-size:.9rem;color:#64748b">${c.climate || '详见攻略'}</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📅</div><div style="font-weight:600">最佳时间</div><div style="font-size:.9rem;color:#8A7E6E">${c.bestSeason}</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">⏱️</div><div style="font-weight:600">建议天数</div><div style="font-size:.9rem;color:#8A7E6E">${c.suggestedDays}</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📍</div><div style="font-weight:600">省份</div><div style="font-size:.9rem;color:#8A7E6E">${c.province}</div></div>
+        <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">🌤️</div><div style="font-weight:600">气候</div><div style="font-size:.9rem;color:#8A7E6E">${c.climate || '详见攻略'}</div></div>
       </div>
     </div>
     <div style="font-size:10rem;text-align:center;opacity:.15">${c.emoji}</div>
@@ -195,16 +195,16 @@ function generateIndex(city) {
 <section class="attractions-preview">
   <div style="text-align:center;margin-bottom:48px">
     <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🏔️ 热门景点</h2>
-    <p style="color:#64748b">${c.name}最值得去的地方</p>
+    <p style="color:#8A7E6E">${c.name}最值得去的地方</p>
   </div>
   <div class="attractions-grid">
     ${(c.attractions || []).slice(0, 6).map((a, i) => `
-    <a href="/city/${c.id}/attraction/${i}.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-      <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,${c.color||'#1a73e8'}44 0%,${c.color||'#1a73e8'}22 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">${a.image ? `<img src="${a.image}" alt="${a.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover">` : a.icon}</div>
+    <a href="/city/${c.id}/attraction/${i}.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,${c.color||'#BD4B2B'}44 0%,${c.color||'#BD4B2B'}22 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">${a.image ? `<img src="${a.image}" alt="${a.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover">` : a.icon}</div>
       <div style="padding:20px">
         <h3 style="font-weight:700;margin-bottom:6px">${a.name}</h3>
-        <p style="font-size:.9rem;color:#64748b;line-height:1.6">${a.desc.slice(0, 60)}...</p>
-        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#94a3b8">
+        <p style="font-size:.9rem;color:#8A7E6E;line-height:1.6">${a.desc.slice(0, 60)}...</p>
+        <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#B8AB99">
           ${a.ticket ? '<span>🎫 '+a.ticket+'</span>' : ''}
           ${a.time ? '<span>⏱️ '+a.time+'</span>' : ''}
         </div>
@@ -220,14 +220,14 @@ function generateIndex(city) {
 <section style="padding:100px 24px;background:#fff">
   <div style="text-align:center;margin-bottom:48px">
     <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">🍜 必吃美食</h2>
-    <p style="color:#64748b">${c.name}特色美食推荐</p>
+    <p style="color:#8A7E6E">${c.name}特色美食推荐</p>
   </div>
   <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px">
     ${(c.food || []).slice(0, 4).map(f => `
-    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #e2e8f0">
+    <div style="padding:24px;background:var(--gray-50);border-radius:14px;border:1px solid #E9E1D6">
       <div style="font-size:2rem;margin-bottom:8px">${f.icon}</div>
       <h3 style="font-weight:700;margin-bottom:6px">${f.name}</h3>
-      <p style="font-size:.9rem;color:#64748b;line-height:1.6">${f.desc.slice(0, 80)}...</p>
+      <p style="font-size:.9rem;color:#8A7E6E;line-height:1.6">${f.desc.slice(0, 80)}...</p>
     </div>`).join('')}
   </div>
   <div style="text-align:center;margin-top:36px">
@@ -239,14 +239,14 @@ function generateIndex(city) {
 <section style="padding:100px 24px;background:var(--gray-50)">
   <div style="text-align:center;margin-bottom:48px">
     <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px">📋 旅游攻略</h2>
-    <p style="color:#64748b">交通·住宿·最佳时间·注意事项</p>
+    <p style="color:#8A7E6E">交通·住宿·最佳时间·注意事项</p>
   </div>
   <div style="max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
     ${(c.guide || []).map(g => `
-    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #e2e8f0">
+    <div style="padding:28px;background:#fff;border-radius:14px;border:1px solid #E9E1D6">
       <div style="font-size:2rem;margin-bottom:12px">${g.icon}</div>
       <h3 style="font-weight:700;margin-bottom:8px">${g.title}</h3>
-      <div style="font-size:.9rem;color:#475569;line-height:1.7">${g.content.replace(/<[^>]+>/g,'').slice(0,120)}...</div>
+      <div style="font-size:.9rem;color:#6B6155;line-height:1.7">${g.content.replace(/<[^>]+>/g,'').slice(0,120)}...</div>
     </div>`).join('')}
   </div>
   <div style="text-align:center;margin-top:36px">
@@ -263,11 +263,12 @@ function generateIndex(city) {
       <div class="footer-col"><h4>旅游攻略</h4><a href="/city/${c.id}/guide.html">出行指南</a><a href="/city/${c.id}/itinerary.html">行程规划</a><a href="/city/${c.id}/blog.html">旅游博客</a></div>
       <div class="footer-col"><h4>其他城市</h4>${data.cities.filter(x=>x.id!==c.id).slice(0,4).map(x=>`<a href="/city/${x.id}/">${x.name}</a>`).join('')}</div>
     </div>
-    <div class="footer-bottom"><span>© 2026 全国旅游攻略</span><span style="font-size:.8rem;color:#94a3b8">· 图片来源：Wikimedia Commons（CC BY / CC BY-SA）</span><div><a href="/sitemap.xml">网站地图</a></div></div>
+    <div class="footer-bottom"><span>© 2026 全国旅游攻略</span><span style="font-size:.8rem;color:#B8AB99">· 图片来源：Wikimedia Commons（CC BY / CC BY-SA）</span><div><a href="/sitemap.xml">网站地图</a></div></div>
   </div>
 </footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
@@ -317,19 +318,19 @@ function generateAttractions(city) {
 </div></nav>
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="/city/${c.id}/" style="color:#1a73e8">首页</a> / <span>景点推荐</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="/city/${c.id}/" style="color:#BD4B2B">首页</a> / <span>景点推荐</span></nav>
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🏔️ ${c.name}景点推荐</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">${c.name}最值得去的景点，附门票和游玩建议</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">${c.name}最值得去的景点，附门票和游玩建议</p>
   ${(c.attractions || []).map((a, idx) => `
-  <a class="spot-card" href="/city/${c.id}/attraction/${idx}.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
+  <a class="spot-card reveal" href="/city/${c.id}/attraction/${idx}.html" style="display:block;text-decoration:none;color:inherit;background:#fff;border-radius:16px;margin-bottom:20px;border:1px solid #E9E1D6;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s" onmouseover="this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.boxShadow='var(--shadow-sm)'">
     ${a.image ? `
-    <div style="aspect-ratio:16/9;overflow:hidden;background:#eef2f7">
+    <div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7">
       <img src="${a.image}" alt="${a.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
     </div>` : ''}
     <div style="padding:22px 28px 26px">
       <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">${a.icon} ${a.name}</h3>
-      <p style="color:#475569;line-height:1.8;margin-bottom:12px">${a.desc}</p>
-      <div style="display:flex;gap:20px;font-size:.85rem;color:#94a3b8;flex-wrap:wrap">
+      <p style="color:#6B6155;line-height:1.8;margin-bottom:12px">${a.desc}</p>
+      <div style="display:flex;gap:20px;font-size:.85rem;color:#B8AB99;flex-wrap:wrap">
         ${a.ticket ? '<span>🎫 门票：'+a.ticket+'</span>' : ''}
         ${a.time ? '<span>⏱️ 游玩时间：'+a.time+'</span>' : ''}
       </div>
@@ -337,9 +338,10 @@ function generateAttractions(city) {
   </a>`).join('')}
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
@@ -374,14 +376,14 @@ function generateAttractionDetail(city, a, idx) {
 .att-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;text-shadow:0 2px 16px rgba(0,0,0,.5)}
 .att-hero .sub{opacity:.92;margin-top:8px;font-size:1.05rem}
 .att-body{max-width:960px;margin:0 auto;padding:36px 24px 60px}
-.att-meta{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;padding:20px 24px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px}
-.att-meta .m b{display:block;color:#94a3b8;font-size:.76rem;font-weight:600;margin-bottom:4px;letter-spacing:.04em}
-.att-meta .m span{color:#1a1a2e;font-weight:600;font-size:1rem}
-.att-desc{font-size:1.08rem;line-height:1.9;color:#334155}
-.att-credit{margin-top:28px;font-size:.8rem;color:#94a3b8}
-.att-credit a{color:#1a73e8}
+.att-meta{display:flex;gap:28px;flex-wrap:wrap;margin:24px 0;padding:20px 24px;background:#FBF8F4;border:1px solid #E9E1D6;border-radius:14px}
+.att-meta .m b{display:block;color:#B8AB99;font-size:.76rem;font-weight:600;margin-bottom:4px;letter-spacing:.04em}
+.att-meta .m span{color:#211C18;font-weight:600;font-size:1rem}
+.att-desc{font-size:1.08rem;line-height:1.9;color:#4A423A}
+.att-credit{margin-top:28px;font-size:.8rem;color:#B8AB99}
+.att-credit a{color:#BD4B2B}
 .rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:20px}
-.rel-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;transition:all .25s}
+.rel-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #E9E1D6;border-radius:14px;overflow:hidden;transition:all .25s}
 .rel-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.1)}
 .rel-card img{width:100%;height:130px;object-fit:cover;display:block}
 .rel-card .ri{padding:12px 14px;font-weight:700}
@@ -405,7 +407,7 @@ function generateAttractionDetail(city, a, idx) {
 </div></nav>
 
 <header class="att-hero">
-  ${a.image ? `<img src="${a.image}" alt="${a.name}" loading="lazy">` : `<div style="position:absolute;inset:0;background:linear-gradient(135deg,${c.color||'#1a73e8'},#34a853)"></div>`}
+  ${a.image ? `<img src="${a.image}" alt="${a.name}" loading="lazy">` : `<div style="position:absolute;inset:0;background:linear-gradient(135deg,${c.color||'#BD4B2B'},#2E7D5B)"></div>`}
   <div class="att-hero-inner">
     <div style="font-size:2.4rem;margin-bottom:6px">${a.icon}</div>
     <h1>${a.name}</h1>
@@ -414,7 +416,7 @@ function generateAttractionDetail(city, a, idx) {
 </header>
 
 <main class="att-body">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:8px"><a href="/city/${c.id}/" style="color:#1a73e8">首页</a> / <a href="/city/${c.id}/attractions.html" style="color:#1a73e8">景点</a> / <span>${a.name}</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:8px"><a href="/city/${c.id}/" style="color:#BD4B2B">首页</a> / <a href="/city/${c.id}/attractions.html" style="color:#BD4B2B">景点</a> / <span>${a.name}</span></nav>
   <div class="att-meta">
     ${a.ticket ? `<div class="m"><b>🎫 门票</b><span>${a.ticket}</span></div>` : ''}
     ${a.time ? `<div class="m"><b>⏱️ 建议游玩</b><span>${a.time}</span></div>` : ''}
@@ -423,20 +425,20 @@ function generateAttractionDetail(city, a, idx) {
   <p class="att-desc">${a.desc}</p>
   <section style="margin-top:36px">
     <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px">📖 详细介绍</h2>
-    <div style="color:#334155;line-height:1.95;font-size:1.02rem">
+    <div style="color:#4A423A;line-height:1.95;font-size:1.02rem">
       ${(a.detail || a.desc).split('\\n').filter(p => p.trim()).map(p => `<p style="margin-bottom:16px">${p}</p>`).join('')}
     </div>
-    ${a.detailSource ? `<p style="margin-top:18px;font-size:.82rem;color:#94a3b8">文字来源：<a href="${a.detailSource}" target="_blank" rel="noopener" style="color:#64748b">维基百科</a>（CC BY-SA）</p>` : ''}
+    ${a.detailSource ? `<p style="margin-top:18px;font-size:.82rem;color:#B8AB99">文字来源：<a href="${a.detailSource}" target="_blank" rel="noopener" style="color:#8A7E6E">维基百科</a>（CC BY-SA）</p>` : ''}
   </section>
   ${a.imageCredit ? `<p class="att-credit">图片来源：<a href="${a.imageCredit}" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY / CC BY-SA）</p>` : `<p class="att-credit">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p>`}
   ${others.length ? `
   <section style="margin-top:48px">
     <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:6px">${c.name}其他热门景点</h2>
-    <p style="color:#64748b;margin-bottom:20px">继续探索${c.name}的精彩去处</p>
+    <p style="color:#8A7E6E;margin-bottom:20px">继续探索${c.name}的精彩去处</p>
     <div class="rel-grid">
       ${others.map(o => `
       <a class="rel-card" href="/city/${c.id}/attraction/${o.i}.html">
-        ${o.x.image ? `<img src="${o.x.image}" alt="${o.x.name}" loading="lazy">` : `<div style="height:130px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;background:#eef2f7">${o.x.icon}</div>`}
+        ${o.x.image ? `<img src="${o.x.image}" alt="${o.x.name}" loading="lazy">` : `<div style="height:130px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;background:#F3EEE7">${o.x.icon}</div>`}
         <div class="ri">${o.x.icon} ${o.x.name}</div>
       </a>`).join('')}
     </div>
@@ -447,9 +449,10 @@ function generateAttractionDetail(city, a, idx) {
   </div>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
@@ -488,23 +491,24 @@ function generateFood(city) {
 </div></nav>
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="/city/${c.id}/" style="color:#1a73e8">首页</a> / <span>美食攻略</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="/city/${c.id}/" style="color:#BD4B2B">首页</a> / <span>美食攻略</span></nav>
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🍜 ${c.name}美食攻略</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">${c.name}必吃美食，特色小吃一网打尽</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">${c.name}必吃美食，特色小吃一网打尽</p>
   ${(c.food || []).map(f => `
-  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #e2e8f0;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    ${f.image ? `<div style="height:200px;overflow:hidden"><img src="${f.image}" alt="${f.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>` : `<div style="height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:#eef2f7">${f.icon}</div>`}
+  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+    ${f.image ? `<div style="height:200px;overflow:hidden"><img src="${f.image}" alt="${f.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>` : `<div style="height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:#F3EEE7">${f.icon}</div>`}
     <div style="padding:28px">
     <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">${f.icon} ${f.name}</h3>
-    <p style="color:#475569;line-height:1.8;margin-bottom:8px">${f.desc}</p>
-    ${f.tip ? '<p style="font-size:.85rem;color:#94a3b8">💡 '+f.tip+'</p>' : ''}
+    <p style="color:#6B6155;line-height:1.8;margin-bottom:8px">${f.desc}</p>
+    ${f.tip ? '<p style="font-size:.85rem;color:#B8AB99">💡 '+f.tip+'</p>' : ''}
     </div>
   </div>`).join('')}
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
@@ -543,21 +547,22 @@ function generateGuide(city) {
 </div></nav>
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6b7280;margin-bottom:24px"><a href="/city/${c.id}/" style="color:#1a73e8">首页</a> / <span>旅游攻略</span></nav>
+  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="/city/${c.id}/" style="color:#BD4B2B">首页</a> / <span>旅游攻略</span></nav>
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">📋 ${c.name}旅游攻略</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">${c.description}</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">${c.description}</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
     ${(c.guide || []).map(g => `
-    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:28px;border:1px solid #E9E1D6">
       <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px">${g.icon} ${g.title}</h3>
-      <div style="color:#475569;line-height:1.8;font-size:.95rem">${g.content}</div>
+      <div style="color:#6B6155;line-height:1.8;font-size:.95rem">${g.content}</div>
     </div>`).join('')}
   </div>
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
@@ -610,25 +615,26 @@ function generateItinerary(city) {
 
 <main style="max-width:800px;margin:0 auto;padding:100px 24px 60px">
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px;text-align:center">🗺️ ${c.name}行程规划</h1>
-  <p style="color:#64748b;margin-bottom:36px;text-align:center;font-size:1.05rem">建议游玩 ${c.suggestedDays}，以下是推荐行程</p>
+  <p style="color:#8A7E6E;margin-bottom:36px;text-align:center;font-size:1.05rem">建议游玩 ${c.suggestedDays}，以下是推荐行程</p>
   <div class="day-tabs">
     ${dayPlans.map((d,i)=>`<div class="day-tab${i===0?' active':''}" onclick="showDay(${i})">第${d.day}天</div>`).join('')}
   </div>
   ${dayPlans.map((d,i)=>`
   <div class="day-panel${i===0?' active':''}" id="day-${i}">
-    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #e2e8f0">
+    <div style="background:#fff;border-radius:16px;padding:32px;border:1px solid #E9E1D6">
       <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">第${d.day}天：${d.title}</h2>
       <ul style="list-style:none;padding:0">
-        ${d.items.map(item=>`<li style="padding:12px 0;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>${item}</li>`).join('')}
+        ${d.items.map(item=>`<li style="padding:12px 0;border-bottom:1px solid #F3EEE7;display:flex;align-items:center;gap:12px"><span style="width:8px;height:8px;background:var(--brand);border-radius:50%;flex-shrink:0"></span>${item}</li>`).join('')}
       </ul>
     </div>
   </div>`).join('')}
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 function showDay(n){document.querySelectorAll('.day-tab').forEach((t,i)=>{t.classList.toggle('active',i===n)});document.querySelectorAll('.day-panel').forEach((p,i)=>{p.classList.toggle('active',i===n)})}
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
@@ -668,18 +674,19 @@ function generateBlog(city) {
 
 <main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
   <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">📝 ${c.name}旅游博客</h1>
-  <p style="color:#64748b;margin-bottom:40px;font-size:1.05rem">${c.name}旅游攻略、游记、实用信息</p>
+  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">${c.name}旅游攻略、游记、实用信息</p>
   ${(c.blogs || []).length > 0 ? c.blogs.map(b => `
-  <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #e2e8f0;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
+  <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1px solid #E9E1D6;transition:all .2s;cursor:pointer" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
     <h3 style="font-weight:700;margin-bottom:6px"><a href="/city/${c.id}/blog.html/${b.slug}" style="color:inherit">${b.title}</a></h3>
-    <p style="font-size:.9rem;color:#64748b">${b.excerpt || ''}</p>
-    <div style="font-size:.8rem;color:#94a3b8;margin-top:8px">📅 ${b.date || '2026'}</div>
-  </div>`).join('') : '<div style="text-align:center;padding:60px;color:#94a3b8"><p>博客内容即将上线，敬请期待！</p></div>'}
+    <p style="font-size:.9rem;color:#8A7E6E">${b.excerpt || ''}</p>
+    <div style="font-size:.8rem;color:#B8AB99;margin-top:8px">📅 ${b.date || '2026'}</div>
+  </div>`).join('') : '<div style="text-align:center;padding:60px;color:#B8AB99"><p>博客内容即将上线，敬请期待！</p></div>'}
 </main>
 
-<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#94a3b8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
+<footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
 window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
@@ -717,7 +724,7 @@ for (const [prov, cities] of Object.entries(provinces)) {
     <h2 class="province-title">${prov}</h2>
     <div class="city-cards">
       ${cities.map(c => `
-      <a href="/city/${c.id}/" class="city-card">
+      <a href="/city/${c.id}/" class="city-card reveal">
         ${(c.attractions && c.attractions[0] && c.attractions[0].image) ? `<img class="thumb" src="${c.attractions[0].image}" alt="${c.name}风光实景" loading="lazy">` : `<div class="emoji-fallback">${c.emoji}</div>`}
         <div class="info">
           <h3>${c.name}</h3>
@@ -741,17 +748,17 @@ const rootIndex = `<!DOCTYPE html>
 .hero-picker::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,32,39,.62) 0%,rgba(15,32,39,.38) 45%,rgba(15,32,39,.78) 100%)}
 .hero-picker>*{position:relative;z-index:1}
 .province-section{max-width:1100px;margin:0 auto;padding:24px 24px 0}
-.province-title{font-size:1.2rem;font-weight:700;color:#1a1a2e;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e2e8f0}
+.province-title{font-size:1.2rem;font-weight:700;color:#211C18;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #E9E1D6}
 .city-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
-.city-card{display:block;padding:0;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;transition:all .25s;cursor:pointer;color:#1a1a2e;text-decoration:none}
-.city-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.1);border-color:#cbd5e1}
-.city-card .thumb{width:100%;height:140px;object-fit:cover;display:block;background:#eef2f7}
-.city-card .emoji-fallback{width:100%;height:140px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#1a73e8 0%,#34a853 100%)}
+.city-card{display:block;padding:0;background:#fff;border:1px solid #E9E1D6;border-radius:12px;overflow:hidden;transition:all .25s;cursor:pointer;color:#211C18;text-decoration:none}
+.city-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.1);border-color:#DAD0C2}
+.city-card .thumb{width:100%;height:140px;object-fit:cover;display:block;background:#F3EEE7}
+.city-card .emoji-fallback{width:100%;height:140px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,#BD4B2B 0%,#2E7D5B 100%)}
 .city-card .info{padding:14px 16px}
 .city-card .info h3{font-size:1.05rem;font-weight:700;margin-bottom:2px}
-.city-card .info p{font-size:.82rem;color:#64748b}
+.city-card .info p{font-size:.82rem;color:#8A7E6E}
 .main-content{padding-bottom:60px}
-.footer-simple{text-align:center;padding:40px 24px;color:#94a3b8;font-size:.85rem;border-top:1px solid #e2e8f0}
+.footer-simple{text-align:center;padding:40px 24px;color:#B8AB99;font-size:.85rem;border-top:1px solid #E9E1D6}
 </style>
 </head>
 <body>
@@ -767,6 +774,10 @@ const rootIndex = `<!DOCTYPE html>
   <p>© 2026 全国旅游攻略 · <a href="/sitemap.xml">网站地图</a></p>
   <p style="font-size:.8rem;opacity:.8;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p>
 </footer>
+<script>
+window.addEventListener('scroll',function(){var n=document.getElementById('navbar');if(n)n.classList.toggle('scrolled',window.scrollY>20)});
+(function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
+</script>
 </body>
 </html>`;
 writeHtml('index.html', rootIndex);
