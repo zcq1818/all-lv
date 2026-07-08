@@ -934,7 +934,9 @@ ${citySelectorJS}
 // ===== 博客详情页模板（修复旧版绝对路径死链；统一暖陶土风格 + 子路径安全） =====
 function generateBlogDetail(city, blog, idx) {
   const c = city;
-  const heroImg = BLOG_IMG[c.id] || ((c.attractions && c.attractions[0] && c.attractions[0].image) ? c.attractions[0].image : '');
+  const blogImgFile = path.join(ROOT, 'assets', 'images', 'blog', blog.slug + '.webp');
+  const blogImg = fs.existsSync(blogImgFile) ? '/assets/images/blog/' + blog.slug + '.webp' : '';
+  const heroImg = blogImg || BLOG_IMG[c.id] || ((c.attractions && c.attractions[0] && c.attractions[0].image) ? c.attractions[0].image : '');
   const heroBg = heroImg ? 'url(' + heroImg + ') center/cover' : 'linear-gradient(135deg,#BD4B2B,#8F3517)';
   const excerpt = blog.excerpt || '';
   const date = blog.date || '2026';
