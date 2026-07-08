@@ -63,9 +63,20 @@
     injectControls();
   }
 
+  // PWA：注册 Service Worker（离线访问 + 可安装到主屏幕）
+  function registerSW() {
+    if (!('serviceWorker' in navigator)) return;
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/service-worker.js').catch(function (err) {
+        console.warn('[SW] 注册失败:', err);
+      });
+    });
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
+  registerSW();
 })();
