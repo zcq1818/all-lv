@@ -165,7 +165,11 @@ ${seoHead({
         "image": `${SITE}${a.image}`
       }))
     },
-    breadcrumb([['首页', '/'], [c.name, `/city/${c.id}/`]])
+    breadcrumb([['首页', '/'], [c.name, `/city/${c.id}/`]]),
+    ...(c.faqs && c.faqs.length ? [{
+      "@context": "https://schema.org", "@type": "FAQPage",
+      "mainEntity": c.faqs.map(f => ({"@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a}}))
+    }] : [])
   ]
 })}
 <link rel="manifest" href="/manifest.json">
@@ -227,7 +231,7 @@ ${seoHead({
   <div class="city-grid">
     <div>
       <h2 style="font-size:2rem;font-weight:800;margin-bottom:16px">关于${c.name}</h2>
-      <p style="font-size:1.05rem;line-height:1.9;color:#6B6155;margin-bottom:24px">${c.description}</p>
+      <p style="font-size:1.05rem;line-height:1.9;color:#6B6155;margin-bottom:24px">${c.seoIntro || c.description}</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📅</div><div style="font-weight:600">最佳时间</div><div style="font-size:.9rem;color:#8A7E6E">${c.bestSeason}</div></div>
         <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">⏱️</div><div style="font-weight:600">建议天数</div><div style="font-size:.9rem;color:#8A7E6E">${c.suggestedDays}</div></div>
@@ -236,6 +240,21 @@ ${seoHead({
       </div>
     </div>
     <div style="font-size:10rem;text-align:center;opacity:.15">${c.emoji}</div>
+  </div>
+</section>
+
+<!-- 常见问题 FAQ -->
+<section class="city-faq" style="padding:80px 24px;background:var(--gray-50)">
+  <div style="max-width:var(--max-width);margin:0 auto">
+    <h2 style="font-size:2rem;font-weight:800;margin-bottom:8px;text-align:center">❓ ${c.name}旅游常见问题</h2>
+    <p style="color:#8A7E6E;text-align:center;margin-bottom:40px">出行前最常被问到的几件事</p>
+    <div style="display:grid;gap:16px;max-width:820px;margin:0 auto">
+      ${c.faqs && c.faqs.length ? c.faqs.map(f => `
+      <details style="background:#fff;border:1px solid #E9E1D6;border-radius:12px;padding:18px 22px;cursor:pointer">
+        <summary style="font-weight:700;font-size:1.05rem;color:#211C18">${f.q}</summary>
+        <p style="margin-top:10px;color:#6B6155;line-height:1.8">${f.a}</p>
+      </details>`).join('') : ''}
+    </div>
   </div>
 </section>
 
@@ -251,7 +270,7 @@ ${seoHead({
       <div style="height:160px;overflow:hidden;background:linear-gradient(135deg,${c.color||'#BD4B2B'}44 0%,${c.color||'#BD4B2B'}22 100%);display:flex;align-items:center;justify-content:center;font-size:3.5rem">${a.image ? `<img src="${a.image}" alt="${a.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover">` : a.icon}</div>
       <div style="padding:20px">
         <h3 style="font-weight:700;margin-bottom:6px">${a.name}</h3>
-        <p style="font-size:.9rem;color:#8A7E6E;line-height:1.6">${a.desc.slice(0, 60)}...</p>
+        <p style="font-size:.9rem;color:#8A7E6E;line-height:1.6">${(a.seoDesc||a.desc).slice(0, 60)}...</p>
         <div style="margin-top:12px;display:flex;gap:12px;font-size:.8rem;color:#B8AB99">
           ${a.ticket ? '<span>🎫 '+a.ticket+'</span>' : ''}
           ${a.time ? '<span>⏱️ '+a.time+'</span>' : ''}
@@ -408,7 +427,7 @@ function generateAttractionDetail(city, a, idx) {
     "@context": "https://schema.org",
     "@type": "TouristAttraction",
     "name": a.name,
-    "description": a.desc,
+    "description": a.seoDesc || a.desc,
     "image": a.image ? (SITE + a.image) : '',
     "url": url,
     "address": { "@type": "PostalAddress", "addressLocality": c.name, "addressRegion": c.province, "addressCountry": "CN" },
@@ -488,7 +507,7 @@ ${seoHead({
     ${a.time ? `<div class="m"><b>⏱️ 建议游玩</b><span>${a.time}</span></div>` : ''}
     <div class="m"><b>📍 所在城市</b><span>${c.name}</span></div>
   </div>
-  <p class="att-desc">${a.desc}</p>
+  <p class="att-desc">${a.seoDesc || a.desc}</p>
   <section style="margin-top:36px">
     <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px">📖 详细介绍</h2>
     <div style="color:#4A423A;line-height:1.95;font-size:1.02rem">
@@ -496,6 +515,13 @@ ${seoHead({
     </div>
     ${a.detailSource ? `<p style="margin-top:18px;font-size:.82rem;color:#B8AB99">文字来源：<a href="${a.detailSource}" target="_blank" rel="noopener" style="color:#8A7E6E">维基百科</a>（CC BY-SA）</p>` : ''}
   </section>
+  ${a.tips && a.tips.length ? `
+  <section style="margin-top:36px">
+    <h2 style="font-size:1.4rem;font-weight:800;margin-bottom:16px;display:flex;align-items:center;gap:8px">💡 本地贴士</h2>
+    <ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px">
+      ${a.tips.map(t => `<li style="display:flex;gap:10px;align-items:flex-start;padding:14px 16px;background:var(--gray-50);border-left:3px solid var(--brand);border-radius:8px;color:#4A423A;line-height:1.7"><span style="color:#BD4B2B;font-weight:700">Tip</span><span>${t}</span></li>`).join('')}
+    </ul>
+  </section>` : ''}
   ${a.imageCredit ? `<p class="att-credit">图片来源：<a href="${a.imageCredit}" target="_blank" rel="noopener">Wikimedia Commons</a>（CC BY / CC BY-SA）</p>` : `<p class="att-credit">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p>`}
   ${others.length ? `
   <section style="margin-top:48px">
