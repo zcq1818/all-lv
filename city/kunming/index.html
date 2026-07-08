@@ -65,6 +65,7 @@
 .attractions-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 @media(max-width:768px){.hero-grid,.city-grid{grid-template-columns:1fr}.attractions-grid{grid-template-columns:1fr}.hero-photo{display:none}}
 </style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <!-- 导航栏 -->
@@ -327,5 +328,7 @@ function toggleCityMenu(){var d=document.getElementById('cityDropdown');d.classL
 document.addEventListener('click',function(e){if(!e.target.closest('#citySelector')&&!e.target.closest('.city-selector')){var d=document.getElementById('cityDropdown');if(d)d.classList.remove('open')}});
 
 </script>
+<script src="../../js/site-ui.js"></script>
+<script src="../../js/search.js"></script>
 </body>
 </html>

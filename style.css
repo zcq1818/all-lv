@@ -1063,3 +1063,200 @@ html.reveal-ready .reveal.visible {
   .footer-grid { grid-template-columns: 1fr; }
   .btn { padding: var(--s2) var(--s5); font-size: var(--text-sm); }
 }
+
+/* ============================================================
+   导航栏搜索 / 主题切换按钮
+   ============================================================ */
+.nav-search-trigger,
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  background: var(--bg-page);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast, .15s);
+  flex: none;
+}
+.nav-search-trigger:hover,
+.theme-toggle:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+  background: var(--bg-alt);
+}
+.theme-toggle .icon-moon { display: none; }
+.theme-dark .theme-toggle .icon-sun { display: none; }
+.theme-dark .theme-toggle .icon-moon { display: block; }
+
+/* ============================================================
+   全站搜索浮层
+   ============================================================ */
+.qhd-search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(33, 28, 24, 0.5);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 8vh 16px 16px;
+}
+.qhd-search-overlay.open { display: flex; }
+.qhd-search-modal {
+  width: 100%;
+  max-width: 640px;
+  background: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  animation: qhdPop .18s ease;
+}
+@keyframes qhdPop { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.qhd-search-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--brand);
+}
+.qhd-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.1rem;
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+.qhd-search-input::placeholder { color: var(--text-muted); }
+.qhd-search-close {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 4px;
+}
+.qhd-search-close:hover { color: var(--brand); }
+.qhd-search-body { max-height: 60vh; overflow-y: auto; padding: 16px 18px; }
+.qhd-search-hint p { color: var(--text-secondary); margin-bottom: 12px; }
+.qhd-search-suggestions { display: flex; flex-wrap: wrap; gap: 8px; }
+.qhd-suggestion-chip {
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  font-size: .88rem;
+  cursor: pointer;
+  transition: all .15s;
+}
+.qhd-suggestion-chip:hover { color: var(--brand); border-color: var(--brand); }
+.qhd-result-group { margin-bottom: 14px; }
+.qhd-result-group-label {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.qhd-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text);
+  transition: background .15s;
+}
+.qhd-result-item:hover,
+.qhd-result-item.active { background: var(--bg-alt); }
+.qhd-result-title { font-weight: 600; font-size: .98rem; }
+.qhd-result-title mark { background: var(--brand-glow); color: var(--brand-dark); padding: 0 2px; border-radius: 3px; }
+.qhd-result-desc {
+  font-size: .82rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 460px;
+}
+.qhd-result-tag {
+  flex: none;
+  font-size: .72rem;
+  color: var(--brand);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 3px 10px;
+}
+.qhd-search-empty { text-align: center; padding: 32px 12px; color: var(--text-muted); }
+.qhd-search-empty svg { color: var(--gray-400); margin-bottom: 8px; }
+.qhd-search-empty a { color: var(--brand); }
+
+/* ============================================================
+   暗色模式 — token 覆盖 + 关键表面修正
+   ============================================================ */
+[data-theme="dark"] {
+  --bg-page: #16130F;
+  --bg-alt: #1F1B16;
+  --border: #2E2823;
+  --border-light: #261F1A;
+  --text: #F1E9DF;
+  --text-secondary: #C2B5A6;
+  --text-muted: #8E8377;
+  --gray-50: #1A1611;
+  --gray-100: #221D17;
+  --gray-200: #2C261F;
+  --gray-300: #3A332B;
+  --gray-400: #5A5048;
+  --gray-500: #8E8377;
+  --gray-600: #B8AB99;
+  --gray-700: #DAD0C2;
+  --gray-800: #EAE1D6;
+  --gray-900: #F1E9DF;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.45);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+  --shadow-xl: 0 24px 48px rgba(0,0,0,0.55);
+  --shadow-brand: 0 4px 16px rgba(189,75,43,0.35);
+}
+[data-theme="dark"] body { background: var(--bg-page); color: var(--text); }
+[data-theme="dark"] .navbar {
+  background: rgba(22, 19, 15, 0.92);
+  border-bottom-color: var(--border);
+}
+[data-theme="dark"] .nav-links a { color: var(--text-secondary); }
+[data-theme="dark"] .nav-links a:hover,
+[data-theme="dark"] .nav-links a.active { color: var(--brand-light); }
+[data-theme="dark"] .nav-cta { background: var(--brand); color: #fff; }
+/* 修正生成器中内联白底的卡片，使其跟随暗色 */
+[data-theme="dark"] .spot-card,
+[data-theme="dark"] .city-card,
+[data-theme="dark"] .rel-card,
+[data-theme="dark"] .featured-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .qhd-result-item,
+[data-theme="dark"] .faq-item {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+[data-theme="dark"] .card-body h3,
+[data-theme="dark"] .city-card .info h3,
+[data-theme="dark"] .spot-card h3 { color: var(--text) !important; }
+[data-theme="dark"] .footer { background: var(--bg-alt); border-top-color: var(--border); }
+[data-theme="dark"] .hero-picker::before { background: linear-gradient(180deg, rgba(22,19,15,.7), rgba(22,19,15,.85)); }
+[data-theme="dark"] ::selection { background: var(--brand); color: #fff; }
+[data-theme="dark"] .qhd-search-overlay { background: rgba(0,0,0,.6); }

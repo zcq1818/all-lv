@@ -1,31 +1,29 @@
 /**
  * 全站搜索组件 — 检索景点、美食、攻略
  * 自执行 IIFE，按 Ctrl+K 或点击搜索按钮唤起
- * 数据源：attractions.json + 内置美食/攻略索引
+ * 数据源：/data/attractions.json + 内置美食/攻略索引
  */
 (function () {
   'use strict';
 
   var SEARCH_DATA = null;
-  var DATA_URL = 'data/attractions.json';
+  // 站点部署在根域名(lv.divdu.com)，使用绝对路径确保城市子页也能正确拉取
+  var DATA_URL = '/data/attractions.json';
 
   // 内置通用搜索索引（无需后端，覆盖热门旅行关键词）
   var BUILT_IN_INDEX = [
-    // 通用美食标签
     { type: 'food', title: '特色小吃', desc: '当地必尝特色小吃推荐', url: 'food', tag: '美食' },
     { type: 'food', title: '网红餐厅', desc: '人气打卡餐厅合集', url: 'food', tag: '美食' },
     { type: 'food', title: '夜市攻略', desc: '当地最热闹夜市与美食街', url: 'food', tag: '夜市' },
     { type: 'food', title: '本地人推荐', desc: '本地人私藏的好店清单', url: 'food', tag: '美食' },
-    { type: 'food', title: '早餐指南', desc: '地道早餐吃什么', url: 'food', tag: '美食' },
+    { type: 'food', title: '早餐指南', desc: '地道早餐吃什么', url: 'food', tag: '特产' },
     { type: 'food', title: '特产伴手礼', desc: '值得带回家的当地特产', url: 'food', tag: '特产' },
-    // 通用攻略标签
     { type: 'guide', title: '交通指南', desc: '高铁/飞机/自驾如何到达', url: 'guide#transport', tag: '交通' },
     { type: 'guide', title: '住宿推荐', desc: '各区域住宿对比与推荐', url: 'guide#accommodation', tag: '住宿' },
     { type: 'guide', title: '最佳旅游时间', desc: '四季特点与最佳出行窗口', url: 'guide#besttime', tag: '时间' },
     { type: 'guide', title: '旅行注意事项', desc: '防晒防坑、实用贴士', url: 'guide#tips', tag: '贴士' },
     { type: 'guide', title: '行程规划', desc: '精选路线一日/三日游', url: 'itinerary', tag: '行程' },
     { type: 'guide', title: '预算攻略', desc: '穷游/舒适/奢华三档预算', url: 'guide', tag: '攻略' },
-    // 通用博客文章
     { type: 'blog', title: '必玩景点TOP10', desc: '第一次来不可错过的景点', url: 'blog', tag: '攻略' },
     { type: 'blog', title: '拍照打卡指南', desc: '最佳拍照机位与时间', url: 'blog', tag: '攻略' },
     { type: 'blog', title: '亲子游攻略', desc: '带娃出行的完美路线', url: 'blog', tag: '亲子' },
@@ -36,6 +34,23 @@
 
   var dom = {};
   var state = { query: '', results: [], activeIndex: -1 };
+
+  // ============ 工具 ============
+
+  // 从当前路径推断所在城市，内置索引链接指向对应城市页
+  function currentCityId() {
+    var m = (location.pathname || '').match(/\/city\/([^/]+)\//);
+    return m ? m[1] : 'beijing';
+  }
+
+  function absUrl(u) {
+    var base = '/city/' + currentCityId() + '/';
+    if (u.indexOf('#') >= 0) {
+      var p = u.split('#');
+      return base + p[0] + '.html#' + p[1];
+    }
+    return base + u + '.html';
+  }
 
   // ============ 初始化 ============
 
@@ -136,7 +151,7 @@
       }
     });
 
-    // 点击建议词
+    // 点击建议词 / 结果
     dom.body.addEventListener('click', function (e) {
       var chip = e.target.closest('.qhd-suggestion-chip');
       if (chip) {
@@ -176,7 +191,7 @@
       var q = state.query.toLowerCase();
       var results = [];
 
-      // 搜索景点
+      // 搜索景点 / 美食（来自数据索引）
       (data.spots || []).forEach(function (spot) {
         var score = 0;
         var name = (spot.name || '').toLowerCase();
@@ -189,12 +204,15 @@
           if (h.toLowerCase().indexOf(q) >= 0) score += 2;
         });
         if (score > 0) {
+          var isFood = spot.level === '美食';
           results.push({
-            type: 'attraction',
+            type: isFood ? 'food' : 'attraction',
             title: spot.name,
             desc: spot.desc,
-            url: 'attractions#' + spot.id + '-spot',
-            tag: spot.level || '景点',
+            url: isFood
+              ? '/city/' + spot.cityId + '/food.html'
+              : '/city/' + spot.cityId + '/attractions.html',
+            tag: spot.city,
             score: score
           });
         }
@@ -206,7 +224,14 @@
         if (item.title.toLowerCase().indexOf(q) >= 0) score += 8;
         if (item.desc.toLowerCase().indexOf(q) >= 0) score += 3;
         if (item.tag.toLowerCase().indexOf(q) >= 0) score += 2;
-        if (score > 0) results.push(Object.assign({}, item, { score: score }));
+        if (score > 0) results.push({
+          type: item.type,
+          title: item.title,
+          desc: item.desc,
+          url: absUrl(item.url),
+          tag: item.tag,
+          score: score
+        });
       });
 
       results.sort(function (a, b) { return b.score - a.score; });
@@ -239,7 +264,7 @@
         '<div class="qhd-search-empty">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>' +
           '<p>没有找到「' + escapeHtml(state.query) + '」的相关内容</p>' +
-          '<span>试试换个关键词，或浏览<a href="`attractions">全部景点</a></span>' +
+          '<span>试试换个关键词，或浏览<a href="' + absUrl('attractions') + '">全部景点</a></span>' +
         '</div>';
       return;
     }

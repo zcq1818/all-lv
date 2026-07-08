@@ -187,6 +187,7 @@ ${seoHead({
 .attractions-grid{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 @media(max-width:768px){.hero-grid,.city-grid{grid-template-columns:1fr}.attractions-grid{grid-template-columns:1fr}.hero-photo{display:none}}
 </style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <!-- 导航栏 -->
@@ -339,6 +340,8 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 }
@@ -367,6 +370,7 @@ ${seoHead({
 .spot-card:hover img{transform:scale(1.06)}
 .spot-card img{transition:transform .45s ease}
 </style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -411,6 +415,8 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 }
@@ -475,6 +481,7 @@ ${seoHead({
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
 @media(max-width:600px){.att-meta{gap:16px}.att-meta .m{font-size:.9rem}}
 </style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -548,6 +555,8 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 }
@@ -573,6 +582,7 @@ ${seoHead({
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -611,6 +621,8 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 }
@@ -646,6 +658,7 @@ ${seoHead({
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -682,6 +695,8 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 }
@@ -720,6 +735,7 @@ ${seoHead({
 .day-panel{display:none}.day-panel.active{display:block;animation:fadeIn .4s}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 </style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -761,6 +777,8 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 }
@@ -786,6 +804,7 @@ ${seoHead({
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 <style>${citySelectorCSS}</style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -820,6 +839,8 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 }
@@ -878,6 +899,7 @@ ${seoHead({
 .blog-note a{color:#BD4B2B;font-weight:600}
 .blog-back{display:inline-block;margin-top:28px;color:#BD4B2B;font-weight:600;text-decoration:none}
 </style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <nav class="navbar" id="navbar"><div class="nav-inner">
@@ -909,6 +931,8 @@ window.addEventListener('scroll',function(){document.getElementById('navbar').cl
 document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 ${citySelectorJS}
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 }
@@ -1066,6 +1090,7 @@ ${seoHead({
 .footer-simple{text-align:center;padding:40px 24px;color:#B8AB99;font-size:.85rem;border-top:1px solid #E9E1D6}
 @media (max-width:640px){.featured-strip{grid-template-columns:1fr 1fr}.city-cards{grid-template-columns:1fr 1fr}.hero-picker{padding:90px 18px 48px}}
 </style>
+<script>try{var _t=localStorage.getItem('lv-theme');if(_t==='dark'||(!_t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.setAttribute('data-theme','dark');document.documentElement.classList.add('theme-dark');}}catch(e){}</script>
 </head>
 <body>
 <div class="hero-picker">
@@ -1091,6 +1116,8 @@ ${seoHead({
 window.addEventListener('scroll',function(){var n=document.getElementById('navbar');if(n)n.classList.toggle('scrolled',window.scrollY>20)});
 (function(){if(!('IntersectionObserver'in window))return;var d=document.documentElement;d.classList.add('reveal-ready');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)})})();
 </script>
+<script src="/js/site-ui.js"></script>
+<script src="/js/search.js"></script>
 </body>
 </html>`;
 writeHtml('index.html', rootIndex);
