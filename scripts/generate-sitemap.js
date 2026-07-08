@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const SITE = 'https://www.all-lv.com';
+const SITE = 'https://lv.divdu.com';
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'cities.json'), 'utf8'));
 
 const urls = [

@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const SITE = 'https://www.all-lv.com';
+const SITE = 'https://lv.divdu.com';
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'cities.json'), 'utf8'));
 
 function generateCityPage(city) {

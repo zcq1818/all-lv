@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const SITE = 'https://all-lv.vercel.app';
+const SITE = 'https://lv.divdu.com';
 
 // ===== SEO 工具函数（生成式站点统一注入，覆盖全部页面）=====
 function seoHead({ title, description, keywords, url, image, type = 'website', jsonLd = null, noindex = false }) {

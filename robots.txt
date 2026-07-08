@@ -1,8 +1,8 @@
 # robots.txt — 全国旅游攻略 (all-lv)
-# 部署于 Vercel: https://all-lv.vercel.app
+# 部署于 Vercel: https://lv.divdu.com
 
 User-agent: *
 Allow: /
 
 # 站点地图
-Sitemap: https://all-lv.vercel.app/sitemap.xml
+Sitemap: https://lv.divdu.com/sitemap.xml

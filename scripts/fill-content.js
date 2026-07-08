@@ -354,11 +354,11 @@ function genAttractionsHTML(cityId, cityName, cityDesc, items) {
 <meta name="keywords" content="${cityName}景点,${cityName}旅游,${cityName}攻略">
 <meta name="author" content="全国旅游攻略">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://www.all-lv.com/city/${cityId}/attractions">
+<link rel="canonical" href="https://lv.divdu.com/city/${cityId}/attractions">
 <meta property="og:title" content="${cityName}景点推荐 - ${cityName}旅游攻略">
 <meta property="og:description" content="${cityName}最值得去的景点推荐">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.all-lv.com/city/${cityId}/attractions">
+<meta property="og:url" content="https://lv.divdu.com/city/${cityId}/attractions">
 <meta property="og:site_name" content="全国旅游攻略">
 <link rel="stylesheet" href="../../style.css">
 </head>
@@ -393,7 +393,7 @@ function genFoodHTML(cityId, cityName, cityDesc, items) {
 <title>${cityName}美食攻略 - ${cityName}旅游</title>
 <meta name="description" content="${cityName}必吃美食推荐：特色小吃、网红餐厅、本地人私藏好店。">
 <meta name="keywords" content="${cityName}美食,${cityName}小吃,${cityName}餐厅,${cityName}特色菜">
-<link rel="canonical" href="https://www.all-lv.com/city/${cityId}/food">
+<link rel="canonical" href="https://lv.divdu.com/city/${cityId}/food">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -420,7 +420,7 @@ function genGuideHTML(cityId, cityName, cityDesc, cityInfo) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${cityName}旅游攻略 - 交通/住宿/最佳时间</title>
 <meta name="description" content="${cityName}旅游全攻略：交通指南、住宿推荐、最佳旅游时间、行程规划。">
-<link rel="canonical" href="https://www.all-lv.com/city/${cityId}/guide">
+<link rel="canonical" href="https://lv.divdu.com/city/${cityId}/guide">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>

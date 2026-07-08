@@ -11,7 +11,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const DATA_FILE = path.join(ROOT, 'data', 'cities.json');
-const SITE = 'https://www.all-lv.com'; // TODO: 换成实际域名
+const SITE = 'https://lv.divdu.com'; // TODO: 换成实际域名
 
 function loadCities() {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
