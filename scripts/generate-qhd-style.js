@@ -395,6 +395,7 @@ ${citySelectorJS}
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 }
@@ -470,6 +471,7 @@ ${citySelectorJS}
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 }
@@ -610,6 +612,7 @@ ${citySelectorJS}
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 }
@@ -676,6 +679,7 @@ ${citySelectorJS}
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 }
@@ -750,6 +754,7 @@ ${citySelectorJS}
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 }
@@ -832,6 +837,7 @@ ${citySelectorJS}
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 }
@@ -894,6 +900,7 @@ ${citySelectorJS}
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 }
@@ -986,6 +993,7 @@ ${citySelectorJS}
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 }
@@ -1177,6 +1185,7 @@ window.addEventListener('scroll',function(){var n=document.getElementById('navba
 </script>
 <script src="/js/site-ui.js"></script>
 <script src="/js/search.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
 writeHtml('index.html', rootIndex);
