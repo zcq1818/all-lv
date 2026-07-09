@@ -165,10 +165,11 @@ h1, h2, h3, h4,
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.78);
+  background: rgba(255,255,255,0.92);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
   transition: all var(--dur-slow) var(--ease-out);
 }
 .navbar.scrolled::before {
@@ -176,6 +177,8 @@ h1, h2, h3, h4,
   border-bottom-color: var(--border);
   box-shadow: var(--shadow-sm);
 }
+/* 覆盖 inline citySelectorCSS 里的白字：navbar 在白底/浅 hero 页面必须深色文字才可见 */
+.navbar .city-selector-btn { color: var(--text); }
 
 .nav-inner {
   position: relative;
