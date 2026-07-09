@@ -144,7 +144,7 @@ const CITY_ILLU = {
 function illu(id) { return CITY_ILLU[id] || null; }
 
 // 目的地短视频（文生视频生成，已落地 assets/videos/<id>.mp4）
-const VIDEO_CITIES = new Set(['beijing','xian','chengdu','hangzhou','sanya','lijiang','chongqing','xiamen']);
+const VIDEO_CITIES = new Set(['beijing','xian','chengdu','hangzhou','sanya','lijiang','chongqing','xiamen','dali','qingdao','guilin']);
 
 // 博客头图：优先用城市独家插画（其余城市后续补生成）
 const BLOG_IMG = {
