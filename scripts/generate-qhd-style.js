@@ -646,6 +646,10 @@ ${citySelectorJS}
 // ===== 美食页模板 =====
 function generateFood(city) {
   const c = city;
+  const firstFoodImg = (c.food && c.food[0] && c.food[0].image) ? c.food[0].image : '';
+  const heroBg = firstFoodImg
+    ? `linear-gradient(135deg,rgba(143,53,23,.85),rgba(189,75,43,.6)),url('${firstFoodImg}')`
+    : `linear-gradient(135deg,#BD4B2B,#8F3517)`;
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -681,19 +685,26 @@ ${seoHead({
   <button class="hamburger" id="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
 </div></nav>
 
-<main style="max-width:960px;margin:0 auto;padding:100px 24px 60px">
-  <nav style="font-size:.875rem;color:#6B6155;margin-bottom:24px"><a href="/city/${c.id}/" style="color:#BD4B2B">首页</a> / <span>美食攻略</span></nav>
-  <h1 style="font-size:2.2rem;font-weight:800;margin-bottom:8px">🍜 ${c.name}美食攻略</h1>
-  <p style="color:#8A7E6E;margin-bottom:40px;font-size:1.05rem">${c.name}必吃美食，特色小吃一网打尽</p>
-  ${(c.food || []).map(f => `
-  <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:20px;border:1px solid #E9E1D6;transition:all .25s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow=''">
-    ${f.image ? `<div style="height:200px;overflow:hidden"><img src="${f.image}" alt="${f.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>` : `<div style="height:200px;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:#F3EEE7">${f.icon}</div>`}
-    <div style="padding:28px">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">${f.icon} ${f.name}</h3>
-    <p style="color:#6B6155;line-height:1.8;margin-bottom:8px">${f.desc}</p>
-    ${f.tip ? '<p style="font-size:.85rem;color:#B8AB99">💡 '+f.tip+'</p>' : ''}
-    </div>
-  </div>`).join('')}
+<section class="page-hero" style="background:${heroBg};background-size:cover;background-position:center">
+  <div style="position:relative;z-index:2;max-width:760px;margin:0 auto;text-align:center">
+    <span class="page-hero-tag">${c.name} · 美食地图</span>
+    <h1 style="margin-top:18px">🍜 ${c.name}美食攻略</h1>
+    <p>${c.name}必吃美食，特色小吃一网打尽</p>
+  </div>
+</section>
+
+<main style="max-width:var(--max-width);margin:0 auto;padding:56px 24px 80px">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px">
+    ${(c.food || []).map(f => `
+    <article class="reveal" style="background:#fff;border-radius:18px;overflow:hidden;border:1px solid #E9E1D6;box-shadow:var(--shadow-sm);transition:transform .3s ease,box-shadow .3s ease;display:flex;flex-direction:column" onmouseover="this.style.boxShadow='var(--shadow-lg)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='var(--shadow-sm)';this.style.transform=''">
+      ${f.image ? `<div style="aspect-ratio:16/9;overflow:hidden;background:#F3EEE7"><img src="${f.image}" alt="${f.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform=''"></div>` : `<div style="aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:4rem;background:#F3EEE7">${f.icon}</div>`}
+      <div style="padding:22px 24px 24px;flex:1;display:flex;flex-direction:column">
+        <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px">${f.icon} ${f.name}</h3>
+        <p style="color:#6B6155;line-height:1.8;margin-bottom:12px;flex:1">${f.desc}</p>
+        ${f.tip ? `<p style="font-size:.85rem;color:#8F3517;background:#F7EDE8;padding:8px 12px;border-radius:10px">💡 ${f.tip}</p>` : ''}
+      </div>
+    </article>`).join('')}
+  </div>
 </main>
 
 <footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
