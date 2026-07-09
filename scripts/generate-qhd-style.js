@@ -44,7 +44,92 @@ function breadcrumb(items) {
     }))
   };
 }
-const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'cities.json'), 'utf8'));
+// ===== 多语言支持（LANG=en 渲染英文子站 en/）=====
+const LANG = process.env.LANG || '';
+const PREFIX = LANG === 'en' ? 'en' : '';
+// 英文站 UI 标签翻译表：仅对「被 HTML 标签包裹的标签串」做替换，绝不误伤正文中文
+const EN_UI_TOKENS = [
+  ['>首页</a>', '>Home</a>'],
+  ['>景点</a>', '>Attractions</a>'],
+  ['>美食</a>', '>Food</a>'],
+  ['>攻略</a>', '>Guide</a>'],
+  ['>行程</a>', '>Itinerary</a>'],
+  ['>博客</a>', '>Blog</a>'],
+  ['返回首页</a>', 'Back to Home</a>'],
+  ['网站地图</a>', 'Sitemap</a>'],
+  ['景点推荐</a>', 'Attractions</a>'],
+  ['美食推荐</a>', 'Food</a>'],
+  ['出行指南</a>', 'Travel Tips</a>'],
+  ['行程规划</a>', 'Itinerary</a>'],
+  ['旅游博客</a>', 'Travel Blog</a>'],
+  ['免费规划行程 →', 'Plan Trip Free →'],
+  ['aria-label="菜单"', 'aria-label="Menu"'],
+  ["['首页', '/']", "['Home', '/']"],
+  ['🏔️ 热门景点</h2>', '🏔️ Top Attractions</h2>'],
+  ['🍜 必吃美食</h2>', '🍜 Must-Try Food</h2>'],
+  ['📋 旅游攻略</h2>', '📋 Travel Guide</h2>'],
+  ['🧭 周边热门目的地</h2>', '🧭 Nearby Destinations</h2>'],
+  ['🎬 目的地掠影</h2>', '🎬 Destination Glimpse</h2>'],
+  ['旅游常见问题</h2>', 'FAQ</h2>'],
+  ['热门页面</h4>', 'Popular</h4>'],
+  ['旅游攻略</h4>', 'Travel Guide</h4>'],
+  ['其他城市</h4>', 'Other Cities</h4>'],
+  ['省份</div>', 'Province</div>'],
+  ['最佳时间</div>', 'Best Time</div>'],
+  ['建议天数</div>', 'Recommended Days</div>'],
+  ['气候</div>', 'Climate</div>'],
+  ['查看全部景点 →', 'All Attractions →'],
+  ['查看全部美食 →', 'All Food →'],
+  ['查看完整攻略 →', 'Full Guide →'],
+  ['🗺️ 智能规划行程', '🗺️ Plan Itinerary'],
+  ['🏔️ 探索景点', '🏔️ Explore Attractions'],
+  ['出行前最常被问到的几件事', 'Common questions before you go'],
+  ['顺道规划的邻城与同区推荐', 'Neighboring cities worth a side trip'],
+  ['的沉浸式视觉之旅', "'s immersive visual journey"],
+  ['旅游攻略、游记、实用信息', 'Guides, travelogues & practical info'],
+  ['旅游博客、游记、实用信息', 'Travel blog, travelogues & practical info'],
+  ['全国旅游攻略', 'China Travel Guide'],
+  ['旅游官网', 'Travel Guide'],
+  ['图片来源：Wikimedia Commons（CC BY / CC BY-SA）', 'Image credits: Wikimedia Commons (CC BY / CC BY-SA)'],
+  ['编辑精选', "Editor's Picks"],
+  ['最值得出发的', 'Top destinations to explore'],
+  ['发现中国最美目的地', 'Discover China’s most beautiful destinations'],
+  ['景点 · 美食 · 行程，一站规划', 'Attractions, food & itineraries — all in one place'],
+  ['中国 · ', 'China · '],
+  [' 城 · 精选旅行攻略', ' cities · curated travel guides'],
+];
+// 动态模板串用的翻译表（仅含纯词，绝不含正文常见词；t() 对中文页原样返回）
+const UI_TRANS = { '关于': 'About', '返回': 'Back to', '博客列表': 'Blog' };
+function t(s) { return (LANG === 'en' && UI_TRANS[s]) ? UI_TRANS[s] : s; }
+function transformForEn(html) {
+  let h = html
+    .replace('<html lang="zh-CN">', '<html lang="en">')
+    .replace(/href="\/city\//g, 'href="/en/city/')
+    .replace(/href="\/index\.html"/g, 'href="/en/index.html"')
+    .replace(/https:\/\/lv\.divdu\.com\/city\//g, 'https://lv.divdu.com/en/city/')
+    .replace(/https:\/\/lv\.divdu\.com\/"/g, 'https://lv.divdu.com/en/"');
+  for (const [zh, en] of EN_UI_TOKENS) h = h.split(zh).join(en);
+  // 根页索引用了相对资源路径，英文根页需回退一层
+  h = h.replace(/(href|src)="(assets\/|style\.css)/g, '$1="../$2')
+       .replace(/href="sitemap\.xml"/g, 'href="../sitemap.xml"');
+  return h;
+}
+
+let data = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'cities.json'), 'utf8'));
+if (LANG === 'en') {
+  const enPath = path.join(ROOT, 'data', 'cities.en.json');
+  if (fs.existsSync(enPath)) {
+    const enRaw = JSON.parse(fs.readFileSync(enPath, 'utf8'));
+    const enById = {}; enRaw.cities.forEach(c => enById[c.id] = c);
+    data.cities = data.cities
+      .filter(c => enById[c.id])
+      .map(c => Object.assign({}, c, enById[c.id]));
+    console.log(`🌐 英文模式：载入 ${data.cities.length} 城英文数据`);
+  } else {
+    console.warn('⚠️ 未找到 data/cities.en.json，英文站将退化为空');
+    data.cities = [];
+  }
+}
 
 // 城市独家插画映射（AI 生成，暖陶土品牌色系）
 const CITY_ILLU = {
@@ -114,9 +199,10 @@ function relativize(html, filePath) {
     .replace(/url\(\//g, `url(${p}`);
 }
 function writeHtml(relPath, html) {
-  const filePath = path.join(ROOT, relPath);
+  const out = (LANG === 'en') ? transformForEn(html) : html;
+  const filePath = path.join(ROOT, PREFIX, relPath);
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
-  fs.writeFileSync(filePath, relativize(html, filePath));
+  fs.writeFileSync(filePath, relativize(out, filePath));
 }
 
 // 按省份分组
@@ -286,7 +372,7 @@ ${seoHead({
 <section class="city-intro">
   <div class="city-grid">
     <div>
-      <h2 style="font-size:2rem;font-weight:800;margin-bottom:16px">关于${c.name}</h2>
+      <h2 style="font-size:2rem;font-weight:800;margin-bottom:16px">${t('关于')}${c.name}</h2>
       <p style="font-size:1.05rem;line-height:1.9;color:#6B6155;margin-bottom:24px">${c.seoIntro || c.description}</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="padding:16px;background:var(--gray-50);border-radius:12px"><div style="font-size:1.5rem;margin-bottom:4px">📅</div><div style="font-weight:600">最佳时间</div><div style="font-size:.9rem;color:#8A7E6E">${c.bestSeason}</div></div>
@@ -1023,7 +1109,7 @@ ${seoHead({
 </header>
 <main class="blog-main reveal">
   ${bodyHTML}
-  <a class="blog-back" href="../blog.html">← 返回 ${c.name}博客列表</a>
+  <a class="blog-back" href="../blog.html">${LANG === 'en' ? `← Back to ${c.name} Blog` : `← 返回 ${c.name}博客列表`}</a>
 </main>
 <footer class="footer"><div class="footer-inner"><p>© 2026 ${c.name}旅游官网 · <a href="/city/${c.id}/">返回首页</a></p><p style="font-size:.8rem;color:#B8AB99;margin-top:6px">图片来源：Wikimedia Commons（CC BY / CC BY-SA）</p></div></footer>
 <script>
@@ -1041,7 +1127,7 @@ ${citySelectorJS}
 
 // ===== 主入口 =====
 for (const city of data.cities) {
-  const cityDir = path.join(ROOT, 'city', city.id);
+  const cityDir = path.join(ROOT, PREFIX, 'city', city.id);
   fs.mkdirSync(cityDir, { recursive: true });
   
   writeHtml(`city/${city.id}/index.html`, generateIndex(city));
@@ -1090,8 +1176,8 @@ const REGION_DESC = {
 };
 const provinces2 = groupByProvince();
 // 编辑精选 6 城（按名称匹配，缺失自动跳过）
-const FEATURED = ['北京','西安','成都','杭州','三亚','丽江'];
-const featuredCities = FEATURED.map(n => data.cities.find(c => c.name === n)).filter(Boolean);
+const FEATURED_IDS = ['beijing','xian','chengdu','hangzhou','sanya','lijiang'];
+const featuredCities = FEATURED_IDS.map(id => data.cities.find(c => c.id === id)).filter(Boolean);
 
 function cityCardHTML(c) {
   const ci = illu(c.id);
@@ -1229,6 +1315,10 @@ window.addEventListener('scroll',function(){var n=document.getElementById('navba
   <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>`;
-writeHtml('index.html', rootIndex);
+if (LANG !== 'en') {
+  writeHtml('index.html', rootIndex);
+} else {
+  writeHtml('index.html', transformForEn(rootIndex));
+}
 console.log(`✅ 首页: index.html`);
 console.log('\n🎉 全部完成！');
