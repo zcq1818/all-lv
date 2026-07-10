@@ -1,0 +1,45 @@
+=== [wuhan] submitting ===
+[wuhan] DONE
+=== [changsha] submitting ===
+[changsha] DONE
+=== [tianjin] submitting ===
+[tianjin] DONE
+=== [huangshan] submitting ===
+[huangshan] DONE
+=== [hulunbuir] submitting ===
+[hulunbuir] DONE
+=== [xining] submitting ===
+[xining] DONE
+OK   wuhan
+OK   changsha
+OK   tianjin
+OK   huangshan
+OK   hulunbuir
+OK   xining
+missing=0
+=== wiring VIDEO_CITIES ===
+[eval]:13
+console.log('wired ids:', ids.join(','));
+                          ^
+
+ReferenceError: ids is not defined
+    at [eval]:13:27
+    at runScriptInThisContext (node:internal/vm:209:10)
+    at node:internal/process/execution:446:12
+    at [eval]-wrapper:6:24
+    at runScriptInContext (node:internal/process/execution:444:60)
+    at evalFunction (node:internal/process/execution:279:30)
+    at evalTypeScript (node:internal/process/execution:291:3)
+    at node:internal/main/eval_string:74:3
+
+Node.js v22.22.2
+=== rebuild site ===
+✅ 首页: index.html
+
+🎉 全部完成！
+=== git commit + push (triggers Vercel deploy) ===
+	assets/videos/xining.mp4
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Everything up-to-date
+DONE_ALL
