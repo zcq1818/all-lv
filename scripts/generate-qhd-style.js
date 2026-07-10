@@ -8,6 +8,11 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://lv.divdu.com';
 
+// ===== Google Analytics 4 (gtag.js) — 全站各页面头部统一注入（中/英共用同一生成器）=====
+const GA_TAG = `<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G4WJCDDC8N"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-G4WJCDDC8N');</script>`;
+
 // ===== SEO 工具函数（生成式站点统一注入，覆盖全部页面）=====
 function seoHead({ title, description, keywords, url, image, type = 'website', jsonLd = null, noindex = false }) {
   const kw = Array.isArray(keywords) ? keywords.join(',') : (keywords || '');
@@ -144,7 +149,7 @@ const CITY_ILLU = {
 function illu(id) { return CITY_ILLU[id] || null; }
 
 // 目的地短视频（文生视频生成，已落地 assets/videos/<id>.mp4）
-const VIDEO_CITIES = new Set(['beijing','xian','chengdu','hangzhou','sanya','lijiang','chongqing','xiamen','dali','qingdao','guilin','nanjing','zhangjiajie','suzhou']);
+const VIDEO_CITIES = new Set(['beijing','xian','chengdu','hangzhou','sanya','lijiang','chongqing','xiamen','dali','qingdao','guilin','nanjing','zhangjiajie','suzhou','wuhan','changsha','tianjin','huangshan','hulunbuir','xining']);
 
 // 博客头图：优先用城市独家插画（其余城市后续补生成）
 const BLOG_IMG = {
@@ -279,6 +284,7 @@ function generateIndex(city) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
@@ -518,6 +524,7 @@ function generateAttractions(city) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
@@ -611,6 +618,7 @@ function generateAttractionDetail(city, a, idx) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
@@ -739,6 +747,7 @@ function generateFood(city) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
@@ -813,6 +822,7 @@ function generateGuide(city) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
@@ -894,6 +904,7 @@ function generateItinerary(city) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
@@ -971,6 +982,7 @@ function generateBlog(city) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
@@ -1045,6 +1057,7 @@ function generateBlogDetail(city, blog, idx) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
@@ -1215,6 +1228,7 @@ for (const region of REGION_ORDER) {
 const rootIndex = `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+${GA_TAG}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ${seoHead({
